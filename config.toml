@@ -81,7 +81,7 @@ paginate = 10
     email         = "simumbaa21@gmail.com"
     twitter       = "https://twitter.com/zedsamurai"
     linkedin      = "https://www.linkedin.com/in/aaron-simumba-13737958/"
-   # stackoverflow = "full profile url in stackoverflow"
+    stackoverflow = "https://stackoverflow.com/users/8137815/aaron-simumba"
     github        = "https://github.com/asimumba"
 
 # Enable and disable widgets for the right sidebar
