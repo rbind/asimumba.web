@@ -64,9 +64,9 @@ paginate = 10
   
       address = """
         <strong>Aaron Simumba</strong><br/>
-        9 Luombwe Lane<br/>
-        Thorn Park<br/>
-        Lusaka<br/>
+        9 Luombwe Lane <br/>
+        Thorn Park <br/>
+        Lusaka <br/>
         ZAMBIA
       """
     latitude = "15.3875"
