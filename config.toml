@@ -1,127 +1,59 @@
-baseurl = "https://asimumba.rbind.io/"
-title = "Aaron Simumba"
-theme = "hugo-universal-theme"
+baseurl = "https://www.asimumba.rbind.io/"
 languageCode = "en-us"
-# Site language. Available translations in the theme's `/i18n` directory.
-defaultContentLanguage = "en"
-# Enable comments by entering your Disqus shortname
-disqusShortname = "asimumba-rbind-io"
-# Enable Google Analytics by entering your tracking code
-googleAnalytics = ""
-
-# Define the number of posts per page
+title = "Den of Thoughts"
+theme = "blackburn"
+author = "Aaron Simumba"
+copyright = "&copy; 2017. All rights reserved."
+canonifyurls = true
 paginate = 10
 
-# Main menu
-[menu]
+[indexes]
+  tag = "tags"
+  topic = "topics"
 
-[[menu.main]]
-    name = "Home"
-    url  = "/"
-    weight = 1
-
-[[menu.main]]
-    name = "Blog"
-    url  = "/blog/"
-    weight = 2
-    
 [params]
-      viewMorePostLink = "/blog/"
-      author = "Aaron Simumba"
-      defaultDescription = "Aaron Simumba"
-      defaultKeywords = ["r", "rmarkdown", "sql"]
-      githubContentURL = "https://github.com/rbind/asimumba/edit/master/content/"
+  # Shown in the home page
+  subtitle = "A Hugo Theme"
+  brand = "Blackburn"
+  googleAnalytics = "Your Google Analytics tracking ID"
+  disqus = "Your Disqus shortname"
+  # CSS name for highlight.js
+  highlightjs = "androidstudio"
+  dateFormat = "02 Jan 2006, 15:04"
 
+[menu]
+  # Shown in the side menu.
+  [[menu.main]]
+    name = "Home"
+    pre = "<i class='fa fa-home fa-fw'></i>"
+    weight = 0
+    identifier = "home"
+    url = "/"
+  [[menu.main]]
+    name = "Posts"
+    pre = "<i class='fa fa-list fa-fw'></i>"
+    weight = 1
+    identifier = "post"
+    url = "/post/"
+  [[menu.main]]
+    name = "About"
+    pre = "<i class='fa fa-user fa-fw'></i>"
+    weight = 2
+    identifier = "about"
+    url = "/about/"
+  [[menu.main]]
+    name = "Contact"
+    pre = "<i class='fa fa-phone fa-fw'></i>"
+    weight = 3
+    url = "/contact/"
 
-    # Google Maps API key (if not set will default to not passing a key.)
-    googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
-
-    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-    style = "violet"
-
-    # Since this template is static, the contact form uses www.formspree.io as a
-    # proxy. The form makes a POST request to their servers to send the actual
-    # email. Visitors can send up to a 1000 emails each month for free.
-    #
-    # What you need to do for the setup?
-    #
-    # - set your email address under 'email' below
-    # - upload the generated site to your server
-    # - send a dummy email yourself to confirm your account
-    # - click the confirm link in the email from www.formspree.io
-    # - you're done. Happy mailing!
-    #
-    # Enable the contact form by entering your Formspree.io email
-    email = "your@email.com"
-
-    about_us = "<p>I am an aspiring data scientist, with keen interest in the followning areas: stock market data analysis;visualisation and everything interesting R has in store.</p>"
-    copyright = "Copyright (c) 2017, Aaron Simumba; all rights reserved."
-
-    # Format dates with Go's time formatting
-    date_format = "02/01/2006"
-
-   # logo = "img/logo.png"
-  
-      address = """
-        <strong>Aaron Simumba</strong><br/>
-        9 Luombwe Lane <br/>
-        Thorn Park <br/>
-        Lusaka <br/>
-        ZAMBIA
-      """
-    latitude = "15.3875"
-    longitude = "28.3228"
-
-[Permalinks]
-    blog = "/blog/:year/:month/:day/:slug/"
-
-[params.social]
-    facebook      = "https://web.facebook.com/aaron.s.simumba"
-    googleplus    = "https://plus.google.com/+AaronSimumba"
-    email         = "simumbaa21@gmail.com"
-    twitter       = "https://twitter.com/zedsamurai"
-    linkedin      = "https://www.linkedin.com/in/aaron-simumba-13737958/"
-    stackoverflow = "https://stackoverflow.com/users/8137815/aaron-simumba"
-    github        = "https://github.com/asimumba"
-
-# Enable and disable widgets for the right sidebar
-[params.widgets]
-    categories = true
-    tags = true
-    search = true
-
-[params.carousel]
-    enable = false
-    # All carousel items are defined in their own files. You can find example items
-    # at 'exampleSite/data/carousel'.
-    # For more informtion take a look at the README.
-
-[params.features]
-    enable = false
-    # All features are defined in their own files. You can find example items
-    # at 'exampleSite/data/features'.
-    # For more informtion take a look at the README.
-
-[params.testimonials]
-    enable = false
-    # All testimonials are defined in their own files. You can find example items
-    # at 'exampleSite/data/testimonials'.
-    # For more informtion take a look at the README.
-    title = "Testimonials"
-    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
-
-[params.see_more]
-    enable = true
-
-[params.clients]
-    enable = false
-    # All clients are defined in their own files. You can find example items
-    # at 'exampleSite/data/clients'.
-    # For more informtion take a look at the README.
-    title = "Our Clients"
-    subtitle = ""
-
-[params.recent_posts]
-    enable = true
-    title = "From my blog"
-    subtitle = "You can only see what is in the treasure box by opening it."
+[social]
+  # Link your social networking accouns to the side menu
+  # by entering your username or ID.
+  facebook = "https://web.facebook.com/aaron.s.simumba"
+  googleplus = "https://plus.google.com/+AaronSimumba"
+  email = "simumbaa21@gmail.com"
+  twitter  = "https://twitter.com/zedsamurai"
+  linkedin = "https://www.linkedin.com/in/aaron-simumba-13737958/"
+  stackoverflow = "https://stackoverflow.com/users/8137815/aaron-simumba"
+  github        = "https://github.com/asimumba"
