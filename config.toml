@@ -18,7 +18,7 @@ paginate = 10
 [params]
   # Shown in the home page
   subtitle = "A place where I share my daily Musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies."
-  brand = "Den of Thoguhts"
+  brand = "Den of Thoughts"
   googleAnalytics = "UA-101235795-1"
   disqus = "asimumba"
   # CSS name for highlight.js
@@ -45,11 +45,6 @@ paginate = 10
     weight = 2
     identifier = "about"
     url = "/about/"
-  [[menu.main]]
-    name = "Contact"
-    pre = "<i class='fa fa-contact fa-fw'></i>"
-    weight = 3
-    url = "/contact/"
 
 [social]
   # Link your social networking accounts to the side menu

@@ -1,19 +1,7 @@
-+++
-title = "Portfolio Analysis"
-description = ""
-author = "Aaron Simumba""
-date = "2017-02-06"
-tags = [
-        "stock market",
-        "investment returns",
-        
-]
-categories = [
-    "stock markets",
-    "R",
-]
-+++
-
+Portfolio Analysis
+================
+Aaron Simumba
+2017-06-18
 
 ``` r
 ## Packages to load
@@ -120,7 +108,7 @@ fundreturn_final <- temp
 ggplot(data = fundreturn_final, aes(x=Year, y=PercentageReturn, color=Stockticker)) +geom_line()
 ```
 
-![](fund_returns_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](2017-02-06-fund-returns_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
 ``` r
 # Google stock Performance
@@ -141,11 +129,10 @@ g + annotate("text",x=as.Date("2009-09-01"),y=0.3245,label="HR",fontface="bold",
 annotate("text",x=as.Date("2010-04-01"),y=-0.1900,label="LR",fontface="bold",size=3,colour ="red") 
 ```
 
-![](fund_returns_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](2017-02-06-fund-returns_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
 ``` r
 # Portfolio Performance Appraisal
-#-------------------------------------------------------------------------------
 
 # Having the following portfolio
 
@@ -169,7 +156,7 @@ p + labs(
     ggtitle(" Apple, Amazon and Google Stock Returns",subtitle =" For the period June 2007 - Nov. 2016")
 ```
 
-![](fund_returns_files/figure-markdown_github/unnamed-chunk-6-1.png)
+![](2017-02-06-fund-returns_files/figure-markdown_github/unnamed-chunk-6-1.png)
 
 ``` r
 #Dygraphing
@@ -198,7 +185,7 @@ dygraph(merged_returns, main = "Amazon v Microsoft v Apple v Google") %>% # Usin
   dyOptions(colors = RColorBrewer::brewer.pal(4, "Set2")) 
 ```
 
-![](fund_returns_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![](2017-02-06-fund-returns_files/figure-markdown_github/unnamed-chunk-8-1.png)
 
 ``` r
 # Let's now evaluate the portfolio
@@ -217,7 +204,7 @@ dygraph(monthly_P_return, main = "Portfolio Monthly Return") %>%
   dyAxis("y", label = "%")
 ```
 
-![](fund_returns_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![](2017-02-06-fund-returns_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
 ``` r
 # Add the wealth.index = TRUE argument and, instead of returning monthly returns,
@@ -229,7 +216,7 @@ dygraph(dollar_growth, main = "Growth of $1 Invested in Portfolio") %>%
   dyAxis("y", label = "$")
 ```
 
-![](fund_returns_files/figure-markdown_github/unnamed-chunk-10-1.png)
+![](2017-02-06-fund-returns_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
 ``` r
 # Calculating the Sharpe Ratio

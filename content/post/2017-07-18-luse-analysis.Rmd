@@ -1,10 +1,8 @@
 ---
 title: "What's in the numbers: A look at the Lusaka Securities Exchange"
 author: "Aaron Simumba"
-date: "June 18, 2017"
-output: 
-  html_document: 
-    keep_md: yes
+date: "`r Sys.Date()`"
+output: github_document
 ---
 ```{r, echo=FALSE, message=FALSE}
 library(xts)
