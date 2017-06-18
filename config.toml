@@ -4,7 +4,8 @@ title = "Den of Thoughts"
 theme = "blackburn"
 author = "Aaron Simumba"
 copyright = "&copy; 2017. All rights reserved."
-#canonifyurls = true
+canonifyurls = true
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 paginate = 10
 
 [indexes]
@@ -16,9 +17,9 @@ paginate = 10
 
 [params]
   # Shown in the home page
-  subtitle = "Den of Thoughts"
-  brand = "Blackburn"
-  googleAnalytics = "Your Google Analytics tracking ID"
+  subtitle = "A place where I share my daily Musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies."
+  brand = "Den of Thoguhts"
+  googleAnalytics = "UA-101235795-1"
   disqus = "asimumba"
   # CSS name for highlight.js
   highlightjs = "github"
@@ -45,10 +46,10 @@ paginate = 10
     identifier = "about"
     url = "/about/"
   [[menu.main]]
-    name = "Blog"
-    pre = "<i class='fa fa-blog fa-fw'></i>"
+    name = "Contact"
+    pre = "<i class='fa fa-contact fa-fw'></i>"
     weight = 3
-    url = "/blog/"
+    url = "/contact/"
 
 [social]
   # Link your social networking accounts to the side menu
@@ -57,6 +58,6 @@ paginate = 10
   googleplus = "AaronSimumba"
   email = "simumbaa21@gmail.com"
   twitter  = "zedsamurai"
-  linkedin = "aaron simumba"
-  stackoverflow = "aaron simumba"
+  linkedin = "aaron-simumba"
+  stackoverflow = "aaron-simumba"
   github        = "asimumba"
