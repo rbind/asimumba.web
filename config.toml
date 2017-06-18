@@ -1,25 +1,28 @@
-baseurl = "https://www.asimumba.rbind.io/"
+baseurl = "https://asimumba.rbind.io/"
 languageCode = "en-us"
 title = "Den of Thoughts"
 theme = "blackburn"
 author = "Aaron Simumba"
 copyright = "&copy; 2017. All rights reserved."
-canonifyurls = true
+#canonifyurls = true
 paginate = 10
 
 [indexes]
   tag = "tags"
   topic = "topics"
 
+[permalinks]
+  post = "/:year/:month/:day/:slug/"
+
 [params]
   # Shown in the home page
-  subtitle = "A Hugo Theme"
+  subtitle = "Den of Thoughts"
   brand = "Blackburn"
   googleAnalytics = "Your Google Analytics tracking ID"
-  disqus = "Your Disqus shortname"
+  disqus = "asimumba"
   # CSS name for highlight.js
-  highlightjs = "androidstudio"
-  dateFormat = "02 Jan 2006, 15:04"
+  highlightjs = "github"
+  dateFormat = "2006/01/02, 15:04"
 
 [menu]
   # Shown in the side menu.
@@ -42,18 +45,18 @@ paginate = 10
     identifier = "about"
     url = "/about/"
   [[menu.main]]
-    name = "Contact"
-    pre = "<i class='fa fa-phone fa-fw'></i>"
+    name = "Blog"
+    pre = "<i class='fa fa-blog fa-fw'></i>"
     weight = 3
-    url = "/contact/"
+    url = "/blog/"
 
 [social]
-  # Link your social networking accouns to the side menu
+  # Link your social networking accounts to the side menu
   # by entering your username or ID.
-  facebook = "https://web.facebook.com/aaron.s.simumba"
-  googleplus = "https://plus.google.com/+AaronSimumba"
+  facebook = "aaron.s.simumba"
+  googleplus = "AaronSimumba"
   email = "simumbaa21@gmail.com"
-  twitter  = "https://twitter.com/zedsamurai"
-  linkedin = "https://www.linkedin.com/in/aaron-simumba-13737958/"
-  stackoverflow = "https://stackoverflow.com/users/8137815/aaron-simumba"
-  github        = "https://github.com/asimumba"
+  twitter  = "zedsamurai"
+  linkedin = "aaron simumba"
+  stackoverflow = "aaron simumba"
+  github        = "asimumba"
