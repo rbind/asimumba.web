@@ -2,7 +2,7 @@
 title: "Portfolio Analysis"
 author: "Aaron Simumba"
 date: "`r Sys.Date()`"
-output: github_document
+output: html_document
 ---
 
 ```{r,results='hide',message=FALSE}

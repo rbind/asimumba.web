@@ -5,7 +5,7 @@ theme = "blackburn"
 author = "Aaron Simumba"
 copyright = "&copy; 2017. All rights reserved."
 canonifyurls = true
-ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+#ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 paginate = 10
 
 [indexes]
@@ -23,7 +23,7 @@ paginate = 10
   disqus = "asimumba"
   # CSS name for highlight.js
   highlightjs = "github"
-  dateFormat = "2006/01/02, 15:04"
+  dateFormat = "2006-01-02"
 
 [menu]
   # Shown in the side menu.
