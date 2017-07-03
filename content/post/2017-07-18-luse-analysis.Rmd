@@ -1,19 +1,24 @@
 ---
 title: "What's in the numbers: A look at the Lusaka Securities Exchange"
-author: "Aaron Simumba"
-date: "`r Sys.Date()`"
-output: html_document
+author: Aaron Simumba
+date: "2017-04-06"
+slug: lusaka-stock-exchange
+tags:
+  - LuSE
+  - ALSI
+  - stocks
+  - stock returns
+  - Zambia capital market
+image: "data/bloomberg.png"
 ---
+
+```{r,echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
 ```{r, echo=FALSE, message=FALSE}
 library(xts)
-LASI_yearly <- read.csv("~/R/asimumba/content/data/LUSE_yearly1.csv", header = TRUE) # End of the year price of the Lusaka Securities Exchange All Share  (LASI)
-
-LASI_monthly <- read.csv("~/R/asimumba/content/data/LUSE_monthly1.csv", header = TRUE)
-
-LASI_yearly_zccm <- read.csv("~/R/asimumba/content/data/LUSE_yearly2.csv", header = TRUE) # Excluding ZCCM_IH
-
-LASI_monthly_zccm <- read.csv("~/R/asimumba/content/data/LUSE_monthly2.csv", header = TRUE)
-
+load("~/R/asimumba/content/data/luse.RData")
 # convert the data frame to an xts
 LASI_monthly <- xts(x = LASI_monthly[,-1], order.by = as.Date(LASI_monthly[,1]))
 
@@ -29,22 +34,23 @@ In the next coming few weeks, I plan to do a series of posts specifically target
 And of focus here, the LuSE, ranks in the top 10 on both account of returns after converting to US dollars and on a risk adjusted basis. The table below shows the local bourse appearing twice in the top ten, twice  on number 2 in the year 2007 and 2011 only being edge out of the first spot by Mongolia on both occasions.
 As this data from Bloomberg Markets  shows, emerging and frontier markets accounted for 9 spots out of a rank order of 10 in dollar terms and 7 spots on a risk adjusted basis.
 
-```{r,echo=FALSE,out.width="50%",eval=FALSE}
-knitr::include_graphics("~/R/asimumba/content/data/bloomberg.png")
+```{r,echo=FALSE,eval=TRUE, out.width="30%"}
+knitr::include_graphics("~/R/asimumba/static/img/bloomberg.png")
 ```
-
 
 
 The following excerpt from Bloomberg stands out:
 
-     “The top 10 stock indexes that gave global investors the greatest returns in 2016 were all emerging or frontier markets, according to data compiled by Bloomberg. That’s not a fluke: over the past 20 years, nine out of 10 best-performing equity gauges have been in developing nations, the figures show”.
+
+_“The top 10 stock indexes that gave global investors the greatest returns in 2016 were all emerging or frontier markets, according to data compiled by Bloomberg. That’s not a fluke: over the past 20 years, nine out of 10 best-performing equity gauges have been in developing nations, the figures show”._
+
 
 Investment theory contends that risk taken in an investment must commensurate the return sought. Though equities as a class of investible assets are by their very nature riskier assets relative to other assets like Treasury Bill or Bonds; this in essence frightens most investors to invest in them. More so from the view of the emerging markets, which expose investors to higher levels of volatility relative to more mature and developed markets. In my next post I will look at what was historically being  demanded by investors for taking up the extra risk posed by emerging markets.
 
 The table below shows the top 10 market returns on a risk adjusted basis. No doubt emerging markets still dominated the list.
 
-```{r,echo=FALSE,eval=FALSE}
-knitr::include_graphics("/~/R/asimumba/content/data/bloomberg-returns.png")
+```{r,echo=FALSE,eval=TRUE,out.width="30%"}
+knitr::include_graphics("~/R/asimumba/static/img/bloomberg-returns.png")
 ```
 
 
@@ -75,6 +81,7 @@ plot(LASI_monthly_zccm$Return,xlab=" Period", ylab="Return", main="The LuSE LASI
 ```
 
 The last two charts detail the index on a yearly basis. Though unlike the picture painted from the monthly data, yearly data that goes farther down the years, seem to be carrying a different message on the effect of the company ZCCM-IH. When introduced into the computations, the volatility is more than that observed without its inclusion.
+
 ```{r}
 plot(LASI_yearly$Return,xlab=" Period", ylab="Return", main="The LuSE LASI yearly Returns For the Period 1997-2014 
      (excl. ZCCM-IH)",cex.main =1, font.main=2)
@@ -87,8 +94,8 @@ plot(LASI_yearly_zccm$Return, xlab=" Period", ylab="Return", main="The LuSE LASI
 ```
 
 ## Final Remarks
-It’s with no doubt the Emerging Markets had a stellar performance the past 2 decades. But what remains inherently  attached with these developing markets is: (i.) lack of proper oversight on market monitoring and supervision; (ii.) the lack of or inadequate liquidity in the market among other challenges.
+It’s with no doubt the Emerging Markets had a stellar performance the past 2 decades. But what remains inherently  attached with these developing markets is: `(i)` lack of proper oversight on market monitoring and supervision; `(ii)` the lack of or inadequate liquidity in the market among other challenges.
 In the coming posts I hope to dwell more on the performance of the LuSE and have a look at its peer exchanges in the region.
 
 
-P.S: I used R statistical Computing Language for my analysis. For the data and the code,you can find them on [my GitHub account](https://github.com/ASimumba/LuSE_Data). Do check them out and run your own analysis.
+^[P.S: I used R statistical Computing Language for my analysis. For the data and the code,you can find them on [my GitHub account](https://github.com/ASimumba/LuSE_Data). Do check them out and run your own analysis.]

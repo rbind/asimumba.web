@@ -1,10 +1,10 @@
 baseurl = "https://asimumba.rbind.io/"
 languageCode = "en-us"
-title = "Den of Thoughts"
+title = "Den of Thought"
 theme = "blackburn"
 author = "Aaron Simumba"
 copyright = "&copy; 2017. All rights reserved."
-canonifyurls = true
+#canonifyurls = true
 #ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 paginate = 10
 
@@ -18,36 +18,41 @@ paginate = 10
 [params]
   # Shown in the home page
   subtitle = "A place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies."
-  
-  brand = "Den of Thoughts"
+  brand =  "![Den of Thought](/img/aalogo.png)"
   googleAnalytics = "UA-101235795-1"
   disqus = "asimumba"
-  highlight = true
-  highlight_languages = []
-  CSS name for highlight.js
-  #highlightjs = "github"
+  #CSS name for highlight.js
+  highlightjs = "github"
   dateFormat = "2006-01-02"
+  #custom_css = ["/css/my.css"]
+  #custom_js = ["/js/ui.js"]
 
 [menu]
   # Shown in the side menu.
   [[menu.main]]
     name = "Home"
     pre = "<i class='fa fa-home fa-fw'></i>"
-    weight = 0
+    weight = 1
     identifier = "home"
     url = "/"
   [[menu.main]]
     name = "Posts"
     pre = "<i class='fa fa-list fa-fw'></i>"
-    weight = 1
+    weight = 2
     identifier = "post"
     url = "/post/"
   [[menu.main]]
     name = "About"
     pre = "<i class='fa fa-user fa-fw'></i>"
-    weight = 2
+    weight = 3
     identifier = "about"
     url = "/about/"
+  [[menu.main]]
+    name = "Contact"
+    pre = "<i class='fa fa-phone fa-fw'></i>"
+    weight = 4
+    identifier = "contact"
+    url = "/contact/"
 
 [social]
   # Link your social networking accounts to the side menu

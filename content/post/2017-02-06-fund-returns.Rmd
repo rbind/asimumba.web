@@ -1,8 +1,13 @@
 ---
-title: "Portfolio Analysis"
-author: "Aaron Simumba"
-date: "`r Sys.Date()`"
-output: html_document
+title: Stocks Portfolio Analysis
+author: Aaron Simumba
+date: "2017-03-17"
+slug: portfolio-analysis
+tags: 
+ - GOOG
+ - AMAZON
+ - APPLE
+ - Stocks
 ---
 
 ```{r,results='hide',message=FALSE}
@@ -16,13 +21,14 @@ library(dygraphs)
 ```
 
 
-```{r}
-#loading the data
-fundreturn <- read.csv("~/R/asimumba/content/data/fundreturns.csv", header = T)
 
-# quick peep  of the data
-head(fundreturn, 3)
-str(fundreturn)
+```{r, echo=FALSE, message=FALSE}
+#loading the data
+fundreturn <- readRDS("~/R/asimumba/content/data/fundreturns.RDS")
+
+```
+
+```{r}
 ## Dates have been loaded as a factor instead of as dates. There is need to convert this variable to the date class and covert the rest of the variables to xts(Extensible Time Series)
 
 temp <- xts(x =fundreturn[,-1], order.by = as.Date(fundreturn[,1])) 
