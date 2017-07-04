@@ -18,7 +18,7 @@ paginate = 10
 [params]
   # Shown in the home page
   subtitle = "A place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies."
-  brand =  "![Den of Thought](/img/aalogo.png)"
+  brand =  "Den of Thought"
   googleAnalytics = "UA-101235795-1"
   disqus = "asimumba"
   #CSS name for highlight.js
