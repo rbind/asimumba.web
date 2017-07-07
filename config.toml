@@ -1,5 +1,5 @@
 baseurl = "https://asimumba.rbind.io/"
-title = "Universal"
+title = "Aaron Simumba"
 theme = "hugo-universal-theme"
 languageCode = "en-us"
 # Site language. Available translations in the theme's `/i18n` directory.
@@ -60,7 +60,7 @@ paginate = 10
 [[menu.topbar]]
     weight = 5
     name = "LinkedIn"
-    url = "http://linkedin.com/aaron-simumba"
+    url = "http://linkedin.com/aaron-simumba-13737958"
     pre = "<i class='fa fa-2x fa-linkedin'></i>"
 
 
@@ -68,7 +68,8 @@ paginate = 10
     viewMorePostLink = "/blog/"
     author = "Aaron Simumba"
     defaultKeywords = ["R", "Stocks", "SQL"]
-    defaultDescription = "A place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies."
+    defaultDescription = "Aaron Simumba. Tech crazy, society explorer,lost in the Data science dungeon"
+    highlightjs = "github"
 
     # Google Maps API key (if not set will default to not passing a key.)
     googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
@@ -89,15 +90,15 @@ paginate = 10
     # - you're done. Happy mailing!
     #
     # Enable the contact form by entering your Formspree.io email
-    email = "your@email.com"
+    email = "simumbaa21@gmail.com"
 
-    about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
+    about_us = "<p>A place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies.</p>"
     copyright = "Copyright (c) 2017, Aaron Simumba; all rights reserved."
 
     # Format dates with Go's time formatting
     date_format = "2006-02-01"
 
-    logo = "img/dtlogo.png"
+    logo = "img/logo.png"
     address = """<p><strong>Aaron Simumba.</strong>
         <br>Thornpark
         <br>Lusaka
