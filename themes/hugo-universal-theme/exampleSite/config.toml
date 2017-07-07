@@ -1,13 +1,13 @@
-baseurl = "https://asimumba.rbind.io"
+baseurl = "https://example.org"
 title = "Universal"
 theme = "hugo-universal-theme"
 languageCode = "en-us"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "en"
 # Enable comments by entering your Disqus shortname
-disqusShortname = "asimumba"
+disqusShortname = "devcows"
 # Enable Google Analytics by entering your tracking code
-googleAnalytics = "UA-101235795-1"
+googleAnalytics = ""
 
 # Define the number of posts per page
 paginate = 10
@@ -42,32 +42,32 @@ paginate = 10
 [[menu.topbar]]
     weight = 1
     name = "GitHub"
-    url = "https://github.com/rbind/asimumba"
+    url = "https://github.com/devcows/hugo-universal-theme"
     pre = "<i class='fa fa-2x fa-github'></i>"
 
 [[menu.topbar]]
     weight = 2
     name = "Facebook"
-    url = "http://facebook.com/aaron.s.simumba"
+    url = "http://facebook.com"
     pre = "<i class='fa fa-2x fa-facebook'></i>"
 
 [[menu.topbar]]
     weight = 3
     name = "Twitter"
-    url = "http://twitter.com/zedsamurai"
+    url = "http://twitter.com"
     pre = "<i class='fa fa-2x fa-twitter'></i>"
 
 [[menu.topbar]]
     weight = 4
     name = "Email"
-    url = "mailto:simumbaa21@gmail.com"
+    url = "mailto:your@email.com"
     pre = "<i class='fa fa-2x fa-envelope'></i>"
 
 [params]
     viewMorePostLink = "/blog/"
-    author = "Aaron Simumba"
-    defaultKeywords = ["r", "stocks", "sql"]
-    defaultDescription = "A place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies."
+    author = "DevCows"
+    defaultKeywords = ["devows", "hugo", "go"]
+    defaultDescription = "Site template made by devcows using hugo"
 
     # Google Maps API key (if not set will default to not passing a key.)
     googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
@@ -91,26 +91,26 @@ paginate = 10
     email = "your@email.com"
 
     about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
-    copyright = "Copyright (c) 2017, Aaron Simumba; all rights reserved."
+    copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
 
     # Format dates with Go's time formatting
-    date_format = "2006-02-01"
+    date_format = "January 2, 2006"
 
-    logo = "img/dtlogo.png"
-    address = """<p><strong>Aaron Simumba.</strong>
-        <br>Thornpark
-        <br>Lusaka
-        <br>10101
+    logo = "img/logo.png"
+    address = """<p><strong>Universal Ltd.</strong>
+        <br>13/25 New Avenue
+        <br>Newtown upon River
+        <br>45Y 73J
+        <br>England
         <br>
-         <strong>Zambia</strong>
+        <strong>Great Britain</strong>
       </p>
       """
     latitude = "-12.043333"
     longitude = "-77.028333"
 
 [Permalinks]
-    post = "/:year/:month/:day/:slug/"
-
+    blog = "/blog/:year/:month/:day/:filename/"
 
 # Enable or disable top bar with social icons
 [params.topbar]
@@ -166,4 +166,4 @@ paginate = 10
 [params.recent_posts]
     enable = true
     title = "From our blog"
-    subtitle = "Everything interesting goes here."
+    subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
