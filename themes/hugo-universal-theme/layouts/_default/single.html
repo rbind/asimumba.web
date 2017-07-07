@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="en">
 
   {{ partial "head.html" . }}
 
@@ -13,23 +13,33 @@
 
         </header>
 
-        {{ partial "breadcrumbs.html" . }}
-
         <div id="content">
             <div class="container">
 
                 <div class="row">
 
                     <!-- *** LEFT COLUMN *** -->
+                    <div class="col-md-1"></div>
 
-                    <div class="col-md-9" id="blog-post">
+                    <div class="col-md-10" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">{{ if .Params.author }}{{ i18n "authorBy" }} <a href="#">{{ .Params.author }}</a> | {{ end }}{{ .Date.Format .Site.Params.date_format }}</p>
+                        <h2>{{ .Title }}</h2>
+
+                        <span class="article-duration">{{ .ReadingTime }} min read</span>
+                        
+                        {{ partial "article_meta.html" . }}
+
+                        {{ partial "tags.html" . }}
 
                         <div id="post-content">
                           {{ .Content }}
                         </div>
                         <!-- /#post-content -->
+
+                        {{ partial "gallery.html" . }}
+
+                        {{ partial "prev_next.html" . }}
+
                         {{ if .Site.DisqusShortname }}
                         <div id="comments">
                             {{ template "_internal/disqus.html" . }}
@@ -40,21 +50,6 @@
                     <!-- /#blog-post -->
 
                     <!-- *** LEFT COLUMN END *** -->
-
-                    <!-- *** RIGHT COLUMN *** -->
-
-                    <div class="col-md-3">
-
-                        <!-- *** MENUS AND WIDGETS *** -->
-
-                        {{ partial "sidebar.html" . }}
-
-                        <!-- *** MENUS AND FILTERS END *** -->
-
-                    </div>
-                    <!-- /.col-md-3 -->
-
-                    <!-- *** RIGHT COLUMN END *** -->
 
                 </div>
                 <!-- /.row -->
@@ -70,6 +65,19 @@
     <!-- /#all -->
 
     {{ partial "scripts.html" . }}
+
+    {{ if .Params.gallery }}
+    <script src="/lib/gallery/js/blueimp-gallery.min.js"></script>
+
+    <script>
+    blueimp.Gallery(
+    document.getElementById('links').getElementsByTagName('a'),{
+        container: '#blueimp-gallery-carousel',
+        carousel: true
+    });
+    </script>
+
+    {{ end }}
 
   </body>
 </html>

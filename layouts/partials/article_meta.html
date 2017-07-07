@@ -1,0 +1,26 @@
+<div class="article-date">
+  <span>
+  {{ if .Params.author }} {{ .Params.author }} - {{ end }}
+
+  {{ .Date.Format .Site.Params.date_format }}
+  </span>
+
+  <span class="article-toolbar">
+    {{ with .Section }}
+    <a href="/{{ . }}/index.xml" type="application/rss+xml" target="_blank"><i class="fa fa-rss" aria-hidden="true" title="RSS feed"></i></a>
+    {{ end }}
+
+    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i></a>
+
+    <a href="https://twitter.com/home?{{ (querify "status" (print .Title " " .Permalink " via @" .Site.Params.social.twitter )) | safeURL }}" target="_blank">
+      <i class="fa fa-twitter" aria-hidden="true" title="Share via Twitter"></i>
+    </a>
+
+    {{ with .Site.Params.githubContentURL }}
+    {{ $.Scratch.Set "filePath" (replaceRE "[.]html$" ".Rmd" $.File.Path) }}
+    <a href="{{ . }}{{ $.Scratch.Get "filePath" }}"><i class="fa fa-pencil-square-o" aria-hidden="true" ></i></a>
+    {{ end }}
+
+  </span>
+
+</div>

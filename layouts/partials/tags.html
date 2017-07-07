@@ -1,0 +1,12 @@
+{{ if isset .Params "tags" }}
+{{ $count := len .Params.tags }}
+{{ if gt $count 0}}
+<p class="meta-tags">
+
+  {{ range $k, $v := .Params.tags }}
+  <a href="/tags/{{ . | urlize }}" class="post-taxonomy-tag"> <i class="fa fa-tags fa-fw"></i> {{.}}</a>
+  {{ end }}
+
+</p>
+{{ end }}
+{{ end }}

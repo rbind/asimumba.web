@@ -11,7 +11,7 @@ tags:
 banner: "img/portfolio.png"
 ---
 
-<img src="/img/portfolio.png" width="100px" style = "float: left; margin: 20px;" />
+<img src="/img/portfolio.png" width="100px"/>
 ```{r,results='hide',message=FALSE}
 ## Packages to load
 library(quantmod)
