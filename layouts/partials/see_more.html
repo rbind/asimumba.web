@@ -1,17 +1,37 @@
 {{ if isset .Site.Params "see_more" }}
 {{ if .Site.Params.see_more.enable }}
-<section class="bar background-image-fixed-2 no-mb color-white text-center">
+<section class="bar background-image-fixed-2 no-mb color-white">
     <div class="dark-mask"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="icon icon-lg"><i class="{{ .Site.Params.see_more.icon }}"></i>
-                </div>
-                <h3 class="text-uppercase">{{ .Site.Params.see_more.title }}</h3>
-                <p class="lead">{{ .Site.Params.see_more.subtitle }}</p>
-                <p class="text-center">
-                    <a href="{{ .Site.Params.see_more.link_url }}" class="btn btn-template-transparent-black btn-lg">{{ .Site.Params.see_more.link_text }}</a>
+            <div class="col-md-8" style="margin-top: 200px">
+                
+                <h1>Hello! I'm Romain François</h1>
+                <p class="lead">
+                  Consulting Datactive at <a href="http://www.thinkr.fr">ThinkR</a>
+                  since February 2017.
+                  <br/>
+                  I have been involved in the
+                  <a href="https://www.r-project.org">R community</a>
+                  for several years. I'm interested in anything that
+                  is even remotely connected to R.
                 </p>
+
+                <p class="lead">
+                  I am specifically interested in performance and mixing R with
+                  other languages, which led to the development of
+                  <a href="http://www.rcpp.org">Rcpp</a> for seamless
+                  R and C++ integration. I also contributed to the design and implementation of 
+                  C++ internals for <a href="http://dplyr.tidyverse.org">dplyr</a>. 
+                </p>
+
+                <p class="lead">
+                  I am never far from my <a href="https://twitter.com/romain_francois">twitter</a>
+                  or <a href="https://github.com/romainfrancois">github</a> accounts. I am 
+                  passionate about R, discovering or making new R things, and helping you
+                  make the most of R. 
+                </p>               
+
             </div>
 
         </div>

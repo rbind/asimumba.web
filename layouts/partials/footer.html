@@ -3,7 +3,7 @@
 
         {{ if isset .Site.Params "about_us" }}
         <div class="col-md-4 col-sm-6">
-            <h4>{{ i18n "aboutUs" }}</h4>
+            <h4>About me</h4>
 
             {{ .Site.Params.about_us | markdownify }}
 
@@ -43,20 +43,31 @@
         </div>
         <!-- /.col-md-4 -->
 
-        {{ if isset .Site.Params "address" }}
         <div class="col-md-4 col-sm-6">
 
           <h4>{{ i18n "contactTitle" }}</h4>
 
-            {{ .Site.Params.address | markdownify }}
+            {{ with .Site.Params.social }}
+            <div class="social-entries">
 
-            <a href="/contact" class="btn btn-small btn-template-main">{{ i18n "contactGoTo" }}</a>
-
-            <hr class="hidden-md hidden-lg hidden-sm">
+              <div class="social-entry">
+                <i class="fa fa-envelope fa-fw"></i>&nbsp;{{ .email }}
+              </div>
+              <div class="social-entry">
+                <a href="https://twitter.com/{{ .twitter }}"><i class="fa fa-twitter fa-fw"></i>{{ .twitter }}</a>
+              </div>
+              <div class="social-entry">
+                <a href="https://github.com/{{ .github }}"><i class="fa fa-github fa-fw"></i>{{ .github }}</a>
+              </div>
+              <div class="social-entry">
+                <a href="https://www.linkedin.com/in/{{ .linkedin }}"><i class="fa fa-linkedin fa-fw"></i>{{ .linkedin }}</a>
+              </div>
+              <div class="social-entry">
+                <a href="https://stackoverflow.com/users/{{ .stackoverflow }}"><i class="fa fa-stack-overflow fa-fw"></i>{{ .stackoverflow }}</a>
+              </div>
+            {{ end }}
 
         </div>
-        <!-- /.col-md-4 -->
-        {{ end }}
 
     </div>
     <!-- /.container -->
@@ -76,10 +87,15 @@ _________________________________________________________ -->
             <p class="pull-left">{{ .Site.Params.copyright | safeHTML }}</p>
             {{ end }}
             <p class="pull-right">
+              Site built with <a href="https://github.com/rstudio/blogdown">blogdown</a>
+              and <a href="https://gohugo.io">hugo</a>. Deployed on <a href="https://www.netlify.com">Netlify</a>
+
+              <br/>
               {{ i18n "templateBy" }} <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
               <!-- Not removing this link is part of the licence conditions of the template. Thanks for understanding :) -->
 
-              {{ i18n "portedBy" }} <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
+              {{ i18n "portedBy" }} <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>.
+
             </p>
         </div>
     </div>

@@ -26,44 +26,6 @@ paginate = 10
     url  = "/blog/"
     weight = 2
 
-[[menu.main]]
-    name = "Contact"
-    url  = "/contact/"
-    weight = 4
-
-# Top bar social links menu
-
-[[menu.topbar]]
-    weight = 1
-    name = "GitHub"
-    url = "https://github.com/rbind/asimumba"
-    pre = "<i class='fa fa-2x fa-github'></i>"
-
-[[menu.topbar]]
-    weight = 2
-    name = "Facebook"
-    url = "http://facebook.com/aaron.s.simumba"
-    pre = "<i class='fa fa-2x fa-facebook'></i>"
-
-[[menu.topbar]]
-    weight = 3
-    name = "Twitter"
-    url = "http://twitter.com/zedsamurai"
-    pre = "<i class='fa fa-2x fa-twitter'></i>"
-
-[[menu.topbar]]
-    weight = 4
-    name = "Email"
-    url = "mailto:simumbaa21@gmail.com"
-    pre = "<i class='fa fa-2x fa-envelope'></i>"
-    
-[[menu.topbar]]
-    weight = 5
-    name = "LinkedIn"
-    url = "http://linkedin.com/aaron-simumba-13737958"
-    pre = "<i class='fa fa-2x fa-linkedin'></i>"
-
-
 [params]
     viewMorePostLink = "/blog/"
     author = "Aaron Simumba"
@@ -75,7 +37,7 @@ paginate = 10
     googleMapsApiKey = "AIzaSyAtewb1VLna3DbaOB7ccpwaR7Ka7o8bRwk"
 
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-    style = "default"
+    style = "blue"
 
     # Since this template is static, the contact form uses www.formspree.io as a
     # proxy. The form makes a POST request to their servers to send the actual
@@ -99,29 +61,19 @@ paginate = 10
     date_format = "2006-02-01"
 
     logo = "img/logo.png"
-    address = """<p><strong>Aaron Simumba.</strong>
-        <br>Thornpark
-        <br>Lusaka
-        <br>10101
-        <br>
-         <strong>Zambia</strong>
-      </p>
-      """
     latitude = "15.3875"
     longitude = "28.3228"
 
 [Permalinks]
     post = "/:year/:month/:day/:slug/"
-
-
-# Enable or disable top bar with social icons
-[params.topbar]
-    enable = true
-    text = """<p class="hidden-sm hidden-xs"></p>
-      <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>
-      <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
-      </p>
-      """
+    
+[params.social]
+    twitter = "zedsamurai"
+    github = "asimumba"
+    linkedin = "aaron-simumba-13737958"
+    stackoverflow = "aaron-simumba"
+    email = "simumbaa21@gmail.com"
+    
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
