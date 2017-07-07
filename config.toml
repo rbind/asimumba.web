@@ -27,12 +27,6 @@ paginate = 10
     weight = 2
 
 [[menu.main]]
-    name = "FAQ"
-    identifier = "faq"
-    url  = "/faq/"
-    weight = 3
-
-[[menu.main]]
     name = "Contact"
     url  = "/contact/"
     weight = 4
@@ -62,11 +56,18 @@ paginate = 10
     name = "Email"
     url = "mailto:simumbaa21@gmail.com"
     pre = "<i class='fa fa-2x fa-envelope'></i>"
+    
+[[menu.topbar]]
+    weight = 5
+    name = "LinkedIn"
+    url = "http://linkedin.com/aaron-simumba"
+    pre = "<i class='fa fa-2x fa-linkedin'></i>"
+
 
 [params]
     viewMorePostLink = "/blog/"
     author = "Aaron Simumba"
-    defaultKeywords = ["r", "stocks", "sql"]
+    defaultKeywords = ["R", "Stocks", "SQL"]
     defaultDescription = "A place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies."
 
     # Google Maps API key (if not set will default to not passing a key.)
