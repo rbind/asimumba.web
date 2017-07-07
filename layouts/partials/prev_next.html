@@ -1,0 +1,16 @@
+{{ if or (.PrevInSection) (.NextInSection) }}
+<nav id="article-nav">
+  {{ if .PrevInSection }}
+    <a href="{{ .PrevInSection.RelPermalink }}" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> {{ .PrevInSection.Title }}</div>
+    </a>
+    {{ end }}
+
+    {{ if .NextInSection }}
+    <a href="{{ .NextInSection.RelPermalink }}" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-title">{{ .NextInSection.Title }} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></div>
+    </a>
+    {{ end }}
+
+</nav>
+{{ end }}

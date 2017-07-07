@@ -13,7 +13,7 @@ banner: "img/bloomberg.png"
 ---
 <img src="/img/bloomberg.png" width="100px style = "float: left; margin: 20px;"/>
 ```{r,echo=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, eval = FALSE)
 ```
 
 ```{r, echo=FALSE, message=FALSE}
