@@ -12,7 +12,9 @@ tags:
   - netlify
   - git
   - github
+banner: "img/blogbanner.png"
 ---
+<img src="/img/blogbanner.png" width="100px" style = "float: left; margin: 20px;" />
 
 In this short post. I will detail my journey building my website using [__blogdown__](https://github/rstudio/blogdown) an [__R__](https://r-project.org) package that makes use of the static website generator [__Hugo__](https://gohugo.io). This is a great R package, written by [Yihui Xie](https://yihui.name/en). 
 
