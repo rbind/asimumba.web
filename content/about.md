@@ -5,27 +5,14 @@ sidemenu = "true"
 description = "About me and this site"
 +++
 
-Hugo is a static site engine written in Go.
+In another life, I am an Accounting and Finance major. Graduated from the [Univeristy of Namibia](http://unam.edu.na/) with a BA degree in Accounting(Honours). For my part time activities, I explain to or is it tutor Business Administration students in the art of business and accounting at the [University of Zambia](https://www.unza.zm/).
 
+Not to mention, I am lost in the Data Science web... I hope to find my way out of the maze soon. Not to mention I am fascinated by stock markets and everything with a business and finace buzz. More like I am the middle part of a sandwich.
 
-It makes use of a variety of open source projects including:
+`For this website`
 
-* [Cobra](https://github.com/spf13/cobra)
-* [Viper](https://github.com/spf13/viper)
-* [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
-* [Cast](https://github.com/spf13/cast)
+This will be a place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies.
 
-Learn more and contribute on [GitHub](https://github.com/spf13).
-
-## Setup
-
-Some fun facts about [Hugo](http://gohugo.io/):
-
-* Built in [Go](http://golang.org/)
-* Loosely inspired by [Jekyll](http://jekyllrb.com/)
-* Primarily developed by [spf13](http://spf13.com/) on the train while commuting to and from Manhattan.
-* Coded in [Vim](http://vim.org) using [spf13-vim](http://vim.spf13.com/)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/spf13/hugo/issues/new) or [ask me on Twitter](https://twitter.com/spf13).
+`Let's have fun!`
 
 Thanks for reading!

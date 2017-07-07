@@ -25,7 +25,12 @@ paginate = 10
     name = "Blog"
     url  = "/blog/"
     weight = 2
-
+    
+[[menu.main]]
+    name = "About"
+    url  = "/about/"
+    weight = 3
+    
 [params]
     viewMorePostLink = "/blog/"
     author = "Aaron Simumba"
@@ -54,7 +59,7 @@ paginate = 10
     # Enable the contact form by entering your Formspree.io email
     email = "simumbaa21@gmail.com"
 
-    about_me = "<p>A place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies.</p>"
+    about_me = "<p></p>"
     copyright = "Copyright (c) 2017, Aaron Simumba; all rights reserved."
 
     # Format dates with Go's time formatting
