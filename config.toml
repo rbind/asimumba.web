@@ -149,5 +149,5 @@ paginate = 10
     link_text = "Check other homepages"
 [params.recent_posts]
     enable = true
-    title = "From our blog"
+    title = "From my blog"
     subtitle = "Everything interesting goes here."
