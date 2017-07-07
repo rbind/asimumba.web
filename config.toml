@@ -1,4 +1,4 @@
-baseurl = "https://asimumba.rbind.io"
+baseurl = "https://asimumba.rbind.io/"
 title = "Universal"
 theme = "hugo-universal-theme"
 languageCode = "en-us"
