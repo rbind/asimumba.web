@@ -5,6 +5,9 @@ sidemenu = "true"
 description = "About me and this site"
 +++
 
+I am known as Aaron Simumba, welcome to my site.
+
+
 In another life, I am an Accounting and Finance major. Graduated from the [Univeristy of Namibia](http://unam.edu.na/) with a BA degree in Accounting(Honours). For my part time activities, I explain to or is it tutor Business Administration students in the art of business and accounting at the [University of Zambia](https://www.unza.zm/).
 
 Not to mention, I am lost in the Data Science web... I hope to find my way out of the maze soon. Not to mention I am fascinated by stock markets and everything with a business and finace buzz. More like I am the middle part of a sandwich.
@@ -16,3 +19,9 @@ This will be a place where I share my daily musings in the world of R, Stock mar
 `Let's have fun!`
 
 Thanks for reading!
+
+
+Courses completed:
+
+- Introduction to R course - [DataCamp](https://www.datacamp.com/statement-of-accomplishment/course/284ca241bbb76f34add2d7c8a7ad4d4a8167d7f2)
+- Introduction to SQL for Data Science Course - [DataCamp](https://www.datacamp.com/statement-of-accomplishment/course/9c58b5ae8c2e5918dbee19f70e9bf797686b9ddd)
