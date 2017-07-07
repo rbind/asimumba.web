@@ -4,14 +4,14 @@ author: Aaron Simumba
 date: "2017-04-06"
 slug: lusaka-stock-exchange
 tags:
-  - LuSE
-  - ALSI
-  - stocks
-  - stock returns
-  - Zambia capital market
-image: "data/bloomberg.png"
+   - LuSE
+   - ALSI
+   - stocks
+   - stock returns
+   - Zambia capital market
+banner: "img/bloomberg.png"
 ---
-
+<img src="/img/bloomberg.png" width="100px" style = "float: left; margin: 20px;" />
 ```{r,echo=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
