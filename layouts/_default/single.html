@@ -39,13 +39,9 @@
                         {{ partial "gallery.html" . }}
 
                         {{ partial "prev_next.html" . }}
-
-                        {{ if .Site.DisqusShortname }}
-                        <div id="comments">
-                            {{ template "_internal/disqus.html" . }}
-                        </div>
-                        {{ end }}
-
+                        
+                        {{ partial "disqus.html" .  }}
+                        
                     </div>
                     <!-- /#blog-post -->
 
