@@ -8,3 +8,65 @@
 .box-simple {
   min-height: 230px;
 }
+
+.meta-tags{
+  text-align: right ;
+}
+.social-entry, .social-entry a {
+  color: 	#5F9EA0;
+  font-size: 14px ;
+}
+
+.article-duration{
+  margin-top: 12px;
+  float: right;
+  font-size: 10px;
+  padding: 1px 5px;
+  font-weight: bold;
+  border-radius: 3px;
+  background: #5F9EA0;
+  color: #fff
+}
+
+.article-toolbar a:hover, .article-toolbar a:focus {
+  color: #5F9EA0;
+}
+
+#article-nav-newer, .article-date .article-toolbar {
+  text-align: right;
+}
+
+.bar {
+  height: 1000px;
+}
+.navbar {
+  background: #DCDCDC;
+   border-top: none !important;
+}
+
+body {
+  font-size: 15px ;
+}
+
+#article-nav, .article-date {
+  display: flex;
+  align-items: stretch;
+  clear: both;
+  margin-top: 10px ;
+  font-size: 16px ;
+}
+
+#article-nav-older, #article-nav-newer, .article-date span {
+  flex: 1;
+}
+#article-nav-newer, .article-date .article-toolbar {
+  text-align: right;
+}
+
+pre.r code.hljs {
+  border: 2px solid #dddddd ;
+  background: #f4f4f4 ;
+}
+.article-toolbar a {
+  margin-left: .2em;
+}

@@ -42,7 +42,7 @@ paginate = 10
     googleMapsApiKey = "AIzaSyAtewb1VLna3DbaOB7ccpwaR7Ka7o8bRwk"
 
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-    style = "blue"
+    style = "default"
 
     # Since this template is static, the contact form uses www.formspree.io as a
     # proxy. The form makes a POST request to their servers to send the actual
@@ -63,9 +63,9 @@ paginate = 10
     copyright = "Copyright (c) 2017, Aaron Simumba; all rights reserved."
 
     # Format dates with Go's time formatting
-    date_format = "2006-02-01"
+    date_format = "2006/02/01"
 
-    logo = "img/logo.png"
+    logo = ""
     latitude = "15.3875"
     longitude = "28.3228"
 
@@ -73,6 +73,7 @@ paginate = 10
     post = "/:year/:month/:day/:slug/"
     
 [params.social]
+    facebook = "aaron.s.simumba"
     twitter = "zedsamurai"
     github = "asimumba"
     linkedin = "aaron-simumba-13737958"
