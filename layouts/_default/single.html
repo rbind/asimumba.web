@@ -40,7 +40,11 @@
 
                         {{ partial "prev_next.html" . }}
                         
-                        {{ partial "disqus.html" .  }}
+                        {{ if .Site.DisqusShortname }}
+                        <div id="comments">
+                            {{ template "_internal/disqus.html" . }}
+                        </div>
+                        {{ end }}
                         
                     </div>
                     <!-- /#blog-post -->
