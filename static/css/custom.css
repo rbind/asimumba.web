@@ -43,8 +43,9 @@
   background: #DCDCDC;
    border-top: none;
 }
+
 navbar .nav > li > a {
-  text-transform: none;
+  text-transform: none !important;
   text-decoration: none ;
 }
 
