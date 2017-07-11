@@ -41,7 +41,11 @@
 }
 .navbar {
   background: #DCDCDC;
-   border-top: none !important;
+   border-top: none;
+}
+navbar .nav > li > a {
+  text-transform: none;
+  text-decoration: none ;
 }
 
 body {
