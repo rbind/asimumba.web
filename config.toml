@@ -59,8 +59,8 @@ paginate = 10
     # Enable the contact form by entering your Formspree.io email
     email = "simumbaa21@gmail.com"
 
-    about_me = "<p></p>"
-    copyright = "Copyright (c) 2017, Aaron Simumba; all rights reserved."
+    about_me = "<p>Tech crazy,and lost in the Data science dungeon</p>"
+    copyright = "Copyright (c) 2017, Aaron Simumba."
 
     # Format dates with Go's time formatting
     date_format = "2006/02/01"
