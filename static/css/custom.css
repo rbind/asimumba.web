@@ -12,9 +12,10 @@
 .meta-tags{
   text-align: right ;
 }
-.social-entry, .social-entry a {
-  color: 	#5F9EA0;
-  font-size: 14px ;
+
+#blog-post h2 {
+  margin-bottom: 10px ;
+  font-size: 25px ;
 }
 
 .article-duration{
@@ -50,13 +51,16 @@
   color: black;
 }
 
-
 body {
   font-size: 15px ;
 }
 
 .bar {
   padding: 25px 0;
+}
+
+.bar .lead a {
+  color: gray;
 }
 
 #article-nav, .article-date {
@@ -95,6 +99,21 @@ pre.r code.hljs {
   font-size: 11px;
 }
 
+#blog-listing-medium .post h2 {
+  text-transform: none;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+#blog-listing-medium .post {
+  margin-bottom: 15px ;
+}
+
+}
+.social-entry, .social-entry a {
+  color: 	#5F9EA0;
+  font-size: 14px ;
+}
 
 #footer .blog-entries .item .name h5 {
   margin: 0;

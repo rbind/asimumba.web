@@ -59,7 +59,7 @@ paginate = 10
     # Enable the contact form by entering your Formspree.io email
     email = "simumbaa21@gmail.com"
 
-    about_me = "<p>Tech crazy,and lost in the Data science dungeon</p>"
+    about_us = "<p>Tech crazy,and lost in the Data science dungeon</p>"
     copyright = "Copyright (c) 2017, Aaron Simumba."
 
     # Format dates with Go's time formatting
@@ -83,9 +83,9 @@ paginate = 10
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
-    categories = true
+    categories = false
     tags = true
-    search = true
+    search = false
 
 [params.carousel]
     enable = true
