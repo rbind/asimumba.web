@@ -37,11 +37,10 @@
                         <!-- /#post-content -->
 
                         {{ partial "prev_next.html" . }}
-
                         {{ if .Site.DisqusShortname }}
-                        <div id="comments">
-                            {{ template "_internal/disqus.html" . }}
-                        </div>
+                         <div id="comments">
+                             {{ template "_internal/disqus.html" . }}
+                         </div>
                         {{ end }}
 
                     </div>
@@ -56,7 +55,7 @@
             <!-- /.container -->
         </div>
         <!-- /#content -->
-      
+
         {{ partial "footer.html" . }}
 
     </div>

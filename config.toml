@@ -30,6 +30,13 @@ paginate = 10
     name = "About"
     url  = "/about/"
     weight = 3
+
+[[menu.main]]
+    name = "GitHub"
+    url = "https://github.com/rbind/asimumba"
+    pre = "<i class='fa fa-2x fa-github'></i>"
+    weight = 4
+
     
 [params]
     viewMorePostLink = "/blog/"
@@ -59,7 +66,7 @@ paginate = 10
     # Enable the contact form by entering your Formspree.io email
     email = "simumbaa21@gmail.com"
 
-    about_us = "<p>Tech crazy,and lost in the Data science dungeon</p>"
+    about_us = "<p>Tech crazy, and lost in the Data science dungeon</p>"
     copyright = "Copyright (c) 2017, Aaron Simumba."
 
     # Format dates with Go's time formatting
@@ -97,14 +104,8 @@ paginate = 10
     enable = false
     # All features are defined in their own files. You can find example items
     # at 'exampleSite/data/features'.
-    # For more informtion take a look at the 
-[params.see_more]
-    enable = false
-    icon = "fa fa-file-code-o"
-    title = "Do you want to see more?"
-    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
-    link_url = "#"
-    link_text = "Check other homepages"
+    # For more informtion take a look at the
+    
 [params.recent_posts]
     enable = true
     title = "From my blog"
