@@ -79,7 +79,7 @@ g <- g + ggtitle("Google Monthly Return", subtitle = "For the Period between Jun
             axis.title.x = element_text(size = rel(1.0), angle = 360))
 
 g <- g + labs(x = "Year",
-        y ="Percentage return") 
+        y ="Return") 
 
 g + annotate("text",x=as.Date("2009-09-01"),y=0.3245,label="HR",fontface="bold",size=3, colour = "forestgreen") +
 annotate("text",x=as.Date("2010-04-01"),y=-0.1900,label="LR",fontface="bold",size=3,colour ="red") 
@@ -106,7 +106,7 @@ rm("p1","p2", "p3","p4") # Removal of the temp. subsets
 p <- ggplot(data = portfolio, aes(x = Year, y =PercentageReturn, colour = Stockticker))+geom_line()
 p + labs(
         x = " Year",
-        y = "Percentage return",
+        y = "Return",
         colour = "Stock ticker") +
     ggtitle(" Apple, Amazon and Google Stock Returns",subtitle =" For the period June 2007 - Nov. 2016")
 ```
@@ -136,7 +136,7 @@ rm("p1","p2", "p3","p4") # Removal of the temp. subsets
 merged_returns <- merge.xts(AMZN,MSFT,AAPL,GOOG_) # merging the separate share returns into one xts object.
 
 dygraph(merged_returns, main = "Amazon v Microsoft v Apple v Google") %>% # Using pipes to connect the codes
-  dyAxis("y", label ="%") %>%
+  dyAxis("y", label ="Return") %>%
   dyAxis("x", label ="Year") %>%
   dyOptions(colors = RColorBrewer::brewer.pal(4, "Set2")) 
 
@@ -156,7 +156,7 @@ monthly_P_return <-  Return.portfolio(R = merged_returns, weights = w)
 
 # Use dygraphs to chart the portfolio monthly returns.
 dygraph(monthly_P_return, main = "Portfolio Monthly Return") %>% 
-  dyAxis("y", label = "%")
+  dyAxis("y", label = "Return")
 
 ```
 

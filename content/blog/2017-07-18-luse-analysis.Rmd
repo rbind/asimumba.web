@@ -96,4 +96,4 @@ It’s with no doubt the Emerging Markets had a stellar performance the past 2 d
 In the coming posts I hope to dwell more on the performance of the LuSE and have a look at its peer exchanges in the region.
 
 
-^[P.S: I used R statistical Computing Language for my analysis. For the data and the code,you can find them on [my GitHub account](https://github.com/ASimumba/LuSE_Data). Do check them out and run your own analysis.]
+^[For the data and the code,you can find them on [my GitHub account](https://github.com/ASimumba/LuSE_Data). Do check them out and run your own analysis.]
