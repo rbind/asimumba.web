@@ -12,7 +12,7 @@ tags:
   - netlify
   - git
   - github
-banner: "img/blogbanner.png"
+banner: "img/banners/blogbanner.png"
 ---
 
 

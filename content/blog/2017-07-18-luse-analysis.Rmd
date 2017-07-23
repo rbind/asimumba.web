@@ -9,7 +9,7 @@ tags:
    - stocks
    - stock returns
    - Zambia capital market
-banner: "img/bloomberg.png"
+banner: "img/banners/bloomberg.png"
 ---
 
 ```{r,echo=FALSE}
@@ -35,7 +35,7 @@ And of focus here, the LuSE, ranks in the top 10 on both account of returns afte
 As this data from Bloomberg Markets  shows, emerging and frontier markets accounted for 9 spots out of a rank order of 10 in dollar terms and 7 spots on a risk adjusted basis.
 
 
-![bloomberg](/img/bloomberg.png)   <img src="/img/bloomberg.png" alt="Bloomberg returns" height="70" width="100"/>
+![bloomberg](/img/banners/bloomberg.png)   <img src="/img/banners/bloomberg.png" alt="Bloomberg returns" height="70" width="100"/>
 
 
 
