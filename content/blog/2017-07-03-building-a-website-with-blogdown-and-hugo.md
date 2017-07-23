@@ -14,7 +14,7 @@ tags:
   - github
 banner: "img/blogbanner.png"
 ---
-<img src="/img/blogbanner.png" width="100px" style = "float: left; margin: 20px;" />
+
 
 In this short post. I will detail my journey building my website using [__blogdown__](https://github/rstudio/blogdown) an [__R__](https://r-project.org) package that makes use of the static website generator [__Hugo__](https://gohugo.io). This is a great R package, written by [Yihui Xie](https://yihui.name/en). 
 
@@ -27,7 +27,7 @@ Enough with the stories, buckle up we jump right into it.
 For the theme, I was initially spoiled for choice, I tried a few before finally settling for the [Universal theme](https://github.com/devcows/hugo-universal-theme). It's both well enriched with great visual aesthetics as well as a clean presentation. I have changed quite a lot of stuff to meet my own preferences and for what I intend to use the website for. If your choice is to get up and running without bothering to learn a bit of _HTML_ and _CSS_ for further alterations and customizations, the [Hugo site](https://themes.gohugo.io/) has plenty of templates to suit different tastes.
 
 
-<img src="/img/hugo-universal-theme.png" height = "50" width="50" alt = "default theme interface"/>
+<img src="/img/hugo-universal-theme.png" height = "70" width="100" alt = "default theme interface"/>
 ![hugo-iniversal-theme](/img/hugo-universal-theme.png)
 
 
