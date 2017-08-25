@@ -13,7 +13,7 @@ tags:
 banner: "img/banners/happy.png"
 ---
 
-On the 26 August 2017 will marks exactly one year since embarking on learning the R programing language. A year ago I had neither the foresight nor will strength of believing I would be this engrossed in the new found love for programming. But it didn't take long before I found myself spending at least an hour a day playing with different skills and knowledge I had acquired. Coming from the background of playing with VBA in Excel, I got hooked everytime I discovered I could do something more efficient and less painfull in R than other data analysis packages I had used.
+On the 26 August 2017 will marks exactly one year since embarking on learning the R programming language. A year ago I had neither the foresight nor will strength of believing I would be this engrossed in the new found love for programming. But it didn't take long before I found myself spending at least an hour a day playing with different skills and knowledge I had acquired. Coming from the background of playing with VBA in Excel, I got hooked everytime I discovered I could do something more efficient and less painfull in R than other data analysis packages I had used.
 
 Although R has a steep learning curve, its syntax is quite intuitive, and once you understand the underlying language specific issues, such as how it deals with different data types and some of the strengths at the core of the language like its vectorised operations. It becomes quite easy to write code for relatively easy operations quickly and in a few lines of code.
 
