@@ -32,3 +32,6 @@ In hindsight, learning how to program with R is one of the best decisions I made
 
 I can only imagine what is in store in the next 12 months. 
 
+
+In closing, [git](https://git-scm.com/) and [github](https://github.com/) as tools for version control is life to code crunchers...
+
