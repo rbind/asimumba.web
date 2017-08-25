@@ -10,6 +10,9 @@ tags:
    - stock returns
    - Zambia capital market
 banner: "img/banners/bloomberg.png"
+output: 
+  html_document: 
+    keep_md: yes
 ---
 
 ```{r,echo=FALSE}
@@ -42,7 +45,8 @@ As this data from Bloomberg Markets  shows, emerging and frontier markets accoun
 The following excerpt from Bloomberg stands out:
 
 
->“The top 10 stock indexes that gave global investors the greatest returns in 2016 were all emerging or frontier markets, according to data compiled by Bloomberg. That’s not a fluke: over the past 20 years, nine out of 10 best-performing equity gauges have been in developing nations, the figures show”.
+`“The top 10 stock indexes that gave global investors the greatest returns in 2016 were all emerging or frontier markets, according to data compiled by Bloomberg. That’s not a fluke: over the past 20 years, nine out of 10 best-performing equity gauges have been in developing nations, the figures show”.`
+
 
 
 Investment theory contends that risk taken in an investment must commensurate the return sought. Though equities as a class of investible assets are by their very nature riskier assets relative to other assets like Treasury Bill or Bonds; this in essence frightens most investors to invest in them. More so from the view of the emerging markets, which expose investors to higher levels of volatility relative to more mature and developed markets. In my next post I will look at what was historically being  demanded by investors for taking up the extra risk posed by emerging markets.

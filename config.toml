@@ -9,8 +9,10 @@ disqusShortname = "asimumba"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = "UA-101235795-1"
 
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 # Define the number of posts per page
 paginate = 10
+
 
 [menu]
 
