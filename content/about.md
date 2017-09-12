@@ -1,11 +1,11 @@
-+++
-title = "About"
-date = "2014-04-09"
-sidemenu = "true"
-description = "About me and this site"
-+++
+---
+title: About
+date: 2014-04-09
+layout: about
+menu: main
+---
 
-I am known as Aaron Simumba, welcome to my site.
+I'm Aaron Simumba, welcome to my site.
 
 
 In another life, I am an Accounting and Finance major. Graduated from the [Univeristy of Namibia](http://unam.edu.na/) with a BA degree in Accounting(Honours). For my part time activities, I explain to or is it tutor Business Administration students in the art of business and accounting at the [University of Zambia](https://www.unza.zm/).
@@ -29,4 +29,4 @@ Courses completed:
 
 Courses in progress:
 
-- Introduction to Data and Probability [Coursear](https://www.coursera.org/learn/probability-intro?authMode=login)
+- Introduction to Data and Probability [Coursera](https://www.coursera.org/learn/probability-intro?authMode=login)

@@ -13,6 +13,8 @@ footnotereturnlinkcontents = "↩"
 
 [permalinks]
   post = "/:year/:month/:day/:slug"
+  
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params]
 	name = "Aaron Simumba"
@@ -33,7 +35,7 @@ footnotereturnlinkcontents = "↩"
 	# Navigation links
 	home = ""
 	about = ""
-	subscribe = ""
+	subscribe = "RSS"
 	# Pagination links
 	olderPosts = ""
 	newerPosts = ""
