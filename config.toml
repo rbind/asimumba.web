@@ -64,6 +64,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     socialIconStyle = "rounded"
 
 # Add additional social link entries underneath
+
 [social]
     github   = "https://www.github.com/asimumba"
     stackoverflow = "https://www/stackoverflow.com/8137815/aaron-simumba"

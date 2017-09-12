@@ -36,9 +36,7 @@ In the next coming few weeks, I plan to do a series of posts specifically target
 And of focus here, the LuSE, ranks in the top 10 on both account of returns after converting to US dollars and on a risk adjusted basis. The table below shows the local bourse appearing twice in the top ten, twice  on number 2 in the year 2007 and 2011 only being edge out of the first spot by Mongolia on both occasions.
 As this data from Bloomberg Markets  shows, emerging and frontier markets accounted for 9 spots out of a rank order of 10 in dollar terms and 7 spots on a risk adjusted basis.
 
-
-![bloomberg](/img/banners/bloomberg.png)   <img src="/img/banners/bloomberg.png" alt="Bloomberg returns" height="70" width="100"/>
-
+![bloomberg](https://user-images.githubusercontent.com/24398851/30350809-f43f4b5c-9820-11e7-80fa-5cd4aa7882fe.png)
 
 
 The following excerpt from Bloomberg stands out:
@@ -52,8 +50,7 @@ Investment theory contends that risk taken in an investment must commensurate th
 
 The table below shows the top 10 market returns on a risk adjusted basis. No doubt emerging markets still dominated the list.
 
-<img src="/img/bloomberg-returns.png"alt="Bloomberg risk adjusted returns" height="70" width="100"/>
-![bloomberg-returns](/img/bloomberg-returns.png)
+![bloomberg-returns](https://user-images.githubusercontent.com/24398851/30350804-ecf24f0c-9820-11e7-8b32-165181d67703.png)
 
 What’s impressive from this table is that from the period 1997-2016, Zambia appears 5 times, occupying the first position once in the year 2013. The country appeared 4 within the top 5 spots in terms of risk adjusted equity returns in the world .In local currency terms this reflected an over 40% return as can be seen from figure 4.0 below. Going forward, investors can remain optimistic on the prospects of the emerging markets delivering stellar returns ahead of the developed markets pack. So far, the MSCI Emerging Markets Index has gained 2.7 percent in comparison with 1.5 percent from developed stock markets.
 
