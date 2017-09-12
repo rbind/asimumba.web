@@ -1,38 +1,32 @@
 # Site settings
-baseurl = "https://easimumba.rbind.io/"
+baseurl = "https://example.org/"
+themesDir = "../.."
 languageCode = "en-us"
-title = "Aaron Simumba"
+title = "Hugo Cactus Theme"
 theme = "hugo-cactus-theme"
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
 # Disable comments by leaving disqusShortname empty
-disqusShortname = "asimumba"
-
-paginate = 10
-footnotereturnlinkcontents = "↩"
-
-[permalinks]
-  post = "/:year/:month/:day/:slug"
+disqusShortname = "spf13"
 
 [params]
-	name = "Aaron Simumba"
-	description = "Aaron Simumba. Tech crazy, society explorer,lost in the Data science dungeon"
-	bio = "Aspiring Data Scientist & Blogger"
+	name = "John Doe"
+	description = "Describe your website"
+	bio = "Blogger & Programmer"
 	# Enter optionally your twitter account
-	twitter = "zedsamurai"
+	twitter = "Your Twitter account"
 	enableRSS = true
 
 	# Integrate Javascript files or stylesheets by adding the url to the external assets or by
 	# linking local files with their path relative to the static folder, e.g. "css/styles.css"
 	customCSS = []
-	customJS  = ["js/center-img.js"]
+	customJS  = []
 
 	# The variables below are optionally too and can be used to
 	# translate or customize each string of the theme.
 
 	# Navigation links
 	home = ""
-	about = ""
 	subscribe = ""
 	# Pagination links
 	olderPosts = ""
@@ -40,21 +34,12 @@ footnotereturnlinkcontents = "↩"
 	readMore = ""
 	copyright = ""
 	# Sharing options and author information in posts
-	aboutAuthor = "I'm a blogger."
+	aboutAuthor = "I'm an blogger."
 	tweet = ""
-	share = "Facebook"
+	share = ""
 	# 404 page
 	title404 = ""
 	subtitle404 = ""
-	githubRepo = "https://github.com/rbind/asimumba"
-	gitter = "rbind/asimumba"
-	
-
-# options for highlight.js (version, additional languages, and theme)
-  highlightjsVersion = "9.11.0"
-  highlightjsCDN = "//cdn.bootcss.com"
-  highlightjsLang = ["r", "yaml", "tex", "sql"]
-  highlightjsTheme = "github"
 
 	# Choose a font for the social icons in the footer. Either "mono-social" or "font-awesome"
 	iconFont = "mono-social"
@@ -63,8 +48,7 @@ footnotereturnlinkcontents = "↩"
 
 # Add additional social link entries underneath
 [social]
-    twitter  = "https://www.twitter.com/zedsamurai"
-    facebook = "https://www.facebook.com/aaron.s.simumba"
-    github   = "https://www.github.com/asimumba"
-   # dribble  = "https://www.dribbble.com/"
-    stackoverflow = "https://www/stackoverflow.com/8137815/aaron-simumba"
+    twitter  = "https://www.twitter.com/"
+    facebook = "https://www.facebook.com/"
+    github   = "https://www.github.com/"
+    dribble  = "https://www.dribbble.com/"
