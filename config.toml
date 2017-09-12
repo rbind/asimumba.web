@@ -42,7 +42,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 	readMore = ""
 	copyright = ""
 	# Sharing options and author information in posts
-	aboutAuthor = "I'm a blogger."
+	aboutAuthor = "Aspiring Data Scientist & Blogger"
 	tweet = ""
 	share = "Facebook"
 	# 404 page
@@ -61,12 +61,14 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 	# Choose a font for the social icons in the footer. Either "mono-social" or "font-awesome"
 	iconFont = "mono-social"
     # The social icons can be styled differently if you use mono as font - circle, rounded, or empty
-    socialIconStyle = "circle"
+    socialIconStyle = "rounded"
 
 # Add additional social link entries underneath
 [social]
+    github   = "https://www.github.com/asimumba"
+    stackoverflow = "https://www/stackoverflow.com/8137815/aaron-simumba"
+    linkedin = "https://www.linkedin.com/aaron-simumba-13737958"
+    email = "mailto:simumbaa21@gmail.com"
     twitter  = "https://www.twitter.com/zedsamurai"
     facebook = "https://www.facebook.com/aaron.s.simumba"
-    github   = "https://www.github.com/asimumba"
-   # dribble  = "https://www.dribbble.com/"
-    stackoverflow = "https://www/stackoverflow.com/8137815/aaron-simumba"
+    
