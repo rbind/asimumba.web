@@ -1,5 +1,5 @@
 ---
-title: "Happy One YeaR AnniveRsaRy"
+title: "Happy One Year Anniversary"
 author: Aaron Simumba
 date: '2017-08-25'
 categories:

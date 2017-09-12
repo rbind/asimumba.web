@@ -4,7 +4,7 @@ languageCode = "en-us"
 title = "Aaron Simumba"
 theme = "hugo-cactus-theme"
 # Enter your tracking code to enable Google Analytics
-googleAnalytics = ""
+googleAnalytics = "UA-101235795-1"
 # Disable comments by leaving disqusShortname empty
 disqusShortname = "asimumba"
 
