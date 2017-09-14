@@ -12,6 +12,7 @@ tags:
   - netlify
   - git
   - github
+description: How to craft a website with blogdown,hugo and host on netlify
 ---
 
 
@@ -27,6 +28,6 @@ For the theme, I was initially spoiled for choice, I tried a few before finally 
 
 ![screenshot](https://user-images.githubusercontent.com/24398851/30351045-2fa78596-9822-11e7-916b-18cc3e551562.png)
 
-
+The outline inspiration comes from the  [Rbind Support](https://support.rbind.io/). I like the clean and simplistic outline. 
 
 

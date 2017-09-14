@@ -12,6 +12,7 @@ tags:
 output: 
   html_document: 
     keep_md: yes
+description: LuSE performance overview
 ---
 
 ```{r,echo=FALSE}

@@ -10,7 +10,7 @@ tags:
   - blogdown
   - git
   - github
-banner: "img/banners/happy.png"
+description: Reflections on one year in the R dungeon
 ---
 
 On the 26 August 2017 will mark exactly one year since embarking on learning the R programming language. A year ago I had neither the foresight nor will strength of believing I would be this engrossed in the new found love for programming. But it didn't take long before I found myself spending at least an hour a day playing with different skills and knowledge I had acquired. Coming from the background of playing with VBA in Excel. I got hooked everytime I discovered I could do something more efficiently and, less painfull in R than other data analysis packages I had used.
