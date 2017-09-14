@@ -18,7 +18,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params]
 	name = "Aaron Simumba"
-	description = "Aaron Simumba. Tech crazy, society explorer,lost in the Data science dungeon"
+	description = "Tech crazy, society explorer,lost in the Data science dungeon"
 	bio = "Aspiring Data Scientist & Blogger"
 	# Enter optionally your twitter account
 	twitter = "zedsamurai"
@@ -49,7 +49,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 	title404 = ""
 	subtitle404 = ""
 	githubRepo = "https://github.com/rbind/asimumba"
-	gitter = "rbind/asimumba"
+	#gitter = "rbind/asimumba"
 	
 
 # options for highlight.js (version, additional languages, and theme)
@@ -66,8 +66,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 # Add additional social link entries underneath
 
 [social]
-    github   = "https://www.github.com/asimumba"
-    stackoverflow = "https://www/stackoverflow.com/8137815/aaron-simumba"
+    github = "https://www.github.com/asimumba"
+    stackoverflow = "https://www.stackoverflow.com/8137815/aaron-simumba"
     linkedin = "https://www.linkedin.com/aaron-simumba-13737958"
     email = "mailto:simumbaa21@gmail.com"
     twitter  = "https://www.twitter.com/zedsamurai"
