@@ -1,11 +1,11 @@
 <ul id="post-list" class="archive readmore">
-    <h3>{{ .Site.Params.readMore | default "Read more" }}</h3>
+    <h3>{{ with .Site.Params.readMore }}{{ . }}{{ else }}Read more{{ end }}</h3>
 
-    {{ $kind := where .Site.RegularPages "Section" "!=" "" }}
-    {{ $othr := where $kind "URL" "!=" .URL }}
-    {{ range first 10 $othr }}
-        <li>
-            <a href="{{ .URL }}">{{ .LinkTitle }}<aside class="dates">{{ .Date.Format "Jan 2 2006" }}</aside></a>
-        </li>
+    {{ range first 5 (where .Site.Pages "Section" "post") }}
+    {{ if .IsPage }}
+    <li>
+      <a href="{{ .URL }}">{{ .Title }}<aside class="dates">{{ .Date.Format "2006/01/02" }}</aside></a>
+    </li>
+    {{ end }}
     {{ end }}
 </ul>

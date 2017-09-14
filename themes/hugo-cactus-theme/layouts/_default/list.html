@@ -1,7 +1,14 @@
+	{{ partial "head.html" . }}
+	<body>
+	{{ partial "nav.html" . }}
+	{{ partial "profile.html" . }}
 
-{{ define "profile" }}{{ partial "profile.html" . }}{{ end }}
-
-{{ define "main" }}
+	<section id="wrapper" class="home">
 		{{ partial "post-list.html"  . }}
         {{ partial "pagination.html" . }}
-{{ end }}
+		{{ partial "footer.html" . }}
+	</section>
+
+	{{ partial "js.html" . }}
+	</body>
+</html>
