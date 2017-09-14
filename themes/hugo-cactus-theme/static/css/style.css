@@ -299,22 +299,21 @@ hr {
 
 span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
 
-
 pre	{
-font-family:Menlo, Monaco, Courier;
-white-space:pre-wrap;
-/*border: 1px solid #ddd;*/
-padding:0px;
-background-color:#fdfdfd;
-font-size:14px;
-overflow:auto;
-border-radius: 3px;
-background: #272b2d;
-	font-family: 'Source Code Pro',Menlo,monospace;
-	font-size: 13px;
-	line-height: 1.5em;
-	font-weight: 500;
-color: #d0d4d7;
+	font-family:Menlo, Monaco, Courier;
+	white-space:pre-wrap;
+	/*border: 1px solid #ddd;*/
+	padding:0px;
+	background-color:#f5f5f5;
+	/*font-size:14px;*/
+	overflow:auto;
+	border-radius: 3px;
+	background: #f5f5f5;
+	  font-family: 'Source Code Pro',Menlo,monospace;
+	  font-size: 10px;
+	  line-height: 1.5em;
+	  font-weight: 500;
+	color: #d0d4d7;
 
 }
 
@@ -662,14 +661,9 @@ a.symbol:hover {
     color: #BCD4DA;
 }
 
-code, .headline a {
-  background-color: rgba(0,0,0,.02);
-  padding: 4px;
-  border-radius: 4px;
-}
-/*code {
+code {
 	font-family:Menlo, Monaco, Courier;
 	background-color:#EEE; font-size:14px;
 	padding: 4px;
 	font-weight: 600;
-}*/
+}
