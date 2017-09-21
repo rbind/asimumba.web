@@ -55,13 +55,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 # options for highlight.js (version, additional languages, and theme)
   highlightjsVersion = "9.11.0"
   highlightjsCDN = "//cdn.bootcss.com"
-  highlightjsLang = ["r", "yaml", "tex", "sql"]
+  highlightjsLang = ["r", "yaml", "tex", "sql", "python"]
   highlightjsTheme = "github"
 
-	# Choose a font for the social icons in the footer. Either "mono-social" or "font-awesome"
-	iconFont = "mono-social"
-    # The social icons can be styled differently if you use mono as font - circle, rounded, or empty
-    socialIconStyle = "rounded"
 
 # Add additional social link entries underneath
 
