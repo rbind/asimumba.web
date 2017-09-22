@@ -17,7 +17,7 @@ On the 26 August 2017 will mark exactly one year since embarking on learning the
 
 Although R has a steep learning curve, its syntax is quite intuitive, and once you master the underlying language specific issues - such as, how it deals with different data types and some of the strengths at the core of the language; like its vectorised operations. It becomes quite easy to write code for relatively easy operations quickly and in a few lines of code.
 
-## What have I learnt in the last year?
+## What have I learned in the last year?
 In terms of learning, it's been a decent year considering I have had to juggle between my other commitments and sparing time to learn and practice. Thankfully, the R community has grown both in size and commitment to developing new tools that not only make it easier to solve data problems but also makes it easy to report your findings.
 
 
