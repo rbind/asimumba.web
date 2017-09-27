@@ -1,0 +1,99 @@
+---
+title: "Mobile/Internet Penetration in Zambia"
+author: Aaron Simumba
+date: "2017-09-27"
+tags:
+  - mobile penetration
+  - Zambia
+  - mobile user data
+slug: Mobile-Internet-Penetration-in-Zambia
+description: Overview on mobile and internet penetration in Zambia
+---
+
+
+
+<p>The data being used is from the <a href="http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html">ZICTA website</a></p>
+<div id="prerequisites" class="section level2">
+<h2>Prerequisites</h2>
+<pre class="r"><code>library(tidyverse) # We are going got use the dyplr, ggplot2 packages</code></pre>
+</div>
+<div id="load-the-data" class="section level2">
+<h2>load the data</h2>
+<pre class="r"><code>operator_stats &lt;- read_csv(file = &quot;~/R/asimumba/content/data/operator_stats.csv&quot;)</code></pre>
+<pre class="r"><code>head(operator_stats) #Take peek at the data.</code></pre>
+<pre><code>## # A tibble: 6 x 27
+##    Year Population_CSO_Estimate `Number_o_ Mobile_Operators`
+##   &lt;int&gt;                   &lt;dbl&gt;                        &lt;int&gt;
+## 1  2010                13092666                            3
+## 2  2011                13721498                            3
+## 3  2012                14156468                            3
+## 4  2013                14605555                            3
+## 5  2014                15068729                            3
+## 6  2015                15545778                            3
+## # ... with 24 more variables: Number_of_PSTN_Operators &lt;int&gt;,
+## #   Number_of_Active_ISPs &lt;int&gt;,
+## #   Internet_Points_of_Presence_Districts &lt;chr&gt;,
+## #   Number_of_Registered_SIM_Cards &lt;chr&gt;,
+## #   Number_of_active_Subscribers &lt;dbl&gt;,
+## #   Mobile_Penetration_100_Inhabitants &lt;dbl&gt;,
+## #   Mobile_Broadband_users &lt;chr&gt;,
+## #   Mobile_Broadband_penetration_100_users &lt;dbl&gt;,
+## #   Traffic_domestic_Incoming_Minutes_MNO_PSTN &lt;dbl&gt;,
+## #   Traffic_domestic_Outgoing_Minutes_MNO_PSTN &lt;dbl&gt;,
+## #   `Traffic_International_Incoming_Minutes_MNO_PSTN)` &lt;dbl&gt;,
+## #   `Traffic_International_Outgoing_Minutes_MNO_PSTN)` &lt;dbl&gt;,
+## #   SMS_MMS_traffic &lt;dbl&gt;, Minutes_of_use_Monthly &lt;int&gt;,
+## #   Voice_on_net_peak_Mobile &lt;dbl&gt;, `Voice_on_net_of_ peak_Mobile` &lt;dbl&gt;,
+## #   Voice_off_net_peak_Mobile &lt;dbl&gt;, `Voice_off_net_off_peak
+## #   _Mobile` &lt;dbl&gt;, Voice_on_net_peak_Fixed &lt;chr&gt;,
+## #   Voice_on_net_off_peak_Fixed &lt;chr&gt;, Voice_off_net_peak_Fixed &lt;chr&gt;,
+## #   Voice_off_net_off_peak_Fixed &lt;chr&gt;, `Voice _Tariff_Mobile` &lt;dbl&gt;,
+## #   `Voice _Tariff _PSTN` &lt;chr&gt;</code></pre>
+<pre class="r"><code>names(operator_stats) # column names </code></pre>
+<pre><code>##  [1] &quot;Year&quot;                                            
+##  [2] &quot;Population_CSO_Estimate&quot;                         
+##  [3] &quot;Number_o_ Mobile_Operators&quot;                      
+##  [4] &quot;Number_of_PSTN_Operators&quot;                        
+##  [5] &quot;Number_of_Active_ISPs&quot;                           
+##  [6] &quot;Internet_Points_of_Presence_Districts&quot;           
+##  [7] &quot;Number_of_Registered_SIM_Cards&quot;                  
+##  [8] &quot;Number_of_active_Subscribers&quot;                    
+##  [9] &quot;Mobile_Penetration_100_Inhabitants&quot;              
+## [10] &quot;Mobile_Broadband_users&quot;                          
+## [11] &quot;Mobile_Broadband_penetration_100_users&quot;          
+## [12] &quot;Traffic_domestic_Incoming_Minutes_MNO_PSTN&quot;      
+## [13] &quot;Traffic_domestic_Outgoing_Minutes_MNO_PSTN&quot;      
+## [14] &quot;Traffic_International_Incoming_Minutes_MNO_PSTN)&quot;
+## [15] &quot;Traffic_International_Outgoing_Minutes_MNO_PSTN)&quot;
+## [16] &quot;SMS_MMS_traffic&quot;                                 
+## [17] &quot;Minutes_of_use_Monthly&quot;                          
+## [18] &quot;Voice_on_net_peak_Mobile&quot;                        
+## [19] &quot;Voice_on_net_of_ peak_Mobile&quot;                    
+## [20] &quot;Voice_off_net_peak_Mobile&quot;                       
+## [21] &quot;Voice_off_net_off_peak _Mobile&quot;                  
+## [22] &quot;Voice_on_net_peak_Fixed&quot;                         
+## [23] &quot;Voice_on_net_off_peak_Fixed&quot;                     
+## [24] &quot;Voice_off_net_peak_Fixed&quot;                        
+## [25] &quot;Voice_off_net_off_peak_Fixed&quot;                    
+## [26] &quot;Voice _Tariff_Mobile&quot;                            
+## [27] &quot;Voice _Tariff _PSTN&quot;</code></pre>
+</div>
+<div id="number-of-registered-simcards-and-active-users" class="section level1">
+<h1>Number of registered simcards and active users</h1>
+<pre class="r"><code>operator_stats %&gt;% 
+  ggplot() + 
+  geom_line(mapping =aes(x = Year,y = Number_of_active_Subscribers), color = &quot;green&quot;) </code></pre>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre class="r"><code>  # geom_line(aes(x = Year,y = Number_of_Registered_SIM_Cards), color = &quot;&quot;)</code></pre>
+<div id="domestic-calls-traffic---incoming-and-outgoing" class="section level2">
+<h2>Domestic calls Traffic - Incoming and Outgoing</h2>
+<pre class="r"><code>operator_stats %&gt;% 
+ggplot() +
+  geom_line(aes(x = Year,y = Traffic_domestic_Incoming_Minutes_MNO_PSTN ), color = &quot;red&quot;) +
+  geom_line(aes(x = Year, y = Traffic_domestic_Outgoing_Minutes_MNO_PSTN), color = &quot;green&quot;)</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).
+
+## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+</div>

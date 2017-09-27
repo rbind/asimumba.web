@@ -1,0 +1,48 @@
+---
+title: "Mobile/Internet Penetration in Zambia"
+author: Aaron Simumba
+date: "2017-09-27"
+tags:
+  - mobile penetration
+  - Zambia
+  - mobile user data
+slug: Mobile-Internet-Penetration-in-Zambia
+description: Overview on mobile and internet penetration in Zambia
+---
+The data being used is from the [ZICTA website](http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html)
+
+## Prerequisites
+
+```{r, message=FALSE}
+library(tidyverse) # We are going got use the dyplr, ggplot2 packages
+```
+
+## load the data
+```{r,message=FALSE}
+operator_stats <- read_csv(file = "~/R/asimumba/content/data/operator_stats.csv")
+```
+
+```{r}
+head(operator_stats) #Take peek at the data.
+```
+```{r}
+names(operator_stats) # column names 
+```
+#Number of registered simcards and active users 
+```{r}
+operator_stats %>% 
+  ggplot() + 
+  geom_line(mapping =aes(x = Year,y = Number_of_active_Subscribers), color = "green") 
+  # geom_line(aes(x = Year,y = Number_of_Registered_SIM_Cards), color = "")
+```
+
+
+## Domestic calls Traffic - Incoming and Outgoing 
+```{r}
+operator_stats %>% 
+ggplot() +
+  geom_line(aes(x = Year,y = Traffic_domestic_Incoming_Minutes_MNO_PSTN ), color = "red") +
+  geom_line(aes(x = Year, y = Traffic_domestic_Outgoing_Minutes_MNO_PSTN), color = "green")
+```
+
+
