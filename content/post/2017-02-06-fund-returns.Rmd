@@ -28,7 +28,7 @@ library(dygraphs)
 
 ```{r, echo=FALSE, message=FALSE}
 #loading the data
-fundreturn <- readRDS("~/R/asimumba/content/data/fundreturns.RDS")
+fundreturn <- readRDS("../../static/data/fundreturns.RDS")
 
 ```
 

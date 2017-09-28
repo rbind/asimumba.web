@@ -15,11 +15,12 @@ description: Overview on mobile and internet penetration in Zambia
 <p>The data being used is from the <a href="http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html">ZICTA website</a></p>
 <div id="prerequisites" class="section level2">
 <h2>Prerequisites</h2>
-<pre class="r"><code>library(tidyverse) # We are going got use the dyplr, ggplot2 packages</code></pre>
+<pre class="r"><code># We are going got use the dyplr,readr and  ggplot2 packages
+library(tidyverse)</code></pre>
 </div>
 <div id="load-the-data" class="section level2">
 <h2>load the data</h2>
-<pre class="r"><code>operator_stats &lt;- read_csv(file = &quot;~/R/asimumba/content/data/operator_stats.csv&quot;)</code></pre>
+<pre class="r"><code>operator_stats &lt;- read_csv(&quot;../../static/data/operator_stats.csv&quot;)</code></pre>
 <pre class="r"><code>head(operator_stats) #Take peek at the data.</code></pre>
 <pre><code>## # A tibble: 6 x 27
 ##    Year Population_CSO_Estimate `Number_o_ Mobile_Operators`
@@ -32,11 +33,11 @@ description: Overview on mobile and internet penetration in Zambia
 ## 6  2015                15545778                            3
 ## # ... with 24 more variables: Number_of_PSTN_Operators &lt;int&gt;,
 ## #   Number_of_Active_ISPs &lt;int&gt;,
-## #   Internet_Points_of_Presence_Districts &lt;chr&gt;,
-## #   Number_of_Registered_SIM_Cards &lt;chr&gt;,
+## #   Internet_Points_of_Presence_Districts &lt;int&gt;,
+## #   Number_of_Registered_SIM_Cards &lt;int&gt;,
 ## #   Number_of_active_Subscribers &lt;dbl&gt;,
 ## #   Mobile_Penetration_100_Inhabitants &lt;dbl&gt;,
-## #   Mobile_Broadband_users &lt;chr&gt;,
+## #   Mobile_Broadband_users &lt;dbl&gt;,
 ## #   Mobile_Broadband_penetration_100_users &lt;dbl&gt;,
 ## #   Traffic_domestic_Incoming_Minutes_MNO_PSTN &lt;dbl&gt;,
 ## #   Traffic_domestic_Outgoing_Minutes_MNO_PSTN &lt;dbl&gt;,
@@ -45,10 +46,10 @@ description: Overview on mobile and internet penetration in Zambia
 ## #   SMS_MMS_traffic &lt;dbl&gt;, Minutes_of_use_Monthly &lt;int&gt;,
 ## #   Voice_on_net_peak_Mobile &lt;dbl&gt;, `Voice_on_net_of_ peak_Mobile` &lt;dbl&gt;,
 ## #   Voice_off_net_peak_Mobile &lt;dbl&gt;, `Voice_off_net_off_peak
-## #   _Mobile` &lt;dbl&gt;, Voice_on_net_peak_Fixed &lt;chr&gt;,
-## #   Voice_on_net_off_peak_Fixed &lt;chr&gt;, Voice_off_net_peak_Fixed &lt;chr&gt;,
-## #   Voice_off_net_off_peak_Fixed &lt;chr&gt;, `Voice _Tariff_Mobile` &lt;dbl&gt;,
-## #   `Voice _Tariff _PSTN` &lt;chr&gt;</code></pre>
+## #   _Mobile` &lt;dbl&gt;, Voice_on_net_peak_Fixed &lt;dbl&gt;,
+## #   Voice_on_net_off_peak_Fixed &lt;dbl&gt;, Voice_off_net_peak_Fixed &lt;dbl&gt;,
+## #   Voice_off_net_off_peak_Fixed &lt;dbl&gt;, `Voice _Tariff_Mobile` &lt;dbl&gt;,
+## #   `Voice _Tariff _PSTN` &lt;dbl&gt;</code></pre>
 <pre class="r"><code>names(operator_stats) # column names </code></pre>
 <pre><code>##  [1] &quot;Year&quot;                                            
 ##  [2] &quot;Population_CSO_Estimate&quot;                         
@@ -77,23 +78,137 @@ description: Overview on mobile and internet penetration in Zambia
 ## [25] &quot;Voice_off_net_off_peak_Fixed&quot;                    
 ## [26] &quot;Voice _Tariff_Mobile&quot;                            
 ## [27] &quot;Voice _Tariff _PSTN&quot;</code></pre>
+<pre class="r"><code>str(operator_stats)</code></pre>
+<pre><code>## Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:    9 obs. of  27 variables:
+##  $ Year                                            : int  2010 2011 2012 2013 2014 2015 2016 2017 2017
+##  $ Population_CSO_Estimate                         : num  13092666 13721498 14156468 14605555 15068729 ...
+##  $ Number_o_ Mobile_Operators                      : int  3 3 3 3 3 3 3 3 3
+##  $ Number_of_PSTN_Operators                        : int  1 1 1 1 1 1 1 1 1
+##  $ Number_of_Active_ISPs                           : int  NA NA NA 16 16 16 16 13 13
+##  $ Internet_Points_of_Presence_Districts           : int  NA NA NA 99 NA NA NA NA NA
+##  $ Number_of_Registered_SIM_Cards                  : int  NA NA 1046288 4986192 10231609 12133818 NA NA NA
+##  $ Number_of_active_Subscribers                    : num  5447536 8164553 10524676 10395801 10114867 ...
+##  $ Mobile_Penetration_100_Inhabitants              : num  41.6 59.5 74.3 71.2 67.1 74.3 79.4 72.6 75.8
+##  $ Mobile_Broadband_users                          : num  NA 379888 2314983 2211640 3741615 ...
+##  $ Mobile_Broadband_penetration_100_users          : num  NA 2.8 16.4 15.1 24.8 39.2 32.2 30.9 35.9
+##  $ Traffic_domestic_Incoming_Minutes_MNO_PSTN      : num  NA 5.33e+08 6.59e+08 5.46e+08 1.25e+09 ...
+##  $ Traffic_domestic_Outgoing_Minutes_MNO_PSTN      : num  NA 4.11e+09 6.73e+09 7.13e+09 9.01e+09 ...
+##  $ Traffic_International_Incoming_Minutes_MNO_PSTN): num  NA 1.18e+08 1.44e+08 1.30e+08 1.56e+08 ...
+##  $ Traffic_International_Outgoing_Minutes_MNO_PSTN): num  NA 66527853 81332753 95831382 99928727 ...
+##  $ SMS_MMS_traffic                                 : num  NA 1.66e+09 2.04e+09 1.08e+09 8.93e+08 ...
+##  $ Minutes_of_use_Monthly                          : int  NA 49 60 63 87 74 88 75 77
+##  $ Voice_on_net_peak_Mobile                        : num  1.23 1.22 1.16 1.16 1.23 1.14 0.93 1.24 1.24
+##  $ Voice_on_net_of_ peak_Mobile                    : num  0.83 0.81 0.85 0.85 0.89 0.79 0.69 0.72 0.72
+##  $ Voice_off_net_peak_Mobile                       : num  1.5 1.46 1.36 1.36 1.47 1.26 0.99 1.36 1.36
+##  $ Voice_off_net_off_peak _Mobile                  : num  1.19 1.19 1.19 1.19 1.22 1.06 0.75 0.99 0.99
+##  $ Voice_on_net_peak_Fixed                         : num  NA NA NA NA NA NA 1.07 1.07 1.07
+##  $ Voice_on_net_off_peak_Fixed                     : num  NA NA NA NA NA NA 0.75 0.75 0.75
+##  $ Voice_off_net_peak_Fixed                        : num  NA NA NA NA NA NA 1.98 1.98 1.98
+##  $ Voice_off_net_off_peak_Fixed                    : num  NA NA NA NA NA NA 1.98 1.98 1.98
+##  $ Voice _Tariff_Mobile                            : num  0.65 0.69 0.54 0.49 0.49 0.53 0.47 0.43 0.45
+##  $ Voice _Tariff _PSTN                             : num  NA NA NA NA 1.99 1.69 1.51 1.25 1.45
+##  - attr(*, &quot;spec&quot;)=List of 2
+##   ..$ cols   :List of 27
+##   .. ..$ Year                                            : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
+##   .. ..$ Population_CSO_Estimate                         : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
+##   .. ..$ Number_o_ Mobile_Operators                      : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
+##   .. ..$ Number_of_PSTN_Operators                        : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
+##   .. ..$ Number_of_Active_ISPs                           : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
+##   .. ..$ Internet_Points_of_Presence_Districts           : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
+##   .. ..$ Number_of_Registered_SIM_Cards                  : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
+##   .. ..$ Number_of_active_Subscribers                    : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
+##   .. ..$ Mobile_Penetration_100_Inhabitants              : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
+##   .. ..$ Mobile_Broadband_users                          : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
+##   .. ..$ Mobile_Broadband_penetration_100_users          : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
+##   .. ..$ Traffic_domestic_Incoming_Minutes_MNO_PSTN      : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
+##   .. ..$ Traffic_domestic_Outgoing_Minutes_MNO_PSTN      : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
+##   .. ..$ Traffic_International_Incoming_Minutes_MNO_PSTN): list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
+##   .. ..$ Traffic_International_Outgoing_Minutes_MNO_PSTN): list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
+##   .. ..$ SMS_MMS_traffic                                 : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
+##   .. ..$ Minutes_of_use_Monthly                          : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
+##   .. ..$ Voice_on_net_peak_Mobile                        : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
+##   .. ..$ Voice_on_net_of_ peak_Mobile                    : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
+##   .. ..$ Voice_off_net_peak_Mobile                       : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
+##   .. ..$ Voice_off_net_off_peak _Mobile                  : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
+##   .. ..$ Voice_on_net_peak_Fixed                         : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
+##   .. ..$ Voice_on_net_off_peak_Fixed                     : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
+##   .. ..$ Voice_off_net_peak_Fixed                        : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
+##   .. ..$ Voice_off_net_off_peak_Fixed                    : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
+##   .. ..$ Voice _Tariff_Mobile                            : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
+##   .. ..$ Voice _Tariff _PSTN                             : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
+##   ..$ default: list()
+##   .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_guess&quot; &quot;collector&quot;
+##   ..- attr(*, &quot;class&quot;)= chr &quot;col_spec&quot;</code></pre>
 </div>
-<div id="number-of-registered-simcards-and-active-users" class="section level1">
-<h1>Number of registered simcards and active users</h1>
+<div id="number-of-registered-simcards-and-active-users" class="section level2">
+<h2>Number of registered simcards and active users</h2>
 <pre class="r"><code>operator_stats %&gt;% 
   ggplot() + 
-  geom_line(mapping =aes(x = Year,y = Number_of_active_Subscribers), color = &quot;green&quot;) </code></pre>
-<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<pre class="r"><code>  # geom_line(aes(x = Year,y = Number_of_Registered_SIM_Cards), color = &quot;&quot;)</code></pre>
+  geom_line(
+    mapping =aes(
+      x = Year,
+      y = Number_of_active_Subscribers), 
+    color = &quot;green&quot;
+    ) </code></pre>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<pre class="r"><code>operator_stats %&gt;% 
+  ggplot() + 
+    geom_point(
+      aes(
+      x = Population_CSO_Estimate, 
+      y = Number_of_active_Subscribers
+    )
+  ) + 
+  geom_line(
+    aes(
+      x = Population_CSO_Estimate, 
+      y = Number_of_active_Subscribers
+    )
+  )</code></pre>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
 <div id="domestic-calls-traffic---incoming-and-outgoing" class="section level2">
 <h2>Domestic calls Traffic - Incoming and Outgoing</h2>
 <pre class="r"><code>operator_stats %&gt;% 
 ggplot() +
-  geom_line(aes(x = Year,y = Traffic_domestic_Incoming_Minutes_MNO_PSTN ), color = &quot;red&quot;) +
-  geom_line(aes(x = Year, y = Traffic_domestic_Outgoing_Minutes_MNO_PSTN), color = &quot;green&quot;)</code></pre>
+  geom_line(aes(
+    x = Year,
+    y = Traffic_domestic_Incoming_Minutes_MNO_PSTN ), 
+    color = &quot;red&quot;) +
+  geom_line(aes(
+    x = Year, 
+    y = Traffic_domestic_Outgoing_Minutes_MNO_PSTN),
+    color = &quot;green&quot;
+    )</code></pre>
 <pre><code>## Warning: Removed 1 rows containing missing values (geom_path).
 
 ## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
-<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-</div>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
