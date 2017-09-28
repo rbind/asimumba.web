@@ -177,7 +177,25 @@ library(tidyverse)</code></pre>
       y = Number_of_active_Subscribers), 
     color = &quot;green&quot;
     ) </code></pre>
-<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-6-1.png" width="672" /> ## Percentage change in the active user base</p>
+<pre class="r"><code>operator_stats %&gt;% 
+  select(Year,Number_of_active_Subscribers) %&gt;% 
+  mutate(Percentage_change = 
+           (Number_of_active_Subscribers - lag(Number_of_active_Subscribers))/
+           lag(Number_of_active_Subscribers) * 100
+           )  </code></pre>
+<pre><code>## # A tibble: 9 x 3
+##    Year Number_of_active_Subscribers Percentage_change
+##   &lt;int&gt;                        &lt;dbl&gt;             &lt;dbl&gt;
+## 1  2010                      5447536                NA
+## 2  2011                      8164553        49.8760724
+## 3  2012                     10524676        28.9069469
+## 4  2013                     10395801        -1.2245033
+## 5  2014                     10114867        -2.7023795
+## 6  2015                     11557725        14.2647254
+## 7  2016                     12017034         3.9740433
+## 8  2017                     11916871        -0.8335085
+## 9  2017                     12429675         4.3031766</code></pre>
 <pre class="r"><code>operator_stats %&gt;% 
   ggplot() + 
     geom_point(
@@ -192,7 +210,7 @@ library(tidyverse)</code></pre>
       y = Number_of_active_Subscribers
     )
   )</code></pre>
-<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
 <div id="domestic-calls-traffic---incoming-and-outgoing" class="section level2">
 <h2>Domestic calls Traffic - Incoming and Outgoing</h2>
@@ -210,5 +228,5 @@ ggplot() +
 <pre><code>## Warning: Removed 1 rows containing missing values (geom_path).
 
 ## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
-<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 </div>

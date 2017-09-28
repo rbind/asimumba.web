@@ -45,6 +45,16 @@ operator_stats %>%
     ) 
  
 ```
+## Percentage change in the active user base
+
+```{r}
+operator_stats %>% 
+  select(Year,Number_of_active_Subscribers) %>% 
+  mutate(Percentage_change = 
+           (Number_of_active_Subscribers - lag(Number_of_active_Subscribers))/
+           lag(Number_of_active_Subscribers) * 100
+           )  
+```
 
 ```{r}
 operator_stats %>% 
