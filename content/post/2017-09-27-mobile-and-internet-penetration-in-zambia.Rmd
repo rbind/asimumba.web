@@ -45,7 +45,9 @@ operator_stats %>%
     ) 
  
 ```
-## Percentage change in the active user base
+
+
+##Percentage change in the active user base
 
 ```{r}
 operator_stats %>% 
