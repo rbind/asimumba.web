@@ -15,16 +15,33 @@ The data being used is from the [ZICTA website](http://onlinesystems.zicta.zm:85
 
 ```{r, message=FALSE}
 # We are going got use the dyplr,readr and  ggplot2 packages
-library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(readr)
 ```
 
 ## load the data
 ```{r,message=FALSE}
 operator_stats <- read_csv("../../static/data/operator_stats.csv")
+
+isps <- read_csv("../../static/data/isps.csv")
+
+internet_coverage <- read_csv("../../static/data/internet_coverage.csv")
+
+operator_stats <- operator_stats %>% 
+  as_tibble()
+
+isps <- isps %>% 
+  as_tibble()
+
+internet_coverage <- internet_coverage %>% 
+  as_tibble()
 ```
 
-```{r}
-head(operator_stats) #Take peek at the data.
+```{r, eval=FALSE}
+head(operator_stats, 4) #Take peek at the data.
+head(isps, 4)
+head(internet_coverage, 4)
 ```
 ```{r}
 names(operator_stats) # column names 

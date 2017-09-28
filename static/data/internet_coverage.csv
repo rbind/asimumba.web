@@ -1,0 +1,10 @@
+Year,Internet_Points_of_ Presence_Districts,PSTN_Area_Coverage ,National_Network_Geographical_Coverage,National_Network_Geographical_by_Population ,Number_of_Towers,Number_of_2G_Sites,Number_of_2G_3G_Sites,Number_o_ 4G_Sites,Number_of_2G_3G_4G_Sites,Airtel_Zambia,MTN_Zambia,Zamtel
+2010,-,0.9,,,,,,,,,,
+2011,-,0.9,,,,,,,,-,36.60%,75.00%
+2012,-,0.9,0.78,,,,,,,-,37.50%,75.00%
+2013,99,0.9,0.78,,,,,,,42.70%,39.40%,29.70%
+2014,-,0.9,0.78,,,,,,,42.70%,31.70%,27.00%
+2015,-,0.9,0.78,0.93,,,,,,42.70%,45.40%,27.00%
+2016,-,0.91,0.78,0.93,,"2,992","2,354",192,304,42.70%,44.10%,27.00%
+2017,-,0.91,0.78,0.93,"2,180","2,992","2,125",192,304,42.70%,44.10%,27.00%
+2017,-,0.91,0.78,0.93,"2,440","2,992","2,125",235,304,42.70%,44.10%,27.00%

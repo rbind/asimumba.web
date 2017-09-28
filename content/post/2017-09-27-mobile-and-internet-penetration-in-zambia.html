@@ -16,40 +16,29 @@ description: Overview on mobile and internet penetration in Zambia
 <div id="prerequisites" class="section level2">
 <h2>Prerequisites</h2>
 <pre class="r"><code># We are going got use the dyplr,readr and  ggplot2 packages
-library(tidyverse)</code></pre>
+library(ggplot2)
+library(dplyr)
+library(readr)</code></pre>
 </div>
 <div id="load-the-data" class="section level2">
 <h2>load the data</h2>
-<pre class="r"><code>operator_stats &lt;- read_csv(&quot;../../static/data/operator_stats.csv&quot;)</code></pre>
-<pre class="r"><code>head(operator_stats) #Take peek at the data.</code></pre>
-<pre><code>## # A tibble: 6 x 27
-##    Year Population_CSO_Estimate `Number_o_ Mobile_Operators`
-##   &lt;int&gt;                   &lt;dbl&gt;                        &lt;int&gt;
-## 1  2010                13092666                            3
-## 2  2011                13721498                            3
-## 3  2012                14156468                            3
-## 4  2013                14605555                            3
-## 5  2014                15068729                            3
-## 6  2015                15545778                            3
-## # ... with 24 more variables: Number_of_PSTN_Operators &lt;int&gt;,
-## #   Number_of_Active_ISPs &lt;int&gt;,
-## #   Internet_Points_of_Presence_Districts &lt;int&gt;,
-## #   Number_of_Registered_SIM_Cards &lt;int&gt;,
-## #   Number_of_active_Subscribers &lt;dbl&gt;,
-## #   Mobile_Penetration_100_Inhabitants &lt;dbl&gt;,
-## #   Mobile_Broadband_users &lt;dbl&gt;,
-## #   Mobile_Broadband_penetration_100_users &lt;dbl&gt;,
-## #   Traffic_domestic_Incoming_Minutes_MNO_PSTN &lt;dbl&gt;,
-## #   Traffic_domestic_Outgoing_Minutes_MNO_PSTN &lt;dbl&gt;,
-## #   `Traffic_International_Incoming_Minutes_MNO_PSTN)` &lt;dbl&gt;,
-## #   `Traffic_International_Outgoing_Minutes_MNO_PSTN)` &lt;dbl&gt;,
-## #   SMS_MMS_traffic &lt;dbl&gt;, Minutes_of_use_Monthly &lt;int&gt;,
-## #   Voice_on_net_peak_Mobile &lt;dbl&gt;, `Voice_on_net_of_ peak_Mobile` &lt;dbl&gt;,
-## #   Voice_off_net_peak_Mobile &lt;dbl&gt;, `Voice_off_net_off_peak
-## #   _Mobile` &lt;dbl&gt;, Voice_on_net_peak_Fixed &lt;dbl&gt;,
-## #   Voice_on_net_off_peak_Fixed &lt;dbl&gt;, Voice_off_net_peak_Fixed &lt;dbl&gt;,
-## #   Voice_off_net_off_peak_Fixed &lt;dbl&gt;, `Voice _Tariff_Mobile` &lt;dbl&gt;,
-## #   `Voice _Tariff _PSTN` &lt;dbl&gt;</code></pre>
+<pre class="r"><code>operator_stats &lt;- read_csv(&quot;../../static/data/operator_stats.csv&quot;)
+
+isps &lt;- read_csv(&quot;../../static/data/isps.csv&quot;)
+
+internet_coverage &lt;- read_csv(&quot;../../static/data/internet_coverage.csv&quot;)
+
+operator_stats &lt;- operator_stats %&gt;% 
+  as_tibble()
+
+isps &lt;- isps %&gt;% 
+  as_tibble()
+
+internet_coverage &lt;- internet_coverage %&gt;% 
+  as_tibble()</code></pre>
+<pre class="r"><code>head(operator_stats, 4) #Take peek at the data.
+head(isps, 4)
+head(internet_coverage, 4)</code></pre>
 <pre class="r"><code>names(operator_stats) # column names </code></pre>
 <pre><code>##  [1] &quot;Year&quot;                                            
 ##  [2] &quot;Population_CSO_Estimate&quot;                         
@@ -77,9 +66,11 @@ library(tidyverse)</code></pre>
 ## [24] &quot;Voice_off_net_peak_Fixed&quot;                        
 ## [25] &quot;Voice_off_net_off_peak_Fixed&quot;                    
 ## [26] &quot;Voice _Tariff_Mobile&quot;                            
-## [27] &quot;Voice _Tariff _PSTN&quot;</code></pre>
+## [27] &quot;Voice _Tariff _PSTN&quot;                             
+## [28] &quot;SMS_on_net_Mobile&quot;                               
+## [29] &quot;SMS_off_net_Mobile&quot;</code></pre>
 <pre class="r"><code>str(operator_stats)</code></pre>
-<pre><code>## Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:    9 obs. of  27 variables:
+<pre><code>## Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:    9 obs. of  29 variables:
 ##  $ Year                                            : int  2010 2011 2012 2013 2014 2015 2016 2017 2017
 ##  $ Population_CSO_Estimate                         : num  13092666 13721498 14156468 14605555 15068729 ...
 ##  $ Number_o_ Mobile_Operators                      : int  3 3 3 3 3 3 3 3 3
@@ -107,8 +98,10 @@ library(tidyverse)</code></pre>
 ##  $ Voice_off_net_off_peak_Fixed                    : num  NA NA NA NA NA NA 1.98 1.98 1.98
 ##  $ Voice _Tariff_Mobile                            : num  0.65 0.69 0.54 0.49 0.49 0.53 0.47 0.43 0.45
 ##  $ Voice _Tariff _PSTN                             : num  NA NA NA NA 1.99 1.69 1.51 1.25 1.45
+##  $ SMS_on_net_Mobile                               : num  0.23 0.23 0.23 0.23 0.23 0.18 0.18 0.27 0.27
+##  $ SMS_off_net_Mobile                              : num  0.3 0.3 0.3 0.3 0.31 0.26 0.23 0.32 0.32
 ##  - attr(*, &quot;spec&quot;)=List of 2
-##   ..$ cols   :List of 27
+##   ..$ cols   :List of 29
 ##   .. ..$ Year                                            : list()
 ##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
 ##   .. ..$ Population_CSO_Estimate                         : list()
@@ -163,6 +156,10 @@ library(tidyverse)</code></pre>
 ##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
 ##   .. ..$ Voice _Tariff _PSTN                             : list()
 ##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
+##   .. ..$ SMS_on_net_Mobile                               : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
+##   .. ..$ SMS_off_net_Mobile                              : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
 ##   ..$ default: list()
 ##   .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_guess&quot; &quot;collector&quot;
 ##   ..- attr(*, &quot;class&quot;)= chr &quot;col_spec&quot;</code></pre>
@@ -177,7 +174,10 @@ library(tidyverse)</code></pre>
       y = Number_of_active_Subscribers), 
     color = &quot;green&quot;
     ) </code></pre>
-<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-6-1.png" width="672" /> ## Percentage change in the active user base</p>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="percentage-change-in-the-active-user-base" class="section level2">
+<h2>Percentage change in the active user base</h2>
 <pre class="r"><code>operator_stats %&gt;% 
   select(Year,Number_of_active_Subscribers) %&gt;% 
   mutate(Percentage_change = 
