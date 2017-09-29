@@ -8,46 +8,65 @@ tags:
   - mobile user data
 slug: Mobile-Internet-Penetration-in-Zambia
 description: Overview on mobile and internet penetration in Zambia
+fig_height: 4
 ---
-The data being used is from the [ZICTA website](http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html)
+In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information, Communication and Technolgy Agency (ZICTA) data, I will walk through the data on the subscriber base, the user trafffic and the cost differential among the three mobile operators.In addition, internet usage and the statistics on Internet Service Providers(ISPs) will be used. 
 
 ## Prerequisites
 
+For this analysis, I will mainly use the following packages. The beauty with the R language is  that as a modular language, meaning it is fully extensible with add-on packages. I will make use of the `ggplot2` for visualising the data; `dplyr`, which is the package made to seamlessly handle data tranformations, will be used to tweak the data to match the objectives of the analysis. The other packages are `readr` for data import and `plotly` for interactive visualization.
+
 ```{r, message=FALSE}
+# the packages can be installed running the following command
+# install.packges("ggplot2", "dplyr", "readr", "plotly")
 # We are going got use the dyplr,readr and  ggplot2 packages
 library(ggplot2)
 library(dplyr)
 library(readr)
+library(plotly)
 ```
 
-## load the data
+## Data
+
+The data used in this analysis can be found on the [ZICTA website](http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html). Since the data on the ZICTA website is not in a downloadable format. I had to turn to Microsoft Excel, with its option to mine the data from the web. The data online is in a format which is not very helpful to work with, so I had to clean up and reorder the data into a "tidy" format (each variable is a column and each observation occupying a row). The original data format can be seen in the screenshot below.
+
+![](https://user-images.githubusercontent.com/24398851/31025561-ba80b558-a54b-11e7-9e91-b3655f35d4db.png)
+
+Running the following codes loads the data into the work environment, so we can work with it to do our analysis. 
 ```{r,message=FALSE}
 operator_stats <- read_csv("../../static/data/operator_stats.csv")
-
 isps <- read_csv("../../static/data/isps.csv")
-
 internet_coverage <- read_csv("../../static/data/internet_coverage.csv")
 
 operator_stats <- operator_stats %>% 
   as_tibble()
-
 isps <- isps %>% 
   as_tibble()
-
 internet_coverage <- internet_coverage %>% 
   as_tibble()
 ```
+
+The `head()` command gives a view of the first 6 rows accross variables of your data by default. This allows a quick peek at your data, revealing the data types and forms; and learn how the data is laid out .
 
 ```{r, eval=FALSE}
 head(operator_stats, 4) #Take peek at the data.
 head(isps, 4)
 head(internet_coverage, 4)
 ```
+
+The `names()` function helps to know the variables or column names in the data. This comes in hand to pick the names and variables in the analysis.
+
 ```{r}
 names(operator_stats) # column names 
 ```
+
+It is important to learn the data types and the form your data assumes in your dataset. To achieve this, the `str()` function can be called. Since the the dataset has variables I am not interested in, I narrow the field with the `select()` from the `dplyr` package 
+to select only vairables of interest
+
 ```{r}
-str(operator_stats)
+operator_stats %>% 
+  select(Number_of_PSTN_Operators, Number_of_Mobile_Operators, Number_of_Registered_SIM_Cards, Minutes_of_use_Monthly) %>% 
+  str()
 ```
 
 ## Number of registered simcards and active users 

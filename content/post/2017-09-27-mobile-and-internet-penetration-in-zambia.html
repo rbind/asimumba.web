@@ -8,41 +8,50 @@ tags:
   - mobile user data
 slug: Mobile-Internet-Penetration-in-Zambia
 description: Overview on mobile and internet penetration in Zambia
+fig_height: 4
 ---
 
 
 
-<p>The data being used is from the <a href="http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html">ZICTA website</a></p>
+<p>In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information, Communication and Technolgy Agency (ZICTA) data, I will walk through the data on the subscriber base, the user trafffic and the cost differential among the three mobile operators.In addition, internet usage and the statistics on Internet Service Providers(ISPs) will be used.</p>
 <div id="prerequisites" class="section level2">
 <h2>Prerequisites</h2>
-<pre class="r"><code># We are going got use the dyplr,readr and  ggplot2 packages
+<p>For this analysis, I will mainly use the following packages. The beauty with the R language is that as a modular language, meaning it is fully extensible with add-on packages. I will make use of the <code>ggplot2</code> for visualising the data; <code>dplyr</code>, which is the package made to seamlessly handle data tranformations, will be used to tweak the data to match the objectives of the analysis. The other packages are <code>readr</code> for data import and <code>plotly</code> for interactive visualization.</p>
+<pre class="r"><code># the packages can be installed running the following command
+# install.packges(&quot;ggplot2&quot;, &quot;dplyr&quot;, &quot;readr&quot;, &quot;plotly&quot;)
+# We are going got use the dyplr,readr and  ggplot2 packages
 library(ggplot2)
 library(dplyr)
-library(readr)</code></pre>
+library(readr)
+library(plotly)</code></pre>
 </div>
-<div id="load-the-data" class="section level2">
-<h2>load the data</h2>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<p>The data used in this analysis can be found on the <a href="http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html">ZICTA website</a>. Since the data on the ZICTA website is not in a downloadable format. I had to turn to Microsoft Excel, with its option to mine the data from the web. The data online is in a format which is not very helpful to work with, so I had to clean up and reorder the data into a “tidy” format (each variable is a column and each observation occupying a row). The original data format can be seen in the screenshot below.</p>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/24398851/31025561-ba80b558-a54b-11e7-9e91-b3655f35d4db.png" />
+
+</div>
+<p>Running the following codes loads the data into the work environment, so we can work with it to do our analysis.</p>
 <pre class="r"><code>operator_stats &lt;- read_csv(&quot;../../static/data/operator_stats.csv&quot;)
-
 isps &lt;- read_csv(&quot;../../static/data/isps.csv&quot;)
-
 internet_coverage &lt;- read_csv(&quot;../../static/data/internet_coverage.csv&quot;)
 
 operator_stats &lt;- operator_stats %&gt;% 
   as_tibble()
-
 isps &lt;- isps %&gt;% 
   as_tibble()
-
 internet_coverage &lt;- internet_coverage %&gt;% 
   as_tibble()</code></pre>
+<p>The <code>head()</code> command gives a view of the first 6 rows accross variables of your data by default. This allows a quick peek at your data, revealing the data types and forms; and learn how the data is laid out .</p>
 <pre class="r"><code>head(operator_stats, 4) #Take peek at the data.
 head(isps, 4)
 head(internet_coverage, 4)</code></pre>
+<p>The <code>names()</code> function helps to know the variables or column names in the data. This comes in hand to pick the names and variables in the analysis.</p>
 <pre class="r"><code>names(operator_stats) # column names </code></pre>
 <pre><code>##  [1] &quot;Year&quot;                                            
 ##  [2] &quot;Population_CSO_Estimate&quot;                         
-##  [3] &quot;Number_o_ Mobile_Operators&quot;                      
+##  [3] &quot;Number_of_Mobile_Operators&quot;                      
 ##  [4] &quot;Number_of_PSTN_Operators&quot;                        
 ##  [5] &quot;Number_of_Active_ISPs&quot;                           
 ##  [6] &quot;Internet_Points_of_Presence_Districts&quot;           
@@ -69,44 +78,22 @@ head(internet_coverage, 4)</code></pre>
 ## [27] &quot;Voice _Tariff _PSTN&quot;                             
 ## [28] &quot;SMS_on_net_Mobile&quot;                               
 ## [29] &quot;SMS_off_net_Mobile&quot;</code></pre>
-<pre class="r"><code>str(operator_stats)</code></pre>
-<pre><code>## Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:    9 obs. of  29 variables:
-##  $ Year                                            : int  2010 2011 2012 2013 2014 2015 2016 2017 2017
-##  $ Population_CSO_Estimate                         : num  13092666 13721498 14156468 14605555 15068729 ...
-##  $ Number_o_ Mobile_Operators                      : int  3 3 3 3 3 3 3 3 3
-##  $ Number_of_PSTN_Operators                        : int  1 1 1 1 1 1 1 1 1
-##  $ Number_of_Active_ISPs                           : int  NA NA NA 16 16 16 16 13 13
-##  $ Internet_Points_of_Presence_Districts           : int  NA NA NA 99 NA NA NA NA NA
-##  $ Number_of_Registered_SIM_Cards                  : int  NA NA 1046288 4986192 10231609 12133818 NA NA NA
-##  $ Number_of_active_Subscribers                    : num  5447536 8164553 10524676 10395801 10114867 ...
-##  $ Mobile_Penetration_100_Inhabitants              : num  41.6 59.5 74.3 71.2 67.1 74.3 79.4 72.6 75.8
-##  $ Mobile_Broadband_users                          : num  NA 379888 2314983 2211640 3741615 ...
-##  $ Mobile_Broadband_penetration_100_users          : num  NA 2.8 16.4 15.1 24.8 39.2 32.2 30.9 35.9
-##  $ Traffic_domestic_Incoming_Minutes_MNO_PSTN      : num  NA 5.33e+08 6.59e+08 5.46e+08 1.25e+09 ...
-##  $ Traffic_domestic_Outgoing_Minutes_MNO_PSTN      : num  NA 4.11e+09 6.73e+09 7.13e+09 9.01e+09 ...
-##  $ Traffic_International_Incoming_Minutes_MNO_PSTN): num  NA 1.18e+08 1.44e+08 1.30e+08 1.56e+08 ...
-##  $ Traffic_International_Outgoing_Minutes_MNO_PSTN): num  NA 66527853 81332753 95831382 99928727 ...
-##  $ SMS_MMS_traffic                                 : num  NA 1.66e+09 2.04e+09 1.08e+09 8.93e+08 ...
-##  $ Minutes_of_use_Monthly                          : int  NA 49 60 63 87 74 88 75 77
-##  $ Voice_on_net_peak_Mobile                        : num  1.23 1.22 1.16 1.16 1.23 1.14 0.93 1.24 1.24
-##  $ Voice_on_net_of_ peak_Mobile                    : num  0.83 0.81 0.85 0.85 0.89 0.79 0.69 0.72 0.72
-##  $ Voice_off_net_peak_Mobile                       : num  1.5 1.46 1.36 1.36 1.47 1.26 0.99 1.36 1.36
-##  $ Voice_off_net_off_peak _Mobile                  : num  1.19 1.19 1.19 1.19 1.22 1.06 0.75 0.99 0.99
-##  $ Voice_on_net_peak_Fixed                         : num  NA NA NA NA NA NA 1.07 1.07 1.07
-##  $ Voice_on_net_off_peak_Fixed                     : num  NA NA NA NA NA NA 0.75 0.75 0.75
-##  $ Voice_off_net_peak_Fixed                        : num  NA NA NA NA NA NA 1.98 1.98 1.98
-##  $ Voice_off_net_off_peak_Fixed                    : num  NA NA NA NA NA NA 1.98 1.98 1.98
-##  $ Voice _Tariff_Mobile                            : num  0.65 0.69 0.54 0.49 0.49 0.53 0.47 0.43 0.45
-##  $ Voice _Tariff _PSTN                             : num  NA NA NA NA 1.99 1.69 1.51 1.25 1.45
-##  $ SMS_on_net_Mobile                               : num  0.23 0.23 0.23 0.23 0.23 0.18 0.18 0.27 0.27
-##  $ SMS_off_net_Mobile                              : num  0.3 0.3 0.3 0.3 0.31 0.26 0.23 0.32 0.32
+<p>It is important to learn the data types and the form your data assumes in your dataset. To achieve this, the <code>str()</code> function can be called. Since the the dataset has variables I am not interested in, I narrow the field with the <code>select()</code> from the <code>dplyr</code> package to select only vairables of interest</p>
+<pre class="r"><code>operator_stats %&gt;% 
+  select(Number_of_PSTN_Operators, Number_of_Mobile_Operators, Number_of_Registered_SIM_Cards, Minutes_of_use_Monthly) %&gt;% 
+  str()</code></pre>
+<pre><code>## Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:    9 obs. of  4 variables:
+##  $ Number_of_PSTN_Operators      : int  1 1 1 1 1 1 1 1 1
+##  $ Number_of_Mobile_Operators    : int  3 3 3 3 3 3 3 3 3
+##  $ Number_of_Registered_SIM_Cards: int  NA NA 1046288 4986192 10231609 12133818 NA NA NA
+##  $ Minutes_of_use_Monthly        : int  NA 49 60 63 87 74 88 75 77
 ##  - attr(*, &quot;spec&quot;)=List of 2
 ##   ..$ cols   :List of 29
 ##   .. ..$ Year                                            : list()
 ##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
 ##   .. ..$ Population_CSO_Estimate                         : list()
 ##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
-##   .. ..$ Number_o_ Mobile_Operators                      : list()
+##   .. ..$ Number_of_Mobile_Operators                      : list()
 ##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
 ##   .. ..$ Number_of_PSTN_Operators                        : list()
 ##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;

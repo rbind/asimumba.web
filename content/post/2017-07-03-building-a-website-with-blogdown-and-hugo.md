@@ -26,7 +26,7 @@ Enough with the stories, buckle up we jump right into it.
 
 For the theme, I was initially spoiled for choice, I tried a few before finally settling for the [Cactus theme](https://themes.gohugo.io/cactus/). It's both well enriched with great visual aesthetics as well as a clean presentation. I have changed quite a lot of stuff to meet my own preferences and for what I intend to use the website for. If your choice is to get up and running without bothering to learn a bit of `HTML` and `CSS` for further alterations and customizations, the [Hugo site](https://themes.gohugo.io/) has plenty of templates to suit different tastes.
 
-![screenshot](https://user-images.githubusercontent.com/24398851/30351045-2fa78596-9822-11e7-916b-18cc3e551562.png)
+![](https://user-images.githubusercontent.com/24398851/30351045-2fa78596-9822-11e7-916b-18cc3e551562.png)
 
 The outline inspiration comes from the  [Rbind Support](https://support.rbind.io/). I like the clean and simplistic outline. 
 

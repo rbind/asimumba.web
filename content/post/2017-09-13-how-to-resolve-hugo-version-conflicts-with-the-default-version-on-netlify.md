@@ -19,7 +19,7 @@ A quick work around is to define the build environment with the version of hugo 
 With this in place, you can expect a smooth build of the site and deployment. 
 
 
-![screenshot](https://user-images.githubusercontent.com/24398851/30351782-bb5cb162-9825-11e7-9821-967de86b7214.png)
+![](https://user-images.githubusercontent.com/24398851/30351782-bb5cb162-9825-11e7-9821-967de86b7214.png)
 Happy blogging...
 
 
