@@ -10,7 +10,7 @@ slug: Mobile-Internet-Penetration-in-Zambia
 description: Overview on mobile and internet penetration in Zambia
 fig_height: 4
 ---
-In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information, Communication and Technolgy Agency (ZICTA) data, I will walk through the data on the subscriber base, the user trafffic and the cost differential among the three mobile operators.In addition, internet usage and the statistics on Internet Service Providers(ISPs) will be used. 
+In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority (ZICTA) data. I will walk through the data on the subscriber base, the user trafffic and the cost differentials among the three mobile operators, these being: Airtel,Zamtel and MTN Zambia.In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used. 
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ library(plotly)
 
 ## Data
 
-The data used in this analysis can be found on the [ZICTA website](http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html). Since the data on the ZICTA website is not in a downloadable format. I had to turn to Microsoft Excel, with its option to mine the data from the web. The data online is in a format which is not very helpful to work with, so I had to clean up and reorder the data into a "tidy" format (each variable is a column and each observation occupying a row). The original data format can be seen in the screenshot below.
+The data used in this analysis can be found on the [ZICTA](http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html) website. Since the data on the ZICTA website is not in a downloadable format. I had to turn to Microsoft Excel, with its option to mine the data from the web. The data online is in a format which is not very helpful to work with, so I had to clean up and reorder the data into a "tidy" format (each variable is a column and each observation occupying a row). The original data format can be seen in the screenshot below.
 
 ![](https://user-images.githubusercontent.com/24398851/31025561-ba80b558-a54b-11e7-9e91-b3655f35d4db.png)
 
@@ -69,7 +69,8 @@ operator_stats %>%
   str()
 ```
 
-## Number of registered simcards and active users 
+## Number of active users 
+
 ```{r}
 operator_stats %>% 
   ggplot() + 
@@ -83,7 +84,7 @@ operator_stats %>%
 ```
 
 
-##Percentage change in the active user base
+## Change in the active user base
 
 ```{r}
 operator_stats %>% 

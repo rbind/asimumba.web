@@ -27,7 +27,7 @@ library(plotly)</code></pre>
 </div>
 <div id="data" class="section level2">
 <h2>Data</h2>
-<p>The data used in this analysis can be found on the <a href="http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html">ZICTA website</a>. Since the data on the ZICTA website is not in a downloadable format. I had to turn to Microsoft Excel, with its option to mine the data from the web. The data online is in a format which is not very helpful to work with, so I had to clean up and reorder the data into a “tidy” format (each variable is a column and each observation occupying a row). The original data format can be seen in the screenshot below.</p>
+<p>The data used in this analysis can be found on the <a href="http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html">ZICTA</a> website. Since the data on the ZICTA website is not in a downloadable format. I had to turn to Microsoft Excel, with its option to mine the data from the web. The data online is in a format which is not very helpful to work with, so I had to clean up and reorder the data into a “tidy” format (each variable is a column and each observation occupying a row). The original data format can be seen in the screenshot below.</p>
 <div class="figure">
 <img src="https://user-images.githubusercontent.com/24398851/31025561-ba80b558-a54b-11e7-9e91-b3655f35d4db.png" />
 
@@ -151,8 +151,8 @@ head(internet_coverage, 4)</code></pre>
 ##   .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_guess&quot; &quot;collector&quot;
 ##   ..- attr(*, &quot;class&quot;)= chr &quot;col_spec&quot;</code></pre>
 </div>
-<div id="number-of-registered-simcards-and-active-users" class="section level2">
-<h2>Number of registered simcards and active users</h2>
+<div id="number-of-active-users" class="section level2">
+<h2>Number of active users</h2>
 <pre class="r"><code>operator_stats %&gt;% 
   ggplot() + 
   geom_line(
@@ -163,8 +163,8 @@ head(internet_coverage, 4)</code></pre>
     ) </code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 </div>
-<div id="percentage-change-in-the-active-user-base" class="section level2">
-<h2>Percentage change in the active user base</h2>
+<div id="change-in-the-active-user-base" class="section level2">
+<h2>Change in the active user base</h2>
 <pre class="r"><code>operator_stats %&gt;% 
   select(Year,Number_of_active_Subscribers) %&gt;% 
   mutate(Percentage_change = 
