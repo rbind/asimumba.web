@@ -8,9 +8,14 @@ tags:
   - mobile user data
 slug: Mobile-Internet-Penetration-in-Zambia
 description: Overview on mobile and internet penetration in Zambia
+fig_width: 3
 fig_height: 4
 ---
 In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority (ZICTA) data. I will walk through the data on the subscriber base, the user trafffic and the cost differentials among the three mobile operators, these being: Airtel,Zamtel and MTN Zambia.In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used. 
+```{r,echo=FALSE}
+knitr::opts_chunk$set(fig.width=8, fig.height=5) 
+```
+
 
 ## Prerequisites
 
@@ -30,7 +35,7 @@ library(plotly)
 
 The data used in this analysis can be found on the [ZICTA](http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html) website. Since the data on the ZICTA website is not in a downloadable format. I had to turn to Microsoft Excel, with its option to mine the data from the web. The data online is in a format which is not very helpful to work with, so I had to clean up and reorder the data into a "tidy" format (each variable is a column and each observation occupying a row). The original data format can be seen in the screenshot below.
 
-![](https://user-images.githubusercontent.com/24398851/31025561-ba80b558-a54b-11e7-9e91-b3655f35d4db.png)
+![Source: ZICTA](https://user-images.githubusercontent.com/24398851/31025561-ba80b558-a54b-11e7-9e91-b3655f35d4db.png)
 
 Running the following codes loads the data into the work environment, so we can work with it to do our analysis. 
 ```{r,message=FALSE}
@@ -63,13 +68,21 @@ names(operator_stats) # column names
 It is important to learn the data types and the form your data assumes in your dataset. To achieve this, the `str()` function can be called. Since the the dataset has variables I am not interested in, I narrow the field with the `select()` from the `dplyr` package 
 to select only vairables of interest
 
-```{r}
+```{r, eval=FALSE}
 operator_stats %>% 
   select(Number_of_PSTN_Operators, Number_of_Mobile_Operators, Number_of_Registered_SIM_Cards, Minutes_of_use_Monthly) %>% 
   str()
 ```
+## Second quarter statistics from ZICTA
 
-## Number of active users 
+ZICTA provides the following statistics on ICT as of the second quarter of 2017, as seen below.From these statistics, it can be seen that mobile subsription is slightly under 12.5 million suscribers, representing a penetration rate of 75.77%. On the internet side, a penetration rate is more than a third standing at 35.88%.
+
+![Source: ZICTA](https://user-images.githubusercontent.com/24398851/31033551-2f2fdf7e-a569-11e7-87f1-7cd751d0c310.png).
+
+
+## Number of active users
+
+As can be seen from the trend that spans fron 2010 to the year 2017 upto Q2 statistics, there has been a relatively upward trend in active mobile user subscribers. With the period between 2010 to 2012 experiencing the biggest leap of nearly 50% change.
 
 ```{r}
 operator_stats %>% 
@@ -79,39 +92,51 @@ operator_stats %>%
       x = Year,
       y = Number_of_active_Subscribers), 
     color = "green"
-    ) 
+    ) +
+  labs(
+    x = "Year",
+    y = "Number of Active subscirbers"
+  )  + ggtitle("Trend of Active mobile subsribers", 
+                  subtitle = "Over the period from 2010 - Q2, 2017")
  
+```
+
+The plot below shows a positive correlationship between the active mobile subscribers with the population estimate from the Central Statistics Office.
+
+```{r}
+operator_stats %>% 
+  ggplot(aes(x = Population_CSO_Estimate, y = Number_of_active_Subscribers)) +
+  geom_line(color = "green") +
+  geom_point(color = "red") + 
+  labs(
+    x = "Population Estimate",
+    y = "Number of Active subscirbers"
+  ) +
+  ggtitle("Population Vs. Number of Mobile Active subscribers", 
+          subtitle = "Over the period from 2010 - Q2, 2017")
 ```
 
 
 ## Change in the active user base
 
+For much of the period under review, the number of active users was had a positive upward trend. Except for the years 2013 to 2014 and 2017 first quarter that showed a decline. Perhaps much of this decline for the 2013-2014, can be attributed to the fears the general populace had over compulsory sim registration. With fears spreading that the governement was implementing this programme so they can spy on the citizens. The relevant authority made sure these fears were addressed by sensitizing the general [public](https://www.zicta.zm/Views/Articles/Sim%20Registration%20(FAQ)%20.htm) through [press](http://allafrica.com/stories/201212120613.html) releases. 
+
+Though this was a free exercise, some opted to make [money](https://www.lusakatimes.com/2013/01/30/sim-registration-as-the-process-is-absolutely-free-zicta/) by charging for registration. 
+
 ```{r}
 operator_stats %>% 
-  select(Year,Number_of_active_Subscribers) %>% 
+  select(Year,Population_CSO_Estimate,
+         Number_of_active_Subscribers) %>% 
   mutate(Percentage_change = 
            (Number_of_active_Subscribers - lag(Number_of_active_Subscribers))/
            lag(Number_of_active_Subscribers) * 100
            )  
 ```
 
+In terms of the summary statistics, the active users mumbers have average 10,285,415 a year. Considering a population size of nearly 16 million, this is a decent uptake in active mobile users.
 ```{r}
-operator_stats %>% 
-  ggplot() + 
-    geom_point(
-      aes(
-      x = Population_CSO_Estimate, 
-      y = Number_of_active_Subscribers
-    )
-  ) + 
-  geom_line(
-    aes(
-      x = Population_CSO_Estimate, 
-      y = Number_of_active_Subscribers
-    )
-  )
+summary(operator_stats$Number_of_active_Subscribers)
 ```
-
 
 ## Domestic calls Traffic - Incoming and Outgoing 
 ```{r, message=FALSE}
@@ -127,5 +152,6 @@ ggplot() +
     color = "green"
     )
 ```
+
 
 

@@ -8,12 +8,13 @@ tags:
   - mobile user data
 slug: Mobile-Internet-Penetration-in-Zambia
 description: Overview on mobile and internet penetration in Zambia
+fig_width: 3
 fig_height: 4
 ---
 
 
 
-<p>In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information, Communication and Technolgy Agency (ZICTA) data, I will walk through the data on the subscriber base, the user trafffic and the cost differential among the three mobile operators.In addition, internet usage and the statistics on Internet Service Providers(ISPs) will be used.</p>
+<p>In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority (ZICTA) data. I will walk through the data on the subscriber base, the user trafffic and the cost differentials among the three mobile operators, these being: Airtel,Zamtel and MTN Zambia.In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used.</p>
 <div id="prerequisites" class="section level2">
 <h2>Prerequisites</h2>
 <p>For this analysis, I will mainly use the following packages. The beauty with the R language is that as a modular language, meaning it is fully extensible with add-on packages. I will make use of the <code>ggplot2</code> for visualising the data; <code>dplyr</code>, which is the package made to seamlessly handle data tranformations, will be used to tweak the data to match the objectives of the analysis. The other packages are <code>readr</code> for data import and <code>plotly</code> for interactive visualization.</p>
@@ -29,8 +30,8 @@ library(plotly)</code></pre>
 <h2>Data</h2>
 <p>The data used in this analysis can be found on the <a href="http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html">ZICTA</a> website. Since the data on the ZICTA website is not in a downloadable format. I had to turn to Microsoft Excel, with its option to mine the data from the web. The data online is in a format which is not very helpful to work with, so I had to clean up and reorder the data into a “tidy” format (each variable is a column and each observation occupying a row). The original data format can be seen in the screenshot below.</p>
 <div class="figure">
-<img src="https://user-images.githubusercontent.com/24398851/31025561-ba80b558-a54b-11e7-9e91-b3655f35d4db.png" />
-
+<img src="https://user-images.githubusercontent.com/24398851/31025561-ba80b558-a54b-11e7-9e91-b3655f35d4db.png" alt="Source: ZICTA" />
+<p class="caption">Source: ZICTA</p>
 </div>
 <p>Running the following codes loads the data into the work environment, so we can work with it to do our analysis.</p>
 <pre class="r"><code>operator_stats &lt;- read_csv(&quot;../../static/data/operator_stats.csv&quot;)
@@ -82,77 +83,15 @@ head(internet_coverage, 4)</code></pre>
 <pre class="r"><code>operator_stats %&gt;% 
   select(Number_of_PSTN_Operators, Number_of_Mobile_Operators, Number_of_Registered_SIM_Cards, Minutes_of_use_Monthly) %&gt;% 
   str()</code></pre>
-<pre><code>## Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:    9 obs. of  4 variables:
-##  $ Number_of_PSTN_Operators      : int  1 1 1 1 1 1 1 1 1
-##  $ Number_of_Mobile_Operators    : int  3 3 3 3 3 3 3 3 3
-##  $ Number_of_Registered_SIM_Cards: int  NA NA 1046288 4986192 10231609 12133818 NA NA NA
-##  $ Minutes_of_use_Monthly        : int  NA 49 60 63 87 74 88 75 77
-##  - attr(*, &quot;spec&quot;)=List of 2
-##   ..$ cols   :List of 29
-##   .. ..$ Year                                            : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
-##   .. ..$ Population_CSO_Estimate                         : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
-##   .. ..$ Number_of_Mobile_Operators                      : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
-##   .. ..$ Number_of_PSTN_Operators                        : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
-##   .. ..$ Number_of_Active_ISPs                           : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
-##   .. ..$ Internet_Points_of_Presence_Districts           : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
-##   .. ..$ Number_of_Registered_SIM_Cards                  : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
-##   .. ..$ Number_of_active_Subscribers                    : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
-##   .. ..$ Mobile_Penetration_100_Inhabitants              : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
-##   .. ..$ Mobile_Broadband_users                          : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
-##   .. ..$ Mobile_Broadband_penetration_100_users          : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
-##   .. ..$ Traffic_domestic_Incoming_Minutes_MNO_PSTN      : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
-##   .. ..$ Traffic_domestic_Outgoing_Minutes_MNO_PSTN      : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
-##   .. ..$ Traffic_International_Incoming_Minutes_MNO_PSTN): list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
-##   .. ..$ Traffic_International_Outgoing_Minutes_MNO_PSTN): list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
-##   .. ..$ SMS_MMS_traffic                                 : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_number&quot; &quot;collector&quot;
-##   .. ..$ Minutes_of_use_Monthly                          : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
-##   .. ..$ Voice_on_net_peak_Mobile                        : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
-##   .. ..$ Voice_on_net_of_ peak_Mobile                    : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
-##   .. ..$ Voice_off_net_peak_Mobile                       : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
-##   .. ..$ Voice_off_net_off_peak _Mobile                  : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
-##   .. ..$ Voice_on_net_peak_Fixed                         : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
-##   .. ..$ Voice_on_net_off_peak_Fixed                     : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
-##   .. ..$ Voice_off_net_peak_Fixed                        : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
-##   .. ..$ Voice_off_net_off_peak_Fixed                    : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
-##   .. ..$ Voice _Tariff_Mobile                            : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
-##   .. ..$ Voice _Tariff _PSTN                             : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
-##   .. ..$ SMS_on_net_Mobile                               : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
-##   .. ..$ SMS_off_net_Mobile                              : list()
-##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_double&quot; &quot;collector&quot;
-##   ..$ default: list()
-##   .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_guess&quot; &quot;collector&quot;
-##   ..- attr(*, &quot;class&quot;)= chr &quot;col_spec&quot;</code></pre>
+</div>
+<div id="second-quarter-statistics-from-zicta" class="section level2">
+<h2>Second quarter statistics from ZICTA</h2>
+<p>ZICTA provides the following statistics on ICT as of the second quarter of 2017, as seen below.From these statistics, it can be seen that mobile subsription is slightly under 12.5 million suscribers, representing a penetration rate of 75.77%. On the internet side, a penetration rate is more than a third standing at 35.88%.</p>
+<p><img src="https://user-images.githubusercontent.com/24398851/31033551-2f2fdf7e-a569-11e7-87f1-7cd751d0c310.png" alt="Source: ZICTA" />.</p>
 </div>
 <div id="number-of-active-users" class="section level2">
 <h2>Number of active users</h2>
+<p>As can be seen from the trend that spans fron 2010 to the year 2017 upto Q2 statistics, there has been a relatively upward trend in active mobile user subscribers. With the period between 2010 to 2012 experiencing the biggest leap of nearly 50% change.</p>
 <pre class="r"><code>operator_stats %&gt;% 
   ggplot() + 
   geom_line(
@@ -160,44 +99,54 @@ head(internet_coverage, 4)</code></pre>
       x = Year,
       y = Number_of_active_Subscribers), 
     color = &quot;green&quot;
-    ) </code></pre>
-<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+    ) +
+  labs(
+    x = &quot;Year&quot;,
+    y = &quot;Number of Active subscirbers&quot;
+  )  + ggtitle(&quot;Trend of Active mobile subsribers&quot;, 
+                  subtitle = &quot;Over the period from 2010 - Q2, 2017&quot;)</code></pre>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-7-1.png" width="768" /></p>
+<p>The plot below shows a positive correlationship between the active mobile subscribers with the population estimate from the Central Statistics Office.</p>
+<pre class="r"><code>operator_stats %&gt;% 
+  ggplot(aes(x = Population_CSO_Estimate, y = Number_of_active_Subscribers)) +
+  geom_line(color = &quot;green&quot;) +
+  geom_point(color = &quot;red&quot;) + 
+  labs(
+    x = &quot;Population Estimate&quot;,
+    y = &quot;Number of Active subscirbers&quot;
+  ) +
+  ggtitle(&quot;Population Vs. Number of Mobile Active subscribers&quot;, 
+          subtitle = &quot;Over the period from 2010 - Q2, 2017&quot;)</code></pre>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-8-1.png" width="768" /></p>
 </div>
 <div id="change-in-the-active-user-base" class="section level2">
 <h2>Change in the active user base</h2>
+<p>For much of the period under review, the number of active users was had a positive upward trend. Except for the years 2013 to 2014 and 2017 first quarter that showed a decline. Perhaps much of this decline for the 2013-2014, can be attributed to the fears the general populace had over compulsory sim registration. With fears spreading that the governement was implementing this programme so they can spy on the citizens. The relevant authority made sure these fears were addressed by sensitizing the general <a href="https://www.zicta.zm/Views/Articles/Sim%20Registration%20(FAQ)%20.htm">public</a> through <a href="http://allafrica.com/stories/201212120613.html">press</a> releases.</p>
+<p>Though this was a free exercise, some opted to make <a href="https://www.lusakatimes.com/2013/01/30/sim-registration-as-the-process-is-absolutely-free-zicta/">money</a> by charging for registration.</p>
 <pre class="r"><code>operator_stats %&gt;% 
-  select(Year,Number_of_active_Subscribers) %&gt;% 
+  select(Year,Population_CSO_Estimate,
+         Number_of_active_Subscribers) %&gt;% 
   mutate(Percentage_change = 
            (Number_of_active_Subscribers - lag(Number_of_active_Subscribers))/
            lag(Number_of_active_Subscribers) * 100
            )  </code></pre>
-<pre><code>## # A tibble: 9 x 3
-##    Year Number_of_active_Subscribers Percentage_change
-##   &lt;int&gt;                        &lt;dbl&gt;             &lt;dbl&gt;
-## 1  2010                      5447536                NA
-## 2  2011                      8164553        49.8760724
-## 3  2012                     10524676        28.9069469
-## 4  2013                     10395801        -1.2245033
-## 5  2014                     10114867        -2.7023795
-## 6  2015                     11557725        14.2647254
-## 7  2016                     12017034         3.9740433
-## 8  2017                     11916871        -0.8335085
-## 9  2017                     12429675         4.3031766</code></pre>
-<pre class="r"><code>operator_stats %&gt;% 
-  ggplot() + 
-    geom_point(
-      aes(
-      x = Population_CSO_Estimate, 
-      y = Number_of_active_Subscribers
-    )
-  ) + 
-  geom_line(
-    aes(
-      x = Population_CSO_Estimate, 
-      y = Number_of_active_Subscribers
-    )
-  )</code></pre>
-<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<pre><code>## # A tibble: 9 x 4
+##    Year Population_CSO_Estimate Number_of_active_Subscribers
+##   &lt;int&gt;                   &lt;dbl&gt;                        &lt;dbl&gt;
+## 1  2010                13092666                      5447536
+## 2  2011                13721498                      8164553
+## 3  2012                14156468                     10524676
+## 4  2013                14605555                     10395801
+## 5  2014                15068729                     10114867
+## 6  2015                15545778                     11557725
+## 7  2016                16037474                     12017034
+## 8  2017                16405229                     11916871
+## 9  2017                16405229                     12429675
+## # ... with 1 more variables: Percentage_change &lt;dbl&gt;</code></pre>
+<p>In terms of the summary statistics, the active users mumbers have average 10,285,415 a year. Considering a population size of nearly 16 million, this is a decent uptake in active mobile users.</p>
+<pre class="r"><code>summary(operator_stats$Number_of_active_Subscribers)</code></pre>
+<pre><code>##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+##  5447536 10114867 10524676 10285415 11916871 12429675</code></pre>
 </div>
 <div id="domestic-calls-traffic---incoming-and-outgoing" class="section level2">
 <h2>Domestic calls Traffic - Incoming and Outgoing</h2>
@@ -215,5 +164,5 @@ ggplot() +
 <pre><code>## Warning: Removed 1 rows containing missing values (geom_path).
 
 ## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
-<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-11-1.png" width="768" /></p>
 </div>
