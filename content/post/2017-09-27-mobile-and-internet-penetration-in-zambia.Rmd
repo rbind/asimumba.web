@@ -11,7 +11,7 @@ description: Overview on mobile and internet penetration in Zambia
 fig_width: 3
 fig_height: 4
 ---
-In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority (ZICTA) data. I will walk through the data on the subscriber base, the user trafffic and the cost differentials among the three mobile operators, these being: Airtel, Zamtel and MTN Zambia. In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used. 
+In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority ([ZICTA](http://www.zicta.zm/)) data. I will walk through the data on the subscriber base, the user trafffic and the cost differentials among the three mobile operators, these being: Airtel, Zamtel and MTN Zambia. In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used. 
 ```{r,echo=FALSE}
 knitr::opts_chunk$set(fig.width=8, fig.height=5) 
 ```
@@ -51,7 +51,7 @@ internet_coverage <- internet_coverage %>%
   as_tibble()
 ```
 
-The `head()` command gives a view of the first 6 rows accross variables of your data by default. This allows a quick peek at your data, revealing the data types and forms; and learn how the data is laid out .
+The `head()` command gives a view of the first 6 rows across variables of your data by default. This allows a quick peek at your data, revealing the data types and forms; and learn how the data is laid out .
 
 ```{r, eval=FALSE}
 head(operator_stats, 4) #Take peek at the data.
