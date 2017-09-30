@@ -14,7 +14,7 @@ fig_height: 4
 
 
 
-<p>In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority (ZICTA) data. I will walk through the data on the subscriber base, the user trafffic and the cost differentials among the three mobile operators, these being: Airtel,Zamtel and MTN Zambia.In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used.</p>
+<p>In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority (ZICTA) data. I will walk through the data on the subscriber base, the user trafffic and the cost differentials among the three mobile operators, these being: Airtel, Zamtel and MTN Zambia. In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used.</p>
 <div id="prerequisites" class="section level2">
 <h2>Prerequisites</h2>
 <p>For this analysis, I will mainly use the following packages. The beauty with the R language is that as a modular language, meaning it is fully extensible with add-on packages. I will make use of the <code>ggplot2</code> for visualising the data; <code>dplyr</code>, which is the package made to seamlessly handle data tranformations, will be used to tweak the data to match the objectives of the analysis. The other packages are <code>readr</code> for data import and <code>plotly</code> for interactive visualization.</p>
@@ -81,13 +81,19 @@ head(internet_coverage, 4)</code></pre>
 ## [29] &quot;SMS_off_net_Mobile&quot;</code></pre>
 <p>It is important to learn the data types and the form your data assumes in your dataset. To achieve this, the <code>str()</code> function can be called. Since the the dataset has variables I am not interested in, I narrow the field with the <code>select()</code> from the <code>dplyr</code> package to select only vairables of interest</p>
 <pre class="r"><code>operator_stats %&gt;% 
-  select(Number_of_PSTN_Operators, Number_of_Mobile_Operators, Number_of_Registered_SIM_Cards, Minutes_of_use_Monthly) %&gt;% 
+  select(Number_of_PSTN_Operators,
+         Number_of_Mobile_Operators, 
+         Number_of_Registered_SIM_Cards, 
+         Minutes_of_use_Monthly) %&gt;% 
   str()</code></pre>
 </div>
 <div id="second-quarter-statistics-from-zicta" class="section level2">
 <h2>Second quarter statistics from ZICTA</h2>
 <p>ZICTA provides the following statistics on ICT as of the second quarter of 2017, as seen below.From these statistics, it can be seen that mobile subsription is slightly under 12.5 million suscribers, representing a penetration rate of 75.77%. On the internet side, a penetration rate is more than a third standing at 35.88%.</p>
-<p><img src="https://user-images.githubusercontent.com/24398851/31033551-2f2fdf7e-a569-11e7-87f1-7cd751d0c310.png" alt="Source: ZICTA" />.</p>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/24398851/31039423-3acc0a34-a586-11e7-9285-78a08b5d4cd2.png" alt="Source: ZICTA" />
+<p class="caption">Source: ZICTA</p>
+</div>
 </div>
 <div id="number-of-active-users" class="section level2">
 <h2>Number of active users</h2>
@@ -108,9 +114,12 @@ head(internet_coverage, 4)</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-7-1.png" width="768" /></p>
 <p>The plot below shows a positive correlationship between the active mobile subscribers with the population estimate from the Central Statistics Office.</p>
 <pre class="r"><code>operator_stats %&gt;% 
-  ggplot(aes(x = Population_CSO_Estimate, y = Number_of_active_Subscribers)) +
-  geom_line(color = &quot;green&quot;) +
-  geom_point(color = &quot;red&quot;) + 
+  ggplot(aes(x = Population_CSO_Estimate, 
+             y = Number_of_active_Subscribers, color = Number_of_active_Subscribers )) +
+  geom_line() +
+  geom_point() + 
+  theme(legend.title = element_text(size = 10)
+    ) + 
   labs(
     x = &quot;Population Estimate&quot;,
     y = &quot;Number of Active subscirbers&quot;
@@ -127,7 +136,8 @@ head(internet_coverage, 4)</code></pre>
   select(Year,Population_CSO_Estimate,
          Number_of_active_Subscribers) %&gt;% 
   mutate(Percentage_change = 
-           (Number_of_active_Subscribers - lag(Number_of_active_Subscribers))/
+           (Number_of_active_Subscribers -
+              lag(Number_of_active_Subscribers))/
            lag(Number_of_active_Subscribers) * 100
            )  </code></pre>
 <pre><code>## # A tibble: 9 x 4
@@ -160,7 +170,12 @@ ggplot() +
     x = Year, 
     y = Traffic_domestic_Outgoing_Minutes_MNO_PSTN),
     color = &quot;green&quot;
-    )</code></pre>
+    ) +
+  labs(
+    x = &quot;Year&quot;, 
+    y = &quot;Domestic incoming/outgoing traffic in minutes&quot;
+  ) + 
+  ggtitle(&quot;Domestic incoming Vs. Outgoing Traffic in minutes&quot;)</code></pre>
 <pre><code>## Warning: Removed 1 rows containing missing values (geom_path).
 
 ## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
