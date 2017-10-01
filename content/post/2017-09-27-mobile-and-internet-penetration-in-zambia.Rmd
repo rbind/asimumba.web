@@ -222,6 +222,7 @@ knitr::kable(network_cover, booktabs = TRUE,
 ## Internet Penetration
 
 **Broadband users**
+
 The broadband data which covers all those on Direct Subsriber Line,cable and  optic fibre internet access, on average there are 3855730 users, with 75% of the users amounting to 5338910.
 
 ```{r}
