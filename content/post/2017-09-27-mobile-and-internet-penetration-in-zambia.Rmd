@@ -41,13 +41,13 @@ Running the following codes loads the data into the work environment, so we can 
 ```{r,message=FALSE}
 operator_stats <- read_csv("../../static/data/operator_stats.csv")
 isps <- read_csv("../../static/data/isps.csv")
-internet_coverage <- read_csv("../../static/data/internet_coverage.csv")
+network_coverage <- read_csv("../../static/data/network_coverage.csv")
 
 operator_stats <- operator_stats %>% 
   as_tibble()
 isps <- isps %>% 
   as_tibble()
-internet_coverage <- internet_coverage %>% 
+network_coverage <- network_coverage %>% 
   as_tibble()
 ```
 
@@ -56,7 +56,7 @@ The `head()` command gives a view of the first 6 rows across variables of your d
 ```{r, eval=FALSE}
 head(operator_stats, 4) #Take peek at the data.
 head(isps, 4)
-head(internet_coverage, 4)
+head(network_coverage, 4)
 ```
 
 The `names()` function helps to know the variables or column names in the data. This comes in hand to pick the names and variables in the analysis.
@@ -100,7 +100,7 @@ operator_stats %>%
     x = "Year",
     y = "Number of Active subscirbers"
   )  + ggtitle("Trend of Active mobile subsribers", 
-                  subtitle = "Over the period from 2010 - Q2, 2017")
+                  subtitle = "Over the period from 2010 - 2017, Q1 & Q2")
  
 ```
 
@@ -119,7 +119,7 @@ operator_stats %>%
     y = "Number of Active subscirbers"
   ) +
   ggtitle("Population Vs. Number of Mobile Active subscribers", 
-          subtitle = "Over the period from 2010 - Q2, 2017")
+          subtitle = "Over the period from 2010 - 2017, Q1 & Q2")
 ```
 
 
@@ -127,7 +127,7 @@ operator_stats %>%
 
 For much of the period under review, the number of active users was had a positive upward trend. Except for the years 2013 to 2014 and 2017 first quarter that showed a decline. Perhaps much of this decline for the 2013-2014, can be attributed to the fears the general populace had over compulsory sim registration. With fears spreading that the governement was implementing this programme so they can spy on the citizens. The relevant authority made sure these fears were addressed by sensitizing the general [public](https://www.zicta.zm/Views/Articles/Sim%20Registration%20(FAQ)%20.htm) through [press](http://allafrica.com/stories/201212120613.html) releases. 
 
-Though this was a free exercise, some opted to make [money](https://www.lusakatimes.com/2013/01/30/sim-registration-as-the-process-is-absolutely-free-zicta/) by charging for registration. 
+Given  this was a free of charge exercise, some opted to make [money](https://www.lusakatimes.com/2013/01/30/sim-registration-as-the-process-is-absolutely-free-zicta/) by charging for registration. Further casting a negative image on the exercise.
 
 ```{r}
 operator_stats %>% 
@@ -143,6 +143,21 @@ operator_stats %>%
 In terms of the summary statistics, the active users mumbers have average 10,285,415 a year. Considering a population size of nearly 16 million, this is a decent uptake in active mobile users.
 ```{r}
 summary(operator_stats$Number_of_active_Subscribers)
+```
+
+For the mobile pepentration numbers per 100 inhabitants, the graph below shows an upward trend for much of the years under review. More in line with the active user base numbers. 
+
+```{r}
+operator_stats %>% 
+  ggplot(aes(x = Year, y = Mobile_Penetration_100_Inhabitants)) +
+  geom_point() +
+  geom_line() +
+  labs(
+    x = "Year",
+    y = "Mobile Penetration per 100 Inhabitants"
+  ) +
+  ggtitle("Mobile Penetration per 100 Inhabitants", 
+          subtitle = "Over the period from 2010 - 2017, Q1 & Q2")
 ```
 
 ## Domestic calls Traffic - Incoming and Outgoing 
@@ -165,5 +180,113 @@ ggplot() +
   ggtitle("Domestic incoming Vs. Outgoing Traffic in minutes")
 ```
 
+## International incoming and outgoing traffic 
 
+```{r}
+operator_stats %>% 
+ggplot() +
+  geom_line(aes(
+    x = Year,
+    y = Traffic_International_Incoming_Minutes_MNO_PSTN), 
+    color = "red") +
+  geom_line(aes(
+    x = Year, 
+    y = Traffic_International_Outgoing_Minutes_MNO_PSTN),
+    color = "green"
+    ) +
+  labs(
+    x = "Year", 
+    y = "International incoming/outgoing traffic in minutes"
+  ) + 
+  ggtitle("International incoming Vs. Outgoing Traffic in minutes")
+```
+
+## Network Coverage
+
+```{r}
+network_cover <-  network_coverage %>% 
+  select(Year, Airtel_Zambia, MTN_Zambia, Zamtel) 
+knitr::kable(network_cover, booktabs = TRUE, 
+             caption = "Percentage network coverage by Operator")  
+```
+
+## Internet Penetration
+
+**Broadband users**
+The broadband data which covers all those on Direct Subsriber Line,cable and  optic fibre internet access, on average there are 3855730 users, with 75% of the users amounting to 5338910.
+
+```{r}
+summary(operator_stats$Mobile_Broadband_users)
+```
+
+
+```{r}
+operator_stats %>% 
+  ggplot() +
+  geom_line(aes(x = Mobile_Broadband_penetration_100_users,
+                y = Mobile_Broadband_users))
+  
+```
+
+## Internet subscribers Vs Penetration per 100 inhabitants
+
+```{r}
+isps %>% 
+  ggplot() +
+  geom_line(aes(x = Fixed_internet_Penetration_per_100,
+                y = Number_of_Subscribers))
+```
+
+
+## Cost differentials
+
+```{r}
+operator_stats %>% 
+  ggplot() + 
+  geom_line(aes(x = Year, y = Voice_Tariff_Mobile), color = "red") +
+  annotate("text",x= 2013,y=0.55,label="Mobile voice tariff",
+           fontface="bold",size = 3, colour = "forestgreen") +
+  geom_line(aes(x = Year, y = SMS_on_net_Mobile), color = "green") +
+  annotate("text",x= 2013,y=0.32,label="SMS on-net tariff",
+           fontface="bold",size = 3, colour = "red") +
+  geom_line(aes(x = Year, y = SMS_off_net_Mobile), color = "yellow") +
+  annotate("text",x= 2013,y=0.25,label="SMS off-net tariff",
+           fontface="bold",size = 3, colour = "black") +
+  labs(
+    x = "year",
+    y = "Mobile Voice tariff/ SMS - on and off net "
+  ) +
+  ggtitle("Mobile voice tariff and SMS tariff - On & Off net",
+          subtitle = "Over the period from 2010 - 2017, Q1 & Q2")
+  
+```
+
+
+## Mobile voice calls cost per/minute 
+```{r}
+operator_stats %>% 
+  ggplot() +
+  geom_line(aes(x = Year, y = Voice_on_net_peak_Mobile), color = "red") +
+  annotate("text",x= 2013,y=1.18,label="Voice on net peak - Mobile",
+           fontface="bold",size = 3, colour = "black") +
+  
+  geom_line(aes(x = Year, y = Voice_on_net_off_peak_Mobile), color = "green") +
+  annotate("text",x= 2013,y= 0.9,label="Voice on net off peak - Mobile",
+           fontface="bold",size = 3, colour = "black") +
+  
+  geom_line(aes(x = Year, y = Voice_off_net_peak_Mobile), color = "yellow") +
+  annotate("text",x= 2013,y= 1.4,label="Voice off net peak - Mobile",
+           fontface="bold",size = 3, colour = "black") +
+  
+  geom_line(aes(x = Year, y = Voice_off_net_off_peak_Mobile), color = "blue") +
+  annotate("text",x= 2013,y=1.22,label="Voice off net off peak - Mobile",
+           fontface="bold",size = 3, colour = "black")  +
+  labs(
+    x = "Year",
+    y = "Voice cost (Kwacha) per min"
+  ) +
+  ggtitle("Voice cost in Kwachas per minute on mobile")
+
+  
+```
 

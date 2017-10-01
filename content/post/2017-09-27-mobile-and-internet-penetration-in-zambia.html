@@ -14,7 +14,7 @@ fig_height: 4
 
 
 
-<p>In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority (ZICTA) data. I will walk through the data on the subscriber base, the user trafffic and the cost differentials among the three mobile operators, these being: Airtel, Zamtel and MTN Zambia. In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used.</p>
+<p>In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority (<a href="http://www.zicta.zm/">ZICTA</a>) data. I will walk through the data on the subscriber base, the user trafffic and the cost differentials among the three mobile operators, these being: Airtel, Zamtel and MTN Zambia. In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used.</p>
 <div id="prerequisites" class="section level2">
 <h2>Prerequisites</h2>
 <p>For this analysis, I will mainly use the following packages. The beauty with the R language is that as a modular language, meaning it is fully extensible with add-on packages. I will make use of the <code>ggplot2</code> for visualising the data; <code>dplyr</code>, which is the package made to seamlessly handle data tranformations, will be used to tweak the data to match the objectives of the analysis. The other packages are <code>readr</code> for data import and <code>plotly</code> for interactive visualization.</p>
@@ -36,48 +36,48 @@ library(plotly)</code></pre>
 <p>Running the following codes loads the data into the work environment, so we can work with it to do our analysis.</p>
 <pre class="r"><code>operator_stats &lt;- read_csv(&quot;../../static/data/operator_stats.csv&quot;)
 isps &lt;- read_csv(&quot;../../static/data/isps.csv&quot;)
-internet_coverage &lt;- read_csv(&quot;../../static/data/internet_coverage.csv&quot;)
+network_coverage &lt;- read_csv(&quot;../../static/data/network_coverage.csv&quot;)
 
 operator_stats &lt;- operator_stats %&gt;% 
   as_tibble()
 isps &lt;- isps %&gt;% 
   as_tibble()
-internet_coverage &lt;- internet_coverage %&gt;% 
+network_coverage &lt;- network_coverage %&gt;% 
   as_tibble()</code></pre>
-<p>The <code>head()</code> command gives a view of the first 6 rows accross variables of your data by default. This allows a quick peek at your data, revealing the data types and forms; and learn how the data is laid out .</p>
+<p>The <code>head()</code> command gives a view of the first 6 rows across variables of your data by default. This allows a quick peek at your data, revealing the data types and forms; and learn how the data is laid out .</p>
 <pre class="r"><code>head(operator_stats, 4) #Take peek at the data.
 head(isps, 4)
-head(internet_coverage, 4)</code></pre>
+head(network_coverage, 4)</code></pre>
 <p>The <code>names()</code> function helps to know the variables or column names in the data. This comes in hand to pick the names and variables in the analysis.</p>
 <pre class="r"><code>names(operator_stats) # column names </code></pre>
-<pre><code>##  [1] &quot;Year&quot;                                            
-##  [2] &quot;Population_CSO_Estimate&quot;                         
-##  [3] &quot;Number_of_Mobile_Operators&quot;                      
-##  [4] &quot;Number_of_PSTN_Operators&quot;                        
-##  [5] &quot;Number_of_Active_ISPs&quot;                           
-##  [6] &quot;Internet_Points_of_Presence_Districts&quot;           
-##  [7] &quot;Number_of_Registered_SIM_Cards&quot;                  
-##  [8] &quot;Number_of_active_Subscribers&quot;                    
-##  [9] &quot;Mobile_Penetration_100_Inhabitants&quot;              
-## [10] &quot;Mobile_Broadband_users&quot;                          
-## [11] &quot;Mobile_Broadband_penetration_100_users&quot;          
-## [12] &quot;Traffic_domestic_Incoming_Minutes_MNO_PSTN&quot;      
-## [13] &quot;Traffic_domestic_Outgoing_Minutes_MNO_PSTN&quot;      
-## [14] &quot;Traffic_International_Incoming_Minutes_MNO_PSTN)&quot;
-## [15] &quot;Traffic_International_Outgoing_Minutes_MNO_PSTN)&quot;
-## [16] &quot;SMS_MMS_traffic&quot;                                 
-## [17] &quot;Minutes_of_use_Monthly&quot;                          
-## [18] &quot;Voice_on_net_peak_Mobile&quot;                        
-## [19] &quot;Voice_on_net_of_ peak_Mobile&quot;                    
-## [20] &quot;Voice_off_net_peak_Mobile&quot;                       
-## [21] &quot;Voice_off_net_off_peak _Mobile&quot;                  
-## [22] &quot;Voice_on_net_peak_Fixed&quot;                         
-## [23] &quot;Voice_on_net_off_peak_Fixed&quot;                     
-## [24] &quot;Voice_off_net_peak_Fixed&quot;                        
-## [25] &quot;Voice_off_net_off_peak_Fixed&quot;                    
-## [26] &quot;Voice _Tariff_Mobile&quot;                            
-## [27] &quot;Voice _Tariff _PSTN&quot;                             
-## [28] &quot;SMS_on_net_Mobile&quot;                               
+<pre><code>##  [1] &quot;Year&quot;                                           
+##  [2] &quot;Population_CSO_Estimate&quot;                        
+##  [3] &quot;Number_of_Mobile_Operators&quot;                     
+##  [4] &quot;Number_of_PSTN_Operators&quot;                       
+##  [5] &quot;Number_of_Active_ISPs&quot;                          
+##  [6] &quot;Internet_Points_of_Presence_Districts&quot;          
+##  [7] &quot;Number_of_Registered_SIM_Cards&quot;                 
+##  [8] &quot;Number_of_active_Subscribers&quot;                   
+##  [9] &quot;Mobile_Penetration_100_Inhabitants&quot;             
+## [10] &quot;Mobile_Broadband_users&quot;                         
+## [11] &quot;Mobile_Broadband_penetration_100_users&quot;         
+## [12] &quot;Traffic_domestic_Incoming_Minutes_MNO_PSTN&quot;     
+## [13] &quot;Traffic_domestic_Outgoing_Minutes_MNO_PSTN&quot;     
+## [14] &quot;Traffic_International_Incoming_Minutes_MNO_PSTN&quot;
+## [15] &quot;Traffic_International_Outgoing_Minutes_MNO_PSTN&quot;
+## [16] &quot;SMS_MMS_traffic&quot;                                
+## [17] &quot;Minutes_of_use_Monthly&quot;                         
+## [18] &quot;Voice_on_net_peak_Mobile&quot;                       
+## [19] &quot;Voice_on_net_of_ peak_Mobile&quot;                   
+## [20] &quot;Voice_off_net_peak_Mobile&quot;                      
+## [21] &quot;Voice_off_net_off_peak _Mobile&quot;                 
+## [22] &quot;Voice_on_net_peak_Fixed&quot;                        
+## [23] &quot;Voice_on_net_off_peak_Fixed&quot;                    
+## [24] &quot;Voice_off_net_peak_Fixed&quot;                       
+## [25] &quot;Voice_off_net_off_peak_Fixed&quot;                   
+## [26] &quot;Voice_Tariff_Mobile&quot;                            
+## [27] &quot;Voice_Tariff_PSTN&quot;                              
+## [28] &quot;SMS_on_net_Mobile&quot;                              
 ## [29] &quot;SMS_off_net_Mobile&quot;</code></pre>
 <p>It is important to learn the data types and the form your data assumes in your dataset. To achieve this, the <code>str()</code> function can be called. Since the the dataset has variables I am not interested in, I narrow the field with the <code>select()</code> from the <code>dplyr</code> package to select only vairables of interest</p>
 <pre class="r"><code>operator_stats %&gt;% 
@@ -110,7 +110,7 @@ head(internet_coverage, 4)</code></pre>
     x = &quot;Year&quot;,
     y = &quot;Number of Active subscirbers&quot;
   )  + ggtitle(&quot;Trend of Active mobile subsribers&quot;, 
-                  subtitle = &quot;Over the period from 2010 - Q2, 2017&quot;)</code></pre>
+                  subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;)</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-7-1.png" width="768" /></p>
 <p>The plot below shows a positive correlationship between the active mobile subscribers with the population estimate from the Central Statistics Office.</p>
 <pre class="r"><code>operator_stats %&gt;% 
@@ -125,13 +125,13 @@ head(internet_coverage, 4)</code></pre>
     y = &quot;Number of Active subscirbers&quot;
   ) +
   ggtitle(&quot;Population Vs. Number of Mobile Active subscribers&quot;, 
-          subtitle = &quot;Over the period from 2010 - Q2, 2017&quot;)</code></pre>
+          subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;)</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-8-1.png" width="768" /></p>
 </div>
 <div id="change-in-the-active-user-base" class="section level2">
 <h2>Change in the active user base</h2>
 <p>For much of the period under review, the number of active users was had a positive upward trend. Except for the years 2013 to 2014 and 2017 first quarter that showed a decline. Perhaps much of this decline for the 2013-2014, can be attributed to the fears the general populace had over compulsory sim registration. With fears spreading that the governement was implementing this programme so they can spy on the citizens. The relevant authority made sure these fears were addressed by sensitizing the general <a href="https://www.zicta.zm/Views/Articles/Sim%20Registration%20(FAQ)%20.htm">public</a> through <a href="http://allafrica.com/stories/201212120613.html">press</a> releases.</p>
-<p>Though this was a free exercise, some opted to make <a href="https://www.lusakatimes.com/2013/01/30/sim-registration-as-the-process-is-absolutely-free-zicta/">money</a> by charging for registration.</p>
+<p>Given this was a free of charge exercise, some opted to make <a href="https://www.lusakatimes.com/2013/01/30/sim-registration-as-the-process-is-absolutely-free-zicta/">money</a> by charging for registration. Further casting a negative image on the exercise.</p>
 <pre class="r"><code>operator_stats %&gt;% 
   select(Year,Population_CSO_Estimate,
          Number_of_active_Subscribers) %&gt;% 
@@ -157,6 +157,18 @@ head(internet_coverage, 4)</code></pre>
 <pre class="r"><code>summary(operator_stats$Number_of_active_Subscribers)</code></pre>
 <pre><code>##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
 ##  5447536 10114867 10524676 10285415 11916871 12429675</code></pre>
+<p>For the mobile pepentration numbers per 100 inhabitants, the graph below shows an upward trend for much of the years under review. More in line with the active user base numbers.</p>
+<pre class="r"><code>operator_stats %&gt;% 
+  ggplot(aes(x = Year, y = Mobile_Penetration_100_Inhabitants)) +
+  geom_point() +
+  geom_line() +
+  labs(
+    x = &quot;Year&quot;,
+    y = &quot;Mobile Penetration per 100 Inhabitants&quot;
+  ) +
+  ggtitle(&quot;Mobile Penetration per 100 Inhabitants&quot;, 
+          subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;)</code></pre>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-11-1.png" width="768" /></p>
 </div>
 <div id="domestic-calls-traffic---incoming-and-outgoing" class="section level2">
 <h2>Domestic calls Traffic - Incoming and Outgoing</h2>
@@ -179,5 +191,144 @@ ggplot() +
 <pre><code>## Warning: Removed 1 rows containing missing values (geom_path).
 
 ## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
-<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-11-1.png" width="768" /></p>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-12-1.png" width="768" /></p>
+</div>
+<div id="international-incoming-and-outgoing-traffic" class="section level2">
+<h2>International incoming and outgoing traffic</h2>
+<pre class="r"><code>operator_stats %&gt;% 
+ggplot() +
+  geom_line(aes(
+    x = Year,
+    y = Traffic_International_Incoming_Minutes_MNO_PSTN), 
+    color = &quot;red&quot;) +
+  geom_line(aes(
+    x = Year, 
+    y = Traffic_International_Outgoing_Minutes_MNO_PSTN),
+    color = &quot;green&quot;
+    ) +
+  labs(
+    x = &quot;Year&quot;, 
+    y = &quot;International incoming/outgoing traffic in minutes&quot;
+  ) + 
+  ggtitle(&quot;International incoming Vs. Outgoing Traffic in minutes&quot;)</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).
+
+## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-13-1.png" width="768" /></p>
+</div>
+<div id="network-coverage" class="section level2">
+<h2>Network Coverage</h2>
+<pre class="r"><code>network_cover &lt;-  network_coverage %&gt;% 
+  select(Year, Airtel_Zambia, MTN_Zambia, Zamtel) 
+knitr::kable(network_cover, booktabs = TRUE, 
+             caption = &quot;Percentage network coverage by Operator&quot;)  </code></pre>
+<table>
+<caption><span id="tab:unnamed-chunk-14">Table 1: </span>Percentage network coverage by Operator</caption>
+<thead>
+<tr class="header">
+<th align="right">Year</th>
+<th align="left">Airtel_Zambia</th>
+<th align="left">MTN_Zambia</th>
+<th align="left">Zamtel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">2010</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="right">2011</td>
+<td align="left">NA</td>
+<td align="left">36.60%</td>
+<td align="left">75.00%</td>
+</tr>
+<tr class="odd">
+<td align="right">2012</td>
+<td align="left">NA</td>
+<td align="left">37.50%</td>
+<td align="left">75.00%</td>
+</tr>
+<tr class="even">
+<td align="right">2013</td>
+<td align="left">42.70%</td>
+<td align="left">39.40%</td>
+<td align="left">29.70%</td>
+</tr>
+<tr class="odd">
+<td align="right">2014</td>
+<td align="left">42.70%</td>
+<td align="left">31.70%</td>
+<td align="left">27.00%</td>
+</tr>
+<tr class="even">
+<td align="right">2015</td>
+<td align="left">42.70%</td>
+<td align="left">45.40%</td>
+<td align="left">27.00%</td>
+</tr>
+<tr class="odd">
+<td align="right">2016</td>
+<td align="left">42.70%</td>
+<td align="left">44.10%</td>
+<td align="left">27.00%</td>
+</tr>
+<tr class="even">
+<td align="right">2017</td>
+<td align="left">42.70%</td>
+<td align="left">44.10%</td>
+<td align="left">27.00%</td>
+</tr>
+<tr class="odd">
+<td align="right">2017</td>
+<td align="left">42.70%</td>
+<td align="left">44.10%</td>
+<td align="left">27.00%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="internet-penetration" class="section level2">
+<h2>Internet Penetration</h2>
+<p><strong>Broadband users</strong> The broadband data which covers all those on Direct Subsriber Line,cable and optic fibre internet access, on average there are 3855730 users, with 75% of the users amounting to 5338910.</p>
+<pre class="r"><code>summary(operator_stats$Mobile_Broadband_users)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+##  379888 2289147 4403005 3855730 5338910 6090412       1</code></pre>
+<pre class="r"><code>operator_stats %&gt;% 
+  ggplot() +
+  geom_line(aes(x = Mobile_Broadband_penetration_100_users,
+                y = Mobile_Broadband_users))</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-16-1.png" width="768" /></p>
+</div>
+<div id="internet-subscribers-vs-penetration-per-100-inhabitants" class="section level2">
+<h2>Internet subscribers Vs Penetration per 100 inhabitants</h2>
+<pre class="r"><code>isps %&gt;% 
+  ggplot() +
+  geom_line(aes(x = Fixed_internet_Penetration_per_100,
+                y = Number_of_Subscribers))</code></pre>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-17-1.png" width="768" /></p>
+</div>
+<div id="cost-differentials" class="section level2">
+<h2>Cost differentials</h2>
+<pre class="r"><code>operator_stats %&gt;% 
+  ggplot() + 
+  geom_line(aes(x = Year, y = Voice_Tariff_Mobile), color = &quot;red&quot;) +
+  annotate(&quot;text&quot;,x= 2013,y=0.55,label=&quot;Mobile voice tariff&quot;,
+           fontface=&quot;bold&quot;,size=2, colour = &quot;forestgreen&quot;) +
+  geom_line(aes(x = Year, y = SMS_on_net_Mobile), color = &quot;green&quot;) +
+  annotate(&quot;text&quot;,x= 2013,y=0.32,label=&quot;SMS on-net tariff&quot;,
+           fontface=&quot;bold&quot;,size=2, colour = &quot;red&quot;) +
+  geom_line(aes(x = Year, y = SMS_off_net_Mobile), color = &quot;yellow&quot;) +
+  annotate(&quot;text&quot;,x= 2013,y=0.25,label=&quot;SMS off-net tariff&quot;,
+           fontface=&quot;bold&quot;,size=2, colour = &quot;blue&quot;) +
+  labs(
+    x = &quot;year&quot;,
+    y = &quot;Mobile Voice tariff/ SMS - on and off net &quot;
+  ) +
+  ggtitle(&quot;Mobile voice tariff and SMS tariff - On &amp; Off net&quot;,
+          subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;)</code></pre>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-18-1.png" width="768" /></p>
 </div>
