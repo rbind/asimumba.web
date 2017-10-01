@@ -251,7 +251,14 @@ p <- isps %>%
     y = "Number of subscribers") +
    ggtitle("Fixed internet penetration per 100 inhabitants Vs. Number of subscribers",
            subtitle = "Over the period from 2010 - 2017, Q1 & Q2")
-ggplotly(p)
+m <- list(
+  l = 60,
+  r = 60,
+  b = 120,
+  t = 120,
+  pad = 6
+)
+ggplotly(p, autosize = FALSE,width = 500, height = 500, margin = m)
   
 ```
 
