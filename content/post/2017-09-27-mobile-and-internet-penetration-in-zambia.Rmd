@@ -258,7 +258,7 @@ m <- list(
   t = 120,
   pad = 6
 )
-ggplotly(p, autosize = FALSE,width = 500, height = 500, margin = m)
+ggplotly(p, autosize = FALSE,width = 700, height = 500, margin = m)
   
 ```
 
