@@ -304,8 +304,8 @@ operator_stats %>%
 ```
 
 ## Interactive graph
-```{r}
-# plot_ly(x = ~x, y = ~y, mode = 'lines', text = paste(tm, "days from today"))
-plot_ly(operator_stats,x = ~Population_CSO_Estimate, y = ~Number_of_active_Subscribers, mode = 'lines')
+```{r, message=FALSE}
+plot_ly(operator_stats,x = ~Population_CSO_Estimate,
+        y = ~Number_of_active_Subscribers, mode = 'lines')
 ```
 
