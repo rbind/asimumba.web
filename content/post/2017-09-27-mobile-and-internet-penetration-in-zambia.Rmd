@@ -320,7 +320,6 @@ m <- list(
 )
 
 plot_ly(operator_stats,x = ~Population_CSO_Estimate,
-        y = ~Number_of_active_Subscribers, mode = 'lines') %>% 
-  layout(autosize = FALSE,width = 500, height = 500, margin = m)
+        y = ~Number_of_active_Subscribers, mode = 'lines', autosize = FALSE,width = 500, height = 500, margin = m) 
 ```
 
