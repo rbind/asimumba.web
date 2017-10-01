@@ -24,7 +24,6 @@ For this analysis, I will mainly use the following packages. The beauty with the
 ```{r, message=FALSE}
 # the packages can be installed running the following command
 # install.packges("ggplot2", "dplyr", "readr", "plotly")
-# We are going got use the dyplr,readr and  ggplot2 packages
 library(ggplot2)
 library(dplyr)
 library(readr)
@@ -258,6 +257,8 @@ isps %>%
 
 ## Cost differentials
 
+The average cost for SMSs had maintained  a very stable flow from the year 2010 to the year 2014, with on network SMS cost standing at K 0.30. Off net SMS cost averaged K0.24, significantly low than off net cost. A signal to growing competition and the mobile operators' desire to benefit across networks. For the mobile phone tariff, for much of the period under review, we can see a relatively declining average cost of mobile tariff across different mobile operators. Although the year 2017 second quarter numbers show an increase in the tariff.The year 2017 saw a further increase in Excise duty taxes on telephone airtime from 15% to 15.5% for the 2017 [budget](http://taxsummaries.pwc.com/ID/Zambia-Corporate-Other-taxes), this is in addition to the 2015 increase from 10% to 15%. This can be reflected in the uptick in the tarrif costs beyond 2016.
+
 ```{r}
 operator_stats %>% 
   ggplot() + 
@@ -280,7 +281,9 @@ operator_stats %>%
 ```
 
 
-## Mobile voice calls cost per/minute 
+## Mobile voice call cost per/minute 
+
+On all accounts, 2014 through to 2016 saw a significan drop in the cost of calling per minute. This is in comparism to the numbers prebvailing from the year 2010 t0 2014. With Voice-off-net off peak on mobile  maintaining a very steady cost per minute between 2010 to 2014. Conversely, Voice-on-net off peak on mobile had a relatively upwarding swing in the cost of calling per minute. For the year 2014, there was a drop in all forms of calling, whetther on net and off network. This was preceded by the sim registration exercise, which has significnt back drop on the mobile operators. The drop in cost may have been a means to lure back customers on their platform.
 
 ```{r}
 operator_stats %>% 
