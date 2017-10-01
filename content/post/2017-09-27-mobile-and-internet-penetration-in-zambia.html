@@ -68,9 +68,9 @@ head(network_coverage, 4)</code></pre>
 ## [16] &quot;SMS_MMS_traffic&quot;                                
 ## [17] &quot;Minutes_of_use_Monthly&quot;                         
 ## [18] &quot;Voice_on_net_peak_Mobile&quot;                       
-## [19] &quot;Voice_on_net_of_ peak_Mobile&quot;                   
+## [19] &quot;Voice_on_net_off_peak_Mobile&quot;                   
 ## [20] &quot;Voice_off_net_peak_Mobile&quot;                      
-## [21] &quot;Voice_off_net_off_peak _Mobile&quot;                 
+## [21] &quot;Voice_off_net_off_peak_Mobile&quot;                  
 ## [22] &quot;Voice_on_net_peak_Fixed&quot;                        
 ## [23] &quot;Voice_on_net_off_peak_Fixed&quot;                    
 ## [24] &quot;Voice_off_net_peak_Fixed&quot;                       
@@ -221,9 +221,9 @@ ggplot() +
 <pre class="r"><code>network_cover &lt;-  network_coverage %&gt;% 
   select(Year, Airtel_Zambia, MTN_Zambia, Zamtel) 
 knitr::kable(network_cover, booktabs = TRUE, 
-             caption = &quot;Percentage network coverage by Operator&quot;)  </code></pre>
+             caption = &quot;Percentage network coverage by operator&quot;)  </code></pre>
 <table>
-<caption><span id="tab:unnamed-chunk-14">Table 1: </span>Percentage network coverage by Operator</caption>
+<caption><span id="tab:unnamed-chunk-14">Table 1: </span>Percentage network coverage by operator</caption>
 <thead>
 <tr class="header">
 <th align="right">Year</th>
@@ -299,7 +299,13 @@ knitr::kable(network_cover, booktabs = TRUE,
 <pre class="r"><code>operator_stats %&gt;% 
   ggplot() +
   geom_line(aes(x = Mobile_Broadband_penetration_100_users,
-                y = Mobile_Broadband_users))</code></pre>
+                y = Mobile_Broadband_users)) +
+  labs(
+    x = &quot;Mobile broadband penetration per 100 users&quot;, 
+    y = &quot;Mobile broadband users&quot;
+  ) + 
+  ggtitle(&quot;Mobile broadband users Vs. Mobile broadband penetration per 100 users&quot;,
+           subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;)</code></pre>
 <pre><code>## Warning: Removed 1 rows containing missing values (geom_path).</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-16-1.png" width="768" /></p>
 </div>
@@ -308,7 +314,12 @@ knitr::kable(network_cover, booktabs = TRUE,
 <pre class="r"><code>isps %&gt;% 
   ggplot() +
   geom_line(aes(x = Fixed_internet_Penetration_per_100,
-                y = Number_of_Subscribers))</code></pre>
+                y = Number_of_Subscribers)) +
+  labs( 
+    x = &quot;Fixed internet penetration per 100 inhabitants&quot;,
+    y = &quot;Number of subscribers&quot;) +
+   ggtitle(&quot;Fixed internet penetration per 100 inhabitants Vs. Number of subscribers&quot;,
+           subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;)</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-17-1.png" width="768" /></p>
 </div>
 <div id="cost-differentials" class="section level2">
@@ -317,13 +328,13 @@ knitr::kable(network_cover, booktabs = TRUE,
   ggplot() + 
   geom_line(aes(x = Year, y = Voice_Tariff_Mobile), color = &quot;red&quot;) +
   annotate(&quot;text&quot;,x= 2013,y=0.55,label=&quot;Mobile voice tariff&quot;,
-           fontface=&quot;bold&quot;,size=2, colour = &quot;forestgreen&quot;) +
+           fontface=&quot;bold&quot;,size = 3, colour = &quot;forestgreen&quot;) +
   geom_line(aes(x = Year, y = SMS_on_net_Mobile), color = &quot;green&quot;) +
   annotate(&quot;text&quot;,x= 2013,y=0.32,label=&quot;SMS on-net tariff&quot;,
-           fontface=&quot;bold&quot;,size=2, colour = &quot;red&quot;) +
+           fontface=&quot;bold&quot;,size = 3, colour = &quot;red&quot;) +
   geom_line(aes(x = Year, y = SMS_off_net_Mobile), color = &quot;yellow&quot;) +
   annotate(&quot;text&quot;,x= 2013,y=0.25,label=&quot;SMS off-net tariff&quot;,
-           fontface=&quot;bold&quot;,size=2, colour = &quot;blue&quot;) +
+           fontface=&quot;bold&quot;,size = 3, colour = &quot;black&quot;) +
   labs(
     x = &quot;year&quot;,
     y = &quot;Mobile Voice tariff/ SMS - on and off net &quot;
@@ -331,4 +342,30 @@ knitr::kable(network_cover, booktabs = TRUE,
   ggtitle(&quot;Mobile voice tariff and SMS tariff - On &amp; Off net&quot;,
           subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;)</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-18-1.png" width="768" /></p>
+</div>
+<div id="mobile-voice-calls-cost-perminute" class="section level2">
+<h2>Mobile voice calls cost per/minute</h2>
+<pre class="r"><code>operator_stats %&gt;% 
+  ggplot() +
+  geom_line(aes(x = Year, y = Voice_on_net_peak_Mobile), color = &quot;red&quot;) +
+  annotate(&quot;text&quot;,x= 2013,y=1.18,label=&quot;Voice on net peak - Mobile&quot;,
+           fontface=&quot;bold&quot;,size = 3, colour = &quot;black&quot;) +
+  
+  geom_line(aes(x = Year, y = Voice_on_net_off_peak_Mobile), color = &quot;green&quot;) +
+  annotate(&quot;text&quot;,x= 2013,y= 0.9,label=&quot;Voice on net off peak - Mobile&quot;,
+           fontface=&quot;bold&quot;,size = 3, colour = &quot;black&quot;) +
+  
+  geom_line(aes(x = Year, y = Voice_off_net_peak_Mobile), color = &quot;yellow&quot;) +
+  annotate(&quot;text&quot;,x= 2013,y= 1.4,label=&quot;Voice off net peak - Mobile&quot;,
+           fontface=&quot;bold&quot;,size = 3, colour = &quot;black&quot;) +
+  
+  geom_line(aes(x = Year, y = Voice_off_net_off_peak_Mobile), color = &quot;blue&quot;) +
+  annotate(&quot;text&quot;,x= 2013,y=1.22,label=&quot;Voice off net off peak - Mobile&quot;,
+           fontface=&quot;bold&quot;,size = 3, colour = &quot;black&quot;)  +
+  labs(
+    x = &quot;Year&quot;,
+    y = &quot;Voice cost (Kwacha) per min&quot;
+  ) +
+  ggtitle(&quot;Voice cost in Kwachas per minute on mobile&quot;)</code></pre>
+<p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-19-1.png" width="768" /></p>
 </div>

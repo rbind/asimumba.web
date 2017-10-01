@@ -207,7 +207,7 @@ ggplot() +
 network_cover <-  network_coverage %>% 
   select(Year, Airtel_Zambia, MTN_Zambia, Zamtel) 
 knitr::kable(network_cover, booktabs = TRUE, 
-             caption = "Percentage network coverage by Operator")  
+             caption = "Percentage network coverage by operator")  
 ```
 
 ## Internet Penetration
@@ -224,7 +224,13 @@ summary(operator_stats$Mobile_Broadband_users)
 operator_stats %>% 
   ggplot() +
   geom_line(aes(x = Mobile_Broadband_penetration_100_users,
-                y = Mobile_Broadband_users))
+                y = Mobile_Broadband_users)) +
+  labs(
+    x = "Mobile broadband penetration per 100 users", 
+    y = "Mobile broadband users"
+  ) + 
+  ggtitle("Mobile broadband users Vs. Mobile broadband penetration per 100 users",
+           subtitle = "Over the period from 2010 - 2017, Q1 & Q2")
   
 ```
 
@@ -234,7 +240,13 @@ operator_stats %>%
 isps %>% 
   ggplot() +
   geom_line(aes(x = Fixed_internet_Penetration_per_100,
-                y = Number_of_Subscribers))
+                y = Number_of_Subscribers)) +
+  labs( 
+    x = "Fixed internet penetration per 100 inhabitants",
+    y = "Number of subscribers") +
+   ggtitle("Fixed internet penetration per 100 inhabitants Vs. Number of subscribers",
+           subtitle = "Over the period from 2010 - 2017, Q1 & Q2")
+  
 ```
 
 
@@ -263,6 +275,7 @@ operator_stats %>%
 
 
 ## Mobile voice calls cost per/minute 
+
 ```{r}
 operator_stats %>% 
   ggplot() +
