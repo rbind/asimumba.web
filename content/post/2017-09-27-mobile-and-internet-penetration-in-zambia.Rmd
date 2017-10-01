@@ -242,7 +242,7 @@ operator_stats %>%
 ## Internet subscribers Vs Penetration per 100 inhabitants
 
 ```{r}
-isps %>% 
+p <- isps %>% 
   ggplot() +
   geom_line(aes(x = Fixed_internet_Penetration_per_100,
                 y = Number_of_Subscribers)) +
@@ -251,6 +251,7 @@ isps %>%
     y = "Number of subscribers") +
    ggtitle("Fixed internet penetration per 100 inhabitants Vs. Number of subscribers",
            subtitle = "Over the period from 2010 - 2017, Q1 & Q2")
+ggplotly(p)
   
 ```
 
@@ -323,6 +324,7 @@ m <- list(
 )
 
 plot_ly(operator_stats,x = ~Population_CSO_Estimate,
-        y = ~Number_of_active_Subscribers, mode = 'lines', autosize = FALSE,width = 500, height = 500, margin = m) 
+        y = ~Number_of_active_Subscribers, mode = 'lines',
+        autosize = FALSE,width = 500, height = 500, margin = m) 
 ```
 
