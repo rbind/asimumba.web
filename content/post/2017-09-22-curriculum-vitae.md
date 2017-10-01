@@ -8,4 +8,4 @@ tags:
 menu: main
 description: "My curriculum Vitae"
 ---
-My Curriculm Vitae can be found [here](https://drive.google.com/open?id=0B5VTtKE_RbBDVVlzRzhOdTd6NEU)
+My Curriculum Vitae can be found [here](https://drive.google.com/open?id=0B5VTtKE_RbBDVVlzRzhOdTd6NEU)
