@@ -114,7 +114,8 @@ The plot below shows a positive correlationship between the active mobile subscr
 ```{r}
 operator_stats %>% 
   ggplot(aes(x = Population_CSO_Estimate, 
-             y = Number_of_active_Subscribers, color = Number_of_active_Subscribers )) +
+             y = Number_of_active_Subscribers,
+             color = Number_of_active_Subscribers )) +
   geom_line() +
   geom_point() + 
   theme(legend.title = element_text(size = 10)
@@ -135,7 +136,7 @@ For much of the period under review, the number of active users was had a positi
 Given  this was a free of charge exercise, some opted to make [money](https://www.lusakatimes.com/2013/01/30/sim-registration-as-the-process-is-absolutely-free-zicta/) by charging for registration. Further casting a negative image on the exercise.
 
 ```{r}
-operator_stats %>% 
+per_change <- operator_stats %>% 
   select(Year,Population_CSO_Estimate,
          Number_of_active_Subscribers) %>% 
   mutate(Percentage_change = 
@@ -143,6 +144,9 @@ operator_stats %>%
               lag(Number_of_active_Subscribers))/
            lag(Number_of_active_Subscribers) * 100
            )  
+  names(per_change) <- c("Year","Population", 
+                         "Active subscribers", "% change")
+  per_change
 ```
 
 In terms of the summary statistics, the active users mumbers have average 10,285,415 a year. Considering a population size of nearly 16 million, this is a decent uptake in active mobile users.
@@ -234,7 +238,8 @@ operator_stats %>%
     x = "Mobile broadband penetration per 100 users", 
     y = "Mobile broadband users"
   ) + 
-  ggtitle("Mobile broadband users Vs. Mobile broadband penetration per 100 users",
+  ggtitle("Mobile broadband users Vs. 
+          Mobile broadband penetration per 100 users",
            subtitle = "Over the period from 2010 - 2017, Q1 & Q2")
   
 ```
@@ -249,7 +254,8 @@ p <- isps %>%
   labs( 
     x = "Fixed internet penetration per 100 inhabitants",
     y = "Number of subscribers") +
-   ggtitle("Fixed internet penetration per 100 inhabitants Vs. Number of subscribers",
+   ggtitle("Fixed internet penetration per 100 inhabitants Vs.
+           Number of subscribers",
            subtitle = "Over the period from 2010 - 2017, Q1 & Q2")
 m <- list(
   l = 60,
