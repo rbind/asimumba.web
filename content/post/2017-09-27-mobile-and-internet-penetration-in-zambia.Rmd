@@ -94,8 +94,14 @@ operator_stats %>%
     mapping =aes(
       x = Year,
       y = Number_of_active_Subscribers), 
-    color = "green"
+    color = "blue"
     ) +
+  geom_point(
+    mapping =aes(
+      x = Year,
+      y = Number_of_active_Subscribers), 
+    color = "red"
+  ) +
   labs(
     x = "Year",
     y = "Number of Active subscirbers"
@@ -305,7 +311,16 @@ operator_stats %>%
 
 ## Interactive graph
 ```{r, message=FALSE}
+m <- list(
+  l = 60,
+  r = 60,
+  b = 120,
+  t = 120,
+  pad = 6
+)
+
 plot_ly(operator_stats,x = ~Population_CSO_Estimate,
-        y = ~Number_of_active_Subscribers, mode = 'lines')
+        y = ~Number_of_active_Subscribers, mode = 'lines') %>% 
+  layout(autosize = FALSE,width = 500, height = 500, margin = m)
 ```
 
