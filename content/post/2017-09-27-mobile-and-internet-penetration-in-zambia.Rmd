@@ -78,8 +78,11 @@ operator_stats %>%
 ## Second quarter statistics from ZICTA
 
 ZICTA provides the following statistics on ICT as of the second quarter of 2017, as seen below.From these statistics, it can be seen that mobile subsription is slightly under 12.5 million suscribers, representing a penetration rate of 75.77%. On the internet side, a penetration rate is more than a third standing at 35.88%.
-
+<centre>
 ![Source: ZICTA](https://user-images.githubusercontent.com/24398851/31039423-3acc0a34-a586-11e7-9285-78a08b5d4cd2.png)
+</centre>
+
+
 
 
 ## Number of active users
@@ -139,14 +142,21 @@ Given  this was a free of charge exercise, some opted to make [money](https://ww
 per_change <- operator_stats %>% 
   select(Year,Population_CSO_Estimate,
          Number_of_active_Subscribers) %>% 
-  mutate(Percentage_change = 
-           (Number_of_active_Subscribers -
+  mutate(Percentage_change_pop = (
+    Population_CSO_Estimate - lag(Population_CSO_Estimate))/ lag(Population_CSO_Estimate)*100,
+         
+         Percentage_change = (Number_of_active_Subscribers -
               lag(Number_of_active_Subscribers))/
            lag(Number_of_active_Subscribers) * 100
-           )  
-  names(per_change) <- c("Year","Population", 
-                         "Active subscribers", "% change")
-  per_change
+            )  
+
+names(per_change) <- c("Year","Population", "Active subscribers",
+                       "% change pop.", "% change") 
+
+ knitr::kable(per_change, booktabs = TRUE, caption = 
+                "Change in Population Vs. 
+              change in the Active subscribers")
+  
 ```
 
 In terms of the summary statistics, the active users mumbers have average 10,285,415 a year. Considering a population size of nearly 16 million, this is a decent uptake in active mobile users.
@@ -241,7 +251,8 @@ operator_stats %>%
   ) + 
   ggtitle("Mobile broadband users Vs. 
           Mobile broadband penetration per 100 users",
-           subtitle = "Over the period from 2010 - 2017, Q1 & Q2")
+          subtitle = "Over the period from 2010 - 
+          2017, Q1 & Q2")
   
 ```
 
@@ -266,7 +277,7 @@ m <- list(
   pad = 6
 )
 ggplotly(p, autosize = FALSE
-         ,width = 700, height = 500, margin = m)
+         ,width = 600, height = 400, margin = m)
   
 ```
 
@@ -340,6 +351,6 @@ m <- list(
 
 plot_ly(operator_stats,x = ~Population_CSO_Estimate,
         y = ~Number_of_active_Subscribers, mode = 'lines',
-        autosize = FALSE,width = 500, height = 500, margin = m) 
+        autosize = FALSE,width = 500, height = 400, margin = m) 
 ```
 
