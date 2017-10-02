@@ -13,7 +13,7 @@ It is always nice to capture how wide and dense your twitter interactions spread
 
 Jeff Leek  wrote a `twitterMap()`function that lets you map the locations of your twitter followers and those you follow, the script that holds the function can be downloaded [here](http://biostat.jhsph.edu/~jleek/code/twitterMap.R). 
 
-Since the data has to be mined from twitter to R. The first issue to address is setting up this link to twitter. Luckily, the twitter's Application Programmming Interface (API) handles this integration. Twitter has a developer site, where you can set-up your app and acquire the authentication keys and tokens  needed for R and twiter to communicate. For set-up instructions the following [post](https://www.credera.com/blog/business-intelligence/twitter-analytics-using-r-part-1-extract-tweets/) has a nice  step by step walk through set-up from the twitter side.
+Since the data has to be mined from twitter to R. The first issue to address is setting up this link to twitter. Luckily, the twitter's Application Programmming Interface (API) handles this integration. Twitter has a developer site, where you can set-up your app and acquire the authentication keys and tokens  needed for R and twitter to communicate. For set-up instructions the following [post](https://www.credera.com/blog/business-intelligence/twitter-analytics-using-r-part-1-extract-tweets/) has a nice  step by step walk through set-up from the twitter side.
 
 From the R side. We need the following packages: `ROAuth` which is R's interface to the OAuth (Open Authorization) - which is an open standard for token-based authentication and authorization on the Internet, allowing  us give access to the thirdparty apps like twitter and facebook to communicate with the local machine set-up.`twitteR` is the other package, plus the `httr` package.
 
@@ -28,7 +28,7 @@ library(httr)
 library(twitteR)
 ```
 
-Authenticating R to have access to your twitter account, the `twitteR` package has a function called `setup_twitter_oauth()`, where you are required to supply the keys and tokens to be found under the keys and tokens tab on the your twitter developer profile. Supplying the consumer key and secret key obtained online, will prompt authorisation through the web browser, where a step by step prompt is given. Refer to the link above to the walk through set-up.
+Authenticating R to have access to your twitter account, the `twitteR` package has a function called `setup_twitter_oauth()`, where you are required to supply the keys and tokens to be found under the keys and tokens tab on your twitter developer profile. Supplying the `consumer key` and `secret key` obtained online, will prompt authorisation through the web browser, where a step by step prompt is given. Refer to the link above to the walk through set-up.
 
 ```{r, eval=FALSE}
 setup_twitter_oauth(consumer_key ="",consumer_secret =""
@@ -66,7 +66,7 @@ plotted, etc.
 
 Mapping my twitter data, I run the following code, supplying my twitter username, and changing the `plotType` argument to "both", which plots both locations for my followers and those I follow.
 
-I call the `twitterMap.R` script through `source()`, the script loads the function in the environment in order to user the `twitterMap()` command. 
+I call the `twitterMap.R` script through `source()`, the script loads the function in the work environment, in order to user the `twitterMap()` command. 
 
 ```{r, message=FALSE, eval=FALSE}
 source("twitterMap.R")
@@ -80,6 +80,6 @@ The following is the map of the locations of my twitter followers  and those I f
 
 ![](https://user-images.githubusercontent.com/24398851/31088605-e90435ca-a7a9-11e7-89dc-7b5694d980d6.png)
 
-Since most people and companies I follow and those that follow me are either investment firms, open source software developers and of course memes artistes. Memes cannot miss out, they carry life. 
+Since most people and companies I follow and those that follow me are either investment firms, open source software developers and of course meme artists. Memes cannot miss out, they carry life. 
 
-For both the followers and those I follow, it can be seen that they are mainly located in the North America, Europe and Africa. It is my hope to follow more of the budding tech and finance enthusiats on the African continent. Next time I mine this data, it should paint a slightly more balanced picture.
+For both the followers and those I follow, it can be seen that they are mainly located in North America, Europe and Africa. It is my hope to follow more of the budding tech and finance enthusiats on the African continent. Next time I mine this data, it should paint a slightly more balanced picture.
