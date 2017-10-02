@@ -1,0 +1,44 @@
+---
+author: Aaron Simumba
+title: "Mapping the Location of my Twitter Followers and Following in R"
+date: 2017-10-02T17:46:47+02:00
+slug: Mapping-the-Location-of-my-Twitter-Followers-and-Following-in-R
+descrition: Mapping locations for twitter followers and following
+tags: 
+    - Twitter followers
+    - twitteR
+---
+
+
+
+<p>It is always nice to capture how wide and dense your twitter interactions spread. More so, the spread and locations of your twitter followers and those you are following. Making use of the <code>twitteR</code> package, and the inspiration from a post written by <a href="https://simplystatistics.org/2011/12/21/an-r-function-to-map-your-twitter-followers/">Jeff Leek</a>, I attempt to map my followers’ locations and those I follow on twitter.</p>
+<p>Jeff Leek has a written a <code>twitterMap()</code>, it can be downloaded <a href="http://biostat.jhsph.edu/~jleek/code/twitterMap.R">here</a>.</p>
+<p>Since the data has to be mined from twitter to R. The first issue to address is setting up this link to twitter. Luckily, the twitter’s Application Programmming Interface (API) handles this intergration. Twitter has a developer site, where you can set-up your app and acquire all the authentication keys and tokens. For set-up instructions the following <a href="https://www.credera.com/blog/business-intelligence/twitter-analytics-using-r-part-1-extract-tweets/">post</a> has a nice step by step walk through set-up from the twitter side.</p>
+<p>From the R side. We need the following packages: <code>ROAuth</code> which is R’s interface to the OAuth, allowing us give access to the thirdparty apps like twitter and facebook.<code>twitteR</code> is the other package, plus the <code>httr</code> package.</p>
+<pre class="r"><code># The following code will install the packages.
+install.packages(&quot;twitteR&quot;, &quot;httr&quot;, &quot;ROAuth&quot;)</code></pre>
+<pre class="r"><code>#load the packages
+library(httr)
+library(twitteR)</code></pre>
+<p>Authenticating R to have access to your twitter account, the <code>twitteR</code> package has a function called <code>setup_twitter_oauth()</code>, where you are required to supply the keys and tokens to be found under the keys and tokens tab on the developer profile. Supplying the consumer key and secret key obtained online, will prompt authorisation through the web browser. Refer to the link above to the walk through set up.</p>
+<pre class="r"><code>setup_twitter_oauth(consumer_key =&quot;&quot; ,consumer_secret =&quot;&quot; ,access_token =&quot;&quot; ,access_secret = &quot;&quot;)</code></pre>
+<div id="mapping-followersfollowing" class="section level2">
+<h2>Mapping followers/Following</h2>
+<p>Jeff Leek provides the following description for the twitterMap function:</p>
+<p>twitterMap &lt;- function(userName,userLocation=NULL,fileName=”twitterMap.pdf”,nMax = 1000,plotType=c(“followers”,”both”,”following”))</p>
+<p>with arguments:</p>
+<pre><code>userName - the twitter username you want to plot
+userLocation - an optional argument giving the location of the user, necessary when the location information you have provided Twitter isn’t sufficient for us to find latitude/longitude data
+fileName - the file where you want the plot to appear
+nMax - The maximum number of followers/following to get from Twitter, this is implemented to avoid rate limiting for people with large numbers of followers. 
+plotType - if “both” both followers/following are plotted, etc.</code></pre>
+<p>Mapping my map I run the follwoing code,supplying my twitter username, and chaning the <code>plotType</code> argument to “both”, which plots both locations for my followers and those I follow.</p>
+<p>I call the twitterMap function through <code>source()</code>, the script loads the function in the environment in order to user the twitterMap() function.</p>
+<pre class="r"><code>source(&quot;twitterMap.R&quot;)
+twitterMap(&quot;zedsamurai&quot;,fileName = &quot;twitterMap.pdf&quot;, plotType = &quot;both&quot; )</code></pre>
+<p>The following is the map of the locations of my twitter followers and those I follow.</p>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/24398851/31088605-e90435ca-a7a9-11e7-89dc-7b5694d980d6.png" />
+
+</div>
+</div>
