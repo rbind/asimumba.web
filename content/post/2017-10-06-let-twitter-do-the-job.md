@@ -18,7 +18,7 @@ After finilising my previous blog [post](https://asimumba.rbind.io/2017/10/02/ma
 
 The post was not really based on something original, I was implementing some work done by [Jeff Leek](https://twitter.com/jtleek). Which I am happy I got to learn and experience something new. Thanks to `@Thinkr` for initiating the retweet... As they say the rest is history.
 
-{{ < tweet 915497991955472384 > }}
+{{< tweet 915497991955472384 >}}
 
 
-In hindsight, I now believe more in the adage: "there is nothing new under the sun, whatever was built can be taken apart". And the open source communities have proven this many a times.
+In hindsight, I now believe more in the adage: "there is nothing new under the sun, whatever was built can be taken apart". And the open source community have proven this many a times.
