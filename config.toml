@@ -7,6 +7,7 @@ theme = "hugo-cactus-theme"
 googleAnalytics = "UA-101235795-1"
 # Disable comments by leaving disqusShortname empty
 disqusShortname = "asimumba"
+enableEmoji = true
 
 paginate = 10
 footnotereturnlinkcontents = "↩"

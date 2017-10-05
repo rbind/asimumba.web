@@ -66,7 +66,7 @@ plotted, etc.
 
 Mapping my twitter data, I run the following code, supplying my twitter username, and changing the `plotType` argument to "both", which plots both locations for my followers and those I follow.
 
-I call the `twitterMap.R` script through `source()`, the script loads the function in the work environment, in order to user the `twitterMap()` command. 
+I call the `twitterMap.R` script through `source()`, the script loads the function in the work environment, in order to use the `twitterMap()` command. 
 
 ```{r, message=FALSE, eval=FALSE}
 source("twitterMap.R")
@@ -80,6 +80,6 @@ The following is the map of the locations of my twitter followers  and those I f
 
 ![](https://user-images.githubusercontent.com/24398851/31088605-e90435ca-a7a9-11e7-89dc-7b5694d980d6.png)
 
-Since most people and companies I follow and those that follow me are either investment firms, open source software developers and of course meme artists. Memes cannot miss out, they carry life. 
+Since most people and companies I follow and those that follow me are either investment firms, open source software developers and of course meme artists. Memes cannot miss out, they carry life.  
 
 For both the followers and those I follow, it can be seen that they are mainly located in North America, Europe and Africa. It is my hope to follow more of the budding tech and finance enthusiats on the African continent. Next time I mine this data, it should paint a slightly more balanced picture.
