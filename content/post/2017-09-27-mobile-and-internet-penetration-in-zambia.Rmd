@@ -78,9 +78,9 @@ operator_stats %>%
 ## Second quarter statistics from ZICTA
 
 ZICTA provides the following statistics on ICT as of the second quarter of 2017, as seen below.From these statistics, it can be seen that mobile subsription is slightly under 12.5 million suscribers, representing a penetration rate of 75.77%. On the internet side, a penetration rate is more than a third standing at 35.88%.
-<centre>
+
 ![Source: ZICTA](https://user-images.githubusercontent.com/24398851/31039423-3acc0a34-a586-11e7-9285-78a08b5d4cd2.png)
-</centre>
+
 
 
 
