@@ -136,7 +136,9 @@ province <- rep(c("central", "copperbelt", "eastern",
                 ) 
 
 cso_transformed <- cbind(cso_provincial,province) %>% 
-  select(year,province, census_proj) 
+  select(year,province, census_proj) %>% 
+  as.tibble() 
+cso_transformed
 
 
 

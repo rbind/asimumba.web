@@ -120,5 +120,21 @@ province &lt;- rep(c(&quot;central&quot;, &quot;copperbelt&quot;, &quot;eastern&
                 ) 
 
 cso_transformed &lt;- cbind(cso_provincial,province) %&gt;% 
-  select(year,province, census_proj) </code></pre>
+  select(year,province, census_proj) %&gt;% 
+  as.tibble() 
+cso_transformed</code></pre>
+<pre><code>## # A tibble: 60 x 3
+##     year      province census_proj
+##    &lt;chr&gt;        &lt;fctr&gt;       &lt;chr&gt;
+##  1  2011       central   1,355,775
+##  2  2011    copperbelt   2,143,413
+##  3  2011       eastern   1,628,880
+##  4  2011       luapula   1,015,629
+##  5  2011        lusaka   2,362,967
+##  6  2011      muchinga     749,449
+##  7  2011       northen   1,146,392
+##  8  2011 north.western     746,982
+##  9  2011      southern   1,642,757
+## 10  2011       western     926,478
+## # ... with 50 more rows</code></pre>
 </div>
