@@ -85,7 +85,7 @@ cso_column <- cso_table[[1]]
 ```
 From the extraction results, it can bee seen the output is not in a very "tidy" format, to allow any meaning analyses from being done. The next still would be reshaping and reordering the extract results in to a neat data frame or table made up of columns and rows. 
 
-## Tdying the data
+## Tidying the data
 
 Two approaches can be down here: the easy way or the hard way.
 
@@ -116,7 +116,7 @@ names(cso_data) <-
 str(cso_data)[3,] # Checking the structure of the data.
 cso_data[1:10, ] # first 10 rows
 ```
-`tidyr` is used to gather the obersations in the columns into rows and combine all the observations across 2 columns.The function `gather()` achives this.
+`tidyr` is used to gather the observations in the columns into rows and combine all the observations across 2 columns.The function `gather()` achieves this.
 ```{r}
 # install.packages("tidyverse") # This will install the tidyverse
 library(tidyverse)

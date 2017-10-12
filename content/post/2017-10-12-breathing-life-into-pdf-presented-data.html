@@ -73,8 +73,8 @@ cso_table &lt;- extract_tables(cso, pages = 24,
 cso_column &lt;- cso_table[[1]]</code></pre>
 <p>From the extraction results, it can bee seen the output is not in a very “tidy” format, to allow any meaning analyses from being done. The next still would be reshaping and reordering the extract results in to a neat data frame or table made up of columns and rows.</p>
 </div>
-<div id="tdying-the-data" class="section level2">
-<h2>Tdying the data</h2>
+<div id="tidying-the-data" class="section level2">
+<h2>Tidying the data</h2>
 <p>Two approaches can be down here: the easy way or the hard way.</p>
 <ul>
 <li>Firstly, the easy way. We can write the data to a <code>CSV</code> file and clean the data in Microsoft Excel. The solution is to use the <code>write.csv()</code> function. With the first argument is the data object.Under<code>file</code> you define the output filename together with the file extension, in our case it is a <code>.CSV</code> file. The <code>row.names</code> specifies whether to include the default index R attaches to the data, which spans the length of your data.</li>
@@ -92,7 +92,7 @@ cso_column &lt;- cso_table[[1]]</code></pre>
 <div id="welcome-to-the-tidyverse-universe" class="section level2">
 <h2>Welcome to the tidyverse universe</h2>
 <p>First step is to clean the data, eliminating unwanted variables and tittle headers. That is in addition to tranforming the data into a “tidy” format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second and last row of the extracted data.</p>
-<p><code>tidyr</code> is used to gather the obersations in the columns into rows and combine all the observations across 2 columns.The function <code>gather()</code> achives this.</p>
+<p><code>tidyr</code> is used to gather the observations in the columns into rows and combine all the observations across 2 columns.The function <code>gather()</code> achieves this.</p>
 <pre class="r"><code># install.packages(&quot;tidyverse&quot;) # This will install the tidyverse
 library(tidyverse)</code></pre>
 <pre><code>## Loading tidyverse: ggplot2
