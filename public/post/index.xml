@@ -1,15 +1,109 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on A Hugo website</title>
+    <title>Posts on ZedR</title>
     <link>/post/</link>
-    <description>Recent content in Posts on A Hugo website</description>
+    <description>Recent content in Posts on ZedR</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2016 21:49:57 -0700</lastBuildDate>
+    <language>en-US</language>
+    <copyright>All rights reserved 2017</copyright>
+    <lastBuildDate>Thu, 12 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Breathing life back into PDF presented Data</title>
+      <link>/2017/10/12/breathing-life-back-into-pdf-presented-data/</link>
+      <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/10/12/breathing-life-back-into-pdf-presented-data/</guid>
+      <description>It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report.</description>
+    </item>
+    
+    <item>
+      <title>Let Twitter do the Job</title>
+      <link>/2017/10/06/let-twitter-do-the-job/</link>
+      <pubDate>Fri, 06 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/10/06/let-twitter-do-the-job/</guid>
+      <description>One of the most exciting things I&amp;rsquo;ve been able to do in the past few months, has been my rekindled interest in blogging. No matter how trivial the idea that comes to mind is, I find myself constantly wanting to put it in words and hang it somewhere on this site. Although, this may seem like an obsession; you never know who is reading or interested in your thoughts, no matter how non-bearing they may seem.</description>
+    </item>
+    
+    <item>
+      <title>Mapping the Location of my Twitter Followers and Following in R</title>
+      <link>/2017/10/02/mapping-the-location-of-my-twitter-followers-and-following-in-r/</link>
+      <pubDate>Mon, 02 Oct 2017 17:46:47 +0200</pubDate>
+      
+      <guid>/2017/10/02/mapping-the-location-of-my-twitter-followers-and-following-in-r/</guid>
+      <description>It is always nice to capture how wide and dense your twitter interactions spread. More so, the spread and locations of your twitter followers and those you are following. Making use of the twitteR package, and the inspiration from a post written by Jeff Leek, I attempt to map my followers’ locations and those I follow on twitter.
+Jeff Leek wrote a twitterMap()function that lets you map the locations of your twitter followers and those you follow, the script that holds the function can be downloaded here.</description>
+    </item>
+    
+    <item>
+      <title>Mobile/Internet Penetration in Zambia</title>
+      <link>/2017/09/27/mobile-internet-penetration-in-zambia/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/09/27/mobile-internet-penetration-in-zambia/</guid>
+      <description>In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority (ZICTA) data. I will walk through the data on the subscriber base, the user trafffic and the cost differentials among the three mobile operators, these being: Airtel, Zamtel and MTN Zambia. In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used.</description>
+    </item>
+    
+    <item>
+      <title>How to resolve hugo version conflicts with the default version on netlify</title>
+      <link>/2017/09/13/how-to-resolve-hugo-version-conflicts-with-the-default-version-on-netlify/</link>
+      <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/09/13/how-to-resolve-hugo-version-conflicts-with-the-default-version-on-netlify/</guid>
+      <description>There is nothing as frustrating as getting stuck with a computer operation/code bug, which you know no better how to get around it. That was my frustration while trying to deploy my website through netlify. Having changed the theme I was initially working with to the new theme, Cactus. I later discovered, the theme is only compatible with version 0.20 and above of the static site generator hugo. After hours of trying to debug what the problem might be to no avail.</description>
+    </item>
+    
+    <item>
+      <title>Happy One Year Anniversary</title>
+      <link>/2017/08/25/happy-one-year-anniversary/</link>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/08/25/happy-one-year-anniversary/</guid>
+      <description>On the 26 August 2017 will mark exactly one year since embarking on learning the R programming language. A year ago I had neither the foresight nor will strength of believing I would be this engrossed in the new found love for programming. But it didn&amp;rsquo;t take long before I found myself spending at least an hour a day playing with different skills and knowledge I had acquired. Coming from the background of playing with VBA in Excel.</description>
+    </item>
+    
+    <item>
+      <title>Building a Website with Blogdown and Hugo</title>
+      <link>/2017/07/03/building-a-website-with-blogdown-and-hugo/</link>
+      <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/03/building-a-website-with-blogdown-and-hugo/</guid>
+      <description>In this short post. I will detail my journey building my website using blogdown an R package that makes use of the static website generator Hugo. This is a great R package, written by Yihui Xie.
+For starters, there is offical documentation which is so far still under developement, but nonetheless it has already covered most of the pertinent issues to get you started buiding your own desired website.
+If you are coming from the Google blogspot or wordpress dungeon, then by default I will assume you are going to love this new introduction to the blogsphere.</description>
+    </item>
+    
+    <item>
+      <title>What&#39;s in the numbers: A look at the Lusaka Securities Exchange</title>
+      <link>/2017/04/06/lusaka-stock-exchange/</link>
+      <pubDate>Thu, 06 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/06/lusaka-stock-exchange/</guid>
+      <description>In the next coming few weeks, I plan to do a series of posts specifically targeted at the Lusaka Securities Exchange (LuSE). Essentially, this idea came to mind after reading through this Bloomberg Markets article, which highlights historical equity market returns . One aspect that stands out from this article is that over the past 2 decades, emerging markets equities provided greater returns; both on a risk adjusted basis and in dollar terms.</description>
+    </item>
+    
+    <item>
+      <title>Stocks Portfolio Analysis</title>
+      <link>/2017/03/17/portfolio-analysis/</link>
+      <pubDate>Fri, 17 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/17/portfolio-analysis/</guid>
+      <description>## Packages to loadlibrary(quantmod)library(ggplot2) library(xts)library(highcharter)library(PerformanceAnalytics)library(dygraphs)## Dates have been loaded as a factor instead of as dates. There is need to convert this variable to the date class and covert the rest of the variables to xts(Extensible Time Series)temp &amp;lt;- xts(x =fundreturn[,-1], order.by = as.Date(fundreturn[,1])) # all the variables except data are coerced to xts using date as the index.</description>
+    </item>
+    
+    <item>
+      <title>Curriculum Vitae</title>
+      <link>/2017/01/22/curriculum-vitae/</link>
+      <pubDate>Sun, 22 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/01/22/curriculum-vitae/</guid>
+      <description>My Curriculum Vitae can be found here</description>
+    </item>
     
     <item>
       <title>A Plain Markdown Post</title>
