@@ -4,7 +4,7 @@ Title= "ZedR"
 paginate = 4
 DisqusShortname = "asimumba"
 Copyright = "All rights reserved 2017"
-canonifyurls = true
+canonifyurls = false
 
 footnotereturnlinkcontents = "↩"
 
@@ -71,3 +71,5 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   [params.social]
     twitter = "zedsamurai"
     github = "asimumba"
+    email =  "simumbaa21@gmail.com"
+  
