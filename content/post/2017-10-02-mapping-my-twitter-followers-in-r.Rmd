@@ -7,6 +7,7 @@ description: Mapping locations for twitter followers and following
 tags: 
     - Twitter followers
     - twitteR
+image: "images/background.jpg"
 ---
 
 It is always nice to capture how wide and dense your twitter interactions spread. More so, the spread and locations of your twitter followers and those you are following. Making use of the `twitteR` package, and the inspiration from a post written by [Jeff Leek](https://simplystatistics.org/2011/12/21/an-r-function-to-map-your-twitter-followers/), I attempt to map my followers' locations and those I follow on twitter.

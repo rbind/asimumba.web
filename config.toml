@@ -1,7 +1,7 @@
 BaseUrl= "http://zedr.rbind.io/"
 LanguageCode= "en-US"
 Title= "ZedR"
-paginate = 10
+paginate = 4
 DisqusShortname = "asimumba"
 Copyright = "All rights reserved 2017"
 canonifyurls = true
@@ -13,6 +13,31 @@ footnotereturnlinkcontents = "↩"
   
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
+[[menu.main]]
+  name = "About me"
+  weight = -90
+  identifier = "about"
+  url = "/about"
+
+[[menu.main]]
+  name = "Blog"
+  weight = -100
+  identifier = "blog"
+  url = "/"
+  
+[[menu.main]]
+  name = "CV"
+  weight = -110
+  identifier = "cv"
+  url = "/cv"
+  
+[[menu.main]]
+  name = "Projects"
+  weight = -120
+  identifier = "projects"
+  url = "/projects"
+  
+  
 [params]
   description = "Welcome to my website"
   metadescription = "Used as 'description' meta tag for both home and index pages. If not set, 'description' will be used instead"
