@@ -1,5 +1,5 @@
 ---
-title: "Let Twitter do the Job"
+title: "Let twitter do the job"
 author: Aaron Simumba
 date: "2017-10-06"
 description: Why you must put your thoughts in writing 
@@ -7,6 +7,7 @@ tags:
     - tweet
     - blog
 slug: let-twitter-do-the-job
+image: "images/background.jpg"
 
 ---
 
