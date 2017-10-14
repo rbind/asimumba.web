@@ -1,10 +1,11 @@
 BaseUrl= "https://asimumba.rbind.io/"
 LanguageCode= "en-US"
 Title= "Aaron Simumba"
-paginate = 4
+paginate = 3
 DisqusShortname = "asimumba"
 Copyright = "All rights reserved 2017"
 canonifyurls = false
+enableEmoji = true 
 
 footnotereturnlinkcontents = "↩"
 
