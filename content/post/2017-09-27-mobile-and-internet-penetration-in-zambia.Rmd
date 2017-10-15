@@ -35,7 +35,7 @@ library(plotly)
 
 The data used in this analysis can be found on the [ZICTA](http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html) website. Since the data on the ZICTA website is not in a downloadable format. I had to turn to Microsoft Excel, with its option to mine the data from the web. The data online is in a format which is not very helpful to work with, so I had to clean up and reorder the data into a "tidy" format (each variable is a column and each observation occupying a row). The original data format can be seen in the screenshot below.
 
-![Source: ZICTA](https://user-images.githubusercontent.com/24398851/31025561-ba80b558-a54b-11e7-9e91-b3655f35d4db.png)
+![Source: ZICTA](https://user-images.githubusercontent.com/24398851/31025561-ba80b558-a54b-11e7-9e91-b3655f35d4db.png){width=700px height=600px}
 
 Running the following codes loads the data into the work environment, so we can work with it to do our analysis. 
 ```{r,message=FALSE}
