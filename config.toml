@@ -1,12 +1,15 @@
-BaseUrl= "https://asimumba.rbind.io/"
-LanguageCode= "en-US"
-Title= "Aaron Simumba"
-paginate = 3
-DisqusShortname = "asimumba"
-Copyright = "All rights reserved 2017"
-canonifyurls = false
-enableEmoji = true 
+# Site settings
+baseurl = "https://asimumba.rbind.io/"
+languageCode = "en-us"
+title = "Aaron Simumba"
+theme = "hugo-cactus-theme"
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = "UA-101235795-1"
+# Disable comments by leaving disqusShortname empty
+disqusShortname = "asimumba"
+enableEmoji = true
 
+paginate = 10
 footnotereturnlinkcontents = "↩"
 
 [permalinks]
@@ -14,66 +17,56 @@ footnotereturnlinkcontents = "↩"
   
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
-[[menu.main]]
-  name = "About me"
-  weight = -90
-  identifier = "about"
-  url = "/about"
-
-[[menu.main]]
-  name = "Blog"
-  weight = -100
-  identifier = "blog"
-  url = "/"
-  
-[[menu.main]]
-  name = "CV"
-  weight = -110
-  identifier = "cv"
-  url = "/cv"
-  
-[[menu.main]]
-  name = "Projects"
-  weight = -120
-  identifier = "projects"
-  url = "/projects"
-  
-  
 [params]
-  description = "Welcome to my website"
-  metadescription = "Used as 'description' meta tag for both home and index pages. If not set, 'description' will be used instead"
-  cover = "images/cover.jpg"
-  author = "Aaron Simumba"
-  authorlocation = "Lusaka, Zambia"
-  authorwebsite = "https://asimumba.rbind.io/"
-  authorbio= "Tech crazy, society explorer,lost in the Data science dungeon"
-  logo = "images/logo.png"
-  googleAnalyticsUserID = "UA-101235795-1"
-  # Optional RSS-Link, if not provided it defaults to the standard index.xml
-  RSSLink = "http://feeds.feedburner.com/..."
-  githubName = "asimumba"
-  twitterName = "zedsamurai"
-  facebookName = "aaron.s.simumba"
-  linkedinName = "aaron-simumba-13737958"
-  stackoverflowName = "aaron-simumba-8137815"
-  email = "mailto:simumbaa21@gmail.com"
-  
-  
-  # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
-  hideHUGOSupport = false
-  
-  # Setting a value will load highlight.js and enable syntax highlighting using the style selected.
-  # See https://github.com/isagalaev/highlight.js/tree/master/src/styles for available styles
-  # A preview of above styles can be viewed at https://highlightjs.org/static/demo/
-  hjsStyle = "default"
-  
+	name = "Aaron Simumba"
+	description = "Tech crazy, society explorer,lost in the Data science dungeon"
+	bio = "Aspiring Data Scientist & Blogger"
+	# Enter optionally your twitter account
+	twitter = "zedsamurai"
+	enableRSS = true
+
+	# Integrate Javascript files or stylesheets by adding the url to the external assets or by
+	# linking local files with their path relative to the static folder, e.g. "css/styles.css"
+	customCSS = []
+	customJS  = ["js/center-img.js"]
+
+	# The variables below are optionally too and can be used to
+	# translate or customize each string of the theme.
+
+	# Navigation links
+	home = ""
+	about = ""
+	subscribe = "RSS"
+	# Pagination links
+	olderPosts = ""
+	newerPosts = ""
+	readMore = ""
+	copyright = ""
+	# Sharing options and author information in posts
+	aboutAuthor = "Aspiring Data Scientist & Blogger"
+	tweet = ""
+	share = "Facebook"
+	# 404 page
+	title404 = ""
+	subtitle404 = ""
+	githubRepo = "https://github.com/rbind/asimumba"
+	#gitter = "rbind/asimumba"
+	
+
+# options for highlight.js (version, additional languages, and theme)
   highlightjsVersion = "9.11.0"
   highlightjsCDN = "//cdn.bootcss.com"
   highlightjsLang = ["r", "yaml", "tex", "sql", "python"]
   highlightjsTheme = "github"
 
 
-  [params.social]
-    twitter = "zedsamurai"
-    github = "asimumba"
+# Add additional social link entries underneath
+
+[social]
+    github = "https://www.github.com/asimumba"
+    stackoverflow = "https://www.stackoverflow.com/8137815/aaron-simumba"
+    linkedin = "https://www.linkedin.com/aaron-simumba-13737958"
+    email = "mailto:simumbaa21@gmail.com"
+    twitter  = "https://www.twitter.com/zedsamurai"
+    facebook = "https://www.facebook.com/aaron.s.simumba"
     

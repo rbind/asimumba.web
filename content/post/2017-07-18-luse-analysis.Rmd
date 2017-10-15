@@ -16,6 +16,23 @@ description: LuSE performance overview
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r, message=FALSE}
+library(xts)
+load("../../static/data/luse.RData")
+# convert the data frame to an xts
+LASI_monthly <- xts(x = LASI_monthly[,-1], 
+                    order.by = as.Date(LASI_monthly[,1]))
+
+LASI_monthly_zccm <- xts(x = LASI_monthly_zccm[,-1], 
+                         order.by = as.Date(LASI_monthly_zccm[,1]))
+
+LASI_yearly <- xts(x = LASI_yearly[,-1], 
+                   order.by = as.Date(LASI_yearly[,1]))
+
+LASI_yearly_zccm <- xts(x = LASI_yearly_zccm[,-1], 
+                        order.by = as.Date(LASI_yearly_zccm[,1]))
+```
+
 
 In the next coming few weeks, I plan to do a series of posts specifically targeted at the Lusaka Securities Exchange (LuSE). Essentially, this idea came to mind after reading through this [Bloomberg Markets](https://www.bloomberg.com/news/articles/2017-01-10/history-shows-world-s-best-stock-gains-arise-in-emerging-markets) article, which highlights historical equity market returns . One aspect that stands out from this article is that over the past 2 decades, emerging markets equities provided greater returns; both on a risk adjusted basis and in dollar terms.
 And of focus here, the LuSE, ranks in the top 10 on both account of returns after converting to US dollars and on a risk adjusted basis. The table below shows the local bourse appearing twice in the top ten, twice  on number 2 in the year 2007 and 2011 only being edge out of the first spot by Mongolia on both occasions.
@@ -33,23 +50,6 @@ The following excerpt from Bloomberg stands out:
     not a fluke: over the past 20 years, nine out of 10 
     best-performing equity gauges have been in developing 
     nations, the figures show”.
-
-```{r, message=FALSE,echo=FALSE}
-library(xts)
-load("../../static/data/luse.RData")
-# convert the data frame to an xts
-LASI_monthly <- xts(x = LASI_monthly[,-1], 
-                    order.by = as.Date(LASI_monthly[,1]))
-
-LASI_monthly_zccm <- xts(x = LASI_monthly_zccm[,-1], 
-                         order.by = as.Date(LASI_monthly_zccm[,1]))
-
-LASI_yearly <- xts(x = LASI_yearly[,-1], 
-                   order.by = as.Date(LASI_yearly[,1]))
-
-LASI_yearly_zccm <- xts(x = LASI_yearly_zccm[,-1], 
-                        order.by = as.Date(LASI_yearly_zccm[,1]))
-```
 
 
 
