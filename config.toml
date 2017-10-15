@@ -1,6 +1,7 @@
 BaseUrl= "http://zedr.rbind.io/"
 LanguageCode= "en-US"
 Title= "ZedR"
+theme = "hugo-theme-casper"
 paginate = 4
 DisqusShortname = "asimumba"
 Copyright = "All rights reserved 2017"
