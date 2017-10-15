@@ -41,7 +41,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   
   
 [params]
-  description = "Welcome to my website"
+  description = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast"
   metadescription = "Used as 'description' meta tag for both home and index pages. If not set, 'description' will be used instead"
   cover = "images/cover.jpg"
   author = "Aaron Simumba"
