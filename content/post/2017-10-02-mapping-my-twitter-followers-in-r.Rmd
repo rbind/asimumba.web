@@ -8,6 +8,7 @@ tags:
     - Twitter followers
     - twitteR
 image: "images/background.jpg"
+css: center-image.css
 ---
 
 It is always nice to capture how wide and dense your twitter interactions spread. More so, the spread and locations of your twitter followers and those you are following. Making use of the `twitteR` package, and the inspiration from a post written by [Jeff Leek](https://simplystatistics.org/2011/12/21/an-r-function-to-map-your-twitter-followers/), I attempt to map my followers' locations and those I follow on twitter.
@@ -50,16 +51,11 @@ with arguments:
 ```
 userName - the twitter username you want to plot
 
-userLocation - an optional argument giving the location 
-of the user, necessary when the location information you
-have provided Twitter isn’t sufficient for us to find 
-latitude/longitude data
+userLocation - an optional argument giving the location of the user, necessary when the location information you have provided Twitter isn’t sufficient for us to find latitude/longitude data
 
 fileName - the file where you want the plot to appear
 
-nMax - The maximum number of followers/following to get
-from Twitter, this is implemented to avoid rate limiting 
-for people with large numbers of followers.
+nMax - The maximum number of followers/following to get from Twitter, this is implemented to avoid rate limiting for people with large numbers of followers.
 
 plotType - if “both” both followers/following are
 plotted, etc.
@@ -79,7 +75,8 @@ twitterMap("zedsamurai",
 The following is the map of the locations of my twitter followers  and those I follow. 
 
 
-![](https://user-images.githubusercontent.com/24398851/31088605-e90435ca-a7a9-11e7-89dc-7b5694d980d6.png){width=700px height=600px}
+![](https://user-images.githubusercontent.com/24398851/31088605-e90435ca-a7a9-11e7-89dc-7b5694d980d6.png)
+
 
 Since most people and companies I follow and those that follow me are either investment firms, open source software developers and of course meme artists. Memes cannot miss out, they carry life.  
 

@@ -58,8 +58,8 @@ ghit::install_github(c(&quot;leeper/tabulizerjars&quot;, &quot;leeper/tabulizer&
 <h2>Demo</h2>
 <p>For demostraction purpose, I will use the report from the Central Statistics Office (CSO), Zambia, on <a href="https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf">Zambia Census Projection 2011-2035</a>. Below is the outline of the sample data as presented in the PDF report.</p>
 <div class="figure">
-<img src="https://user-images.githubusercontent.com/24398851/31478548-c845dd9e-af19-11e7-8350-912e43c9fd00.png" alt="Source: CSO" width="700" height="600" />
-<p class="caption">Source: CSO</p>
+<img src="https://user-images.githubusercontent.com/24398851/31478548-c845dd9e-af19-11e7-8350-912e43c9fd00.png" alt="Source: ZICTA" width="600" height="500" />
+<p class="caption">Source: ZICTA</p>
 </div>
 <p>We call the tabulizer package with the following command.</p>
 <pre class="r"><code>library(&quot;tabulizer&quot;)</code></pre>
@@ -99,17 +99,8 @@ cso_column &lt;- cso_table[[1]]</code></pre>
 <p>First step is to clean the data, eliminating unwanted variables and tittle headers. That is in addition to tranforming the data into a “tidy” format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second and last row of the extracted data.</p>
 <p><code>tidyr</code> is used to gather the observations in the columns into rows and combine all the observations across 2 columns.The function <code>gather()</code> achieves this.</p>
 <pre class="r"><code># install.packages(&quot;tidyverse&quot;) # This will install the tidyverse
-library(tidyverse)</code></pre>
-<pre><code>## Loading tidyverse: ggplot2
-## Loading tidyverse: tibble
-## Loading tidyverse: tidyr
-## Loading tidyverse: readr
-## Loading tidyverse: purrr
-## Loading tidyverse: dplyr</code></pre>
-<pre><code>## Conflicts with tidy packages ----------------------------------------------</code></pre>
-<pre><code>## filter(): dplyr, stats
-## lag():    dplyr, stats</code></pre>
-<pre class="r"><code># converting to a tibble
+library(tidyverse)
+# converting to a tibble
 cso_data &lt;- cso_data %&gt;% 
   as.tibble()
 
@@ -142,9 +133,12 @@ cso_transformed</code></pre>
 ##  9  2011      southern   1,642,757
 ## 10  2011       western     926,478
 ## # ... with 50 more rows</code></pre>
+We can finaly take a breather, and enjoy!
+<center>
 <iframe src="https://giphy.com/embed/13r9tgg7ZisiT6" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen>
 </iframe>
 <p>
 <a href="https://giphy.com/gifs/michelle-tanner-stickleyman-13r9tgg7ZisiT6">via GIPHY</a>
 </p>
+</center>
 </div>

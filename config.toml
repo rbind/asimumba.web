@@ -66,7 +66,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # Setting a value will load highlight.js and enable syntax highlighting using the style selected.
   # See https://github.com/isagalaev/highlight.js/tree/master/src/styles for available styles
   # A preview of above styles can be viewed at https://highlightjs.org/static/demo/
-  hjsStyle = "default"
+  hjsStyle = "Github"
   
   highlightjsVersion = "9.11.0"
   highlightjsCDN = "//cdn.bootcss.com"

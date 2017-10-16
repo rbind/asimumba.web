@@ -67,7 +67,10 @@ This will download and install other Java related packages tabulizer depends on.
 For demostraction purpose, I will use the report from the Central Statistics Office (CSO), Zambia, on [Zambia Census Projection 2011-2035](https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf). Below is the outline of the sample data as presented in the PDF report. 
 
 
-![Source: CSO](https://user-images.githubusercontent.com/24398851/31478548-c845dd9e-af19-11e7-8350-912e43c9fd00.png){width=700px height=600px}
+![Source: ZICTA](https://user-images.githubusercontent.com/24398851/31478548-c845dd9e-af19-11e7-8350-912e43c9fd00.png){ width=600px height=500px }
+
+
+
 
 
 We call the tabulizer package with the following command.
@@ -127,7 +130,7 @@ str(cso_data)[3,] # Checking the structure of the data.
 cso_data[1:10, ] # first 10 rows
 ```
 `tidyr` is used to gather the observations in the columns into rows and combine all the observations across 2 columns.The function `gather()` achieves this.
-```{r}
+```{r,message=FALSE}
 # install.packages("tidyverse") # This will install the tidyverse
 library(tidyverse)
 # converting to a tibble
@@ -154,5 +157,7 @@ cso_transformed
 
 ```
 
+We can finaly take a breather, and enjoy!
+<center>
 <iframe src="https://giphy.com/embed/13r9tgg7ZisiT6" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/michelle-tanner-stickleyman-13r9tgg7ZisiT6">via GIPHY</a></p>
-
+</center>

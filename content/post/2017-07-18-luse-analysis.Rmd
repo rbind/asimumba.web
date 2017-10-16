@@ -27,13 +27,9 @@ As this data from Bloomberg Markets  shows, emerging and frontier markets accoun
 
 The following excerpt from Bloomberg stands out:
 
-
-    “The top 10 stock indexes that gave global investors 
-    the greatest returns in 2016 were all emerging or frontier
-    markets, according to data compiled by Bloomberg. That’s 
-    not a fluke: over the past 20 years, nine out of 10 
-    best-performing equity gauges have been in developing 
-    nations, the figures show”.
+<div style="text-align: left;" markdown="1">
+    “The top 10 stock indexes that gave global investors the greatest returns in 2016 were all emerging or frontier markets, according to data compiled by Bloomberg. That’s not a fluke: over the past 20 years, nine out of 10 best-performing equity gauges have been in developing nations, the figures show”.
+</div>
 
 ```{r, message=FALSE,echo=FALSE}
 library(xts)
