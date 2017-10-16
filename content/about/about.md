@@ -2,7 +2,6 @@
 title: About
 date: 2014-04-09
 comments: false
-image: "images/background.jpg"
 ---
 Hi, I'm Aaron Simumba, welcome to my site.
 
@@ -31,3 +30,5 @@ Courses in progress:
 This website is built with [**Blogdown**](https://github.com/rstudio/blogdown),and [**hugo**](https://gohugo.io/),deployed by [**netlify**](https://www.netlify.com/)
 
 The content is licensed under the [**Creative Commons Attribution-ShareAlike 4.0 International License**](https://creativecommons.org/licenses/by-sa/4.0/)
+![cclogo](https://user-images.githubusercontent.com/24398851/31635963-64f882f8-b2d1-11e7-9b98-3fbe3e08af96.png)
+
