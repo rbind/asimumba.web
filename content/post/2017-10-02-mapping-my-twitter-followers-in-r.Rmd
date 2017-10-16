@@ -74,8 +74,9 @@ twitterMap("zedsamurai",
 
 The following is the map of the locations of my twitter followers  and those I follow. 
 
-
-![](https://user-images.githubusercontent.com/24398851/31088605-e90435ca-a7a9-11e7-89dc-7b5694d980d6.png)
+<div style="text-align:center" markdown="1">
+![Map of twitter followers and followings](https://user-images.githubusercontent.com/24398851/31088605-e90435ca-a7a9-11e7-89dc-7b5694d980d6.png)
+</div>
 
 
 Since most people and companies I follow and those that follow me are either investment firms, open source software developers and of course meme artists. Memes cannot miss out, they carry life.  
