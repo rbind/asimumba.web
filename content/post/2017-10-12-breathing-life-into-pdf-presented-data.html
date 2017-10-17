@@ -20,7 +20,7 @@ fig_height: 3
 
 
 
-<p>It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extra water from a rock, which is an endeavour in futility.</p>
+<p>It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.</p>
 <p>The good news is, technology seem to run on a brain of its own. While one side of the technology spectrum impedes, another end liberate. One such solution to extracting the dead and static PDF presented data, is to turn to the powerful and versatile R package, <code>tabulizer</code>. The <a href="https://github.com/ropensci/tabulizer">tabulizer</a> package is an R wrapper for the powerful PDF extractor Java library <a href="https://github.com/tabulapdf/tabula-java/">Tabula</a>. This package allows one to extract with ease, data presented in tables in PDF. For as long as the data is in a clean and unclustered format. The package will try to guess the delimiters for the data and extract the data in the format which maintains close to the original data outline.</p>
 <div id="installation" class="section level2">
 <h2>Installation</h2>
@@ -135,6 +135,321 @@ cso_transformed</code></pre>
 ##  9  2011      southern   1,642,757
 ## 10  2011       western     926,478
 ## # ... with 50 more rows</code></pre>
+<p>For the full data table view, see the table below.</p>
+<pre class="r"><code>knitr::kable(cso_transformed, booktabs = TRUE, 
+             caption = &quot;Census data per Province&quot;)  </code></pre>
+<table>
+<caption><span id="tab:unnamed-chunk-8">Table 1: </span>Census data per Province</caption>
+<thead>
+<tr class="header">
+<th align="left">year</th>
+<th align="left">province</th>
+<th align="left">census_proj</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">central</td>
+<td align="left">1,355,775</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">copperbelt</td>
+<td align="left">2,143,413</td>
+</tr>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">eastern</td>
+<td align="left">1,628,880</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">luapula</td>
+<td align="left">1,015,629</td>
+</tr>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">lusaka</td>
+<td align="left">2,362,967</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">muchinga</td>
+<td align="left">749,449</td>
+</tr>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">northen</td>
+<td align="left">1,146,392</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">north.western</td>
+<td align="left">746,982</td>
+</tr>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">southern</td>
+<td align="left">1,642,757</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">western</td>
+<td align="left">926,478</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">central</td>
+<td align="left">1,515,086</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">copperbelt</td>
+<td align="left">2,362,207</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">eastern</td>
+<td align="left">1,813,445</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">luapula</td>
+<td align="left">1,127,453</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">lusaka</td>
+<td align="left">2,777,439</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">muchinga</td>
+<td align="left">895,058</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">northen</td>
+<td align="left">1,304,435</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">north.western</td>
+<td align="left">833,818</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">southern</td>
+<td align="left">1,853,464</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">western</td>
+<td align="left">991,500</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">central</td>
+<td align="left">1,734,601</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">copperbelt</td>
+<td align="left">2,669,635</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">eastern</td>
+<td align="left">2,065,590</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">luapula</td>
+<td align="left">1,276,608</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">lusaka</td>
+<td align="left">3,360,183</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">muchinga</td>
+<td align="left">1,095,535</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">northen</td>
+<td align="left">1,520,004</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">north.western</td>
+<td align="left">950,789</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">southern</td>
+<td align="left">2,135,794</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">western</td>
+<td align="left">1,076,683</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">central</td>
+<td align="left">1,979,202</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">copperbelt</td>
+<td align="left">3,016,344</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">eastern</td>
+<td align="left">2,344,980</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">luapula</td>
+<td align="left">1,439,877</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">lusaka</td>
+<td align="left">4,004,276</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">muchinga</td>
+<td align="left">1,326,222</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">northen</td>
+<td align="left">1,763,638</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">north.western</td>
+<td align="left">1,080,072</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">southern</td>
+<td align="left">2,445,929</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">western</td>
+<td align="left">1,173,598</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">central</td>
+<td align="left">2,254,435</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">copperbelt</td>
+<td align="left">3,402,007</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">eastern</td>
+<td align="left">2,655,422</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">luapula</td>
+<td align="left">1,623,991</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">lusaka</td>
+<td align="left">4,704,135</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">muchinga</td>
+<td align="left">1,587,414</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">northen</td>
+<td align="left">2,040,926</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">north.western</td>
+<td align="left">1,227,481</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">southern</td>
+<td align="left">2,793,523</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">western</td>
+<td align="left">1,286,880</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">central</td>
+<td align="left">2,565,450</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">copperbelt</td>
+<td align="left">3,823,642</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">eastern</td>
+<td align="left">3,001,152</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">luapula</td>
+<td align="left">1,834,667</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">lusaka</td>
+<td align="left">5,465,775</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">muchinga</td>
+<td align="left">1,879,642</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">northen</td>
+<td align="left">2,355,007</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">north.western</td>
+<td align="left">1,397,137</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">southern</td>
+<td align="left">3,184,855</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">western</td>
+<td align="left">1,416,331</td>
+</tr>
+</tbody>
+</table>
 We can finally take a breather, and enjoy!
 <center>
 <iframe src="https://giphy.com/embed/13r9tgg7ZisiT6" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen>

@@ -21,7 +21,7 @@ fig_height: 3
 knitr::opts_chunk$set(echo = TRUE,eval = TRUE)
 ```
 
-It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extra water from a rock, which is an endeavour in futility.
+It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.
 
 The good news is, technology seem to run on a brain of its own. While one side of the technology spectrum impedes, another end liberate. One such solution to extracting the dead and static PDF presented data, is to turn to the powerful and versatile R package, `tabulizer`. The [tabulizer](https://github.com/ropensci/tabulizer) package is an R wrapper for the powerful PDF extractor Java library  [Tabula](https://github.com/tabulapdf/tabula-java/). This package allows one to extract with ease, data presented in tables in PDF. For as long as the data is in a clean and unclustered format. The package will try to guess the delimiters for the data and extract the data in the format which maintains close to the original data outline.
 
@@ -157,6 +157,11 @@ cso_transformed
 
 
 
+```
+For the full data table view, see the table below.
+```{r}
+knitr::kable(cso_transformed, booktabs = TRUE, 
+             caption = "Census data per Province")  
 ```
 
 We can finally take a breather, and enjoy!
