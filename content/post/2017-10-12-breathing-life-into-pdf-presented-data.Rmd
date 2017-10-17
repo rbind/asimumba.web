@@ -67,7 +67,7 @@ This will download and install other Java related packages tabulizer depends on.
 For demostraction purpose, I will use the report from the Central Statistics Office (CSO), Zambia, on [Zambia Census Projection 2011-2035](https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf). Below is the outline of the sample data as presented in the PDF report. 
 
 <div style="text-align:center" markdown="1">
-![Sample Data File - Source: ZICTA](https://user-images.githubusercontent.com/24398851/31639999-7d7cc290-b2e4-11e7-85d3-03cc648a73e6.png){ width=600px height=500px }
+![Sample Data File - Source: CSO](https://user-images.githubusercontent.com/24398851/31639999-7d7cc290-b2e4-11e7-85d3-03cc648a73e6.png){ width=600px height=500px }
 
 </div>
 
@@ -159,7 +159,7 @@ cso_transformed
 
 ```
 
-We can finaly take a breather, and enjoy!
+We can finally take a breather, and enjoy!
 <center>
 <iframe src="https://giphy.com/embed/13r9tgg7ZisiT6" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/michelle-tanner-stickleyman-13r9tgg7ZisiT6">via GIPHY</a></p>
 </center>
