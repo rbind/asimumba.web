@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE,eval = TRUE)
 
 It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.
 
-The good news is, technology seem to run on a brain of its own. While one side of the technology spectrum impedes, another end liberate. One such solution to extracting the dead and static PDF presented data, is to turn to the powerful and versatile R package, `tabulizer`. The [tabulizer](https://github.com/ropensci/tabulizer) package is an R wrapper for the powerful PDF extractor Java library  [Tabula](https://github.com/tabulapdf/tabula-java/). This package allows one to extract with ease, data presented in tables in PDF. For as long as the data is in a clean and unclustered format. The package will try to guess the delimiters for the data and extract the data in the format which maintains close to the original data outline.
+The good news is, technology seem to run on a brain of its own. While one side of the technology spectrum impedes, another end liberate. One such solution to extracting the dead and static PDF presented data, is to turn to the powerful and versatile R package, `tabulizer`. The [tabulizer](https://github.com/ropensci/tabulizer) package is an R wrapper for the powerful PDF extractor Java library  [Tabula](https://github.com/tabulapdf/tabula-java/). This package allows one to extract with ease, data presented in tables in a PDF document. For as long as the data is in a clean and unclustered format. The `extract_tables()` function will try to guess the delimiters for the data and extract the data in the format which maintains close to the original data outline.
 
 ## Installation
 
@@ -80,10 +80,10 @@ We call the tabulizer package with the following command.
 library("tabulizer")
 ```
 
-The main function is the `extract_tables()`, with the first argument is the PDF `file` or report where the targeted table(s) is/are. The second argument is the `pages`, where you specify the page number the table of data is. There are other arguments such as `area`, which you can specify the targeted area(s) to extract. `columns`   which matches with the number of pages to be extracted. This argument allows for each page extracted to be stored in its own separate column.The `guess` argument, which by default is `=TRUE`, allows for the function to guess the location of the table(s) on each page. For a list of all the arguments: run `?extract_tables` in the R console.
+The main function is the `extract_tables()`. The first argument is the PDF `file` or report where the targeted table(s) is/are. The second argument is the `pages`, where you specify the page number the table of data is. There are other arguments such as `area`, which you can specify the targeted area(s) to extract. `columns`   which matches with the number of pages to be extracted. This argument allows for each page extracted to be stored in its own separate column.The `guess` argument, which by default is `=TRUE`, allows for the function to guess the location of the table(s) on each page. For a list of all the arguments: run `?extract_tables` in the R console.
 By default, the data is extracted as a list. Lists in R can be thought of as a vector containing other objects. We can zoom in on a particular object using the double square brackets,`[[]]`. For instance, the first object in the variable is indexed by the number 1, and the  second object by 2, and so on. Since,only one table is being extracted, the variable below contain one column; extracted with this command,`cso_table[[1]]`.
 
-The dafault way, `extract_table()` extracts the data as a list of character matrices, helps in cases where the data is irregular and cannot be properly coerced to a data frame. To change this behaviour in order to have the extracted data coerced to a data frame, we supply the `method` argument, and have `data frame` as the value.   
+The dafault way, `extract_table()` extracts the data as a list of character matrices. This helps in cases where the data is irregular and cannot be properly coerced to a data frame (column by row format). To change this behaviour so that the extracted data is coerced to a data frame, we supply the `method` argument, and have `data.frame` as the value.   
 
 ```{r}
 cso <- ("https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf") 
@@ -98,13 +98,14 @@ cso_table <- extract_tables(cso, pages = 24,
 # arguments are left as defaults
 cso_column <- cso_table[[1]]
 ```
-From the extraction results, it can bee seen the output is not in a very "tidy" format, to allow any meaning analyses from being done. The next still would be reshaping and reordering the extract results in to a neat data frame or table made up of columns and rows. 
+
+From the extracted results, it can bee seen the output is not in a "tidy" format, to allow any meaning analyses to be done. The next step would be reshaping and reordering the extracted results into a neat data frame. 
 
 ## Tidying the data
 
 Two approaches can be down here: the easy way or the hard way.
 
-- Firstly, the easy way. We can write the data to a `CSV` file and clean the data in Microsoft Excel. The solution is to use the `write.csv()` function. With the first argument is the data object.Under`file` you define the output filename together with the file extension, in our case it is a `.CSV` file. The `row.names` specifies whether to include the default index R attaches to the data, which spans the length of your data.
+- Firstly, the easy way. We can write the data to a `CSV` file and clean the data in Microsoft Excel. The solution is to use the `write.csv()` function. The first argument in the function is the data object. The `file` argument, you define the output filename together with the file extension - in our case it is a `.CSV` extension. The `row.names` specifies whether to include the default index R attaches to the data, which spans the length of your data.
 ```{r}
 write.csv(cso_column, file = "../../static/data/cso_data.csv",
           row.names = FALSE)
@@ -119,7 +120,7 @@ After cleaning the data in Excel, it can be re-imported to aid in analysis.
 
 ## Welcome to the tidyverse universe
 
-First step is to clean the data, eliminating unwanted variables and tittle headers. That is in addition to tranforming the data into a "tidy" format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second and last row of the extracted data.
+First step is to clean the data, eliminating unwanted variables and title headers. That is in addition to tranforming the data into a "tidy" format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second, and the last three row of the extracted data.
 
 ```{r, message=FALSE,include=FALSE}
 # this eleminates the rows specified
@@ -131,7 +132,7 @@ names(cso_data) <-
 str(cso_data)[3,] # Checking the structure of the data.
 cso_data[1:10, ] # first 10 rows
 ```
-`tidyr` is used to gather the observations in the columns into rows and combine all the observations across 2 columns.The function `gather()` achieves this.
+`tidyr` package is used to gather the observations in the columns into rows and combine all the observations across 2 columns.The function `gather()` achieves this in the `tidyr` package.
 ```{r,message=FALSE}
 # install.packages("tidyverse") # This will install the tidyverse
 library(tidyverse)

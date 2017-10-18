@@ -60,7 +60,7 @@ The table below shows the top 10 market returns on a risk adjusted basis. No dou
 ![Source: Bloomberg](https://user-images.githubusercontent.com/24398851/30350804-ecf24f0c-9820-11e7-8b32-165181d67703.png){width=600px height=500px}
 </div>
 
-What’s impressive from this table is that from the period 1997-2016, Zambia appears 5 times, occupying the first position once in the year 2013. The country appeared 4 within the top 5 spots in terms of risk adjusted equity returns in the world .In local currency terms this reflected an over 40% return as can be seen from figure \@ref(fig:first-figure) below. Going forward, investors can remain optimistic on the prospects of the emerging markets delivering stellar returns ahead of the developed markets pack. So far, the MSCI Emerging Markets Index has gained 2.7 percent in comparison with 1.5 percent from developed stock markets.
+What’s impressive from this table is that from the period 1997-2016, Zambia appears 5 times, occupying the first position once in the year 2013. The country appeared on 4th position within the top 5 spots in terms of risk adjusted equity returns in the world .In local currency terms this reflected an over 40% return as can be seen from figure \@ref(fig:first-figure) below. Going forward, investors can remain optimistic on the prospects of the emerging markets delivering stellar returns ahead of the developed markets pack. So far, the MSCI Emerging Markets Index has gained 2.7 percent in comparison with 1.5 percent from developed stock markets.
 
 ### In Focus
 
