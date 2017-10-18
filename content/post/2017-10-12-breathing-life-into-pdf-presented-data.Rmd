@@ -27,7 +27,7 @@ The good news is, technology seem to run on a brain of its own. While one side o
 
 ## Installation
 
-For the installation and usage, the package depends on Java.  The appropriate Java Developement Kit can be downloaded straight from the Oracle website [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Installation instructions are platform specific. Follow the instructions depending on you OS. I am on Windows, so I installed Java, running the `jdk-8u144-windows-x64.exe` executable file. 
+For the installation and usage, the package depends on Java.  The appropriate Java Developement Kit can be downloaded straight from the Oracle website [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Installation instructions are platform specific. Follow the instructions depending on your OS. I am on Windows, so I installed Java, running the `jdk-8u144-windows-x64.exe` executable file. 
 
 Installing tabulizer package, this can be installed from github. There is only the development version of the package, you will not find it on CRAN.
 ```{r, eval=FALSE}
