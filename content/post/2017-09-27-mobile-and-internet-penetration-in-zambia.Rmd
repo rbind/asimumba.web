@@ -68,7 +68,7 @@ names(operator_stats) # column names
 ```
 
 It is important to learn the data types and the form your data assumes in your dataset. To achieve this, the `str()` function can be called. Since the the dataset has variables I am not interested in, I narrow the field with the `select()` from the `dplyr` package 
-to select only vairables of interest
+to select only variables of interest
 
 ```{r, eval=FALSE}
 operator_stats %>% 
@@ -80,7 +80,7 @@ operator_stats %>%
 ```
 ## Second quarter statistics from ZICTA
 
-ZICTA provides the following statistics on ICT as of the second quarter of 2017, as seen below.From these statistics, it can be seen that mobile subsription is slightly under 12.5 million suscribers, representing a penetration rate of 75.77%. On the internet side, a penetration rate is more than a third standing at 35.88%.
+ZICTA provides the following statistics on ICT as of the second quarter of 2017, as seen below. From these statistics, it can be seen that mobile subscription is slightly under 12.5 million subscribers, representing a penetration rate of 75.77%. On the internet side, a penetration rate is more than a one third standing at 35.88%.
 
 <div style="text-align:center" markdown="1">
 ![Source: ZICTA](https://user-images.githubusercontent.com/24398851/31039423-3acc0a34-a586-11e7-9285-78a08b5d4cd2.png)
