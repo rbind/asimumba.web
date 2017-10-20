@@ -52,7 +52,7 @@ LASI_yearly_zccm <- xts(x = LASI_yearly_zccm[,-1],
 
 
 
-Investment theory contends that risk taken in an investment must commensurate the return sought. Though equities as a class of investible assets are by their very nature riskier assets relative to other assets like Treasury Bill or Bonds; this in essence frightens most investors to invest in them. More so from the view of the emerging markets, which expose investors to higher levels of volatility relative to more mature and developed markets. In my next post I will look at what was historically being  demanded by investors for taking up the extra risk posed by emerging markets.
+Investment theory contends that risk taken in an investment must commensurate the return sought. Though equities as a class of investable assets are by their very nature riskier assets relative to other assets like Treasury Bill or Bonds; this in essence frightens most investors to invest in them. More so from the view of the emerging markets, which expose investors to higher levels of volatility relative to more mature and developed markets. In my next post I will look at what was historically being  demanded by investors for taking up the extra risk posed by emerging markets.
 
 The table below shows the top 10 market returns on a risk adjusted basis. No doubt emerging markets still dominated the list.
 
