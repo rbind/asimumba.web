@@ -16,7 +16,7 @@ There is nothing as frustrating as getting stuck with a computer operation/code 
 After all, the solution is quite simple and straight forward to implement. [netlify](https://www.netlify.com/) uses version 0.17 as the default hugo build for deploying sites built under the hugo platform. And some hugo themes uses the more recent versions which are above version `0.17`. 
 
 
-A quick work around is to define the build environment with the version of hugo you desire or that fits with the theme being used. Under the site settings, you navigating to the build & deploy panel, locate the build environment variables. In the `key` value slot you type `HUGO_VERSION` and in the `value` placeholder, you define the hugo version. For instance version `0.27` as can be seen in the screenshot below. 
+A quick work around is to define the build environment with the version of hugo you desire or that fits with the theme being used. Under the site settings, you navigating to the build & deploy panel, locate the build environment variables. In the `key` value slot you type `HUGO_VERSION` and in the `value` place-holder, you define the hugo version. For instance version `0.27` as can be seen in the screenshot below. 
 With this in place, you can expect a smooth build of the site and deployment. 
 
 

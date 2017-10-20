@@ -21,10 +21,10 @@ fig_height: 3
 
 
 <p>It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.</p>
-<p>The good news is, technology seem to run on a brain of its own. While one side of the technology spectrum impedes, another end liberate. One such solution to extracting the dead and static PDF presented data, is to turn to the powerful and versatile R package, <code>tabulizer</code>. The <a href="https://github.com/ropensci/tabulizer">tabulizer</a> package is an R wrapper for the powerful PDF extractor Java library <a href="https://github.com/tabulapdf/tabula-java/">Tabula</a>. This package allows one to extract with ease, data presented in tables in a PDF document. For as long as the data is in a clean and unclustered format. The <code>extract_tables()</code> function will try to guess the delimiters for the data and extract the data in the format which maintains close to the original data outline.</p>
+<p>The good news is, technology seem to run on a brain of its own. While one side of the technology spectrum impedes, another end liberate. One such solution to extracting the dead and static PDF presented data, is to turn to the powerful and versatile R package, <code>tabulizer</code>. The <a href="https://github.com/ropensci/tabulizer">tabulizer</a> package is an R wrapper for the powerful PDF extractor Java library <a href="https://github.com/tabulapdf/tabula-java/">Tabula</a>. This package allows one to extract with ease, data presented in tables in a PDF document. For as long as the data is in a clean and uncluttered format. The <code>extract_tables()</code> function will try to guess the delimiters for the data and extract the data in the format which maintains close to the original data outline.</p>
 <div id="installation" class="section level2">
 <h2>Installation</h2>
-<p>For the installation and usage, the package depends on Java. The appropriate Java Developement Kit can be downloaded straight from the Oracle website <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">here</a>. Installation instructions are platform specific. Follow the instructions depending on your OS. I am on Windows, so I installed Java, running the <code>jdk-8u144-windows-x64.exe</code> executable file.</p>
+<p>For the installation and usage, the package depends on Java. The appropriate Java Development Kit can be downloaded straight from the Oracle website <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">here</a>. Installation instructions are platform specific. Follow the instructions depending on your OS. I am on Windows, so I installed Java, running the <code>jdk-8u144-windows-x64.exe</code> executable file.</p>
 <p>Installing tabulizer package, this can be installed from github. There is only the development version of the package, you will not find it on CRAN.</p>
 <pre class="r"><code># The original instructions from ropenscilabs, listing the following code to install
 #the packages, but from my experience, I had troulbes installing it from their repo
@@ -56,7 +56,7 @@ ghit::install_github(c(&quot;leeper/tabulizerjars&quot;, &quot;leeper/tabulizer&
 </div>
 <div id="demo" class="section level2">
 <h2>Demo</h2>
-<p>For demostraction purpose, I will use the report from the Central Statistics Office (CSO), Zambia, on <a href="https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf">Zambia Census Projection 2011-2035</a>. Below is the outline of the sample data as presented in the PDF report.</p>
+<p>For demonstration purpose, I will use the report from the Central Statistics Office (CSO), Zambia, on <a href="https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf">Zambia Census Projection 2011-2035</a>. Below is the outline of the sample data as presented in the PDF report.</p>
 <div style="text-align:center" markdown="1">
 <div class="figure">
 <img src="https://user-images.githubusercontent.com/24398851/31639999-7d7cc290-b2e4-11e7-85d3-03cc648a73e6.png" alt="Sample Data File - Source: CSO" width="600" height="500" />
@@ -66,7 +66,7 @@ ghit::install_github(c(&quot;leeper/tabulizerjars&quot;, &quot;leeper/tabulizer&
 <p>We call the tabulizer package with the following command.</p>
 <pre class="r"><code>library(&quot;tabulizer&quot;)</code></pre>
 <p>The main function is the <code>extract_tables()</code>. The first argument is the PDF <code>file</code> or report where the targeted table(s) is/are. The second argument is the <code>pages</code>, where you specify the page number the table of data is. There are other arguments such as <code>area</code>, which you can specify the targeted area(s) to extract. <code>columns</code> which matches with the number of pages to be extracted. This argument allows for each page extracted to be stored in its own separate column.The <code>guess</code> argument, which by default is <code>=TRUE</code>, allows for the function to guess the location of the table(s) on each page. For a list of all the arguments: run <code>?extract_tables</code> in the R console. By default, the data is extracted as a list. Lists in R can be thought of as a vector containing other objects. We can zoom in on a particular object using the double square brackets,<code>[[]]</code>. For instance, the first object in the variable is indexed by the number 1, and the second object by 2, and so on. Since,only one table is being extracted, the variable below contain one column; extracted with this command,<code>cso_table[[1]]</code>.</p>
-<p>The dafault way, <code>extract_table()</code> extracts the data as a list of character matrices. This helps in cases where the data is irregular and cannot be properly coerced to a data frame (column by row format). To change this behaviour so that the extracted data is coerced to a data frame, we supply the <code>method</code> argument, and have <code>data.frame</code> as the value.</p>
+<p>The default way, <code>extract_table()</code> extracts the data as a list of character matrices. This helps in cases where the data is irregular and cannot be properly coerced to a data frame (column by row format). To change this behaviour so that the extracted data is coerced to a data frame, we supply the <code>method</code> argument, and have <code>data.frame</code> as the value.</p>
 <pre class="r"><code>cso &lt;- (&quot;https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf&quot;) 
 
 # stored the link to the report as a variable.
@@ -84,7 +84,7 @@ cso_column &lt;- cso_table[[1]]</code></pre>
 <h2>Tidying the data</h2>
 <p>Two approaches can be down here: the easy way or the hard way.</p>
 <ul>
-<li>Firstly, the easy way. We can write the data to a <code>CSV</code> file and clean the data in Microsoft Excel. The solution is to use the <code>write.csv()</code> function. The first argument in the function is the data object. The <code>file</code> argument, you define the output filename together with the file extension - in our case it is a <code>.CSV</code> extension. The <code>row.names</code> specifies whether to include the default index R attaches to the data, which spans the length of your data.</li>
+<li>Firstly, the easy way. We can write the data to a <code>CSV</code> file and clean the data in Microsoft Excel. The solution is to use the <code>write.csv()</code> function. The first argument in the function is the data object. The <code>file</code> argument, you define the output file name together with the file extension - in our case it is a <code>.CSV</code> extension. The <code>row.names</code> specifies whether to include the default index R attaches to the data, which spans the length of your data.</li>
 </ul>
 <pre class="r"><code>write.csv(cso_column, file = &quot;../../static/data/cso_data.csv&quot;,
           row.names = FALSE)
@@ -93,12 +93,12 @@ cso_column &lt;- cso_table[[1]]</code></pre>
 # to be stored</code></pre>
 <p>After cleaning the data in Excel, it can be re-imported to aid in analysis.</p>
 <ul>
-<li>Second choice, the hard way. R has a suite of packages build specifically to handle such tasks. The<code>dplyr</code> package, is one such package, which represents the grammar of data manipulation. Using well crafted verbs, one can transform, order, filter etc. data with ease.</li>
+<li>Second choice, the hard way. R has a suite of packages build specifically to handle such tasks. The<code>dplyr</code> package, is one such package, which represents the grammar of data manipulation. Using well crafted verbs, one can transform, order, filter etc.. data with ease.</li>
 </ul>
 </div>
 <div id="welcome-to-the-tidyverse-universe" class="section level2">
 <h2>Welcome to the tidyverse universe</h2>
-<p>First step is to clean the data, eliminating unwanted variables and title headers. That is in addition to tranforming the data into a “tidy” format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second, and the last three row of the extracted data.</p>
+<p>First step is to clean the data, eliminating unwanted variables and title headers. That is in addition to transforming the data into a “tidy” format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second, and the last three row of the extracted data.</p>
 <p><code>tidyr</code> package is used to gather the observations in the columns into rows and combine all the observations across 2 columns.The function <code>gather()</code> achieves this in the <code>tidyr</code> package.</p>
 <pre class="r"><code># install.packages(&quot;tidyverse&quot;) # This will install the tidyverse
 library(tidyverse)

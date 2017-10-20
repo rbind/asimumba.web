@@ -12,7 +12,7 @@ fig_width: 2
 fig_height: 3
 image: "images/background.jpg"
 ---
-In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority ([ZICTA](http://www.zicta.zm/)) data. I will walk through the data on the subscriber base, the user trafffic and the cost differentials among the three mobile operators, these being: Airtel, Zamtel and MTN Zambia. In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used. 
+In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority ([ZICTA](http://www.zicta.zm/)) data. I will walk through the data on the subscriber base, the user traffic and the cost differentials among the three mobile operators, these being: Airtel, Zamtel and MTN Zambia. In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used. 
 ```{r,echo=FALSE}
 knitr::opts_chunk$set(fig.width=8, fig.height=5,options(scipen=999)) 
 ```
@@ -20,7 +20,7 @@ knitr::opts_chunk$set(fig.width=8, fig.height=5,options(scipen=999))
 
 ## Prerequisites
 
-For this analysis, I will mainly use the following packages. The beauty with the R language is  that as a modular language, meaning it is fully extensible with add-on packages. I will make use of the `ggplot2` for visualising the data; `dplyr`, which is the package made to seamlessly handle data tranformations, will be used to tweak the data to match the objectives of the analysis. The other packages are `readr` for data import and `plotly` for interactive visualization.
+For this analysis, I will mainly use the following packages. The beauty with the R language is  that as a modular language, meaning it is fully extensible with add-on packages. I will make use of the `ggplot2` for visualising the data; `dplyr`, which is the package made to seamlessly handle data transformations, will be used to tweak the data to match the objectives of the analysis. The other packages are `readr` for data import and `plotly` for interactive visualization.
 
 ```{r, message=FALSE}
 # the packages can be installed running the following command
@@ -33,7 +33,7 @@ library(plotly)
 
 ## Data
 
-The data used in this analysis can be found on the [ZICTA](http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html) website. Since the data on the ZICTA website is not in a downloadable format. I had to turn to Microsoft Excel, with its option to mine the data from the web. The data online is in a format which is not very helpful to work with, so I had to clean up and reorder the data into a "tidy" format (each variable is a column and each observation occupying a row). The original data format can be seen in the screenshot below.
+The data used in this analysis can be found on the [ZICTA](http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html) website. Since the data on the ZICTA website is not in a downloadable format. I had to turn to Microsoft Excel, with its option to mine the data from the web. The data on-line is in a format which is not very helpful to work with, so I had to clean up and reorder the data into a "tidy" format (each variable is a column and each observation occupying a row). The original data format can be seen in the screenshot below.
 
 <div style="text-align:center" markdown="1">
 ![Source: ZICTA](https://user-images.githubusercontent.com/24398851/31025561-ba80b558-a54b-11e7-9e91-b3655f35d4db.png){width=600px height=500px}
@@ -90,7 +90,7 @@ ZICTA provides the following statistics on ICT as of the second quarter of 2017,
 
 ## Number of active users
 
-As can be seen from the trend that spans fron 2010 to the year 2017 upto Q2 statistics, there has been a relatively upward trend in active mobile user subscribers. With the period between 2010 to 2012 experiencing the biggest leap of nearly 50% change.
+As can be seen from the trend that spans from 2010 to the year 2017 up to Q2 statistics, there has been a relatively upward trend in active mobile user subscribers. With the period between 2010 to 2012 experiencing the biggest leap of nearly 50% change.
 
 ```{r}
 operator_stats %>% 
@@ -117,7 +117,7 @@ operator_stats %>%
  
 ```
 
-The plot below shows a positive correlationship between the active mobile subscribers with the population estimate from the Central Statistics Office.
+The plot below shows a positive correlation between the active mobile subscribers with the population estimate from the Central Statistics Office.
 
 ```{r}
 operator_stats %>% 
@@ -141,7 +141,7 @@ operator_stats %>%
 
 ## Change in the active user base
 
-For much of the period under review, the number of active users was had a positive upward trend. Except for the years 2013 to 2014 and 2017 first quarter that showed a decline. Perhaps much of this decline for the 2013-2014, can be attributed to the fears the general populace had over compulsory sim registration. With fears spreading that the governement was implementing this programme so they can spy on the citizens. The relevant authority made sure these fears were addressed by sensitizing the general [public](https://www.zicta.zm/Views/Articles/Sim%20Registration%20(FAQ)%20.htm) through [press](http://allafrica.com/stories/201212120613.html) releases. 
+For much of the period under review, the number of active users was had a positive upward trend. Except for the years 2013 to 2014 and 2017 first quarter that showed a decline. Perhaps much of this decline for the 2013-2014, can be attributed to the fears the general populace had over compulsory sim registration. With fears spreading that the government was implementing this programme so they can spy on the citizens. The relevant authority made sure these fears were addressed by sensitizing the general [public](https://www.zicta.zm/Views/Articles/Sim%20Registration%20(FAQ)%20.htm) through [press](http://allafrica.com/stories/201212120613.html) releases. 
 
 Given  this was a free of charge exercise, some opted to make [money](https://www.lusakatimes.com/2013/01/30/sim-registration-as-the-process-is-absolutely-free-zicta/) by charging for registration. Further casting a negative image on the exercise.
 
@@ -166,12 +166,12 @@ names(per_change) <- c("Year","Population", "Active subscribers",
   
 ```
 
-In terms of the summary statistics, the active users mumbers have average 10,285,415 a year. Considering a population size of nearly 16 million, this is a decent uptake in active mobile users.
+In terms of the summary statistics, the active users numbers have average 10,285,415 a year. Considering a population size of nearly 16 million, this is a decent uptake in active mobile users.
 ```{r}
 summary(operator_stats$Number_of_active_Subscribers)
 ```
 
-For the mobile pepentration numbers per 100 inhabitants, the graph below shows an upward trend for much of the years under review. More in line with the active user base numbers. 
+For the mobile penetration numbers per 100 inhabitants, the graph below shows an upward trend for much of the years under review. More in line with the active user base numbers. 
 
 ```{r}
 operator_stats %>% 
@@ -246,7 +246,7 @@ knitr::kable(network_cover, booktabs = TRUE,
 
 **Broadband users**
 
-The broadband data which covers all those on Direct Subsriber Line,cable and  optic fibre internet access, on average there are 3855730 users, with 75% of the users amounting to 5338910.
+The broadband data which covers all those on Direct Subscriber Line,cable and  optic fibre internet access, on average there are 3855730 users, with 75% of the users amounting to 5338910.
 
 ```{r}
 summary(operator_stats$Mobile_Broadband_users)
@@ -301,7 +301,7 @@ ggplotly(p, autosize = FALSE
 
 ## Cost differentials
 
-The average cost for SMSs had maintained  a very stable flow from the year 2010 to the year 2014, with on network SMS cost standing at K 0.30. Off net SMS cost averaged K0.24, significantly low than off net cost. A signal to growing competition and the mobile operators' desire to benefit across networks. For the mobile phone tariff, for much of the period under review, we can see a relatively declining average cost of mobile tariff across different mobile operators. Although the year 2017 second quarter numbers show an increase in the tariff.The year 2017 saw a further increase in Excise duty taxes on telephone airtime from 15% to 15.5% for the 2017 [budget](http://taxsummaries.pwc.com/ID/Zambia-Corporate-Other-taxes), this is in addition to the 2015 increase from 10% to 15%. This can be reflected in the uptick in the tarrif costs beyond 2016.
+The average cost for SMSs had maintained  a very stable flow from the year 2010 to the year 2014, with on network SMS cost standing at K 0.30. Off net SMS cost averaged K0.24, significantly low than off net cost. A signal to growing competition and the mobile operators' desire to benefit across networks. For the mobile phone tariff, for much of the period under review, we can see a relatively declining average cost of mobile tariff across different mobile operators. Although the year 2017 second quarter numbers show an increase in the tariff.The year 2017 saw a further increase in Excise duty taxes on telephone airtime from 15% to 15.5% for the 2017 [budget](http://taxsummaries.pwc.com/ID/Zambia-Corporate-Other-taxes), this is in addition to the 2015 increase from 10% to 15%. This can be reflected in the up-tick in the tariff costs beyond 2016.
 
 ```{r}
 operator_stats %>% 
@@ -329,7 +329,7 @@ operator_stats %>%
 
 ## Mobile voice call cost per/minute 
 
-On all accounts, 2014 through to 2016 saw a significan drop in the cost of calling per minute. This is in comparism to the numbers prebvailing from the year 2010 t0 2014. With Voice-off-net off peak on mobile  maintaining a very steady cost per minute between 2010 to 2014. Conversely, Voice-on-net off peak on mobile had a relatively upwarding swing in the cost of calling per minute. For the year 2014, there was a drop in all forms of calling, whetther on net and off network. This was preceded by the sim registration exercise, which has significnt back drop on the mobile operators. The drop in cost may have been a means to lure back customers on their platform.
+On all accounts, 2014 through to 2016 saw a significant drop in the cost of calling per minute. This is in comparison to the numbers prevailing from the year 2010 t0 2014. With Voice-off-net off peak on mobile  maintaining a very steady cost per minute between 2010 to 2014. Conversely, Voice-on-net off peak on mobile had a relatively up-ward swing in the cost of calling per minute. For the year 2014, there was a drop in all forms of calling, whether on net and off network. This was preceded by the sim registration exercise, which has significant back drop on the mobile operators. The drop in cost may have been a means to lure back customers on their platform.
 
 ```{r}
 operator_stats %>% 
