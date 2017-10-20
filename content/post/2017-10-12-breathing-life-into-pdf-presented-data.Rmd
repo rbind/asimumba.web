@@ -103,7 +103,7 @@ From the extracted results, it can bee seen the output is not in a "tidy" format
 
 ## Tidying the data
 
-Two approaches can be down here: the easy way or the hard way.
+Two approaches can be implemented here: the easy way or the hard way.
 
 - Firstly, the easy way. We can write the data to a `CSV` file and clean the data in Microsoft Excel. The solution is to use the `write.csv()` function. The first argument in the function is the data object. The `file` argument, you define the output file name together with the file extension - in our case it is a `.CSV` extension. The `row.names` specifies whether to include the default index R attaches to the data, which spans the length of your data.
 ```{r}

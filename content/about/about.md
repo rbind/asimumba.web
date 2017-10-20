@@ -12,7 +12,7 @@ Not to mention, I am lost in the Data Science web... I hope to find my way out o
 
 `For this website`
 
-This will be a place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies.
+This will be a place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytic technologies.
 
 `Let's have fun!` :smile:
 
