@@ -66,7 +66,7 @@ ghit::install_github(c(&quot;leeper/tabulizerjars&quot;, &quot;leeper/tabulizer&
 <p>We call the tabulizer package with the following command.</p>
 <pre class="r"><code>library(&quot;tabulizer&quot;)</code></pre>
 <p>The main function is the <code>extract_tables()</code>. The first argument is the PDF <code>file</code> or report where the targeted table(s) is/are. The second argument is the <code>pages</code>, where you specify the page number the table of data is. There are other arguments such as <code>area</code>, which you can specify the targeted area(s) to extract. <code>columns</code> which matches with the number of pages to be extracted. This argument allows for each page extracted to be stored in its own separate column.The <code>guess</code> argument, which by default is <code>=TRUE</code>, allows for the function to guess the location of the table(s) on each page. For a list of all the arguments: run <code>?extract_tables</code> in the R console. By default, the data is extracted as a list. Lists in R can be thought of as a vector containing other objects. We can zoom in on a particular object using the double square brackets,<code>[[]]</code>. For instance, the first object in the variable is indexed by the number 1, and the second object by 2, and so on. Since,only one table is being extracted, the variable below contain one column; extracted with this command,<code>cso_table[[1]]</code>.</p>
-<p>The default way, <code>extract_table()</code> extracts the data as a list of character matrices. This helps in cases where the data is irregular and cannot be properly coerced to a data frame (column by row format). To change this behaviour so that the extracted data is coerced to a data frame, we supply the <code>method</code> argument, and have <code>data.frame</code> as the value.</p>
+<p>The default way, <code>extract_table()</code> extracts the data as a list of character matrices. This helps in cases where the data is irregular and cannot be properly coerced to a data frame (row by column format). To change this behaviour so that the extracted data is coerced to a data frame, we supply the <code>method</code> argument, and have <code>data.frame</code> as the value.</p>
 <pre class="r"><code>cso &lt;- (&quot;https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf&quot;) 
 
 # stored the link to the report as a variable.
@@ -78,7 +78,7 @@ cso_table &lt;- extract_tables(cso, pages = 24,
 # The table of interest is on page 24, the other
 # arguments are left as defaults
 cso_column &lt;- cso_table[[1]]</code></pre>
-<p>From the extracted results, it can bee seen the output is not in a “tidy” format, to allow any meaning analyses to be done. The next step would be reshaping and reordering the extracted results into a neat data frame.</p>
+<p>From the extracted results, it can be seen the output is not in a “tidy” format, to allow any meaning analyses to be done. The next step would be reshaping and reordering the extracted results into a neat data frame.</p>
 </div>
 <div id="tidying-the-data" class="section level2">
 <h2>Tidying the data</h2>
@@ -99,7 +99,8 @@ cso_column &lt;- cso_table[[1]]</code></pre>
 <div id="welcome-to-the-tidyverse-universe" class="section level2">
 <h2>Welcome to the tidyverse universe</h2>
 <p>First step is to clean the data, eliminating unwanted variables and title headers. That is in addition to transforming the data into a “tidy” format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second, and the last three row of the extracted data.</p>
-<p><code>tidyr</code> package is used to gather the observations in the columns into rows and combine all the observations across 2 columns.The function <code>gather()</code> achieves this in the <code>tidyr</code> package.</p>
+<p><code>tidyr</code> package is used to gather the observations in the columns into rows and combine all the observations across 2 columns. The function <code>gather()</code> achieves this in the <code>tidyr</code> package.</p>
+<p>After gathering the data from the columns to rows, the second issue is to index the data by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.</p>
 <pre class="r"><code># install.packages(&quot;tidyverse&quot;) # This will install the tidyverse
 library(tidyverse)
 # converting to a tibble

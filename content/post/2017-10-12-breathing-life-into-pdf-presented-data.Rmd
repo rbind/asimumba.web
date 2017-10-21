@@ -83,7 +83,7 @@ library("tabulizer")
 The main function is the `extract_tables()`. The first argument is the PDF `file` or report where the targeted table(s) is/are. The second argument is the `pages`, where you specify the page number the table of data is. There are other arguments such as `area`, which you can specify the targeted area(s) to extract. `columns`   which matches with the number of pages to be extracted. This argument allows for each page extracted to be stored in its own separate column.The `guess` argument, which by default is `=TRUE`, allows for the function to guess the location of the table(s) on each page. For a list of all the arguments: run `?extract_tables` in the R console.
 By default, the data is extracted as a list. Lists in R can be thought of as a vector containing other objects. We can zoom in on a particular object using the double square brackets,`[[]]`. For instance, the first object in the variable is indexed by the number 1, and the  second object by 2, and so on. Since,only one table is being extracted, the variable below contain one column; extracted with this command,`cso_table[[1]]`.
 
-The default way, `extract_table()` extracts the data as a list of character matrices. This helps in cases where the data is irregular and cannot be properly coerced to a data frame (column by row format). To change this behaviour so that the extracted data is coerced to a data frame, we supply the `method` argument, and have `data.frame` as the value.   
+The default way, `extract_table()` extracts the data as a list of character matrices. This helps in cases where the data is irregular and cannot be properly coerced to a data frame (row by column format). To change this behaviour so that the extracted data is coerced to a data frame, we supply the `method` argument, and have `data.frame` as the value.   
 
 ```{r}
 cso <- ("https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf") 
@@ -99,7 +99,7 @@ cso_table <- extract_tables(cso, pages = 24,
 cso_column <- cso_table[[1]]
 ```
 
-From the extracted results, it can bee seen the output is not in a "tidy" format, to allow any meaning analyses to be done. The next step would be reshaping and reordering the extracted results into a neat data frame. 
+From the extracted results, it can be seen the output is not in a "tidy" format, to allow any meaning analyses to be done. The next step would be reshaping and reordering the extracted results into a neat data frame. 
 
 ## Tidying the data
 
@@ -132,7 +132,9 @@ names(cso_data) <-
 str(cso_data)[3,] # Checking the structure of the data.
 cso_data[1:10, ] # first 10 rows
 ```
-`tidyr` package is used to gather the observations in the columns into rows and combine all the observations across 2 columns.The function `gather()` achieves this in the `tidyr` package.
+`tidyr` package is used to gather the observations in the columns into rows and combine all the observations across 2 columns. The function `gather()` achieves this in the `tidyr` package.
+
+After gathering the data from the columns to rows, the second issue is to index the data by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.
 ```{r,message=FALSE}
 # install.packages("tidyverse") # This will install the tidyverse
 library(tidyverse)
