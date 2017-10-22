@@ -72,4 +72,5 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   [params.social]
     twitter = "zedsamurai"
     github = "asimumba"
-    stackoverflowName = "aaron-simumba-8137815"
+
+   
