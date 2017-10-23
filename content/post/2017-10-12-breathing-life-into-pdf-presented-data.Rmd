@@ -116,7 +116,7 @@ write.csv(cso_column, file = "../../static/data/cso_data.csv",
 
 After cleaning the data in Excel, it can be re-imported to aid in analysis.
 
-- Second choice, the hard way. R has a suite of packages build specifically to handle such tasks. The`dplyr` package, is one such package, which represents the grammar of data manipulation. Using well crafted verbs, one can transform, order, filter etc.. data with ease.
+- Second choice, the hard way. The `tidyverse` package has a suite of packages built specifically to handle such tasks. The`dplyr` package, is one such package, which represents the grammar of data manipulation. Using well crafted verbs, one can transform, order, filter etc.. data with ease.
 
 ## Welcome to the tidyverse universe
 
@@ -134,7 +134,7 @@ cso_data[1:10, ] # first 10 rows
 ```
 `tidyr` package is used to gather the observations in the columns into rows and combine all the observations across 2 columns. The function `gather()` achieves this in the `tidyr` package.
 
-After gathering the data from the columns to rows, the second issue is to index the data by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.
+After gathering the data from the columns to rows, the second issue is to index the numbers by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.
 ```{r,message=FALSE}
 # install.packages("tidyverse") # This will install the tidyverse
 library(tidyverse)
@@ -149,7 +149,7 @@ cso_provincial <- cso_data %>%
 
 province <- rep(c("central", "copperbelt", "eastern",
                   "luapula", "lusaka", "muchinga",
-                  "northen", "north.western", "southern", "western")
+                  "northern", "north.western", "southern", "western")
                 , 6
                 ) 
 

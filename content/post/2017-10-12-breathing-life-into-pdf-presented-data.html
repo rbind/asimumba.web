@@ -93,14 +93,14 @@ cso_column &lt;- cso_table[[1]]</code></pre>
 # to be stored</code></pre>
 <p>After cleaning the data in Excel, it can be re-imported to aid in analysis.</p>
 <ul>
-<li>Second choice, the hard way. R has a suite of packages build specifically to handle such tasks. The<code>dplyr</code> package, is one such package, which represents the grammar of data manipulation. Using well crafted verbs, one can transform, order, filter etc.. data with ease.</li>
+<li>Second choice, the hard way. The <code>tidyverse</code> package has a suite of packages built specifically to handle such tasks. The<code>dplyr</code> package, is one such package, which represents the grammar of data manipulation. Using well crafted verbs, one can transform, order, filter etc.. data with ease.</li>
 </ul>
 </div>
 <div id="welcome-to-the-tidyverse-universe" class="section level2">
 <h2>Welcome to the tidyverse universe</h2>
 <p>First step is to clean the data, eliminating unwanted variables and title headers. That is in addition to transforming the data into a “tidy” format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second, and the last three row of the extracted data.</p>
 <p><code>tidyr</code> package is used to gather the observations in the columns into rows and combine all the observations across 2 columns. The function <code>gather()</code> achieves this in the <code>tidyr</code> package.</p>
-<p>After gathering the data from the columns to rows, the second issue is to index the data by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.</p>
+<p>After gathering the data from the columns to rows, the second issue is to index the numbers by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.</p>
 <pre class="r"><code># install.packages(&quot;tidyverse&quot;) # This will install the tidyverse
 library(tidyverse)
 # converting to a tibble
@@ -114,7 +114,7 @@ cso_provincial &lt;- cso_data %&gt;%
 
 province &lt;- rep(c(&quot;central&quot;, &quot;copperbelt&quot;, &quot;eastern&quot;,
                   &quot;luapula&quot;, &quot;lusaka&quot;, &quot;muchinga&quot;,
-                  &quot;northen&quot;, &quot;north.western&quot;, &quot;southern&quot;, &quot;western&quot;)
+                  &quot;northern&quot;, &quot;north.western&quot;, &quot;southern&quot;, &quot;western&quot;)
                 , 6
                 ) 
 
@@ -131,7 +131,7 @@ cso_transformed</code></pre>
 ##  4  2011       luapula   1,015,629
 ##  5  2011        lusaka   2,362,967
 ##  6  2011      muchinga     749,449
-##  7  2011       northen   1,146,392
+##  7  2011      northern   1,146,392
 ##  8  2011 north.western     746,982
 ##  9  2011      southern   1,642,757
 ## 10  2011       western     926,478
@@ -181,7 +181,7 @@ cso_transformed</code></pre>
 </tr>
 <tr class="odd">
 <td align="left">2011</td>
-<td align="left">northen</td>
+<td align="left">northern</td>
 <td align="left">1,146,392</td>
 </tr>
 <tr class="even">
@@ -231,7 +231,7 @@ cso_transformed</code></pre>
 </tr>
 <tr class="odd">
 <td align="left">2015</td>
-<td align="left">northen</td>
+<td align="left">northern</td>
 <td align="left">1,304,435</td>
 </tr>
 <tr class="even">
@@ -281,7 +281,7 @@ cso_transformed</code></pre>
 </tr>
 <tr class="odd">
 <td align="left">2020</td>
-<td align="left">northen</td>
+<td align="left">northern</td>
 <td align="left">1,520,004</td>
 </tr>
 <tr class="even">
@@ -331,7 +331,7 @@ cso_transformed</code></pre>
 </tr>
 <tr class="odd">
 <td align="left">2025</td>
-<td align="left">northen</td>
+<td align="left">northern</td>
 <td align="left">1,763,638</td>
 </tr>
 <tr class="even">
@@ -381,7 +381,7 @@ cso_transformed</code></pre>
 </tr>
 <tr class="odd">
 <td align="left">2030</td>
-<td align="left">northen</td>
+<td align="left">northern</td>
 <td align="left">2,040,926</td>
 </tr>
 <tr class="even">
@@ -431,7 +431,7 @@ cso_transformed</code></pre>
 </tr>
 <tr class="odd">
 <td align="left">2035</td>
-<td align="left">northen</td>
+<td align="left">northern</td>
 <td align="left">2,355,007</td>
 </tr>
 <tr class="even">
