@@ -46,7 +46,7 @@ This will be a place where I share my daily musings in the world of R, Stock mar
 
 <br><br>
 
-This website is built with [**Blogdown**](https://github.com/rstudio/blogdown),and [**hugo**](https://gohugo.io/) and deployed by [**netlify**](https://www.netlify.com/)
+This website is built with [**Blogdown**](https://github.com/rstudio/blogdown),[**hugo**](https://gohugo.io/), and deployed by [**netlify**](https://www.netlify.com/)
 
 The content is licensed under the [**Creative Commons Attribution-ShareAlike 4.0 International License**](https://creativecommons.org/licenses/by-sa/4.0/)
 ![cclogo](https://user-images.githubusercontent.com/24398851/31635963-64f882f8-b2d1-11e7-9b98-3fbe3e08af96.png)
