@@ -9,9 +9,9 @@ comments: false
 
 Hi, I'm Aaron Simumba, welcome to my site.
 -----------------------------------------
-In another life, I am an Accounting and Finance major. Graduated from the [**Univeristy of Namibia**](http://unam.edu.na/) with a BA degree in Accounting(Honours). For my part time activities, I explain to or is it tutor Business Administration students in the art of business and accounting at the [**University of Zambia**](https://www.unza.zm/).
+In another life, I am an Accounting and Finance major. Graduated from the [**University of Namibia**](http://unam.edu.na/) with a BA degree in Accounting(Honours). For my part time activities, I explain to or is it tutor Business Administration students in the art of business and accounting at the [**University of Zambia**](https://www.unza.zm/).
 
-Not to mention, I am lost in the Data Science web... I hope to find my way out of the maze soon. In addition, I am fascinated by stock markets and everything with a business and finance buzz. More like I am the middle part of a sandwich.
+Not to mention, I am lost in the Data Science web... I hope to find my way out of the maze soon. In addition, I'm fascinated by stock markets and everything with a business and finance buzz. 
 
 I can be found on [**Github**](https://github.com/asimumba/) poking around interesting projects... and occasionally I rant on [**twitter**](https://twitter.com/zedsamurai/).
 
