@@ -8,7 +8,7 @@ authoravatar: "../../images/avatar.png"
 
 <img align="center" width="200" height="200" src="../../images/avatar.png">
 
-Hi, I'm Aaron Simumba, welcome to my site.
+Hi, I'm Aaron Simumba, welcome to my website.
 -----------------------------------------
 In another life, I am an Accounting and Finance major. Graduated from the [**University of Namibia**](http://unam.edu.na/) with a BA degree in Accounting(Honours). For my part time activities, I explain to or is it tutor Business Administration students in the art of business and accounting at the [**University of Zambia**](https://www.unza.zm/).
 
@@ -46,7 +46,7 @@ This will be a place where I share my daily musings in the world of R, Stock mar
 
 <br><br>
 
-This website is built with [**Blogdown**](https://github.com/rstudio/blogdown),[**hugo**](https://gohugo.io/), and deployed by [**netlify**](https://www.netlify.com/)
+This website is built with [**Blogdown**](https://github.com/rstudio/blogdown), [**hugo**](https://gohugo.io/), and deployed by [**netlify**](https://www.netlify.com/)
 
 The content is licensed under the [**Creative Commons Attribution-ShareAlike 4.0 International License**](https://creativecommons.org/licenses/by-sa/4.0/)
 ![cclogo](https://user-images.githubusercontent.com/24398851/31635963-64f882f8-b2d1-11e7-9b98-3fbe3e08af96.png)
