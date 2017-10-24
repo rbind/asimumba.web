@@ -14,6 +14,7 @@ tags:
   - github
 description: How to craft a website with blogdown,hugo and host on netlify
 image: "images/background.jpg"
+authoravatar: "../../images/avatar.png"
 ---
 
 

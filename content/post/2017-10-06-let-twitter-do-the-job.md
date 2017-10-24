@@ -8,6 +8,7 @@ tags:
     - blog
 slug: let-twitter-do-the-job
 image: "images/background.jpg"
+authoravatar: "../../images/avatar.png"
 
 ---
 
