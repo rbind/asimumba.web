@@ -39,6 +39,16 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "projects"
   url = "/projects"
   
+[[menu.main]]
+  name = "Twitter timeline"
+  url = "https://twitter.com/zedsamurai"
+  weight = -130
+  
+[[menu.main]]
+  name = "Stackoverflow"
+  url = "https://stackoverflow.com/aaron-simumba-8137815"
+  weight = -140
+  
   
 [params]
   description = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast"
@@ -48,7 +58,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   dateFormat = "2006/01/02"
   authorlocation = "Lusaka, Zambia"
   authorwebsite = "https://asimumba.rbind.io/"
-  authorbio= "Tech crazy, society explorer,lost in the Data science dungeon"
+  authorbio= "Tech crazy, society explorer,and lost in the Data science dungeon"
   logo = "images/logo.png"
   googleAnalyticsUserID = "UA-101235795-1"
   # Optional RSS-Link, if not provided it defaults to the standard index.xml
