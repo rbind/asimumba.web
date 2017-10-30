@@ -12,10 +12,24 @@
 &nbsp;
 {{end}}
 
+{{ if .Site.Params.codepenName }}
+    <a class="bloglogo" href="https://codepen.io/{{ .Site.Params.codepenName }}" target="_blank">
+    <span class="icon-codepen" style="color:white;font-size:2em"></span>
+    </a>
+&nbsp;
+{{end}}
+
 {{ if .Site.Params.flickrName }}
     <a class="bloglogo" href="https://flickr.com/{{ .Site.Params.flickrName }}" target="_blank">
     <span class="icon-flickr" style="color:white;font-size:2em"></span>
     </a>
+&nbsp;
+{{end}}
+
+{{ if .Site.Params.stackoverflowId }}
+<a class="bloglogo" href="https://stackoverflow.com/users/{{ .Site.Params.stackoverflowId }}" target="_blank">
+<img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.svg" height="40" width="40">
+</a>
 &nbsp;
 {{end}}
 
