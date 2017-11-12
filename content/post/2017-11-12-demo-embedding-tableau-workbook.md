@@ -3,6 +3,11 @@ title: Demo embedding Tableau workbook
 author: Aaron Simumba
 date: '2017-11-12'
 slug: demo-embedding-tableau-workbook
+tags:
+- tableau
+- Visualisation
+image: "images/background.jpg"
+authoravatar: "../../images/avatar.png"
 ---
 Tableau visualization demo.
 
