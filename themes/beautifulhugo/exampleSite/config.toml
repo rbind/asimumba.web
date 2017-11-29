@@ -1,19 +1,19 @@
-baseurl = "https://asimumba.rbind.io"
+baseurl = "https://username.github.io"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
-title = "Aaron Simumba"
+title = "Beautiful Hugo"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsUseClasses = true
-pygmentCodeFences = false
-disqusShortname = "asimumba"
-googleAnalytics = "UA-101235795-1"
+pygmentCodeFences = true
+#disqusShortname = "XXX"
+#googleAnalytics = "XXX"
 
 [Params]
   subtitle = "Build a beautiful and simple website in minutes"
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
-  dateFormat = "01/01/2006"
+  dateFormat = "January 2, 2006"
   commit = false
   rss = true
   comments = true
@@ -32,28 +32,28 @@ googleAnalytics = "UA-101235795-1"
 #  desc = "Hexagon"
 
 [Author]
-  name = "Aaron Simumba"
-  website = "asimumba.rbind.io"
-  email = "simumbaa21@gmail.com"
-  facebook = "aaron.s.simumba"
+  name = "Some Person"
+  website = "yourwebsite.com"
+  email = "youremail@domain.com"
+  facebook = "username"
   googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
-  github = "asimumba"
-  #gitlab = "username"
-  twitter = "zedsamurai"
-  #reddit = "username"
-  linkedin = "aaron-simumba-13737958"
-  #xing = "username"
+  github = "username"
+  gitlab = "username"
+  twitter = "username"
+  reddit = "username"
+  linkedin = "username"
+  xing = "username"
   stackoverflow = "users/XXXXXXX/username"
-  #snapchat = "username"
-  #instagram = "username"
+  snapchat = "username"
+  instagram = "username"
   youtube = "user/username" # or channel/channelname
-  #soundcloud = "username"
-  #spotify = "username"
-  #bandcamp = "username"
-  #itchio = "username"
-  #vk = "username"
-  #paypal = "username"
-  #telegram = "username"
+  soundcloud = "username"
+  spotify = "username"
+  bandcamp = "username"
+  itchio = "username"
+  vk = "username"
+  paypal = "username"
+  telegram = "username"
 
 [[menu.main]]
     name = "Blog"
