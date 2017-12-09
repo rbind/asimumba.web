@@ -589,7 +589,7 @@ body.nav-opened .site-wrapper {
 .main-header a.bloglogo .icon-stackoverflow,
 .main-header a.bloglogo .icon-pinterest,
 .main-header a.bloglogo .icon-google-plus {
-    color: white;
+    color: black;
     font-size: 2em;
 }
 
@@ -1091,7 +1091,7 @@ body:not(.post-template) .post-title {
 
 .user-name {
     display: block;
-    font-weight: 700;
+    font-weight: 1000;
 }
 
 .user-bio {

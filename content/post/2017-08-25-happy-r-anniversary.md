@@ -11,7 +11,7 @@ tags:
   - git
   - github
 description: Reflections on one year in the R dungeon
-image: "images/background.jpg"
+#image: "images/background.jpg"
 authoravatar: "../../images/avatar.png"
 ---
 
