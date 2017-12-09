@@ -1,5 +1,5 @@
 ---
-title: "Mobile/Internet Penetration in Zambia"
+title: "Mobile and Internet Penetration in Zambia"
 author: Aaron Simumba
 date: "2017-09-27"
 tags:
@@ -37,7 +37,7 @@ library(plotly)
 The data used in this analysis can be found on the [ZICTA](http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html) website. Since the data on the ZICTA website is not in a downloadable format. I had to turn to Microsoft Excel, with its option to mine the data from the web. The data on-line is in a format which is not very helpful to work with, so I had to clean up and reorder the data into a "tidy" format (each variable is a column and each observation occupying a row). The original data format can be seen in the screenshot below.
 
 <div style="text-align:center" markdown="1">
-![Source: ZICTA](https://user-images.githubusercontent.com/24398851/31025561-ba80b558-a54b-11e7-9e91-b3655f35d4db.png){width=600px height=500px}
+![Source: ZICTA](https://user-images.githubusercontent.com/24398851/31025561-ba80b558-a54b-11e7-9e91-b3655f35d4db.png){width=650px height=550px}
 </div>
 
 Running the following codes loads the data into the work environment, so we can work with it to do our analysis. 
@@ -275,7 +275,7 @@ operator_stats %>%
 ## Internet subscribers Vs Penetration per 100 inhabitants
 
 ```{r}
-p <- isps %>% 
+isps %>% 
   ggplot() +
   geom_line(aes(x = Fixed_internet_Penetration_per_100,
                 y = Number_of_Subscribers)) +
@@ -287,16 +287,6 @@ p <- isps %>%
            subtitle = "Over the period from 2010 - 2017, Q1 & Q2") +
   guides(colour = FALSE) + 
   theme_bw()
-m <- list(
-  l = 70,
-  r = 60,
-  b = 120,
-  t = 120,
-  pad = 8
-)
-ggplotly(p, autosize = FALSE
-         ,width = 700, height = 400, margin = m)
-  
 ```
 
 
@@ -360,19 +350,3 @@ operator_stats %>%
 
   
 ```
-
-## Interactive graph
-```{r, message=FALSE}
-m <- list(
-  l = 60,
-  r = 60,
-  b = 120,
-  t = 120,
-  pad = 6
-)
-
-plot_ly(operator_stats,x = ~Population_CSO_Estimate,
-        y = ~Number_of_active_Subscribers, mode = 'lines',
-        width = 500, height = 400, margin = m) 
-```
-
