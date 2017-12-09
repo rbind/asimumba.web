@@ -8,7 +8,7 @@ tags:
   - hugo
   - continous deployment
 description: Resolving desired hugo version conflict with the default hugo build on netlify.
-image: "images/background.jpg"
+#image: "images/background.jpg"
 authoravatar: "../../images/avatar.png"
 ---
 

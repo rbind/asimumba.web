@@ -9,6 +9,7 @@ pygmentCodeFences = false
 disqusShortname = "asimumba"
 googleAnalytics = "UA-101235795-1"
 
+
 [Params]
   subtitle = "Build a beautiful and simple website in minutes"
   logo = "img/avatar-icon.png"

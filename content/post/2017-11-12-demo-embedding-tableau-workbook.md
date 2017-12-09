@@ -6,7 +6,7 @@ slug: demo-embedding-tableau-workbook
 tags:
 - tableau
 - Visualisation
-image: "images/background.jpg"
+#image: "images/background.jpg"
 authoravatar: "../../images/avatar.png"
 ---
 This is a short demo experimenting with embedding Tableau workbook on your personal 
