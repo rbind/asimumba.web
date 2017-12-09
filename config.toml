@@ -39,17 +39,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "projects"
   url = "/projects"
   
-[[menu.main]]
-  name = "Twitter timeline"
-  url = "https://twitter.com/zedsamurai"
-  weight = -130
-  
-[[menu.main]]
-  name = "Stackoverflow"
-  url = "https://stackoverflow.com/aaron-simumba-8137815"
-  weight = -140
-  
-  
 [params]
   description = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast"
   metadescription = "Used as 'description' meta tag for both home and index pages. If not set, 'description' will be used instead"
@@ -59,7 +48,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   authorlocation = "Lusaka, Zambia"
   authorwebsite = "https://asimumba.rbind.io/"
   authorbio= "Tech crazy, society explorer,and lost in the Data science dungeon"
-  logo = "images/logo.png"
+  logo = "images/logo.jpg"
   googleAnalyticsUserID = "UA-101235795-1"
   # Optional RSS-Link, if not provided it defaults to the standard index.xml
   RSSLink = "http://feeds.feedburner.com/..."
