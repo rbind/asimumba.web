@@ -41,7 +41,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   
 [params]
   description = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast"
-  metadescription = "Used as 'description' meta tag for both home and index pages. If not set, 'description' will be used instead"
+  metadescription = ""
   cover = "images/cover.jpg"
   author = "Aaron Simumba"
   dateFormat = "2006/01/02"
@@ -55,7 +55,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   githubName = "asimumba"
   twitterName = "zedsamurai"
   facebookName = "aaron.s.simumba"
-  linkedinName = "aaron-simumba-13737958"
+  linkedinName = "aaronsimumba"
   stackoverflowId = "8137815"
   email = "mailto:simumbaa21@gmail.com"
   
