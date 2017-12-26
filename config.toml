@@ -48,7 +48,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   authorlocation = "Lusaka, Zambia"
   authorwebsite = "https://asimumba.rbind.io/"
   authorbio= "Tech crazy, society explorer,and lost in the Data science dungeon"
-  logo = "images/logo.jpg"
+  logo = "images/logo.png"
   googleAnalyticsUserID = "UA-101235795-1"
   # Optional RSS-Link, if not provided it defaults to the standard index.xml
   RSSLink = "http://feeds.feedburner.com/..."
