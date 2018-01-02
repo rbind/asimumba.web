@@ -1,25 +1,27 @@
-baseurl = "https://asimumba.rbind.io"
+baseurl = "https://asimumba.rbind.io/"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
 title = "Aaron Simumba"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsUseClasses = true
-pygmentCodeFences = false
+pygmentsCodeFences = true
 disqusShortname = "asimumba"
 googleAnalytics = "UA-101235795-1"
 
-
 [Params]
-  subtitle = "Build a beautiful and simple website in minutes"
-  logo = "img/avatar-icon.png"
+  subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast"
+  logo = "img/avatar.png"
   favicon = "img/favicon.ico"
-  dateFormat = "01/01/2006"
+  dateFormat = "January 2, 2006"
   commit = false
   rss = true
   comments = true
+  readingTime = false
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+  
 #[[Params.bigimg]]
 #  src = "img/triangle.jpg"
 #  desc = "Triangle"
@@ -33,18 +35,18 @@ googleAnalytics = "UA-101235795-1"
 #  desc = "Hexagon"
 
 [Author]
-  name = "Aaron Simumba"
-  website = "asimumba.rbind.io"
+  #name = "Aaron Simumba"
+  website = "https://asimumba.rbind.io/"
   email = "simumbaa21@gmail.com"
   facebook = "aaron.s.simumba"
-  googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
+  googleplus = "+aaronsimumba" # or xxxxxxxxxxxxxxxxxxxxx
   github = "asimumba"
   #gitlab = "username"
   twitter = "zedsamurai"
   #reddit = "username"
-  linkedin = "aaron-simumba-13737958"
+  linkedin = "aaron-simumba"
   #xing = "username"
-  stackoverflow = "users/XXXXXXX/username"
+  stackoverflow = "users/8137815/aaron-simumba"
   #snapchat = "username"
   #instagram = "username"
   youtube = "user/username" # or channel/channelname
