@@ -11,7 +11,7 @@ googleAnalytics = "UA-101235795-1"
 
 [Params]
   subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast"
-  logo = "img/avatar.png"
+  #logo = "img/avatar.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
   commit = false
