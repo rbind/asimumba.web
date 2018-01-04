@@ -2,11 +2,10 @@
 title: About
 date: 2014-04-09
 comments: false
-authoravatar: "../../images/avatar.png"
 ---
 
 
-<img align="center" width="200" height="200" src="../../images/avatar.png">
+<img align="center" width="200" height="200" src="../../img/avatar.png">
 
 Hi, I'm Aaron Simumba, welcome to my website.
 -----------------------------------------

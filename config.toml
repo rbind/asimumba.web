@@ -66,33 +66,20 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [[menu.main]]
     name = "About"
     url = "page/about/"
-    weight = 3
-
-[[menu.main]]
-    identifier = "samples"
-    name = "Samples"
     weight = 2
-
+    
 [[menu.main]]
-    parent = "samples"
-    name = "Big Image Sample"
-    url = "post/2017-03-07-bigimg-sample"
-    weight = 1
-
-[[menu.main]]
-    parent = "samples"
-    name = "Math Sample"
-    url = "post/2017-03-05-math-sample"
-    weight = 2
-
-[[menu.main]]
-    parent = "samples"
-    name = "Code Sample"
-    url = "post/2016-03-08-code-sample"
+    name = "CV"
+    url = "cv/2017-09-22-curriculum-vitae"
     weight = 3
+    
+[[menu.main]]
+    name = "Projects"
+    url = "projects/projects"
+    weight = 4
 
 [[menu.main]]
     name = "Tags"
     url = "tags"
-    weight = 3
+    weight = 5
 

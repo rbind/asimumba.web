@@ -14,7 +14,3 @@ website using `iframe.` The public visualisation is from [Jack Dougherty](http:/
 
 <iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="95%" height="500"></iframe>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> beautiful_hugo
