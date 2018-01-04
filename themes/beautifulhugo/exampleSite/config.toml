@@ -1,27 +1,25 @@
-baseurl = "https://asimumba.rbind.io/"
+baseurl = "https://username.github.io"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
-title = "Aaron Simumba"
+title = "Beautiful Hugo"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsUseClasses = true
-pygmentsCodeFences = true
-disqusShortname = "asimumba"
-googleAnalytics = "UA-101235795-1"
+pygmentCodeFences = true
+#disqusShortname = "XXX"
+#googleAnalytics = "XXX"
 
 [Params]
-  subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast"
-  logo = "img/avatar.png"
+  subtitle = "Build a beautiful and simple website in minutes"
+  logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
   commit = false
   rss = true
   comments = true
-  readingTime = false
+  readingTime = true
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-  
 #[[Params.bigimg]]
 #  src = "img/triangle.jpg"
 #  desc = "Triangle"
@@ -35,28 +33,28 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 #  desc = "Hexagon"
 
 [Author]
-  #name = "Aaron Simumba"
-  website = "https://asimumba.rbind.io/"
-  email = "simumbaa21@gmail.com"
-  facebook = "aaron.s.simumba"
-  googleplus = "+aaronsimumba" # or xxxxxxxxxxxxxxxxxxxxx
-  github = "asimumba"
-  #gitlab = "username"
-  twitter = "zedsamurai"
-  #reddit = "username"
-  linkedin = "aaron-simumba"
-  #xing = "username"
-  stackoverflow = "users/8137815/aaron-simumba"
-  #snapchat = "username"
-  #instagram = "username"
+  name = "Some Person"
+  website = "yourwebsite.com"
+  email = "youremail@domain.com"
+  facebook = "username"
+  googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
+  github = "username"
+  gitlab = "username"
+  twitter = "username"
+  reddit = "username"
+  linkedin = "username"
+  xing = "username"
+  stackoverflow = "users/XXXXXXX/username"
+  snapchat = "username"
+  instagram = "username"
   youtube = "user/username" # or channel/channelname
-  #soundcloud = "username"
-  #spotify = "username"
-  #bandcamp = "username"
-  #itchio = "username"
-  #vk = "username"
-  #paypal = "username"
-  #telegram = "username"
+  soundcloud = "username"
+  spotify = "username"
+  bandcamp = "username"
+  itchio = "username"
+  vk = "username"
+  paypal = "username"
+  telegram = "username"
 
 [[menu.main]]
     name = "Blog"
@@ -95,4 +93,3 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     name = "Tags"
     url = "tags"
     weight = 3
-
