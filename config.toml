@@ -3,8 +3,8 @@ DefaultContentLanguage = "en"
 title = "Aaron Simumba"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
-pygmentsUseClasses = true
-pygmentsCodeFences = true
+pygmentsUseClasses = false
+pygmentsCodeFences = false
 disqusShortname = "asimumba"
 googleAnalytics = "UA-101235795-1"
 
