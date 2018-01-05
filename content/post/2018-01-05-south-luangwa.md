@@ -19,7 +19,7 @@ One of the most scenic Zambian National park- The South Luangwa National Park.
   {{< figure thumb="-thumb" link="/img/zebra.jpg" caption="Zebra" alt="Zebra, one animal that remains fat whole year around" >}}
   {{< figure thumb="-thumb" link="/img/elephant.jpg" caption="Elephant" >}}
   {{< figure thumb="-thumb" link="/img/baobab.jpg" caption="Baobab tree" >}}
-  {{< figure thumb="-thumb" link="/img/wilddogs.jpg" caption="Wild Dogs" >}}
+  {{< figure thumb="-thumb" link="/img/wilddog.jpg" caption="Wild Dog" >}}
 {{< /gallery >}}
 
 <!--more-->

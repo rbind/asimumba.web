@@ -27,8 +27,8 @@ googleAnalytics = "UA-101235795-1"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[Params.bigimg]]
-  src = "img/aaron.jpg"
-  desc = "Aaron"
+  src = "img/banner.jpg"
+  desc = "Banner"
   position = "center bottom"
   
 [[Params.bigimg]]
