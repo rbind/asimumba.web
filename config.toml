@@ -1,6 +1,5 @@
 baseurl = "https://asimumba.rbind.io/"
 DefaultContentLanguage = "en"
-#DefaultContentLanguage = "ja"
 title = "Aaron Simumba"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
@@ -8,9 +7,10 @@ pygmentsUseClasses = true
 pygmentsCodeFences = true
 disqusShortname = "asimumba"
 googleAnalytics = "UA-101235795-1"
+footnotereturnlinkcontents: "↩"
 
 [Params]
-  subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast"
+  subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast \ Data Visualisation, R programming, Python, Tableau, Microsoft Power BI and, Travelling and Gym."
   #logo = "img/avatar.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
@@ -18,24 +18,42 @@ googleAnalytics = "UA-101235795-1"
   rss = true
   comments = true
   readingTime = false
+  UseChroma = false
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+  
+   # options for highlight.js (version, additional languages, and theme)
+  highlightjsVersion = "9.11.0"
+  highlightjsCDN = "//cdn.bootcss.com"
+  highlightjsLang = ["r", "yaml", "tex"]
+  highlightjsTheme = "github"
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-  
-#[[Params.bigimg]]
-#  src = "img/triangle.jpg"
-#  desc = "Triangle"
-#[[Params.bigimg]]
-#  src = "img/sphere.jpg"
-#  desc = "Sphere"
-#  # position: see values of CSS background-position.
-#  position = "center top"
-#[[Params.bigimg]]
-#  src = "img/hexagon.jpg"
-#  desc = "Hexagon"
 
+[[Params.bigimg]]
+  src = "img/aaron.jpg"
+  desc = "Aaron"
+  position = "center bottom"
+  
+[[Params.bigimg]]
+  src = "img/triangle.jpg"
+  desc = "Triangle"
+  
+[[Params.bigimg]]
+  src = "img/sphere.jpg"
+  desc = "Sphere"
+  # position: see values of CSS background-position.
+  position = "center top"
+  
+[[Params.bigimg]]
+  src = "img/hexagon.jpg"
+  desc = "Hexagon"
+  
+[[Params.bigimg]]
+  src = "img/path.jpg"
+  desc = "Path"
+  
 [Author]
-  #name = "Aaron Simumba"
+  #name = "Aaron Simumba "
   website = "https://asimumba.rbind.io/"
   email = "simumbaa21@gmail.com"
   facebook = "aaron.s.simumba"
@@ -57,15 +75,14 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   #vk = "username"
   #paypal = "username"
   #telegram = "username"
-
-[[menu.main]]
-    name = "Blog"
-    url = ""
-    weight = 1
-
 [[menu.main]]
     name = "About"
     url = "page/about/"
+    weight = 1
+    
+[[menu.main]]
+    name = "Blog"
+    url = ""
     weight = 2
     
 [[menu.main]]
