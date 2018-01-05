@@ -19,7 +19,7 @@ I can be found on [**Github**](https://github.com/asimumba/) poking around inter
 
 This will be a place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytic technologies.
 
-`Let's have fun!` :smile:
+`Let's have fun!`
 
 **Courses completed:**
 
