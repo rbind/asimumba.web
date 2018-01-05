@@ -12,6 +12,8 @@ tags:
 **Nature's beauty in full colour** `Safari`.
 One of the most scenic Zambian National park- The South Luangwa National Park.
 
+The gallery below showcases a few beautiful scenes.Hover over the gallery and click on the image to zoom out.
+
 
 {{< gallery caption-effect="fade" >}}
   {{< figure thumb="-thumb" link="/img/pool.jpg" caption="Cooling off" >}}
