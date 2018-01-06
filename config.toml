@@ -29,7 +29,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [[Params.bigimg]]
   src = "img/banner.jpg"
   desc = "Banner"
-  position = "center bottom"
+  position = "center top"
+  
+[[Params.bigimg]]
+  src = "img/background.jpg"
+  desc = "background"
+  position = "center top"
   
 [[Params.bigimg]]
   src = "img/triangle.jpg"
@@ -47,7 +52,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   
 [[Params.bigimg]]
   src = "img/path.jpg"
-  desc = "Path"
+  desc = "Beautiful Road"
   
 [Author]
   #name = "Aaron Simumba "
