@@ -1,6 +1,6 @@
 /* --- Code blocks --- */
-/*
-pre {
+
+/* pre {
   font-size: 16px;
   line-height: 1.5em;
 }
@@ -9,15 +9,27 @@ pre {
     white-space: pre;
   }
 } */
+
 /* --- Code to resolve horizontal scrolling on mobile devices --- */
-pre {
+/* pre {
   font-size: 15px;
   line-height: 1.2em;
 }
 pre code {
   white-space: pre;
-}
+} */
 /* --- Code to resolve horizontal scrolling on mobile devices --- */
+/* code from Yihui Xie*/
+pre {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  padding: 1em;
+  overflow-x: auto;
+}
+code { background: #f9f9f9; }
+pre code { background: none; }
+
+/* end */
 
 pre.highlight, .highlight > pre, td.code pre {
   background: f8f8f8;

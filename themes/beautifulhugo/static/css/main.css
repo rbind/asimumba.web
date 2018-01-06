@@ -36,13 +36,21 @@ a:hover,
 a:focus {
   color: #0085a1;
 }
-blockquote {
+/* blockquote {
   color: #808080;
   font-style: italic;
 }
 blockquote p:first-child {
   margin-top: 0;
+} */
+/* from Yihui */
+blockquote {
+  background: #f9f9f9;
+  border-left: 5px solid #ccc;
+  padding: 3px 1em 3px;
 }
+/* end */
+
 hr.small {
   max-width: 100px;
   margin: 15px auto;
