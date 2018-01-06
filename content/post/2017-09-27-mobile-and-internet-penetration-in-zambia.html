@@ -152,7 +152,8 @@ head(network_coverage, 4)</code></pre>
   select(Year,Population_CSO_Estimate,
          Number_of_active_Subscribers) %&gt;% 
   mutate(Percentage_change_pop = (
-    Population_CSO_Estimate - lag(Population_CSO_Estimate))/ lag(Population_CSO_Estimate)*100,
+    Population_CSO_Estimate - lag(Population_CSO_Estimate))/
+      lag(Population_CSO_Estimate)*100,
          
          Percentage_change = (Number_of_active_Subscribers -
               lag(Number_of_active_Subscribers))/
