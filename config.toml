@@ -9,7 +9,7 @@ disqusShortname = "asimumba"
 googleAnalytics = "UA-101235795-1"
 
 [Params]
-  subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast \ Data Visualisation, R programming, Python, Tableau, Microsoft Power BI and, Travelling and Gym."
+  subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast  \ Data Visualisation, R programming, Python, Tableau, Microsoft Power BI and everything fun."
   #logo = "img/avatar.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
@@ -85,9 +85,15 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     weight = 1 
   
 [[menu.main]]
+    identifier = "about"
+    name = "About"
+    weight = 5
+
+[[menu.main]]
+    parent = "about"
     name = "About"
     url = "page/about/"
-    weight = 2
+    weight = 1
     
 [[menu.main]]
     name = "Blog"
@@ -95,9 +101,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     weight = 3
     
 [[menu.main]]
+    parent = "about"
     name = "CV"
     url = "cv/2017-09-22-curriculum-vitae"
-    weight = 5
+    weight = 2
     
 [[menu.main]]
     name = "Projects"
@@ -107,5 +114,5 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [[menu.main]]
     name = "Tags"
     url = "tags"
-    weight = 6
+    weight = 5
 

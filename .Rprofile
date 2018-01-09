@@ -1,5 +1,5 @@
 options(
-  servr.daemon = FALSE, blogdown.yaml.empty = FALSE,
+  servr.daemon = TRUE, blogdown.yaml.empty = FALSE,
   blogdown.publishDir = '../aaron-public',  blogdown.author = "Aaron Simumba"
 )
 

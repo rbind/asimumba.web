@@ -129,7 +129,7 @@ img {
 }
 
 .navbar-custom .nav li a {
-  text-transform: uppercase;
+  text-transform: normal;
   font-size: 12px;
   letter-spacing: 1px;
 }
