@@ -117,8 +117,11 @@ img {
 }
 .navbar-custom .nav li a {
   text-transform: normal;
-  font-size: 13x;
+  font-size: 20px;
+  padding: 14px 15px;
   letter-spacing: 1px;
+  line-height: 22px;
+  height: 50px;
 }
 
 .navbar-custom .navbar-brand,
