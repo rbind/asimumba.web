@@ -13,7 +13,7 @@
   {{ if $bigimg }}
     <div id="header-big-imgs" data-num-img={{len $bigimg}} {{range $i, $img := $bigimg}}data-img-src-{{add $i 1}}="{{$img.src | absURL }}" {{ if $img.desc}}data-img-desc-{{add $i 1}}="{{$img.desc}}"{{end}}{{end}}></div>
   {{ end }}
-
+  
   <header class="header-section {{ if $bigimg }}has-img{{ end }}">
     {{ if $bigimg }}
       <div class="intro-header big-img">
