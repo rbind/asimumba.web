@@ -637,10 +637,22 @@ footer .theme-by {
 }
 
 /* --- Tables --- */
-
+ /* new table code */
 table {
-  padding: 0;
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
 }
+
+table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px; }
+thead, tfoot, tr:nth-child(even) { background: #eee }
+/* end  */
+
+/* table {
+  padding: 0;
+} */
+
 table tr {
   border-top: 1px solid #cccccc;
   background-color: #ffffff;
