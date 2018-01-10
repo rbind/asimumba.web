@@ -52,9 +52,15 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
   <link rel="stylesheet" href="{{ "css/codeblock.css" | absURL }}" />
+  <!-- Aaron's codeLinks and stylesheets -->
+  <link rel="stylesheet" href="{{"css/github.css" | absURL}}" rel="stylesheet" id="theme-stylesheet">
+  <script src="{{ "js/highlight.pack.js" | absURL }}"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- Aaron's code-->
   {{- if (not ( .Site.Params.UseChroma )) }}
   <link rel="stylesheet" href="{{ "css/highlight.min.css" | absURL }}" />
   {{- else -}}
+  <link rel="stylesheet" href="{{ "css/github.css" | absURL }}" />
   <link rel="stylesheet" href="{{ "css/syntax.css" | absURL }}" />
   {{- end -}}
 

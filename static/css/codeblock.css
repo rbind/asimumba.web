@@ -12,7 +12,7 @@ pre {
 } */
 /* --- Code to resolve horizontal scrolling on mobile devices --- */
 pre {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.2em;
 }
 @media only screen and (min-width: 768px) {
@@ -33,6 +33,7 @@ code { background: #f9f9f9; }
 pre code { background: none; }
 
 /* end */
+
 pre.highlight, .highlight > pre, td.code pre {
   background: #FAFAFA;
   background-image: linear-gradient(#F9F9F9 50%, #FDFDFD 50%);
