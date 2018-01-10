@@ -78,7 +78,18 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   #vk = "username"
   #paypal = "username"
   #telegram = "username"
+  
 [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+    
+[[menu.main]]
+    identifier = "about"
+    name = "About"
+    weight = 4
+[[menu.main]]
+    parent = "about"
     name = "About"
     url = "page/about/"
     weight = 1
@@ -89,14 +100,21 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     weight = 2
     
 [[menu.main]]
+    parent = "about"
     name = "CV"
     url = "cv/2017-09-22-curriculum-vitae"
-    weight = 3
+    weight = 2
+
+[[menu.main]]
+    parent = "about"
+    name = "Safari"
+    url = "travel"
+    weight = 3    
     
 [[menu.main]]
     name = "Projects"
     url = "projects/projects"
-    weight = 4
+    weight = 3
 
 [[menu.main]]
     name = "Tags"
