@@ -1,6 +1,6 @@
 options(
-  servr.daemon = FALSE, blogdown.yaml.empty = FALSE,
-  blogdown.publishDir = '../asimumba-public',  blogdown.author = "Aaron Simumba"
+  servr.daemon = TRUE, blogdown.yaml.empty = FALSE,
+  blogdown.publishDir = '../aaron-public',  blogdown.author = "Aaron Simumba"
 )
 
 local({

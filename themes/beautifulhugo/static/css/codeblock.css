@@ -31,7 +31,6 @@ pre {
 }
 code { background: #f9f9f9; }
 pre code { background: none; }
-
 /* end */
 pre.highlight, .highlight > pre, td.code pre {
   background: #FAFAFA;
