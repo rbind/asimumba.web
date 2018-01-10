@@ -112,7 +112,7 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
-  background: #F5F5F5;
+  background: #F8F8F8;
   border-bottom: 1px solid #EAEAEA;
   font-family: "Droid Serif",Georgia,"Times New Roman",Times,serif;
 }
@@ -170,7 +170,7 @@ img {
   }
 }
 
-.navbar-custom .avatar-container {
+/* .navbar-custom .avatar-container {
   opacity: 1;
   position: absolute;
   -webkit-transition: opacity 0.5s ease-in-out;
@@ -207,9 +207,9 @@ img {
   .navbar-custom .avatar-container {
     width: 100px;
     margin-top: -50px;
-  }
+  } */
 
-  .navbar-custom .avatar-container  .avatar-img-border {
+  /* .navbar-custom .avatar-container  .avatar-img-border {
     width: 100%;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
     -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
@@ -219,7 +219,7 @@ img {
   .navbar-custom .avatar-container  .avatar-img {
     width: 100%;
   }
-}
+} */
 
 /* Multi-level navigation links */
 .navbar-custom .nav .navlinks-container {
@@ -494,7 +494,7 @@ footer .theme-by {
   font-size: 25px;
   line-height: 1.1;
   display: block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Droid Serif",Georgia,"Times New Roman",Times,serif;
   font-weight: 300;
   margin: 10px 0 0;
 }
