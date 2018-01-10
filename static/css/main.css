@@ -112,7 +112,7 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
-  background: #F8F8F8;
+  background: #F5F5F5;
   border-bottom: 1px solid #EAEAEA;
   font-family: "Droid Serif",Georgia,"Times New Roman",Times,serif;
 }
@@ -129,7 +129,7 @@ img {
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a {
   font-weight: 700;
-  color: #999999;
+  color: #555555;
 }
 
 .navbar-custom .navbar-brand:hover,

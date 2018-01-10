@@ -2,11 +2,10 @@
 title: South Luangwa National Park - Zambia
 author: Aaron Simumba
 date: '2018-01-05'
-slug: south-luangwa-national-park
 tags:
-  - Safari
-  - Luangwa
-  - National park
+  - South luangwa National Park
+  - Zambia tourisms
+slug: south-luangwa-national-park
 ---
 
 **Nature's beauty in full colour** `Safari`.
