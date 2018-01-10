@@ -116,6 +116,7 @@ img {
   border-bottom: 1px solid #EAEAEA;
   font-family: "Droid Serif",Georgia,"Times New Roman",Times,serif;
 }
+
 .navbar-custom .nav li a {
   text-transform: normal;
   font-size: 16px;
@@ -595,9 +596,9 @@ footer .theme-by {
 
 .pager li a {
   font-family: "Droid Serif",Georgia,"Times New Roman",Times,serif;
-  text-transform: uppercase;
+  text-transform: normal;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1px;
   padding: 10px 5px;
   background: #FFF;
