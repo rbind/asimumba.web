@@ -120,7 +120,7 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
-  background: #F5F5F5;
+  background: #536878;
   border-bottom: 1px solid #EAEAEA;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -134,7 +134,7 @@ img {
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a {
   font-weight: 800;
-  color: #7B7B7B;
+  color: #FFFFFF;
 }
 
 .navbar-custom .navbar-brand:hover,
@@ -280,7 +280,7 @@ img {
 
 footer {
   padding: 30px 0;
-  background: #F5F5F5;
+  background: #536878;
   border-top: 1px #EAEAEA solid;
   margin-top: auto;
   font-size: 14px;
