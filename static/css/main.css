@@ -368,18 +368,28 @@ footer .theme-by {
   color: #536878;
   border: none
   /* color: #6A9070; */
-  font-size: 13px;
+  font-size: 12px;
   font-style: normal;
   margin: 0 0 10px;
+
 }
 .post-preview .post-meta a,
 .post-heading .post-meta a {
-  color: #404040;
+  color: #536878;
   text-decoration: none;
+  padding: 5px 5px 3px 5px;
+  border: none;
+  /* background: #e0e3e5;
+  color: #0f0f0f;
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-radius: 15px; */
 }
 .post-preview .post-entry {
   font-family: 'Carlito', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6em;
+  color: #222222;
 }
 .post-entry-container {
   display: inline-block;
@@ -410,7 +420,7 @@ footer .theme-by {
   font-size: 11.25px;
   padding: 5px 5px 3px 5px;
   background: #e0e3e5; */
-  font-size: 12.75px;
+  font-size: 12px;
   display: inline-block;
   line-height: 1;
   padding: 5px 5px 3px 5px;
@@ -425,6 +435,8 @@ footer .theme-by {
 @media only screen and (min-width: 768px) {
   .post-preview .post-title {
     font-size: 22px;
+    color: #36454f;
+    font-weight: bold;
   }
 }
 
@@ -535,7 +547,7 @@ footer .theme-by {
 }
 .intro-header.big-img .page-heading .page-subheading,
 .intro-header.big-img .post-heading .post-subheading {
-  font-weight: 400;
+  font-weight: 300;
 }
 .intro-header.big-img .page-heading hr {
   box-shadow: 1px 1px 3px #000;
@@ -570,12 +582,13 @@ footer .theme-by {
   .intro-header .page-heading h1,
   .intro-header .tags-heading h1 {
     font-size: 50px;
+    color: inherit;
   }
   .intro-header .post-heading h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
   .intro-header.big-img .img-desc {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
