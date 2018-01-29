@@ -130,11 +130,11 @@ img {
   background: #536878;
   border-bottom: none;
   font-family: 'Carlito', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding-bottom: 10px;
 }
 
 .navbar-custom .nav li a {
-  text-transform: normal;
-  font-size: 18px;
+  text-transform: none;
 }
 
 .navbar-custom .navbar-brand,
@@ -143,6 +143,10 @@ img {
   color: #ffffff;
   border: none;
   text-align: left;
+  font-size: 110%;
+  display: block;
+  /* padding: 1rem .7rem; */
+  line-height: 1;
 }
 
 .navbar-custom .navbar-brand:hover,
@@ -357,6 +361,7 @@ footer .theme-by {
 .post-preview .post-title {
   font-size: 15px;
   margin-top: 0;
+  border-bottom: 1px dotted #b3cde0;
 }
 .post-preview .post-subtitle {
   margin: 0;
@@ -367,7 +372,6 @@ footer .theme-by {
 .post-heading .post-meta {
   color: #536878;
   border: none
-  /* color: #6A9070; */
   font-size: 12px;
   font-style: normal;
   margin: 0 0 10px;
@@ -420,7 +424,7 @@ footer .theme-by {
   font-size: 11.25px;
   padding: 5px 5px 3px 5px;
   background: #e0e3e5; */
-  font-size: 12px;
+  font-size: 10px;
   display: inline-block;
   line-height: 1;
   padding: 5px 5px 3px 5px;
@@ -581,11 +585,12 @@ footer .theme-by {
   }
   .intro-header .page-heading h1,
   .intro-header .tags-heading h1 {
-    font-size: 50px;
+    font-size: 45px;
     color: inherit;
+    font-weight: lighter;
   }
   .intro-header .post-heading h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
   .intro-header.big-img .img-desc {
     font-size: 15px;
@@ -754,9 +759,5 @@ pre {
   overflow-x: auto;
 }
 
-code {
-  background: #f9f9f9;
-}
-pre code {
-  background: none;
-}
+code {background: #f9f9f9;}
+pre code {background: none;}
