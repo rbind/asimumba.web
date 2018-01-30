@@ -16,12 +16,12 @@ The gallery below showcases a few beautiful scenes.Hover over the gallery and cl
 
 
 {{< gallery caption-effect="fade" >}}
-  {{< figure thumb="-thumb" link="/img/pool.jpg" caption="Cooling off" >}}
-  {{< figure thumb="-thumb" link="/img/elephant2.jpg" caption="Upclose with an Elephant" >}}
-  {{< figure thumb="-thumb" link="/img/zebra.jpg" caption="Zebra" alt="Zebra, one animal that remains fat whole year around" >}}
-  {{< figure thumb="-thumb" link="/img/elephant.jpg" caption="Elephant" >}}
-  {{< figure thumb="-thumb" link="/img/baobab.jpg" caption="Baobab tree" >}}
-  {{< figure thumb="-thumb" link="/img/wilddog.jpg" caption="Wild Dog" >}}
+  {{< figure thumb="-thumb" link="/img/safari/pool.jpg" caption="Cooling off" >}}
+  {{< figure thumb="-thumb" link="/img/safari/elephant2.jpg" caption="Upclose with an Elephant" >}}
+  {{< figure thumb="-thumb" link="/img/safari/zebra.jpg" caption="Zebra" alt="Zebra, one animal that remains fat whole year around" >}}
+  {{< figure thumb="-thumb" link="/img/safari/elephant.jpg" caption="Elephant" >}}
+  {{< figure thumb="-thumb" link="/img/safari/baobab.jpg" caption="Baobab tree" >}}
+  {{< figure thumb="-thumb" link="/img/safari/wilddog.jpg" caption="Wild Dog" >}}
 {{< /gallery >}}
 
 <!--more-->
