@@ -34,7 +34,7 @@ pre code { background: none; }
 
 /* end */
 
-pre.highlight, .highlight > pre, td.code pre {
+/* pre.highlight, .highlight > pre, td.code pre {
   background: f8f8f8;
   background-image: linear-gradient(#F9F9F9 50%, #FDFDFD 50%);
   background-repeat: repeat;
@@ -59,4 +59,4 @@ td.code pre {
 }
 td.gutter {
   padding-top: 3px;
-}
+} */

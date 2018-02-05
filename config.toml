@@ -10,7 +10,7 @@ googleAnalytics = "UA-101235795-1"
 enableEmoji = true
 
 [Params]
-  subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast \ | Data Visualisation, R programming, Python, Tableau, Microsoft Power BI and, Travelling and Gym."
+  subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast \ | Data Visualisation, R programming, Python, Tableau, and Microsoft Power BI."
   #logo = "img/avatar.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
