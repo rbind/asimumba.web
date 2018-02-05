@@ -34,8 +34,8 @@ pre code { background: none; }
 
 /* end */
 
-/* pre.highlight, .highlight > pre, td.code pre {
-  background: f8f8f8;
+pre.highlight, .highlight > pre, td.code pre {
+  background: #f9f9f9;
   background-image: linear-gradient(#F9F9F9 50%, #FDFDFD 50%);
   background-repeat: repeat;
   background-size: 3em 3em;
@@ -46,7 +46,7 @@ code table, code table td, code table th, code table tbody, code table tr,
 td.gutter pre {
   padding: 0;
   border: none;
-  background-color: #fff;
+  background-color: #f9f9f9;
 }
 .highlight > pre {
   padding: 0;
@@ -59,4 +59,4 @@ td.code pre {
 }
 td.gutter {
   padding-top: 3px;
-} */
+}
