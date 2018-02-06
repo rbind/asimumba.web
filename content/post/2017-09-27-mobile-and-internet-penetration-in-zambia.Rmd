@@ -116,8 +116,7 @@ operator_stats %>%
     y = "Number of Active subscirbers"
   )  + ggtitle("Trend of Active mobile subsribers", 
                   subtitle = "Over the period from 2010 - 2017, Q1 & Q2") +
-  guides(colour = FALSE) + 
-  theme_bw()
+  guides(colour = FALSE) 
  
 ```
 
@@ -138,8 +137,7 @@ operator_stats %>%
   ) +
   ggtitle("Population Vs. Number of Mobile Active subscribers", 
           subtitle = "Over the period from 2010 - 2017, Q1 & Q2") +
-  guides(colour = FALSE) + 
-  theme_bw()
+  guides(colour = FALSE) 
 ```
 
 
@@ -189,8 +187,8 @@ operator_stats %>%
   ) +
   ggtitle("Mobile Penetration per 100 Inhabitants", 
           subtitle = "Over the period from 2010 - 2017, Q1 & Q2") +
-  guides(colour = FALSE) + 
-  theme_bw()
+  guides(colour = FALSE)  
+  
 ```
 
 ## Domestic calls Traffic - Incoming and Outgoing 
@@ -211,8 +209,7 @@ ggplot() +
     y = "Domestic incoming/outgoing traffic in minutes"
   ) + 
   ggtitle("Domestic incoming Vs. Outgoing Traffic in minutes") +
-  guides(colour = FALSE) + 
-  theme_bw()
+  guides(colour = FALSE) 
 ```
 
 ## International incoming and outgoing traffic 
@@ -234,8 +231,7 @@ ggplot() +
     y = "International incoming/outgoing traffic in minutes"
   ) + 
   ggtitle("International incoming Vs. Outgoing Traffic in minutes") +
-  guides(colour = FALSE) + 
-  theme_bw()
+  guides(colour = FALSE) 
 ```
 
 ## Network Coverage
@@ -271,8 +267,7 @@ operator_stats %>%
           Mobile broadband penetration per 100 users",
           subtitle = "Over the period from 2010 - 
           2017, Q1 & Q2") +
-  guides(colour = FALSE) + 
-  theme_bw()
+  guides(colour = FALSE) 
   
 ```
 
@@ -289,8 +284,7 @@ isps %>%
    ggtitle("Fixed internet penetration per 100 inhabitants Vs.
            Number of subscribers",
            subtitle = "Over the period from 2010 - 2017, Q1 & Q2") +
-  guides(colour = FALSE) + 
-  theme_bw()
+  guides(colour = FALSE) 
 ```
 
 
@@ -316,8 +310,7 @@ operator_stats %>%
   ) +
   ggtitle("Mobile voice tariff and SMS tariff - On & Off net",
           subtitle = "Over the period from 2010 - 2017, Q1 & Q2") +
-  guides(colour = FALSE) + 
-  theme_bw()
+  guides(colour = FALSE) 
   
 ```
 
@@ -349,8 +342,5 @@ operator_stats %>%
     y = "Voice cost (Kwacha) per min"
   ) +
   ggtitle("Voice cost in Kwachas per minute on mobile") + 
-  guides(colour = FALSE) + 
-  theme_bw()
-
-  
+  guides(colour = FALSE) 
 ```

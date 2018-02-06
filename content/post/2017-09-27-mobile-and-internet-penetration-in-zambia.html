@@ -141,8 +141,7 @@ head(network_coverage, 4)</code></pre>
     y = &quot;Number of Active subscirbers&quot;
   )  + ggtitle(&quot;Trend of Active mobile subsribers&quot;, 
                   subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;) +
-  guides(colour = FALSE) + 
-  theme_bw()</code></pre>
+  guides(colour = FALSE) </code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-7-1.png" width="768" /></p>
 <p>The plot below shows a positive correlation between the active mobile subscribers with the population estimate from the Central Statistics Office.</p>
 <pre class="r"><code>operator_stats %&gt;% 
@@ -159,8 +158,7 @@ head(network_coverage, 4)</code></pre>
   ) +
   ggtitle(&quot;Population Vs. Number of Mobile Active subscribers&quot;, 
           subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;) +
-  guides(colour = FALSE) + 
-  theme_bw()</code></pre>
+  guides(colour = FALSE) </code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-8-1.png" width="768" /></p>
 </div>
 <div id="change-in-the-active-user-base" class="section level2">
@@ -277,8 +275,7 @@ names(per_change) &lt;- c(&quot;Year&quot;,&quot;Population&quot;, &quot;Active 
   ) +
   ggtitle(&quot;Mobile Penetration per 100 Inhabitants&quot;, 
           subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;) +
-  guides(colour = FALSE) + 
-  theme_bw()</code></pre>
+  guides(colour = FALSE)  </code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-11-1.png" width="768" /></p>
 </div>
 <div id="domestic-calls-traffic---incoming-and-outgoing" class="section level2">
@@ -299,8 +296,7 @@ ggplot() +
     y = &quot;Domestic incoming/outgoing traffic in minutes&quot;
   ) + 
   ggtitle(&quot;Domestic incoming Vs. Outgoing Traffic in minutes&quot;) +
-  guides(colour = FALSE) + 
-  theme_bw()</code></pre>
+  guides(colour = FALSE) </code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-12-1.png" width="768" /></p>
 </div>
 <div id="international-incoming-and-outgoing-traffic" class="section level2">
@@ -321,8 +317,7 @@ ggplot() +
     y = &quot;International incoming/outgoing traffic in minutes&quot;
   ) + 
   ggtitle(&quot;International incoming Vs. Outgoing Traffic in minutes&quot;) +
-  guides(colour = FALSE) + 
-  theme_bw()</code></pre>
+  guides(colour = FALSE) </code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-13-1.png" width="768" /></p>
 </div>
 <div id="network-coverage" class="section level2">
@@ -418,8 +413,7 @@ knitr::kable(network_cover, booktabs = TRUE,
           Mobile broadband penetration per 100 users&quot;,
           subtitle = &quot;Over the period from 2010 - 
           2017, Q1 &amp; Q2&quot;) +
-  guides(colour = FALSE) + 
-  theme_bw()</code></pre>
+  guides(colour = FALSE) </code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-16-1.png" width="768" /></p>
 </div>
 <div id="internet-subscribers-vs-penetration-per-100-inhabitants" class="section level2">
@@ -434,8 +428,7 @@ knitr::kable(network_cover, booktabs = TRUE,
    ggtitle(&quot;Fixed internet penetration per 100 inhabitants Vs.
            Number of subscribers&quot;,
            subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;) +
-  guides(colour = FALSE) + 
-  theme_bw()</code></pre>
+  guides(colour = FALSE) </code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-17-1.png" width="768" /></p>
 </div>
 <div id="cost-differentials" class="section level2">
@@ -458,8 +451,7 @@ knitr::kable(network_cover, booktabs = TRUE,
   ) +
   ggtitle(&quot;Mobile voice tariff and SMS tariff - On &amp; Off net&quot;,
           subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;) +
-  guides(colour = FALSE) + 
-  theme_bw()</code></pre>
+  guides(colour = FALSE) </code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-18-1.png" width="768" /></p>
 </div>
 <div id="mobile-voice-call-cost-perminute" class="section level2">
@@ -487,7 +479,6 @@ knitr::kable(network_cover, booktabs = TRUE,
     y = &quot;Voice cost (Kwacha) per min&quot;
   ) +
   ggtitle(&quot;Voice cost in Kwachas per minute on mobile&quot;) + 
-  guides(colour = FALSE) + 
-  theme_bw()</code></pre>
+  guides(colour = FALSE) </code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-19-1.png" width="768" /></p>
 </div>
