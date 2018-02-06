@@ -1,6 +1,11 @@
-body {
+/* body {
   font-family: Optima, Candara, Calibri, Arial, sans-serif;
+} */
+
+body {
+  font-family: 'Carlito', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
 code {
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 85%;
