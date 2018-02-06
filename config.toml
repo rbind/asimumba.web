@@ -41,9 +41,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   src = "img/laptop.jpg"
   desc = "Analytics"
 
-[[Params.bigimg]]
-  src = "img/path.jpg"
-  desc = "Beauty"
+# [[Params.bigimg]]
+#   src = "img/path.jpg"
+#   desc = "Beauty"
 
 [Author]
   #name = "Aaron Simumba "
