@@ -10,6 +10,8 @@ tags:
    - stock returns
    - Zambia capital market
 description: LuSE performance overview
+image: "images/background.jpg"
+authoravatar: "../../images/avatar.png"
 ---
 
 ```{r,echo=FALSE}
@@ -21,18 +23,16 @@ In the next coming few weeks, I plan to do a series of posts specifically target
 And of focus here, the LuSE, ranks in the top 10 on both account of returns after converting to US dollars and on a risk adjusted basis. The table below shows the local bourse appearing twice in the top ten, twice  on number 2 in the year 2007 and 2011 only being edge out of the first spot by Mongolia on both occasions.
 As this data from Bloomberg Markets  shows, emerging and frontier markets accounted for 9 spots out of a rank order of 10 in dollar terms and 7 spots on a risk adjusted basis.
 
-![Source: Bloomberg](https://user-images.githubusercontent.com/24398851/30350809-f43f4b5c-9820-11e7-80fa-5cd4aa7882fe.png)
+<div style="text-align:center" markdown="1">
+![Source: Bloomberg](https://user-images.githubusercontent.com/24398851/30350809-f43f4b5c-9820-11e7-80fa-5cd4aa7882fe.png){width=600px height=500px}
+</div>
 
 
 The following excerpt from Bloomberg stands out:
 
-
-    “The top 10 stock indexes that gave global investors 
-    the greatest returns in 2016 were all emerging or frontier
-    markets, according to data compiled by Bloomberg. That’s 
-    not a fluke: over the past 20 years, nine out of 10 
-    best-performing equity gauges have been in developing 
-    nations, the figures show”.
+<div style="text-align: left;" markdown="1">
+    “The top 10 stock indexes that gave global investors the greatest returns in 2016 were all emerging or frontier markets, according to data compiled by Bloomberg. That’s not a fluke: over the past 20 years, nine out of 10 best-performing equity gauges have been in developing nations, the figures show”.
+</div>
 
 ```{r, message=FALSE,echo=FALSE}
 library(xts)
@@ -53,13 +53,15 @@ LASI_yearly_zccm <- xts(x = LASI_yearly_zccm[,-1],
 
 
 
-Investment theory contends that risk taken in an investment must commensurate the return sought. Though equities as a class of investible assets are by their very nature riskier assets relative to other assets like Treasury Bill or Bonds; this in essence frightens most investors to invest in them. More so from the view of the emerging markets, which expose investors to higher levels of volatility relative to more mature and developed markets. In my next post I will look at what was historically being  demanded by investors for taking up the extra risk posed by emerging markets.
+Investment theory contends that risk taken in an investment must commensurate the return sought. Though equities as a class of investable assets are by their very nature riskier assets relative to other assets like Treasury Bill or Bonds; this in essence frightens most investors to invest in them. More so from the view of the emerging markets, which expose investors to higher levels of volatility relative to more mature and developed markets. In my next post I will look at what was historically being  demanded by investors for taking up the extra risk posed by emerging markets.
 
 The table below shows the top 10 market returns on a risk adjusted basis. No doubt emerging markets still dominated the list.
 
-![Source: Bloomberg](https://user-images.githubusercontent.com/24398851/30350804-ecf24f0c-9820-11e7-8b32-165181d67703.png)
+<div style="text-align:center" markdown="1">
+![Source: Bloomberg](https://user-images.githubusercontent.com/24398851/30350804-ecf24f0c-9820-11e7-8b32-165181d67703.png){width=600px height=500px}
+</div>
 
-What’s impressive from this table is that from the period 1997-2016, Zambia appears 5 times, occupying the first position once in the year 2013. The country appeared 4 within the top 5 spots in terms of risk adjusted equity returns in the world .In local currency terms this reflected an over 40% return as can be seen from figure 4.0 below. Going forward, investors can remain optimistic on the prospects of the emerging markets delivering stellar returns ahead of the developed markets pack. So far, the MSCI Emerging Markets Index has gained 2.7 percent in comparison with 1.5 percent from developed stock markets.
+What’s impressive from this table is that from the period 1997-2016, Zambia appears 5 times, occupying the first position once in the year 2013. The country appeared on 4th position within the top 5 spots in terms of risk adjusted equity returns in the world .In local currency terms this reflected an over 40% return as can be seen from figure \@ref(fig:first-figure) below. Going forward, investors can remain optimistic on the prospects of the emerging markets delivering stellar returns ahead of the developed markets pack. So far, the MSCI Emerging Markets Index has gained 2.7 percent in comparison with 1.5 percent from developed stock markets.
 
 ### In Focus
 
@@ -67,11 +69,12 @@ The following charts give a snapshot of the performance of the Lusaka Securities
 
 NB: The returns are computed in the local currency (Kwacha).
 
-```{r}
+```{r, first-figure,fig.cap="The LuSE LASI Monthly Returns For the Period 2005-2014 (excl. ZCCM-IH)"}
 plot(LASI_monthly$Return, xlab=" Period",
 ylab="Return",
-main="The LuSE LASI Monthly Returns For the Period 2005-2014
-     (excl. ZCCM-IH)",cex.main =1, font.main=2)
+main = "The LuSE LASI Monthly Returns For the Period 2005-2014 (excl. ZCCM-IH)",
+cex.main =1, font.main=2)
+
 ```
 
 
@@ -82,7 +85,7 @@ Most noticeable from the above chart is the greater volatility experienced at th
 
 The following chart shows the LASI index inclusive of  ZCCM-IH. Since the LASI is a value weighted index, stocks having greater market value tend to have a much more pronounced effect on the movement in the index. For instance, factoring ZCCM-IH’s market capitalization into the LASI index has a telling effect on the overall picture of the index. The chart below shows volatility in certain months relatively lower compared to the chart above which excludes ZCCM-IH. My follow-up posts will closely evaluate this effect and try to elicit some information that explains why this is the case.
 
-```{r}
+```{r,fig.cap= "The LuSE LASI Monthly Returns For the Period 2005-2014 (incl. ZCCM-IH)"}
 plot(LASI_monthly_zccm$Return,xlab=" Period", 
 ylab="Return", 
 main="The LuSE LASI Monthly Returns For the Period 2005-2014 
@@ -91,7 +94,7 @@ main="The LuSE LASI Monthly Returns For the Period 2005-2014
 
 The last two charts detail the index on a yearly basis. Though unlike the picture painted from the monthly data, yearly data that goes farther down the years, seem to be carrying a different message on the effect of the company ZCCM-IH. When introduced into the computations, the volatility is more than that observed without its inclusion.
 
-```{r}
+```{r, fig.cap= "The LuSE LASI yearly Returns For the Period 1997-2014 (excl. ZCCM-IH)"}
 plot(LASI_yearly$Return,xlab=" Period", 
 ylab="Return", 
 main="The LuSE LASI yearly Returns For the Period 1997-2014 
@@ -100,7 +103,7 @@ main="The LuSE LASI yearly Returns For the Period 1997-2014
 
 **Inclusive of ZCCM-IH yearly LASI Index returns**
 
-```{r}
+```{r, fig.cap= "The LuSE LASI yearly Returns For the Period 1997-2014 (incl. ZCCM-IH)"}
 plot(LASI_yearly_zccm$Return, 
 xlab=" Period", ylab="Return", 
 main="The LuSE LASI yearly Returns For the Period 1997-2014 
