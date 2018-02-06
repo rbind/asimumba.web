@@ -1,0 +1,174 @@
+---
+title: Breathing life back into PDF presented Data
+author: Aaron Simumba
+date: '2017-10-12'
+categories:
+  - R
+  - Rmarkdown
+tags:
+  - pdf
+  - Java jdk
+  - tabulizer
+draft: no
+description: Bringing PDF presented data back to life.
+slug: Breathing-life-back-into-PDF-presented-Data
+#image: "images/background.jpg"
+fig_width: 4
+fig_height: 3
+authoravatar: "../../images/avatar.png"
+---
+```{r,echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE,eval = TRUE)
+```
+
+It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.
+
+The good news is, technology seem to run on a brain of its own. While one side of the technology spectrum impedes, another end liberate. One such solution to extracting the dead and static PDF presented data, is to turn to the powerful and versatile R package, `tabulizer`. The [tabulizer](https://github.com/ropensci/tabulizer) package is an R wrapper for the powerful PDF extractor Java library  [Tabula](https://github.com/tabulapdf/tabula-java/). This package allows one to extract with ease, data presented in tables in a PDF document. For as long as the data is in a clean and uncluttered format. The `extract_tables()` function will try to guess the delimiters for the data and extract the data in the format which maintains close to the original data outline.
+
+## Installation
+
+For the installation and usage, the package depends on Java.  The appropriate Java Development Kit can be downloaded straight from the Oracle website [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html). Installation instructions are platform specific. Follow the instructions depending on your OS. I am on Windows, so I installed Java, running the `jdk-8u144-windows-x64.exe` executable file. 
+
+Installing tabulizer package, this can be installed from github. There is only the development version of the package, you will not find it on CRAN.
+```{r, eval=FALSE}
+# The original instructions from ropenscilabs, listing the following code to install
+#the packages, but from my experience, I had troulbes installing it from their repo
+
+if(!require("ghit")){
+    install.packages("ghit")
+}
+# on 64-bit Windows
+ghit::install_github(c("ropenscilabs/tabulizerjars",
+                       "ropenscilabs/tabulizer"), 
+                     INSTALL_opts = "--no-multiarch")
+# elsewhere
+ghit::install_github(c("ropenscilabs/tabulizerjars",
+                       "ropenscilabs/tabulizer"))
+
+#After searching around, a workable option is installing 
+#from Thomas Leeper cloned repo
+
+if(!require("ghit")){
+    install.packages("ghit")
+}
+# on 64-bit Windows
+ghit::install_github(c("leeper/tabulizerjars", 
+                       "leeper/tabulizer"), 
+                     INSTALL_opts = "--no-multiarch")
+# elsewhere
+ghit::install_github(c("leeper/tabulizerjars", "leeper/tabulizer"))
+
+
+```
+
+This will download and install other Java related packages tabulizer depends on.
+
+##Demo 
+For demonstration purpose, I will use the report from the Central Statistics Office (CSO), Zambia, on [Zambia Census Projection 2011-2035](https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf). Below is the outline of the sample data as presented in the PDF report. 
+
+<div style="text-align:center" markdown="1">
+![Sample Data File - Source: CSO](https://user-images.githubusercontent.com/24398851/31639999-7d7cc290-b2e4-11e7-85d3-03cc648a73e6.png){ width=600px height=500px }
+
+</div>
+
+
+
+
+
+We call the tabulizer package with the following command.
+```{r}
+library("tabulizer")
+```
+
+The main function is the `extract_tables()`. The first argument is the PDF `file` or report where the targeted table(s) is/are. The second argument is the `pages`, where you specify the page number the table of data is. There are other arguments such as `area`, which you can specify the targeted area(s) to extract. `columns`   which matches with the number of pages to be extracted. This argument allows for each page extracted to be stored in its own separate column.The `guess` argument, which by default is `=TRUE`, allows for the function to guess the location of the table(s) on each page. For a list of all the arguments: run `?extract_tables` in the R console.
+By default, the data is extracted as a list. Lists in R can be thought of as a vector containing other objects. We can zoom in on a particular object using the double square brackets,`[[]]`. For instance, the first object in the variable is indexed by the number 1, and the  second object by 2, and so on. Since,only one table is being extracted, the variable below contain one column; extracted with this command,`cso_table[[1]]`.
+
+The default way, `extract_table()` extracts the data as a list of character matrices. This helps in cases where the data is irregular and cannot be properly coerced to a data frame (row by column format). To change this behaviour so that the extracted data is coerced to a data frame, we supply the `method` argument, and have `data.frame` as the value.   
+
+```{r}
+cso <- ("https://goo.gl/d2xMwS") 
+# This is the shortened version of the original URL
+
+# stored the link to the report as a variable.
+
+# We are going to pass the cso variable to the extract_tables() function
+
+cso_table <- extract_tables(cso, pages = 24, 
+                            method = "data.frame")
+# The table of interest is on page 24, the other
+# arguments are left as defaults
+cso_column <- cso_table[[1]]
+```
+
+From the extracted results, it can be seen the output is not in a "tidy" format, to allow any meaning analyses to be done. The next step would be reshaping and reordering the extracted results into a neat data frame. 
+
+## Tidying the data
+
+Two approaches can be implemented here: the easy way or the hard way.
+
+- Firstly, the easy way. We can write the data to a `CSV` file and clean the data in Microsoft Excel. The solution is to use the `write.csv()` function. The first argument in the function is the data object. The `file` argument, you define the output file name together with the file extension - in our case it is a `.CSV` extension. The `row.names` specifies whether to include the default index R attaches to the data, which spans the length of your data.
+```{r}
+write.csv(cso_column, file = "../../static/data/cso_data.csv",
+          row.names = FALSE)
+
+# I have passed a relative path where I want the CSV file 
+# to be stored
+```
+
+After cleaning the data in Excel, it can be re-imported to aid in analysis.
+
+- Second choice, the hard way. The `tidyverse` package has a suite of packages built specifically to handle such tasks. The`dplyr` package, is one such package, which represents the grammar of data manipulation. Using well crafted verbs, one can transform, order, filter etc.. data with ease.
+
+## Welcome to the tidyverse universe
+
+First step is to clean the data, eliminating unwanted variables and title headers. That is in addition to transforming the data into a "tidy" format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second, and the last three row of the extracted data.
+
+```{r, message=FALSE,include=FALSE}
+# this eleminates the rows specified
+cso_data <- cso_column[-c(1,2,33:36), ] 
+# Renaming the columns 
+names(cso_data) <-  
+  c("province", "sex", "2011", "2015", "2020",
+    "2025", "2030", "2035")
+str(cso_data)[3,] # Checking the structure of the data.
+cso_data[1:10, ] # first 10 rows
+```
+`tidyr` package is used to gather the observations in the columns into rows and combine all the observations across 2 columns. The function `gather()` achieves this in the `tidyr` package.
+
+After gathering the data from the columns to rows, the second issue is to index the numbers by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.
+```{r,message=FALSE}
+# install.packages("tidyverse") # This will install the tidyverse
+library(tidyverse)
+# converting to a tibble
+cso_data <- cso_data %>% 
+  as.tibble()
+
+cso_provincial <- cso_data %>% 
+  filter(sex == "Total") %>% 
+  select(`2011`:`2035`) %>% 
+  gather(key = "year", value = "census_proj")
+
+province <- rep(c("central", "copperbelt", "eastern",
+                  "luapula", "lusaka", "muchinga",
+                  "northern", "north.western", "southern", "western")
+                , 6
+                ) 
+
+cso_transformed <- cbind(cso_provincial,province) %>% 
+  select(year,province, census_proj) %>% 
+  as.tibble() 
+cso_transformed
+
+
+
+```
+For the full data table view, see the table below.
+```{r}
+knitr::kable(cso_transformed, booktabs = TRUE, 
+             caption = "Census data per Province")  
+```
+
+We can finally take a breather, and enjoy!
+<center>
+<iframe src="https://giphy.com/embed/13r9tgg7ZisiT6" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/michelle-tanner-stickleyman-13r9tgg7ZisiT6">via GIPHY</a></p>
+</center>

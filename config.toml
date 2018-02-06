@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "ZedR Blog"
 theme = "hugo-xmin"
 googleAnalytics = ""
-disqusShortname = ""
+disqusShortname = "asimumba"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
@@ -34,4 +34,4 @@ footnotereturnlinkcontents = "↩"
 
 [params]
     description = "A website built through Hugo and blogdown."
-    footer = "&copy; [zedr](https://zedr.rbind.io)2018 | [Github](https://github.com/rbind/zedr) | [Twitter](https://twitter.com/asimumba21)"
+    footer = "&copy; [zedr](https://zedr.rbind.io) 2018 | [Github](https://github.com/rbind/zedr) | [Twitter](https://twitter.com/asimumba21)"
