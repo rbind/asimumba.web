@@ -1,6 +1,6 @@
-baseurl = "/"
+baseurl = "https://zedr.rbind.io/"
 languageCode = "en-us"
-title = "A minimal Hugo website"
+title = "ZedR Blog"
 theme = "hugo-xmin"
 googleAnalytics = ""
 disqusShortname = ""
@@ -34,4 +34,4 @@ footnotereturnlinkcontents = "↩"
 
 [params]
     description = "A website built through Hugo and blogdown."
-    footer = "&copy; [Yihui Xie](https://yihui.name) 2017 -- 2018 | [Github](https://github.com/yihui) | [Twitter](https://twitter.com/xieyihui)"
+    footer = "&copy; [zedr](https://zedr.rbind.io)2018 | [Github](https://github.com/rbind/zedr) | [Twitter](https://twitter.com/asimumba21)"
