@@ -16,6 +16,9 @@ slug: Breathing-life-back-into-PDF-presented-Data
 fig_width: 4
 fig_height: 3
 authoravatar: "../../images/avatar.png"
+output:
+   blogdown::html_page:
+     toc: true
 ---
 ```{r,echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE,eval = TRUE)

@@ -14,6 +14,9 @@ output:
 description: Stock portfolio - a quick overview
 #image: "images/background.jpg"
 authoravatar: "../../images/avatar.png"
+output:
+   blogdown::html_page:
+     toc: true
 ---
 
 ```{r,results='hide',message=FALSE}

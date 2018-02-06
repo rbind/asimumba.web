@@ -16,9 +16,20 @@ slug: Breathing-life-back-into-PDF-presented-Data
 fig_width: 4
 fig_height: 3
 authoravatar: "../../images/avatar.png"
+output:
+   blogdown::html_page:
+     toc: true
 ---
 
 
+<div id="TOC">
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#demo">Demo</a></li>
+<li><a href="#tidying-the-data">Tidying the data</a></li>
+<li><a href="#welcome-to-the-tidyverse-universe">Welcome to the tidyverse universe</a></li>
+</ul>
+</div>
 
 <p>It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.</p>
 <p>The good news is, technology seem to run on a brain of its own. While one side of the technology spectrum impedes, another end liberate. One such solution to extracting the dead and static PDF presented data, is to turn to the powerful and versatile R package, <code>tabulizer</code>. The <a href="https://github.com/ropensci/tabulizer">tabulizer</a> package is an R wrapper for the powerful PDF extractor Java library <a href="https://github.com/tabulapdf/tabula-java/">Tabula</a>. This package allows one to extract with ease, data presented in tables in a PDF document. For as long as the data is in a clean and uncluttered format. The <code>extract_tables()</code> function will try to guess the delimiters for the data and extract the data in the format which maintains close to the original data outline.</p>

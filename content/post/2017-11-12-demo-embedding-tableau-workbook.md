@@ -8,6 +8,7 @@ tags:
 - Visualisation
 #image: "images/background.jpg"
 authoravatar: "../../images/avatar.png"
+toc: true
 ---
 This is a short demo experimenting with embedding Tableau workbook on your personal 
 website using `iframe.` The public visualisation is from [Jack Dougherty](http://internet2.trincoll.edu/facProfiles/Default.aspx?fid=1004266).

@@ -7,7 +7,7 @@ disqusShortname = "asimumba"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
-enableEmojis = true
+enableEmoji = true
 
 [permalinks]
     post = "/post/:year/:month/:day/:slug/"

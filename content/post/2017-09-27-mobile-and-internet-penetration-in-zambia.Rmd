@@ -12,6 +12,9 @@ fig_width: 3
 fig_height: 2
 #image: "images/background.jpg"
 authoravatar: "../../images/avatar.png"
+output:
+   blogdown::html_page:
+     toc: true
 ---
 In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority ([ZICTA](http://www.zicta.zm/)) data. I will walk through the data on the subscriber base, the user traffic and the cost differentials among the three mobile operators, these being: Airtel, Zamtel and MTN Zambia. In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used. 
 ```{r,echo=FALSE}
