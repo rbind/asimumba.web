@@ -21,6 +21,10 @@ This will be a place where I share my daily musings in the world of R, Stock mar
 
 `Let's have fun!` :smile:
 
+**Community endeavours** 
+
+To support Data Science and analytics growth in Zambia, I started a blog [ZedR](http://zedr.rbind.io/). Anyone is free to join and contribute content. Going forward, I hope to build a team of data science enthusiasts where we will host meetups and data science hackathons.
+
 **Courses completed:**
 
 - _Introduction to R course_ - [**DataCamp**](https://www.datacamp.com/statement-of-accomplishment/course/284ca241bbb76f34add2d7c8a7ad4d4a8167d7f2)
