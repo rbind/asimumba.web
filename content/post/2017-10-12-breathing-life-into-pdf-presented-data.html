@@ -68,17 +68,11 @@ ghit::install_github(c(&quot;leeper/tabulizerjars&quot;, &quot;leeper/tabulizer&
 <p>The main function is the <code>extract_tables()</code>. The first argument is the PDF <code>file</code> or report where the targeted table(s) is/are. The second argument is the <code>pages</code>, where you specify the page number the table of data is. There are other arguments such as <code>area</code>, which you can specify the targeted area(s) to extract. <code>columns</code> which matches with the number of pages to be extracted. This argument allows for each page extracted to be stored in its own separate column.The <code>guess</code> argument, which by default is <code>=TRUE</code>, allows for the function to guess the location of the table(s) on each page. For a list of all the arguments: run <code>?extract_tables</code> in the R console. By default, the data is extracted as a list. Lists in R can be thought of as a vector containing other objects. We can zoom in on a particular object using the double square brackets,<code>[[]]</code>. For instance, the first object in the variable is indexed by the number 1, and the second object by 2, and so on. Since,only one table is being extracted, the variable below contain one column; extracted with this command,<code>cso_table[[1]]</code>.</p>
 <p>The default way, <code>extract_table()</code> extracts the data as a list of character matrices. This helps in cases where the data is irregular and cannot be properly coerced to a data frame (row by column format). To change this behaviour so that the extracted data is coerced to a data frame, we supply the <code>method</code> argument, and have <code>data.frame</code> as the value.</p>
 <pre class="r"><code>cso &lt;- (&quot;https://goo.gl/d2xMwS&quot;) 
-# This is the shortened version of the original URL
-
-# stored the link to the report as a variable.
-
-# We are going to pass the cso variable to the extract_tables() function
+# This is the shortened version of the original URL. Stored the link to the report as a variable.
 
 cso_table &lt;- extract_tables(cso, pages = 24, 
-                            method = &quot;data.frame&quot;)
-# The table of interest is on page 24, the other
-# arguments are left as defaults
-cso_column &lt;- cso_table[[1]]</code></pre>
+                            method = &quot;data.frame&quot;) # We are going to pass the cso variable to the extract_tables() function
+cso_column &lt;- cso_table[[1]] # The table of interest is on page 24, the other arguments are left as defaults</code></pre>
 <p>From the extracted results, it can be seen the output is not in a “tidy” format, to allow any meaning analyses to be done. The next step would be reshaping and reordering the extracted results into a neat data frame.</p>
 </div>
 <div id="tidying-the-data" class="section level2">
@@ -88,10 +82,7 @@ cso_column &lt;- cso_table[[1]]</code></pre>
 <li>Firstly, the easy way. We can write the data to a <code>CSV</code> file and clean the data in Microsoft Excel. The solution is to use the <code>write.csv()</code> function. The first argument in the function is the data object. The <code>file</code> argument, you define the output file name together with the file extension - in our case it is a <code>.CSV</code> extension. The <code>row.names</code> specifies whether to include the default index R attaches to the data, which spans the length of your data.</li>
 </ul>
 <pre class="r"><code>write.csv(cso_column, file = &quot;../../static/data/cso_data.csv&quot;,
-          row.names = FALSE)
-
-# I have passed a relative path where I want the CSV file 
-# to be stored</code></pre>
+          row.names = FALSE) # I have passed a relative path where I want the CSV file to be stored</code></pre>
 <p>After cleaning the data in Excel, it can be re-imported to aid in analysis.</p>
 <ul>
 <li>Second choice, the hard way. The <code>tidyverse</code> package has a suite of packages built specifically to handle such tasks. The<code>dplyr</code> package, is one such package, which represents the grammar of data manipulation. Using well crafted verbs, one can transform, order, filter etc.. data with ease.</li>
@@ -102,12 +93,9 @@ cso_column &lt;- cso_table[[1]]</code></pre>
 <p>First step is to clean the data, eliminating unwanted variables and title headers. That is in addition to transforming the data into a “tidy” format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second, and the last three row of the extracted data.</p>
 <p><code>tidyr</code> package is used to gather the observations in the columns into rows and combine all the observations across 2 columns. The function <code>gather()</code> achieves this in the <code>tidyr</code> package.</p>
 <p>After gathering the data from the columns to rows, the second issue is to index the numbers by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.</p>
-<pre class="r"><code># install.packages(&quot;tidyverse&quot;) # This will install the tidyverse
-library(tidyverse)
-# converting to a tibble
+<pre class="r"><code>library(tidyverse) # install.packages(&quot;tidyverse&quot;) This will install the tidyverse
 cso_data &lt;- cso_data %&gt;% 
-  as.tibble()
-
+  as.tibble() # converting to a tibble
 cso_provincial &lt;- cso_data %&gt;% 
   filter(sex == &quot;Total&quot;) %&gt;% 
   select(`2011`:`2035`) %&gt;% 
@@ -123,335 +111,9 @@ cso_transformed &lt;- cbind(cso_provincial,province) %&gt;%
   select(year,province, census_proj) %&gt;% 
   as.tibble() 
 cso_transformed</code></pre>
-<pre><code>## # A tibble: 60 x 3
-##    year  province      census_proj
-##    &lt;chr&gt; &lt;fct&gt;         &lt;chr&gt;      
-##  1 2011  central       1,355,775  
-##  2 2011  copperbelt    2,143,413  
-##  3 2011  eastern       1,628,880  
-##  4 2011  luapula       1,015,629  
-##  5 2011  lusaka        2,362,967  
-##  6 2011  muchinga      749,449    
-##  7 2011  northern      1,146,392  
-##  8 2011  north.western 746,982    
-##  9 2011  southern      1,642,757  
-## 10 2011  western       926,478    
-## # ... with 50 more rows</code></pre>
 <p>For the full data table view, see the table below.</p>
 <pre class="r"><code>knitr::kable(cso_transformed, booktabs = TRUE, 
              caption = &quot;Census data per Province&quot;)  </code></pre>
-<table>
-<caption><span id="tab:unnamed-chunk-8">Table 1: </span>Census data per Province</caption>
-<thead>
-<tr class="header">
-<th align="left">year</th>
-<th align="left">province</th>
-<th align="left">census_proj</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">2011</td>
-<td align="left">central</td>
-<td align="left">1,355,775</td>
-</tr>
-<tr class="even">
-<td align="left">2011</td>
-<td align="left">copperbelt</td>
-<td align="left">2,143,413</td>
-</tr>
-<tr class="odd">
-<td align="left">2011</td>
-<td align="left">eastern</td>
-<td align="left">1,628,880</td>
-</tr>
-<tr class="even">
-<td align="left">2011</td>
-<td align="left">luapula</td>
-<td align="left">1,015,629</td>
-</tr>
-<tr class="odd">
-<td align="left">2011</td>
-<td align="left">lusaka</td>
-<td align="left">2,362,967</td>
-</tr>
-<tr class="even">
-<td align="left">2011</td>
-<td align="left">muchinga</td>
-<td align="left">749,449</td>
-</tr>
-<tr class="odd">
-<td align="left">2011</td>
-<td align="left">northern</td>
-<td align="left">1,146,392</td>
-</tr>
-<tr class="even">
-<td align="left">2011</td>
-<td align="left">north.western</td>
-<td align="left">746,982</td>
-</tr>
-<tr class="odd">
-<td align="left">2011</td>
-<td align="left">southern</td>
-<td align="left">1,642,757</td>
-</tr>
-<tr class="even">
-<td align="left">2011</td>
-<td align="left">western</td>
-<td align="left">926,478</td>
-</tr>
-<tr class="odd">
-<td align="left">2015</td>
-<td align="left">central</td>
-<td align="left">1,515,086</td>
-</tr>
-<tr class="even">
-<td align="left">2015</td>
-<td align="left">copperbelt</td>
-<td align="left">2,362,207</td>
-</tr>
-<tr class="odd">
-<td align="left">2015</td>
-<td align="left">eastern</td>
-<td align="left">1,813,445</td>
-</tr>
-<tr class="even">
-<td align="left">2015</td>
-<td align="left">luapula</td>
-<td align="left">1,127,453</td>
-</tr>
-<tr class="odd">
-<td align="left">2015</td>
-<td align="left">lusaka</td>
-<td align="left">2,777,439</td>
-</tr>
-<tr class="even">
-<td align="left">2015</td>
-<td align="left">muchinga</td>
-<td align="left">895,058</td>
-</tr>
-<tr class="odd">
-<td align="left">2015</td>
-<td align="left">northern</td>
-<td align="left">1,304,435</td>
-</tr>
-<tr class="even">
-<td align="left">2015</td>
-<td align="left">north.western</td>
-<td align="left">833,818</td>
-</tr>
-<tr class="odd">
-<td align="left">2015</td>
-<td align="left">southern</td>
-<td align="left">1,853,464</td>
-</tr>
-<tr class="even">
-<td align="left">2015</td>
-<td align="left">western</td>
-<td align="left">991,500</td>
-</tr>
-<tr class="odd">
-<td align="left">2020</td>
-<td align="left">central</td>
-<td align="left">1,734,601</td>
-</tr>
-<tr class="even">
-<td align="left">2020</td>
-<td align="left">copperbelt</td>
-<td align="left">2,669,635</td>
-</tr>
-<tr class="odd">
-<td align="left">2020</td>
-<td align="left">eastern</td>
-<td align="left">2,065,590</td>
-</tr>
-<tr class="even">
-<td align="left">2020</td>
-<td align="left">luapula</td>
-<td align="left">1,276,608</td>
-</tr>
-<tr class="odd">
-<td align="left">2020</td>
-<td align="left">lusaka</td>
-<td align="left">3,360,183</td>
-</tr>
-<tr class="even">
-<td align="left">2020</td>
-<td align="left">muchinga</td>
-<td align="left">1,095,535</td>
-</tr>
-<tr class="odd">
-<td align="left">2020</td>
-<td align="left">northern</td>
-<td align="left">1,520,004</td>
-</tr>
-<tr class="even">
-<td align="left">2020</td>
-<td align="left">north.western</td>
-<td align="left">950,789</td>
-</tr>
-<tr class="odd">
-<td align="left">2020</td>
-<td align="left">southern</td>
-<td align="left">2,135,794</td>
-</tr>
-<tr class="even">
-<td align="left">2020</td>
-<td align="left">western</td>
-<td align="left">1,076,683</td>
-</tr>
-<tr class="odd">
-<td align="left">2025</td>
-<td align="left">central</td>
-<td align="left">1,979,202</td>
-</tr>
-<tr class="even">
-<td align="left">2025</td>
-<td align="left">copperbelt</td>
-<td align="left">3,016,344</td>
-</tr>
-<tr class="odd">
-<td align="left">2025</td>
-<td align="left">eastern</td>
-<td align="left">2,344,980</td>
-</tr>
-<tr class="even">
-<td align="left">2025</td>
-<td align="left">luapula</td>
-<td align="left">1,439,877</td>
-</tr>
-<tr class="odd">
-<td align="left">2025</td>
-<td align="left">lusaka</td>
-<td align="left">4,004,276</td>
-</tr>
-<tr class="even">
-<td align="left">2025</td>
-<td align="left">muchinga</td>
-<td align="left">1,326,222</td>
-</tr>
-<tr class="odd">
-<td align="left">2025</td>
-<td align="left">northern</td>
-<td align="left">1,763,638</td>
-</tr>
-<tr class="even">
-<td align="left">2025</td>
-<td align="left">north.western</td>
-<td align="left">1,080,072</td>
-</tr>
-<tr class="odd">
-<td align="left">2025</td>
-<td align="left">southern</td>
-<td align="left">2,445,929</td>
-</tr>
-<tr class="even">
-<td align="left">2025</td>
-<td align="left">western</td>
-<td align="left">1,173,598</td>
-</tr>
-<tr class="odd">
-<td align="left">2030</td>
-<td align="left">central</td>
-<td align="left">2,254,435</td>
-</tr>
-<tr class="even">
-<td align="left">2030</td>
-<td align="left">copperbelt</td>
-<td align="left">3,402,007</td>
-</tr>
-<tr class="odd">
-<td align="left">2030</td>
-<td align="left">eastern</td>
-<td align="left">2,655,422</td>
-</tr>
-<tr class="even">
-<td align="left">2030</td>
-<td align="left">luapula</td>
-<td align="left">1,623,991</td>
-</tr>
-<tr class="odd">
-<td align="left">2030</td>
-<td align="left">lusaka</td>
-<td align="left">4,704,135</td>
-</tr>
-<tr class="even">
-<td align="left">2030</td>
-<td align="left">muchinga</td>
-<td align="left">1,587,414</td>
-</tr>
-<tr class="odd">
-<td align="left">2030</td>
-<td align="left">northern</td>
-<td align="left">2,040,926</td>
-</tr>
-<tr class="even">
-<td align="left">2030</td>
-<td align="left">north.western</td>
-<td align="left">1,227,481</td>
-</tr>
-<tr class="odd">
-<td align="left">2030</td>
-<td align="left">southern</td>
-<td align="left">2,793,523</td>
-</tr>
-<tr class="even">
-<td align="left">2030</td>
-<td align="left">western</td>
-<td align="left">1,286,880</td>
-</tr>
-<tr class="odd">
-<td align="left">2035</td>
-<td align="left">central</td>
-<td align="left">2,565,450</td>
-</tr>
-<tr class="even">
-<td align="left">2035</td>
-<td align="left">copperbelt</td>
-<td align="left">3,823,642</td>
-</tr>
-<tr class="odd">
-<td align="left">2035</td>
-<td align="left">eastern</td>
-<td align="left">3,001,152</td>
-</tr>
-<tr class="even">
-<td align="left">2035</td>
-<td align="left">luapula</td>
-<td align="left">1,834,667</td>
-</tr>
-<tr class="odd">
-<td align="left">2035</td>
-<td align="left">lusaka</td>
-<td align="left">5,465,775</td>
-</tr>
-<tr class="even">
-<td align="left">2035</td>
-<td align="left">muchinga</td>
-<td align="left">1,879,642</td>
-</tr>
-<tr class="odd">
-<td align="left">2035</td>
-<td align="left">northern</td>
-<td align="left">2,355,007</td>
-</tr>
-<tr class="even">
-<td align="left">2035</td>
-<td align="left">north.western</td>
-<td align="left">1,397,137</td>
-</tr>
-<tr class="odd">
-<td align="left">2035</td>
-<td align="left">southern</td>
-<td align="left">3,184,855</td>
-</tr>
-<tr class="even">
-<td align="left">2035</td>
-<td align="left">western</td>
-<td align="left">1,416,331</td>
-</tr>
-</tbody>
-</table>
 We can finally take a breather, and enjoy!
 <center>
 <iframe src="https://giphy.com/embed/13r9tgg7ZisiT6" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen>

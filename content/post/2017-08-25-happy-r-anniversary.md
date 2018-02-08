@@ -15,7 +15,7 @@ description: Reflections on one year in the R dungeon
 authoravatar: "../../images/avatar.png"
 ---
 
-On the 26 August 2017 will mark exactly one year since embarking on learning the R programming language. A year ago I had neither the foresight nor will strength of believing I would be this engrossed in the new found love for programming. But it didn't take long before I found myself spending at least an hour a day playing with different skills and knowledge I had acquired. Coming from the background of playing with VBA in Excel. I got hooked every time I discovered I could do something more efficiently and, less painful in R than other data analysis packages I had used.
+The 26 August 2017  marks exactly one year since embarking on learning the R programming language. A year ago I had neither the foresight nor will strength of believing I would b this engrossed in the new found love for programming. But it didn't take long before I found myself spending at least an hour a day playing with different skills and knowledge I had acquired. Coming from the background of playing with VBA in Excel. I got hooked every time I discovered I could do something more efficiently and, less painful in R than other data analysis packages I had used.
 
 Although R has a steep learning curve, its syntax is quite intuitive, and once you master the underlying language specific issues - such as, how it deals with different data types and some of the strengths at the core of the language; like its vectorised operations. It becomes quite easy to write code for relatively easy operations quickly and in a few lines of code.
 
@@ -32,8 +32,7 @@ Since I started R, mainly just to learn enough to be able to do simple data anal
 
 In hindsight, learning how to program with R is one of the best decisions I made. I have been exposed to a lot and learnt many things, which 12 months ago was all Greek mythology.
 
-I can only imagine what is in store in the next 12 months. 
+I can only imagine what is in store in the next 12 months.
 
 
 In closing, I have realised [git](https://git-scm.com/) and [github](https://github.com/) as tools for version control mean life to code crunchers...
-

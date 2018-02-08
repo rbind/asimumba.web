@@ -30,6 +30,4 @@ For the theme, I was initially spoiled for choice, I tried a few before finally 
 
 ![](https://user-images.githubusercontent.com/24398851/30351045-2fa78596-9822-11e7-916b-18cc3e551562.png)
 
-The outline inspiration comes from the  [Rbind Support](https://support.rbind.io/). I like the clean and simplistic outline. 
-
-
+**NOTE**: Lookout for a comprehensive summary of how I designed my current website soon...

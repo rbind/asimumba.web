@@ -42,24 +42,24 @@ setup_twitter_oauth(consumer_key ="",consumer_secret =""
 
 Jeff Leek provides the following description for the twitterMap function:
 
-```r
+```{r, eval=FALSE}
 twitterMap <- function(userName,userLocation=NULL,
 fileName=”twitterMap.pdf”,nMax = 1000,
 plotType=c(“followers”,”both”,”following”))
 ```
 with arguments:
-```
-userName - the twitter username you want to plot
 
-userLocation - an optional argument giving the location of the user, necessary when the location information you have provided Twitter isn’t sufficient for us to find latitude/longitude data
+>userName - the twitter username you want to plot
 
-fileName - the file where you want the plot to appear
+>userLocation - an optional argument giving the location of the user, necessary when the location information you have provided Twitter isn’t sufficient for us to find latitude/longitude data
 
-nMax - The maximum number of followers/following to get from Twitter, this is implemented to avoid rate limiting for people with large numbers of followers.
+>fileName - the file where you want the plot to appear
 
-plotType - if “both” both followers/following are
+>nMax - The maximum number of followers/following to get from Twitter, this is implemented to avoid rate limiting for people with large numbers of followers.
+
+>plotType - if “both” both followers/following are
 plotted, etc.
-```
+
 
 Mapping my twitter data, I run the following code, supplying my twitter username, and changing the `plotType` argument to "both", which plots both locations for my followers and those I follow.
 

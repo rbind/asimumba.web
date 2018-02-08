@@ -1,7 +1,7 @@
 /* --- General --- */
 
 body {
-  font-family: Droid Serif', Georgia, 'Times New Roman', Times, Serif;
+  font-family: 'Carlito', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 15px;
   color: #222222;
   position: relative;
@@ -11,6 +11,7 @@ body {
   height: 100vh;
   font-weight: 400;
 }
+
 .container[role=main] {
   margin-bottom:50px;
   flex: 1 0 auto;
@@ -23,18 +24,17 @@ p + p {
     margin: 24px 0 6px 0;
 }
 p a {
-  /* text-decoration: underline */
-  /* color: #008AFF; */
   color: #36454f;
   text-decoration: none;
   border-bottom: dotted 1px #A1A3A1;
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Carlito', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   color: #36454f;
-  /* font-weight: bold; */
 }
+h2 {font-size: 20px}
+
 a {
   color: #36454f;
   text-decoration: none;
@@ -43,21 +43,18 @@ a:hover,
 a:focus {
   color: #0085a1;
 }
-/* blockquote {
+
+blockquote {
   color: #808080;
   font-style: italic;
+  border-left: 5px solid #ccc;
+  padding: 3px 1em 3px;
+  font-size: 15px;
 }
 blockquote p:first-child {
   margin-top: 0;
-} */
-
-/* from Yihui - blockquote*/
-
-blockquote {
-  background: #f9f9f9;
-  border-left: 5px solid #ccc;
-  padding: 3px 1em 3px;
 }
+
 /* adding a dot after section number */
 hr.small {
   max-width: 100px;
@@ -397,6 +394,7 @@ footer .theme-by {
   font-family: 'Carlito', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6em;
   color: #222222;
+  font-size: 13px;
 }
 .post-entry-container {
   display: inline-block;
@@ -404,15 +402,15 @@ footer .theme-by {
 }
 .post-entry {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 5px;
 }
-.post-image {
+/* .post-image {
   float: right;
   height: 100px;
   width: 100px;
   margin-top: -35px;
   filter: grayscale(90%);
-}
+} */
 .post-image:hover {
   filter: grayscale(0%);
 }
@@ -683,6 +681,7 @@ iframe, twitterwidget, video {
   max-width: 100%;
   display: block;
   margin: auto;
+  max-height: 85%
 }
 
 /* --- Tables --- */
@@ -764,5 +763,5 @@ pre {
   overflow-x: auto;
 }
 
-code {background: #f9f9f9;}
+code {background: #f9f9f9; font-size: 85%}
 pre code {background: none;}

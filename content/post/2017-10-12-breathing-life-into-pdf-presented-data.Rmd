@@ -18,7 +18,7 @@ fig_height: 3
 authoravatar: "../../images/avatar.png"
 ---
 ```{r,echo=FALSE}
-knitr::opts_chunk$set(echo = TRUE,eval = TRUE)
+knitr::opts_chunk$set(echo = TRUE,eval = FALSE)
 ```
 
 It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.
@@ -71,10 +71,6 @@ For demonstration purpose, I will use the report from the Central Statistics Off
 
 </div>
 
-
-
-
-
 We call the tabulizer package with the following command.
 ```{r}
 library("tabulizer")
@@ -87,17 +83,11 @@ The default way, `extract_table()` extracts the data as a list of character matr
 
 ```{r}
 cso <- ("https://goo.gl/d2xMwS") 
-# This is the shortened version of the original URL
-
-# stored the link to the report as a variable.
-
-# We are going to pass the cso variable to the extract_tables() function
+# This is the shortened version of the original URL. Stored the link to the report as a variable.
 
 cso_table <- extract_tables(cso, pages = 24, 
-                            method = "data.frame")
-# The table of interest is on page 24, the other
-# arguments are left as defaults
-cso_column <- cso_table[[1]]
+                            method = "data.frame") # We are going to pass the cso variable to the extract_tables() function
+cso_column <- cso_table[[1]] # The table of interest is on page 24, the other arguments are left as defaults
 ```
 
 From the extracted results, it can be seen the output is not in a "tidy" format, to allow any meaning analyses to be done. The next step would be reshaping and reordering the extracted results into a neat data frame. 
@@ -109,10 +99,7 @@ Two approaches can be implemented here: the easy way or the hard way.
 - Firstly, the easy way. We can write the data to a `CSV` file and clean the data in Microsoft Excel. The solution is to use the `write.csv()` function. The first argument in the function is the data object. The `file` argument, you define the output file name together with the file extension - in our case it is a `.CSV` extension. The `row.names` specifies whether to include the default index R attaches to the data, which spans the length of your data.
 ```{r}
 write.csv(cso_column, file = "../../static/data/cso_data.csv",
-          row.names = FALSE)
-
-# I have passed a relative path where I want the CSV file 
-# to be stored
+          row.names = FALSE) # I have passed a relative path where I want the CSV file to be stored
 ```
 
 After cleaning the data in Excel, it can be re-imported to aid in analysis.
@@ -124,8 +111,7 @@ After cleaning the data in Excel, it can be re-imported to aid in analysis.
 First step is to clean the data, eliminating unwanted variables and title headers. That is in addition to transforming the data into a "tidy" format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second, and the last three row of the extracted data.
 
 ```{r, message=FALSE,include=FALSE}
-# this eleminates the rows specified
-cso_data <- cso_column[-c(1,2,33:36), ] 
+cso_data <- cso_column[-c(1,2,33:36), ] # this eleminates the rows specified
 # Renaming the columns 
 names(cso_data) <-  
   c("province", "sex", "2011", "2015", "2020",
@@ -137,12 +123,9 @@ cso_data[1:10, ] # first 10 rows
 
 After gathering the data from the columns to rows, the second issue is to index the numbers by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.
 ```{r,message=FALSE}
-# install.packages("tidyverse") # This will install the tidyverse
-library(tidyverse)
-# converting to a tibble
+library(tidyverse) # install.packages("tidyverse") This will install the tidyverse
 cso_data <- cso_data %>% 
-  as.tibble()
-
+  as.tibble() # converting to a tibble
 cso_provincial <- cso_data %>% 
   filter(sex == "Total") %>% 
   select(`2011`:`2035`) %>% 

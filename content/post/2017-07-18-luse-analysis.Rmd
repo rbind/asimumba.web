@@ -30,9 +30,8 @@ As this data from Bloomberg Markets  shows, emerging and frontier markets accoun
 
 The following excerpt from Bloomberg stands out:
 
-<div style="text-align: left;" markdown="1">
-    “The top 10 stock indexes that gave global investors the greatest returns in 2016 were all emerging or frontier markets, according to data compiled by Bloomberg. That’s not a fluke: over the past 20 years, nine out of 10 best-performing equity gauges have been in developing nations, the figures show”.
-</div>
+>“The top 10 stock indexes that gave global investors the greatest returns in 2016 were all emerging or frontier markets, according to data compiled by Bloomberg. That’s not a fluke: over the past 20 years, nine out of 10 best-performing equity gauges have been in developing nations, the figures show”.
+
 
 ```{r, message=FALSE,echo=FALSE}
 library(xts)
@@ -74,7 +73,6 @@ plot(LASI_monthly$Return, xlab=" Period",
 ylab="Return",
 main = "The LuSE LASI Monthly Returns For the Period 2005-2014 (excl. ZCCM-IH)",
 cex.main =1, font.main=2)
-
 ```
 
 

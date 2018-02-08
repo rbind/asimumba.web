@@ -8,12 +8,18 @@ pygmentsCodeFences = false
 disqusShortname = "asimumba"
 googleAnalytics = "UA-101235795-1"
 enableEmoji = true
+#relativeURLs = true
+
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[permalinks]
+  post = "/:year/:month/:day/:slug/"
 
 [Params]
   subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast \ | Data Visualisation, R programming, Python, Tableau, and Microsoft Power BI."
   #logo = "img/avatar.png"
   favicon = "img/favicon.ico"
-  dateFormat = "January 2, 2006"
+  dateFormat = "2006/01/02"
   commit = false
   rss = true
   comments = true
@@ -27,8 +33,6 @@ enableEmoji = true
   highlightjsLang = ["r", "yaml", "tex", "python"]
   highlightjsTheme = "github"
 
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-
 [[Params.bigimg]]
   src = "img/nature.jpg"
   desc = "nature"
@@ -41,10 +45,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   src = "img/laptop.jpg"
   desc = "Analytics"
 
-# [[Params.bigimg]]
-#   src = "img/path.jpg"
-#   desc = "Beauty"
-
 [Author]
   #name = "Aaron Simumba "
   website = "https://asimumba.rbind.io/"
@@ -56,7 +56,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   facebook = "aaron.s.simumba"
   youtube = "user/aaronsimumba"
   # googleplus = "+aaronsimumba" # or xxxxxxxxxxxxxxxxxxxxx
-  # instagram = "zed_samurai"
+  # instagram = "username"
   #gitlab = "username"
   #reddit = "username"
   #xing = "username"

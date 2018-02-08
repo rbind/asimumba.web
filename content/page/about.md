@@ -8,24 +8,29 @@ comments: false
 <img align="center" width="200" height="200" src="../../img/avatar.png">
 
 Hi, I'm Aaron Simumba, welcome to my website.
------------------------------------------
-In another life, I am an Accounting and Finance major. Graduated from the [**University of Namibia**](http://unam.edu.na/) with a BA degree in Accounting(Honours). For my part time activities, I tutor Business Administration students in the art of business and accounting at the [**University of Zambia**](https://www.unza.zm/).
+---------------------------------------------
+***
+In another life, I am an Accounting and Finance major. Graduated from the [**University of Namibia**](http://unam.edu.na/) with a BA degree in Accounting(Honours). Previously tutored Business Administration students in the art of business and accounting at the [**University of Zambia**](https://www.unza.zm/).
 
-Not to mention, I am lost in the Data Science web... I hope to find my way out of the maze soon. In addition, I'm fascinated by stock markets and everything with a business and finance buzz. 
+I am lost in the Data Science web... hoping to find my way out of the maze soon. I find data and the process of data analysis to glean insight from the raw data, overly exciting and fascinating alike.
+
+In addition, I'm fascinated by stock markets and everything with a business and finance buzz. 
 
 I can be found on [**Github**](https://github.com/asimumba/) poking around interesting projects... and occasionally I rant on [**twitter**](https://twitter.com/zedsamurai/).
 
 `For this website`
 
-This will be a place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytic technologies.
+>This will be a place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytic technologies.
 
 `Let's have fun!` :smile:
 
 **Community endeavours** 
+***
 
 To support Data Science and analytics growth in Zambia, I started a blog [ZedR](http://zedr.rbind.io/). Anyone is free to join and contribute content. Going forward, I hope to build a team of data science enthusiasts where we will host meetups and data science hackathons.
 
 **Courses completed:**
+***
 
 - _Introduction to R course_ - [**DataCamp**](https://www.datacamp.com/statement-of-accomplishment/course/284ca241bbb76f34add2d7c8a7ad4d4a8167d7f2)
 
@@ -44,6 +49,7 @@ To support Data Science and analytics growth in Zambia, I started a blog [ZedR](
 - _Introduction to Data and Probability_ [**Coursera**](https://www.coursera.org/learn/probability-intro?authMode=login)
 
 **Recommended blogs**
+***
 
 - [*Yihui Xie*](https://yihui.name/en/)
 
@@ -53,8 +59,12 @@ To support Data Science and analytics growth in Zambia, I started a blog [ZedR](
 
 - [*R Bloggers*](https://www.r-bloggers.com/)
 
-<br><br><br><br><br>
+- [*RStudio blog*](https://blog.rstudio.com/)
 
+- [*RStudio community: Everything RStudio*](https://community.rstudio.com/)
+
+<br><br><br><br><br>
+***
 This website is built with [**Blogdown**](https://github.com/rstudio/blogdown), [**hugo**](https://gohugo.io/), and deployed by [**netlify**](https://www.netlify.com/)
 
 
