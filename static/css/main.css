@@ -685,7 +685,7 @@ iframe, twitterwidget, video {
 }
 
 /* --- Tables --- */
- /* new table code */
+ /* new table */
 
 table {
   min-width: 50%;
@@ -761,6 +761,7 @@ pre {
   box-shadow: 5px 5px 5px #eee;
   padding: 1em;
   overflow-x: auto;
+  background: #f9f9f9;
 }
 
 code {background: #f9f9f9; font-size: 85%}

@@ -15,7 +15,7 @@ authoravatar: "../../images/avatar.png"
 ---
 
 ```{r,echo=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, tidy = TRUE)
 ```
 
 

@@ -20,7 +20,7 @@ fig_height: 2
 <h2>Prerequisites</h2>
 <p>For this analysis, I will mainly use the following packages. The beauty with the R language is that as a modular language, meaning it is fully extensible with add-on packages. I will make use of the <code>ggplot2</code> for visualising the data; <code>dplyr</code>, which is the package made to seamlessly handle data transformations, will be used to tweak the data to match the objectives of the analysis. The other packages are <code>readr</code> for data import.</p>
 <pre class="r"><code># the packages can be installed running the following command
-# install.packges(&quot;ggplot2&quot;, &quot;dplyr&quot;, &quot;readr&quot;, &quot;plotly&quot;)
+# install.packges(&#39;ggplot2&#39;, &#39;dplyr&#39;, &#39;readr&#39;, &#39;plotly&#39;)
 library(ggplot2)
 library(dplyr)
 library(readr)</code></pre>
@@ -39,18 +39,15 @@ library(readr)</code></pre>
 isps &lt;- read_csv(&quot;../../static/data/isps.csv&quot;)
 network_coverage &lt;- read_csv(&quot;../../static/data/network_coverage.csv&quot;)
 
-operator_stats &lt;- operator_stats %&gt;% 
-  as_tibble()
-isps &lt;- isps %&gt;% 
-  as_tibble()
-network_coverage &lt;- network_coverage %&gt;% 
-  as_tibble()</code></pre>
+operator_stats &lt;- operator_stats %&gt;% as_tibble()
+isps &lt;- isps %&gt;% as_tibble()
+network_coverage &lt;- network_coverage %&gt;% as_tibble()</code></pre>
 <p>The <code>head()</code> command gives a view of the first 6 rows across variables of your data by default. This allows a quick peek at your data, revealing the data types and forms; and learn how the data is laid out .</p>
-<pre class="r"><code>head(operator_stats, 4) #Take peek at the data.
+<pre class="r"><code>head(operator_stats, 4)  #Take peek at the data.
 head(isps, 4)
 head(network_coverage, 4)</code></pre>
 <p>The <code>names()</code> function helps to know the variables or column names in the data. This comes in hand to pick the names and variables in the analysis.</p>
-<pre class="r"><code>names(operator_stats) # column names </code></pre>
+<pre class="r"><code>names(operator_stats)  # column names </code></pre>
 <pre><code>##  [1] &quot;Year&quot;                                           
 ##  [2] &quot;Population_CSO_Estimate&quot;                        
 ##  [3] &quot;Number_of_Mobile_Operators&quot;                     
@@ -81,12 +78,8 @@ head(network_coverage, 4)</code></pre>
 ## [28] &quot;SMS_on_net_Mobile&quot;                              
 ## [29] &quot;SMS_off_net_Mobile&quot;</code></pre>
 <p>It is important to learn the data types and the form your data assumes in your dataset. To achieve this, the <code>str()</code> function can be called. Since the the dataset has variables I am not interested in, I narrow the field with the <code>select()</code> from the <code>dplyr</code> package to select only variables of interest</p>
-<pre class="r"><code>operator_stats %&gt;% 
-  select(Number_of_PSTN_Operators,
-         Number_of_Mobile_Operators, 
-         Number_of_Registered_SIM_Cards, 
-         Minutes_of_use_Monthly) %&gt;% 
-  str()</code></pre>
+<pre class="r"><code>operator_stats %&gt;% select(Number_of_PSTN_Operators, Number_of_Mobile_Operators, 
+    Number_of_Registered_SIM_Cards, Minutes_of_use_Monthly) %&gt;% str()</code></pre>
 </div>
 <div id="second-quarter-statistics-from-zicta" class="section level2">
 <h2>Second quarter statistics from ZICTA</h2>
@@ -101,41 +94,16 @@ head(network_coverage, 4)</code></pre>
 <div id="number-of-active-users" class="section level2">
 <h2>Number of active users</h2>
 <p>As can be seen from the trend that spans from 2010 to the year 2017 up to Q2 statistics, there has been a relatively upward trend in active mobile user subscribers. With the period between 2010 to 2012 experiencing the biggest leap of nearly 50% change.</p>
-<pre class="r"><code>operator_stats %&gt;% 
-  ggplot() + 
-  geom_line(
-    mapping =aes(
-      x = Year,
-      y = Number_of_active_Subscribers), 
-    color = &quot;blue&quot;
-    ) +
-  geom_point(
-    mapping =aes(
-      x = Year,
-      y = Number_of_active_Subscribers), 
-    color = &quot;red&quot;
-  ) +
-  labs(
-    x = &quot;Year&quot;,
-    y = &quot;Number of Active subscirbers&quot;
-  )  + ggtitle(&quot;Trend of Active mobile subsribers&quot;, 
-                  subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;) </code></pre>
+<pre class="r"><code>operator_stats %&gt;% ggplot() + geom_line(mapping = aes(x = Year, y = Number_of_active_Subscribers), 
+    color = &quot;blue&quot;) + geom_point(mapping = aes(x = Year, y = Number_of_active_Subscribers), 
+    color = &quot;red&quot;) + labs(x = &quot;Year&quot;, y = &quot;Number of Active subscirbers&quot;) + 
+    ggtitle(&quot;Trend of Active mobile subsribers&quot;, subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;)</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-7-1.png" width="768" /></p>
 <p>The plot below shows a positive correlation between the active mobile subscribers with the population estimate from the Central Statistics Office.</p>
-<pre class="r"><code>operator_stats %&gt;% 
-  ggplot(aes(x = Population_CSO_Estimate, 
-             y = Number_of_active_Subscribers,
-             color = Number_of_active_Subscribers )) +
-  geom_line() +
-  geom_point() + 
-  theme(legend.title = element_text(size = 10)
-    ) + 
-  labs(
-    x = &quot;Population Estimate&quot;,
-    y = &quot;Number of Active subscirbers&quot;
-  ) +
-  ggtitle(&quot;Population Vs. Number of Mobile Active subscribers&quot;, 
-          subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;) </code></pre>
+<pre class="r"><code>operator_stats %&gt;% ggplot(aes(x = Population_CSO_Estimate, y = Number_of_active_Subscribers, 
+    color = Number_of_active_Subscribers)) + geom_line() + geom_point() + theme(legend.title = element_text(size = 10)) + 
+    labs(x = &quot;Population Estimate&quot;, y = &quot;Number of Active subscirbers&quot;) + ggtitle(&quot;Population Vs. Number of Mobile Active subscribers&quot;, 
+    subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;)</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-8-1.png" width="768" /></p>
 </div>
 <div id="change-in-the-active-user-base" class="section level2">
@@ -242,64 +210,32 @@ names(per_change) &lt;- c(&quot;Year&quot;,&quot;Population&quot;, &quot;Active 
 <pre><code>##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
 ##  5447536 10114867 10524676 10285415 11916871 12429675</code></pre>
 <p>For the mobile penetration numbers per 100 inhabitants, the graph below shows an upward trend for much of the years under review. More in line with the active user base numbers.</p>
-<pre class="r"><code>operator_stats %&gt;% 
-  ggplot(aes(x = Year, y = Mobile_Penetration_100_Inhabitants)) +
-  geom_point() +
-  geom_line() +
-  labs(
-    x = &quot;Year&quot;,
-    y = &quot;Mobile Penetration per 100 Inhabitants&quot;
-  ) +
-  ggtitle(&quot;Mobile Penetration per 100 Inhabitants&quot;, 
-          subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;) </code></pre>
+<pre class="r"><code>operator_stats %&gt;% ggplot(aes(x = Year, y = Mobile_Penetration_100_Inhabitants)) + 
+    geom_point() + geom_line() + labs(x = &quot;Year&quot;, y = &quot;Mobile Penetration per 100 Inhabitants&quot;) + 
+    ggtitle(&quot;Mobile Penetration per 100 Inhabitants&quot;, subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;)</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-11-1.png" width="768" /></p>
 </div>
 <div id="domestic-calls-traffic---incoming-and-outgoing" class="section level2">
 <h2>Domestic calls Traffic - Incoming and Outgoing</h2>
-<pre class="r"><code>operator_stats %&gt;% 
-ggplot() +
-  geom_line(aes(
-    x = Year,
-    y = Traffic_domestic_Incoming_Minutes_MNO_PSTN ), 
-    color = &quot;red&quot;) +
-  geom_line(aes(
-    x = Year, 
-    y = Traffic_domestic_Outgoing_Minutes_MNO_PSTN),
-    color = &quot;green&quot;
-    ) +
-  labs(
-    x = &quot;Year&quot;, 
-    y = &quot;Domestic incoming/outgoing traffic in minutes&quot;
-  ) + 
-  ggtitle(&quot;Domestic incoming Vs. Outgoing Traffic in minutes&quot;) </code></pre>
+<pre class="r"><code>operator_stats %&gt;% ggplot() + geom_line(aes(x = Year, y = Traffic_domestic_Incoming_Minutes_MNO_PSTN), 
+    color = &quot;red&quot;) + geom_line(aes(x = Year, y = Traffic_domestic_Outgoing_Minutes_MNO_PSTN), 
+    color = &quot;green&quot;) + labs(x = &quot;Year&quot;, y = &quot;Domestic incoming/outgoing traffic in minutes&quot;) + 
+    ggtitle(&quot;Domestic incoming Vs. Outgoing Traffic in minutes&quot;)</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-12-1.png" width="768" /></p>
 </div>
 <div id="international-incoming-and-outgoing-traffic" class="section level2">
 <h2>International incoming and outgoing traffic</h2>
-<pre class="r"><code>operator_stats %&gt;% 
-ggplot() +
-  geom_line(aes(
-    x = Year,
-    y = Traffic_International_Incoming_Minutes_MNO_PSTN), 
-    color = &quot;red&quot;) +
-  geom_line(aes(
-    x = Year, 
-    y = Traffic_International_Outgoing_Minutes_MNO_PSTN),
-    color = &quot;green&quot;
-    ) +
-  labs(
-    x = &quot;Year&quot;, 
-    y = &quot;International incoming/outgoing traffic in minutes&quot;
-  ) + 
-  ggtitle(&quot;International incoming Vs. Outgoing Traffic in minutes&quot;) </code></pre>
+<pre class="r"><code>operator_stats %&gt;% ggplot() + geom_line(aes(x = Year, y = Traffic_International_Incoming_Minutes_MNO_PSTN), 
+    color = &quot;red&quot;) + geom_line(aes(x = Year, y = Traffic_International_Outgoing_Minutes_MNO_PSTN), 
+    color = &quot;green&quot;) + labs(x = &quot;Year&quot;, y = &quot;International incoming/outgoing traffic in minutes&quot;) + 
+    ggtitle(&quot;International incoming Vs. Outgoing Traffic in minutes&quot;)</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-13-1.png" width="768" /></p>
 </div>
 <div id="network-coverage" class="section level2">
 <h2>Network Coverage</h2>
-<pre class="r"><code>network_cover &lt;-  network_coverage %&gt;% 
-  select(Year, Airtel_Zambia, MTN_Zambia, Zamtel) 
-knitr::kable(network_cover, booktabs = TRUE, 
-             caption = &quot;Percentage network coverage by operator&quot;)  </code></pre>
+<pre class="r"><code>network_cover &lt;- network_coverage %&gt;% select(Year, Airtel_Zambia, MTN_Zambia, 
+    Zamtel)
+knitr::kable(network_cover, booktabs = TRUE, caption = &quot;Percentage network coverage by operator&quot;)</code></pre>
 <table>
 <caption><span id="tab:unnamed-chunk-14">Table 2: </span>Percentage network coverage by operator</caption>
 <thead>
@@ -375,80 +311,52 @@ knitr::kable(network_cover, booktabs = TRUE,
 <pre class="r"><code>summary(operator_stats$Mobile_Broadband_users)</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
 ##  379888 2289147 4403005 3855730 5338910 6090412       1</code></pre>
-<pre class="r"><code>operator_stats %&gt;% 
-  ggplot() +
-  geom_line(aes(x = Mobile_Broadband_penetration_100_users,
-                y = Mobile_Broadband_users)) +
-  labs(
-    x = &quot;Mobile broadband penetration per 100 users&quot;, 
-    y = &quot;Mobile broadband users&quot;
-  ) + 
-  ggtitle(&quot;Mobile broadband users Vs. 
-          Mobile broadband penetration per 100 users&quot;,
-          subtitle = &quot;Over the period from 2010 - 
+<pre class="r"><code>operator_stats %&gt;% ggplot() + geom_line(aes(x = Mobile_Broadband_penetration_100_users, 
+    y = Mobile_Broadband_users)) + labs(x = &quot;Mobile broadband penetration per 100 users&quot;, 
+    y = &quot;Mobile broadband users&quot;) + ggtitle(&quot;Mobile broadband users Vs. 
+          Mobile broadband penetration per 100 users&quot;, 
+    subtitle = &quot;Over the period from 2010 - 
           2017, Q1 &amp; Q2&quot;)</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-16-1.png" width="768" /></p>
 </div>
 <div id="internet-subscribers-vs-penetration-per-100-inhabitants" class="section level2">
 <h2>Internet subscribers Vs Penetration per 100 inhabitants</h2>
-<pre class="r"><code>isps %&gt;% 
-  ggplot() +
-  geom_line(aes(x = Fixed_internet_Penetration_per_100,
-                y = Number_of_Subscribers)) +
-  labs( 
-    x = &quot;Fixed internet penetration per 100 inhabitants&quot;,
-    y = &quot;Number of subscribers&quot;) +
-   ggtitle(&quot;Fixed internet penetration per 100 inhabitants Vs.
-           Number of subscribers&quot;,
-           subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;) </code></pre>
+<pre class="r"><code>isps %&gt;% ggplot() + geom_line(aes(x = Fixed_internet_Penetration_per_100, y = Number_of_Subscribers)) + 
+    labs(x = &quot;Fixed internet penetration per 100 inhabitants&quot;, y = &quot;Number of subscribers&quot;) + 
+    ggtitle(&quot;Fixed internet penetration per 100 inhabitants Vs.
+           Number of subscribers&quot;, 
+        subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;)</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-17-1.png" width="768" /></p>
 </div>
 <div id="cost-differentials" class="section level2">
 <h2>Cost differentials</h2>
 <p>The average cost for SMSs had maintained a very stable flow from the year 2010 to the year 2014, with on network SMS cost standing at K 0.30. Off net SMS cost averaged K0.24, significantly low than off net cost. A signal to growing competition and the mobile operators’ desire to benefit across networks. For the mobile phone tariff, for much of the period under review, we can see a relatively declining average cost of mobile tariff across different mobile operators. Although the year 2017 second quarter numbers show an increase in the tariff.The year 2017 saw a further increase in Excise duty taxes on telephone airtime from 15% to 15.5% for the 2017 <a href="http://taxsummaries.pwc.com/ID/Zambia-Corporate-Other-taxes">budget</a>, this is in addition to the 2015 increase from 10% to 15%. This can be reflected in the up-tick in the tariff costs beyond 2016.</p>
-<pre class="r"><code>operator_stats %&gt;% 
-  ggplot() + 
-  geom_line(aes(x = Year, y = Voice_Tariff_Mobile), color = &quot;red&quot;) +
-  annotate(&quot;text&quot;,x= 2013,y=0.55,label=&quot;Mobile voice tariff&quot;,
-           fontface=&quot;bold&quot;,size = 3, colour = &quot;forestgreen&quot;) +
-  geom_line(aes(x = Year, y = SMS_on_net_Mobile), color = &quot;green&quot;) +
-  annotate(&quot;text&quot;,x= 2013,y=0.32,label=&quot;SMS on-net tariff&quot;,
-           fontface=&quot;bold&quot;,size = 3, colour = &quot;red&quot;) +
-  geom_line(aes(x = Year, y = SMS_off_net_Mobile), color = &quot;yellow&quot;) +
-  annotate(&quot;text&quot;,x= 2013,y=0.25,label=&quot;SMS off-net tariff&quot;,
-           fontface=&quot;bold&quot;,size = 3, colour = &quot;black&quot;) +
-  labs(
-    x = &quot;year&quot;,
-    y = &quot;Mobile Voice tariff/ SMS - on and off net &quot;
-  ) +
-  ggtitle(&quot;Mobile voice tariff and SMS tariff - On &amp; Off net&quot;,
-          subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;) </code></pre>
+<pre class="r"><code>operator_stats %&gt;% ggplot() + geom_line(aes(x = Year, y = Voice_Tariff_Mobile), 
+    color = &quot;red&quot;) + annotate(&quot;text&quot;, x = 2013, y = 0.55, label = &quot;Mobile voice tariff&quot;, 
+    fontface = &quot;bold&quot;, size = 3, colour = &quot;forestgreen&quot;) + geom_line(aes(x = Year, 
+    y = SMS_on_net_Mobile), color = &quot;green&quot;) + annotate(&quot;text&quot;, x = 2013, y = 0.32, 
+    label = &quot;SMS on-net tariff&quot;, fontface = &quot;bold&quot;, size = 3, colour = &quot;red&quot;) + 
+    geom_line(aes(x = Year, y = SMS_off_net_Mobile), color = &quot;yellow&quot;) + annotate(&quot;text&quot;, 
+    x = 2013, y = 0.25, label = &quot;SMS off-net tariff&quot;, fontface = &quot;bold&quot;, size = 3, 
+    colour = &quot;black&quot;) + labs(x = &quot;year&quot;, y = &quot;Mobile Voice tariff/ SMS - on and off net &quot;) + 
+    ggtitle(&quot;Mobile voice tariff and SMS tariff - On &amp; Off net&quot;, subtitle = &quot;Over the period from 2010 - 2017, Q1 &amp; Q2&quot;)</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-18-1.png" width="768" /></p>
 </div>
 <div id="mobile-voice-call-cost-perminute" class="section level2">
 <h2>Mobile voice call cost per/minute</h2>
 <p>On all accounts, 2014 through to 2016 saw a significant drop in the cost of calling per minute. This is in comparison to the numbers prevailing from the year 2010 t0 2014. With Voice-off-net off peak on mobile maintaining a very steady cost per minute between 2010 to 2014. Conversely, Voice-on-net off peak on mobile had a relatively up-ward swing in the cost of calling per minute. For the year 2014, there was a drop in all forms of calling, whether on net and off network. This was preceded by the sim registration exercise, which has significant back drop on the mobile operators. The drop in cost may have been a means to lure back customers on their platform.</p>
-<pre class="r"><code>operator_stats %&gt;% 
-  ggplot() +
-  geom_line(aes(x = Year, y = Voice_on_net_peak_Mobile), color = &quot;red&quot;) +
-  annotate(&quot;text&quot;,x= 2013,y=1.18,label=&quot;Voice on net peak - Mobile&quot;,
-           fontface=&quot;bold&quot;,size = 3, colour = &quot;black&quot;) +
-  
-  geom_line(aes(x = Year, y = Voice_on_net_off_peak_Mobile), color = &quot;green&quot;) +
-  annotate(&quot;text&quot;,x= 2013,y= 0.9,label=&quot;Voice on net off peak - Mobile&quot;,
-           fontface=&quot;bold&quot;,size = 3, colour = &quot;black&quot;) +
-  
-  geom_line(aes(x = Year, y = Voice_off_net_peak_Mobile), color = &quot;yellow&quot;) +
-  annotate(&quot;text&quot;,x= 2013,y= 1.4,label=&quot;Voice off net peak - Mobile&quot;,
-           fontface=&quot;bold&quot;,size = 3, colour = &quot;black&quot;) +
-  
-  geom_line(aes(x = Year, y = Voice_off_net_off_peak_Mobile), color = &quot;blue&quot;) +
-  annotate(&quot;text&quot;,x= 2013,y=1.22,label=&quot;Voice off net off peak - Mobile&quot;,
-           fontface=&quot;bold&quot;,size = 3, colour = &quot;black&quot;)  +
-  labs(
-    x = &quot;Year&quot;,
-    y = &quot;Voice cost (Kwacha) per min&quot;
-  ) +
-  ggtitle(&quot;Voice cost in Kwachas per minute on mobile&quot;) </code></pre>
+<pre class="r"><code>operator_stats %&gt;% ggplot() + geom_line(aes(x = Year, y = Voice_on_net_peak_Mobile), 
+    color = &quot;red&quot;) + annotate(&quot;text&quot;, x = 2013, y = 1.18, label = &quot;Voice on net peak - Mobile&quot;, 
+    fontface = &quot;bold&quot;, size = 3, colour = &quot;black&quot;) + 
+geom_line(aes(x = Year, y = Voice_on_net_off_peak_Mobile), color = &quot;green&quot;) + 
+    annotate(&quot;text&quot;, x = 2013, y = 0.9, label = &quot;Voice on net off peak - Mobile&quot;, 
+        fontface = &quot;bold&quot;, size = 3, colour = &quot;black&quot;) + 
+geom_line(aes(x = Year, y = Voice_off_net_peak_Mobile), color = &quot;yellow&quot;) + 
+    annotate(&quot;text&quot;, x = 2013, y = 1.4, label = &quot;Voice off net peak - Mobile&quot;, 
+        fontface = &quot;bold&quot;, size = 3, colour = &quot;black&quot;) + 
+geom_line(aes(x = Year, y = Voice_off_net_off_peak_Mobile), color = &quot;blue&quot;) + 
+    annotate(&quot;text&quot;, x = 2013, y = 1.22, label = &quot;Voice off net off peak - Mobile&quot;, 
+        fontface = &quot;bold&quot;, size = 3, colour = &quot;black&quot;) + labs(x = &quot;Year&quot;, y = &quot;Voice cost (Kwacha) per min&quot;) + 
+    ggtitle(&quot;Voice cost in Kwachas per minute on mobile&quot;)</code></pre>
 <p><img src="/post/2017-09-27-mobile-and-internet-penetration-in-zambia_files/figure-html/unnamed-chunk-19-1.png" width="768" /></p>
 </div>

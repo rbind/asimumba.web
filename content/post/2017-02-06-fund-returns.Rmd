@@ -16,6 +16,10 @@ description: Stock portfolio - a quick overview
 authoravatar: "../../images/avatar.png"
 ---
 
+```{r,echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE, tidy = TRUE)
+```
+
 ```{r,results='hide',message=FALSE}
 ## Packages to load
 library(quantmod)
