@@ -62,6 +62,7 @@ To support Data Science and analytics growth in Zambia, I started a blog [ZedR](
 - [*RStudio blog*](https://blog.rstudio.com/)
 
 - [*RStudio community: Everything RStudio*](https://community.rstudio.com/)
+- [*R Weekly*](https://rweekly.org/)
 
 <br><br><br><br><br>
 ***
