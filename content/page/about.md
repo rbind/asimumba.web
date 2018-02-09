@@ -20,14 +20,14 @@ I can be found on [**Github**](https://github.com/asimumba/) poking around inter
 
 `For this website`
 
->This will be a place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytic technologies.
+>This will be a place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies.
 
 `Let's have fun!` :smile:
 
 **Community endeavours** 
 ***
 
-To support Data Science and analytics growth in Zambia, I started a blog [ZedR](http://zedr.rbind.io/). Anyone is free to join and contribute content. Going forward, I hope to build a team of data science enthusiasts where we will host meetups and data science hackathons.
+To support Data Science and analytics growth in Zambia, I started a blog [ZedR](http://zedr.rbind.io/). Anyone is free to join and contribute content. Going forward, I hope to build a team of data science enthusiasts with future pans to host meetups and data science hackathons.
 
 **Courses completed:**
 ***
