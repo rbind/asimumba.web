@@ -300,6 +300,7 @@ footer {
 
 footer a {
   color: #b3cde0;
+  border-bottom: none;
 }
 
 footer .list-inline {
