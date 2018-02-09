@@ -35,15 +35,18 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[Params.bigimg]]
   src = "img/nature.jpg"
-  desc = "nature"
-# [[Params.bigimg]]
-#   src = "img/sphere.jpg"
-#   desc = "Sphere"
-#   # position: see values of CSS background-position.
-#   position = "center top"
+  desc = "Nature"
+
 [[Params.bigimg]]
   src = "img/laptop.jpg"
   desc = "Analytics"
+  position = "center bottom"
+
+[[Params.bigimg]]
+  src = "img/report.jpg"
+  desc = "Research"
+  # position: see values of CSS background-position.
+  position = "center bottom"
 
 [Author]
   #name = "Aaron Simumba "
@@ -55,21 +58,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   twitter = "asimumba21"
   facebook = "aaron.s.simumba"
   youtube = "user/aaronsimumba"
-  # googleplus = "+aaronsimumba" # or xxxxxxxxxxxxxxxxxxxxx
-  # instagram = "username"
-  #gitlab = "username"
-  #reddit = "username"
-  #xing = "username"
-  #snapchat = "username"
-   # or channel/channelname
-  #soundcloud = "username"
-  #spotify = "username"
-  #bandcamp = "username"
-  #itchio = "username"
-  #vk = "username"
-  #paypal = "username"
-  #telegram = "username"
-
 [[menu.main]]
     name = "Home"
     url = "/"

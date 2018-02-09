@@ -7,6 +7,7 @@ tags:
   - Safari
   - Luangwa
   - National park
+bigimg: [{src: "/img/path.jpg", desc: "Beautiful Road"}]
 ---
 
 **Nature's beauty in full colour** `Safari`.

@@ -1,5 +1,6 @@
 ---
 title: "Demo: Embedding Tableau public Visualizations"
+subtitle: "Through Tableau public integration"
 author: Aaron Simumba
 date: '2017-11-12'
 slug: demo-embedding-tableau-workbook

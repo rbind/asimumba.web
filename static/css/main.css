@@ -10,7 +10,6 @@ body {
   flex-flow: column;
   height: 100vh;
   font-weight: 400;
-  /* padding: 0.7em; */
   line-height: 1.5em;
 }
 
@@ -35,6 +34,7 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 600;
   color: #36454f;
 }
+
 h2 {font-size: 20px}
 
 a {
@@ -366,9 +366,13 @@ footer .theme-by {
 }
 .post-preview .post-subtitle {
   margin: 0;
-  font-weight: 200;
+  font-weight: 80;
   margin-bottom: 10px;
+  font-size: 15px;
+  font-style: italic;
+  color: #536878;
 }
+
 .post-preview .post-meta,
 .post-heading .post-meta {
   color: #536878;
@@ -380,14 +384,14 @@ footer .theme-by {
 }
 .post-preview .post-meta a,
 .post-heading .post-meta a {
-  color: #536878;
+  color: #24292e;
   text-decoration: none;
   border: none;
   font-size: 10px;
   display: inline-block;
   line-height: 1;
   padding: 5px 5px 3px 5px;
-  background: #e0e3e5;
+  background: #e0c491;
   text-align: center;
   font-weight: normal;
   text-transform: uppercase;
@@ -398,7 +402,7 @@ footer .theme-by {
   font-family: 'Carlito', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6em;
   color: #222222;
-  font-size: 13px;
+  font-size: 14px;
 }
 .post-entry-container {
   display: inline-block;
@@ -428,8 +432,8 @@ footer .theme-by {
   display: inline-block;
   line-height: 1;
   padding: 5px 5px 3px 5px;
-  background: #e0e3e5;
-  color: #0f0f0f;
+  background:  #e0c491;
+  color: #24292e;
   text-align: center;
   font-weight: normal;
   text-transform: uppercase;
@@ -450,7 +454,7 @@ footer .theme-by {
   font-family: 'Carlito', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #999;
   font-size: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .blog-tags a {
@@ -579,22 +583,54 @@ footer .theme-by {
   .intro-header.big-img {
     margin-top: 91px;  /* Full navbar is small navbar + 20px padding on each side when expanded */
   }
-  .intro-header.big-img .page-heading,
+  .intro-header.big-img .page-heading {
+    padding: 225px 0;
+  }
   .intro-header.big-img .post-heading  {
+    padding: 70px 0;
+  }
+
+  .intro-header.big-img .travel-heading  {
     padding: 150px 0;
   }
-  .intro-header .page-heading h1,
+
+  .intro-header .page-heading h1{
+      font-size: 60px;
+      color: inherit;
+      font-weight: 200px;
+    }
+
+  .intro-header .page-heading h1{
+      font-size: 60px;
+      color: inherit;
+      font-weight: 200px;
+    }
+
+  .intro-header .travel-heading h1{
+      font-size: 50px;
+      color: #ffffff;
+      font-weight: 100px;
+    }
+
   .intro-header .tags-heading h1 {
-    font-size: 45px;
-    color: inherit;
-    font-weight: lighter;
+    font-size: 25px;
+    color: #36454f;
+    font-weight: 200px;
   }
-  .intro-header .post-heading h1 {
-    font-size: 35px;
+
+  .intro-header .About-subheading h1 {
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 200px;
   }
+
+.intro-header .post-heading h1 {
+  font-size: 40px;
+  color: inherit;
+}
+
   .intro-header.big-img .img-desc {
-    font-size: 15px;
-  }
+    font-size: 20px;
 }
 
 .header-section.has-img .no-img {
