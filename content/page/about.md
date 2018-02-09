@@ -27,7 +27,7 @@ I can be found on [**Github**](https://github.com/asimumba/) poking around inter
 **Community endeavours** 
 ***
 
-To support Data Science and analytics growth in Zambia, I started a blog [ZedR](http://zedr.rbind.io/). Anyone is free to join and contribute content. Going forward, I hope to build a team of data science enthusiasts with future pans to host meetups and data science hackathons.
+To support Data Science and analytics growth in Zambia, I started a blog [ZedR](http://zedr.rbind.io/). Anyone is free to join and contribute content. Going forward, I hope to build a team of data science enthusiasts with future plans to host meetups and data science hackathons.
 
 **Courses completed:**
 ***
