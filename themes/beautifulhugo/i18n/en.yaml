@@ -12,15 +12,15 @@
 - id: translationsSeparator
   translation: ", "
 - id: readMore
-  translation: "Read More"
+  translation: "Read more"
 - id: olderPosts
-  translation: "Older Posts"
+  translation: "Older posts"
 - id: newerPosts
-  translation: "Newer Posts"
+  translation: "Newer posts"
 - id: previousPost
-  translation: "Previous Post"
+  translation: "Previous post"
 - id: nextPost
-  translation: "Next Post"
+  translation: "Next post"
 - id: readTime
   translation: "minutes"
 - id: words
@@ -62,5 +62,3 @@
   translation: "Your email address"
 - id: yourWebsite
   translation: "You website"
-
-
