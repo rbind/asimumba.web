@@ -17,7 +17,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [Params]
   subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast \ | Data Visualisation, R programming, Python, Tableau, and Microsoft Power BI."
-  #logo = "img/avatar.png"
   favicon = "img/favicon.ico"
   dateFormat = "2006/01/02"
   commit = false
@@ -65,7 +64,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
     name = "Blog"
-    url = ""
+    url = "blog"
     weight = 2
 
 [[menu.main]]
@@ -90,7 +89,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
     name = "About"
-    url = "page/about/"
+    url = "about/about/"
     weight = 7
 # [[menu.main]]
 #     identifier = "about"
