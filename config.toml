@@ -26,6 +26,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   UseChroma = false
   githubContentURL = "https://github.com/rbind/asimumba/edit/master/content/"
 
+
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
   highlightjsVersion = "9.12.0"
   highlightjsCDN = "//cdn.bootcss.com"
@@ -95,3 +96,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 #     identifier = "about"
 #     name = "About"
 #     weight = 4
+
+[[params.lang]]
+    edit = "Suggest an edit of this page"
