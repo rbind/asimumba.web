@@ -1,11 +1,19 @@
 options(
         servr.daemon = TRUE,
         blogdown.yaml.empty = FALSE,
-        blogdown.publishDir = '../aaron-public',  blogdown.author = "Aaron Simumba",
+        blogdown.publishDir = '../aaron-public',  
+        blogdown.author = "Aaron Simumba",
         blogdown.generator.server = TRUE,
         blogdown.hugo.server = c('-D', '-F', '--navigateToChanged'),
-        blogdown.title_case = TRUE
+        digits = 4,
+        formatR.indent = 2,
+        blogdown.title_case = function(x) {
+          if (is.na(iconv(x, to = 'ASCII'))) return(x)
+          # if the title is pure ASCII, use title case
+          tools::toTitleCase(x)
+        }
 )
+
 
 local({
   pandoc_path = Sys.getenv('RSTUDIO_PANDOC', NA)
