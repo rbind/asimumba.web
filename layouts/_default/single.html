@@ -5,7 +5,9 @@
       <article role="main" class="blog-post">
         {{ .Content }}
       </article>
-
+      {{ if .Params.toc }}
+      {{ .TableOfContents }}
+      {{ end }}
       {{ if ne .Type "page" }}
         <ul class="pager blog-pager">
           {{ if .PrevInSection }}
@@ -20,8 +22,6 @@
           {{ end }}
         </ul>
       {{ end }}
-
-
       {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (ne .Type "page"))) }}
         {{ if .Site.DisqusShortname }}
           <div class="disqus-comments">

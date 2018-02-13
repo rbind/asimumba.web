@@ -9,12 +9,15 @@ tags:
 slug: Mobile-Internet-Penetration-in-Zambia
 description: Overview on mobile and internet penetration in Zambia
 subtittle: An overview of mobile and internet data.
-fig_width: 2
-fig_height: 2
+fig_width: 1
+fig_height: 1
+output:
+   blogdown::html_page:
+     toc: true
 ---
 In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority ([ZICTA](http://www.zicta.zm/)) data. I will walk through the data on the subscriber base, the user traffic and the cost differentials among the three mobile operators, these being: Airtel, Zamtel and MTN Zambia. In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used. 
 ```{r,echo=FALSE}
-knitr::opts_chunk$set(fig.width=8, fig.height=5,options(scipen=999), message = FALSE,warning = FALSE, tidy = TRUE) 
+knitr::opts_chunk$set(fig.height=3.5,fig.width=6,options(scipen=999), message = FALSE,warning = FALSE, tidy = TRUE) 
 ```
 
 
@@ -61,7 +64,7 @@ head(network_coverage, 4)
 
 The `names()` function helps to know the variables or column names in the data. This comes in hand to pick the names and variables in the analysis.
 
-```{r}
+```{r, eval=FALSE}
 names(operator_stats) # column names 
 ```
 
@@ -96,14 +99,12 @@ operator_stats %>%
   geom_line(
     mapping =aes(
       x = Year,
-      y = Number_of_active_Subscribers), 
-    color = "blue"
+      y = Number_of_active_Subscribers)
     ) +
   geom_point(
     mapping =aes(
       x = Year,
-      y = Number_of_active_Subscribers), 
-    color = "red"
+      y = Number_of_active_Subscribers)
   ) +
   labs(
     x = "Year",
@@ -117,8 +118,7 @@ The plot below shows a positive correlation between the active mobile subscriber
 ```{r}
 operator_stats %>% 
   ggplot(aes(x = Population_CSO_Estimate, 
-             y = Number_of_active_Subscribers,
-             color = Number_of_active_Subscribers )) +
+             y = Number_of_active_Subscribers)) +
   geom_line() +
   geom_point() + 
   theme(legend.title = element_text(size = 10)
@@ -144,12 +144,7 @@ per_change <- operator_stats %>%
          Number_of_active_Subscribers) %>% 
   mutate(Percentage_change_pop = (
     Population_CSO_Estimate - lag(Population_CSO_Estimate))/
-      lag(Population_CSO_Estimate)*100,
-         
-         Percentage_change = (Number_of_active_Subscribers -
-              lag(Number_of_active_Subscribers))/
-           lag(Number_of_active_Subscribers) * 100
-            )  
+      lag(Population_CSO_Estimate)*100,Percentage_change = (Number_of_active_Subscribers -lag(Number_of_active_Subscribers))/lag(Number_of_active_Subscribers) * 100)  
 
 names(per_change) <- c("Year","Population", "Active subscribers",
                        "% change pop.", "% change") 
@@ -185,12 +180,10 @@ operator_stats %>%
 ggplot() +
   geom_line(aes(
     x = Year,
-    y = Traffic_domestic_Incoming_Minutes_MNO_PSTN ), 
-    color = "red") +
+    y = Traffic_domestic_Incoming_Minutes_MNO_PSTN )) +
   geom_line(aes(
     x = Year, 
-    y = Traffic_domestic_Outgoing_Minutes_MNO_PSTN),
-    color = "green"
+    y = Traffic_domestic_Outgoing_Minutes_MNO_PSTN)
     ) +
   labs(
     x = "Year", 
@@ -206,12 +199,10 @@ operator_stats %>%
 ggplot() +
   geom_line(aes(
     x = Year,
-    y = Traffic_International_Incoming_Minutes_MNO_PSTN), 
-    color = "red") +
+    y = Traffic_International_Incoming_Minutes_MNO_PSTN)) +
   geom_line(aes(
     x = Year, 
-    y = Traffic_International_Outgoing_Minutes_MNO_PSTN),
-    color = "green"
+    y = Traffic_International_Outgoing_Minutes_MNO_PSTN)
     ) +
   labs(
     x = "Year", 
@@ -278,15 +269,12 @@ The average cost for SMSs had maintained  a very stable flow from the year 2010 
 ```{r}
 operator_stats %>% 
   ggplot() + 
-  geom_line(aes(x = Year, y = Voice_Tariff_Mobile), color = "red") +
-  annotate("text",x= 2013,y=0.55,label="Mobile voice tariff",
-           fontface="bold",size = 3, colour = "forestgreen") +
-  geom_line(aes(x = Year, y = SMS_on_net_Mobile), color = "green") +
-  annotate("text",x= 2013,y=0.32,label="SMS on-net tariff",
-           fontface="bold",size = 3, colour = "red") +
-  geom_line(aes(x = Year, y = SMS_off_net_Mobile), color = "yellow") +
-  annotate("text",x= 2013,y=0.25,label="SMS off-net tariff",
-           fontface="bold",size = 3, colour = "black") +
+  geom_line(aes(x = Year, y = Voice_Tariff_Mobile)) +
+  annotate("text",x= 2013,y=0.55,label="Mobile voice tariff",size = 3) +
+  geom_line(aes(x = Year, y = SMS_on_net_Mobile)) +
+  annotate("text",x= 2013,y=0.32,label="SMS on-net tariff",size = 3) +
+  geom_line(aes(x = Year, y = SMS_off_net_Mobile)) +
+  annotate("text",x= 2013,y=0.25,label="SMS off-net tariff",size = 3) +
   labs(
     x = "year",
     y = "Mobile Voice tariff/ SMS - on and off net "
@@ -303,21 +291,17 @@ On all accounts, 2014 through to 2016 saw a significant drop in the cost of call
 ```{r}
 operator_stats %>% 
   ggplot() +
-  geom_line(aes(x = Year, y = Voice_on_net_peak_Mobile), color = "red") +
-  annotate("text",x= 2013,y=1.18,label="Voice on net peak - Mobile",
-           fontface="bold",size = 3, colour = "black") +
+  geom_line(aes(x = Year, y = Voice_on_net_peak_Mobile)) +
+  annotate("text",x= 2013,y=1.18,label="Voice on net peak - Mobile",size = 3) +
   
-  geom_line(aes(x = Year, y = Voice_on_net_off_peak_Mobile), color = "green") +
-  annotate("text",x= 2013,y= 0.9,label="Voice on net off peak - Mobile",
-           fontface="bold",size = 3, colour = "black") +
+  geom_line(aes(x = Year, y = Voice_on_net_off_peak_Mobile)) +
+  annotate("text",x= 2013,y= 0.9,label="Voice on net off peak - Mobile",size = 3) +
   
-  geom_line(aes(x = Year, y = Voice_off_net_peak_Mobile), color = "yellow") +
-  annotate("text",x= 2013,y= 1.4,label="Voice off net peak - Mobile",
-           fontface="bold",size = 3, colour = "black") +
+  geom_line(aes(x = Year, y = Voice_off_net_peak_Mobile)) +
+  annotate("text",x= 2013,y= 1.4,label="Voice off net peak - Mobile",size = 3) +
   
-  geom_line(aes(x = Year, y = Voice_off_net_off_peak_Mobile), color = "blue") +
-  annotate("text",x= 2013,y=1.22,label="Voice off net off peak - Mobile",
-           fontface="bold",size = 3, colour = "black")  +
+  geom_line(aes(x = Year, y = Voice_off_net_off_peak_Mobile)) +
+  annotate("text",x= 2013,y=1.22,label="Voice off net off peak - Mobile",size = 3)  +
   labs(
     x = "Year",
     y = "Voice cost (Kwacha) per min"

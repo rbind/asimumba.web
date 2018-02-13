@@ -7,9 +7,7 @@ tags:
     - tweet
     - blog
 slug: let-twitter-do-the-job
-#image: "images/background.jpg"
-authoravatar: "../../images/avatar.png"
-
+toc: true
 ---
 
 One of the most exciting things I've been able to do in the past few months, has been my rekindled interest in blogging. No matter how trivial the idea that comes to mind is, I find myself constantly wanting to put it in words and hang it somewhere on this site. Although, this may seem like an obsession; you never know who is reading or interested in your thoughts, no matter how non-bearing they may seem.

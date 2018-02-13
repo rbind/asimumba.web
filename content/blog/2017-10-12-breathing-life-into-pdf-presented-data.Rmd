@@ -10,12 +10,14 @@ tags:
   - pdf
   - Java jdk
   - tabulizer
-draft: no
 description: Bringing PDF presented data back to life.
 slug: Breathing-life-back-into-PDF-presented-Data
-fig_width: 4
-fig_height: 3
+fig_width: 2
+fig_height: 2
 bigimg: [{src: "/img/file.jpg", desc: "Files"}]
+output:
+   blogdown::html_page:
+     toc: true
 ---
 ```{r,echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE,tidy = TRUE, eval = FALSE)

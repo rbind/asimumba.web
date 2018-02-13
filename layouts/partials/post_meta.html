@@ -30,5 +30,12 @@
     {{- $linksOutput := delimit $cleanLinks (i18n "translationsSeparator") -}}
     &nbsp;&bull;&nbsp; {{ i18n "translationsLabel" }}{{ $linksOutput }}
   {{- end }}
-</span>
 
+  {{ with .Site.Params.githubContentURL }}
+    {{ $.Scratch.Set "filePath" $.File.Path }}
+    {{ if $.Params.from_Rmd }}
+    {{ $.Scratch.Set "filePath" (replaceRE "[.]md$" ".Rmd" $.File.Path) }}
+    {{ end }}
+    <a href="{{ or $.Params.githubEditURL  (print .  ($.Scratch.Get "filePath")) }}"><i class="fa fa-pencil-square-o" aria-hidden="true" title="{{ default (index $.Site.Params.lang.edit.en) (index $.Site.Params.lang.edit $.Section) }}"></i></a>
+    {{ end }}
+</span>

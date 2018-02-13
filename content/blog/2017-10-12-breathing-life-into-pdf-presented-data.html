@@ -10,15 +10,25 @@ tags:
   - pdf
   - Java jdk
   - tabulizer
-draft: no
 description: Bringing PDF presented data back to life.
 slug: Breathing-life-back-into-PDF-presented-Data
-fig_width: 4
-fig_height: 3
+fig_width: 2
+fig_height: 2
 bigimg: [{src: "/img/file.jpg", desc: "Files"}]
+output:
+   blogdown::html_page:
+     toc: true
 ---
 
 
+<div id="TOC">
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#demo">Demo</a></li>
+<li><a href="#tidying-the-data">Tidying the data</a></li>
+<li><a href="#welcome-to-the-tidyverse-universe">Welcome to the tidyverse universe</a></li>
+</ul>
+</div>
 
 <p>It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.</p>
 <p>The good news is, technology seem to run on a brain of its own. While one side of the technology spectrum impedes, another end liberate. One such solution to extracting the dead and static PDF presented data, is to turn to the powerful and versatile R package, <code>tabulizer</code>. The <a href="https://github.com/ropensci/tabulizer">tabulizer</a> package is an R wrapper for the powerful PDF extractor Java library <a href="https://github.com/tabulapdf/tabula-java/">Tabula</a>. This package allows one to extract with ease, data presented in tables in a PDF document. For as long as the data is in a clean and uncluttered format. The <code>extract_tables()</code> function will try to guess the delimiters for the data and extract the data in the format which maintains close to the original data outline.</p>
@@ -31,11 +41,11 @@ bigimg: [{src: "/img/file.jpg", desc: "Files"}]
 # from their repo
 
 if (!require(&quot;ghit&quot;)) {
-    install.packages(&quot;ghit&quot;)
+  install.packages(&quot;ghit&quot;)
 }
 # on 64-bit Windows
 ghit::install_github(c(&quot;ropenscilabs/tabulizerjars&quot;, &quot;ropenscilabs/tabulizer&quot;), 
-    INSTALL_opts = &quot;--no-multiarch&quot;)
+  INSTALL_opts = &quot;--no-multiarch&quot;)
 # elsewhere
 ghit::install_github(c(&quot;ropenscilabs/tabulizerjars&quot;, &quot;ropenscilabs/tabulizer&quot;))
 
@@ -43,7 +53,7 @@ ghit::install_github(c(&quot;ropenscilabs/tabulizerjars&quot;, &quot;ropenscilab
 # cloned repo
 
 if (!require(&quot;ghit&quot;)) {
-    install.packages(&quot;ghit&quot;)
+  install.packages(&quot;ghit&quot;)
 }
 # on 64-bit Windows
 ghit::install_github(c(&quot;leeper/tabulizerjars&quot;, &quot;leeper/tabulizer&quot;), INSTALL_opts = &quot;--no-multiarch&quot;)
@@ -92,13 +102,13 @@ cso_column &lt;- cso_table[[1]]  # The table of interest is on page 24, the othe
 <pre class="r"><code>library(tidyverse)  # install.packages(&#39;tidyverse&#39;) This will install the tidyverse
 cso_data &lt;- cso_data %&gt;% as.tibble()  # converting to a tibble
 cso_provincial &lt;- cso_data %&gt;% filter(sex == &quot;Total&quot;) %&gt;% select(`2011`:`2035`) %&gt;% 
-    gather(key = &quot;year&quot;, value = &quot;census_proj&quot;)
+  gather(key = &quot;year&quot;, value = &quot;census_proj&quot;)
 
 province &lt;- rep(c(&quot;central&quot;, &quot;copperbelt&quot;, &quot;eastern&quot;, &quot;luapula&quot;, &quot;lusaka&quot;, &quot;muchinga&quot;, 
-    &quot;northern&quot;, &quot;north.western&quot;, &quot;southern&quot;, &quot;western&quot;), 6)
+  &quot;northern&quot;, &quot;north.western&quot;, &quot;southern&quot;, &quot;western&quot;), 6)
 
 cso_transformed &lt;- cbind(cso_provincial, province) %&gt;% select(year, province, 
-    census_proj) %&gt;% as.tibble()
+  census_proj) %&gt;% as.tibble()
 cso_transformed</code></pre>
 <p>For the full data table view, see the table below.</p>
 <pre class="r"><code>knitr::kable(cso_transformed, booktabs = TRUE, caption = &quot;Census data per Province&quot;)</code></pre>

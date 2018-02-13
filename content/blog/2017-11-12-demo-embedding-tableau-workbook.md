@@ -8,8 +8,6 @@ tags:
 - tableau 
 - Visualization
 - iframe
-#image: "images/background.jpg"
-authoravatar: "../../images/avatar.png"
 toc: true
 ---
 In this short demo, I implement how to embed Tableau public visualizations on the personal website.This implementation is achieved through using `iframe.` The embed link from a Tableau public visualization has to be enclosed with the `<iframe> </iframe>` tag. The public visualisation used for demonstration is from [Jack Dougherty](http://internet2.trincoll.edu/facProfiles/Default.aspx?fid=1004266) on CT schools.
