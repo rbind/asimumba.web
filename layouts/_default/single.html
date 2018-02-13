@@ -5,9 +5,15 @@
       <article role="main" class="blog-post">
         {{ .Content }}
       </article>
+
+      <div class="github-link">
+      <a href="https://github.com/rbind/asimumba/edit/master/content/blog/" target="blank"><i class="fa fa-code-fork"></i> Suggest a post edit</a>
+      </div>
+
       {{ if .Params.toc }}
       {{ .TableOfContents }}
       {{ end }}
+
       {{ if ne .Type "page" }}
         <ul class="pager blog-pager">
           {{ if .PrevInSection }}
@@ -34,6 +40,12 @@
           </div>
         {{ end }}
       {{ end }}
+
+      <div class="col-xs-2">
+        <p class="pull-right">
+          <i  class="fa fa-arrow-circle-o-up"></i><a href="#"> Back to top</a>
+        </p>
+      </div>
 
     </div>
   </div>
