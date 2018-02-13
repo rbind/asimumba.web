@@ -307,13 +307,13 @@ footer .theme-by {
   color: #24292e;
   text-decoration: none;
   border: none;
-  font-size: 10px;
+  font-size: 12px;
   display: inline-block;
   line-height: 1;
   padding: 5px 5px 3px 5px;
-  background: #d0d6d8;
+  background: #F8F8F8;
   text-align: center;
-  font-weight: normal;
+  font-weight: bold;
   text-transform: uppercase;
   border-radius: 12px;
   float: center;
@@ -322,7 +322,7 @@ footer .theme-by {
   font-family: 'Carlito', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.6em;
   color: #222222;
-  font-size: 14px;
+  font-size: 15px;
 }
 .post-entry-container {
   display: inline-block;
