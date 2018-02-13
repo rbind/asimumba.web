@@ -88,14 +88,16 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     url = "travel"
     weight = 6
 
+# [[menu.main]]
+#     name = "Tutorials"
+#     url = "tutorials/"
+#     weight = 7
+
 [[menu.main]]
     name = "About"
     url = "about/about/"
-    weight = 7
+    weight = 8
 # [[menu.main]]
 #     identifier = "about"
 #     name = "About"
 #     weight = 4
-
-[[params.lang]]
-    edit = "Suggest an edit of this page"

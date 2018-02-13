@@ -303,6 +303,7 @@ footer .theme-by {
 }
 .post-preview .post-meta a,
 .post-heading .post-meta a {
+  font-family: 'Carlito', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #24292e;
   text-decoration: none;
   border: none;
@@ -718,3 +719,9 @@ div.panel-body a.list-group-item {
     border: 1px solid #eee;
     border-radius: 5px;
   }
+
+.col-xs-2 {
+    width: 17.66666667%;
+    position: relative;
+    min-height: 4px;
+}
