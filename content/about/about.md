@@ -14,7 +14,7 @@ In another life, I am an Accounting and Finance major. Graduated from the [**Uni
 
 I am lost in the Data Science web... hoping to find my way out of the maze soon. I find data and the process of data analysis to glean insight from the raw data, overly exciting and fascinating alike.
 
-In addition, I'm fascinated by stock markets and everything with a business and finance buzz. 
+In addition, I'm fascinated by stock markets and everything with a business and finance buzz.
 
 I can be found on [**Github**](https://github.com/asimumba/) poking around interesting projects... and occasionally I rant on [**twitter**](https://twitter.com/zedsamurai/).
 
@@ -24,7 +24,7 @@ I can be found on [**Github**](https://github.com/asimumba/) poking around inter
 
 `Let's have fun!` :smile:
 
-**Community endeavours** 
+**Community endeavours**
 ***
 
 To support Data Science and analytics growth in Zambia, I started a blog [ZedR](http://zedr.rbind.io/). Anyone is free to join and contribute content. Going forward, I hope to build a team of data science enthusiasts with future plans to host meetups and data science hackathons.
@@ -42,7 +42,7 @@ To support Data Science and analytics growth in Zambia, I started a blog [ZedR](
 
 - _Introduction to Git for Data Science_ - [**DataCamp**](https://www.datacamp.com/statement-of-accomplishment/course/e9f54b91a3d762e7508001880b0372315a862c50)
 
-- _Intro to Statistics with R: Introduction_ [**DataCamp**](https://www.datacamp.com/statement-of-accomplishment/course/16da816f65c95d6322d6a68fb569a094ef683f0e) 
+- _Intro to Statistics with R: Introduction_ [**DataCamp**](https://www.datacamp.com/statement-of-accomplishment/course/16da816f65c95d6322d6a68fb569a094ef683f0e)
 
 **Courses in progress:**
 
@@ -67,9 +67,3 @@ To support Data Science and analytics growth in Zambia, I started a blog [ZedR](
 <br><br><br><br><br>
 ***
 This website is built with [**Blogdown**](https://github.com/rstudio/blogdown), [**hugo**](https://gohugo.io/), and deployed by [**netlify**](https://www.netlify.com/)
-
-
-
-
-
-
