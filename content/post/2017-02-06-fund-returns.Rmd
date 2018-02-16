@@ -8,13 +8,14 @@ tags:
   - AMAZON
   - APPLE
   - Stocks
-description: Stock portfolio - a quick overview
-#image: "images/background.jpg"
-authoravatar: "../../images/avatar.png"
 output:
    blogdown::html_page:
      toc: true
 ---
+
+```{r,echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE, tidy = TRUE)
+```
 
 ```{r,results='hide',message=FALSE}
 ## Packages to load
@@ -65,12 +66,12 @@ fundreturn_final <- temp
 ```
 
 
-```{r}
+```{r,fig.height=3.5,fig.width=6}
 ggplot(data = fundreturn_final, aes(x=Year, y=PercentageReturn, color=Stockticker)) +geom_line()
 ```
 
 
-```{r}
+```{r,fig.height=3.5,fig.width=6}
 # Google stock Performance
 # GOOG
 GOOG <- subset(fundreturn_final, Stockticker=="GOOG")
@@ -90,7 +91,7 @@ annotate("text",x=as.Date("2010-04-01"),y=-0.1900,label="LR",fontface="bold",siz
 ```
 
 
-```{r}
+```{r,fig.height=3.5,fig.width=6}
 # Portfolio Performance Appraisal
 
 # Having the following portfolio

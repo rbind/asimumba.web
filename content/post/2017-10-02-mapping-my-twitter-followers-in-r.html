@@ -1,14 +1,13 @@
 ---
 author: Aaron Simumba
 title: "Mapping the Location of my Twitter Followers and Following in R"
+subtitle: Twitter data mining
 date: 2017-10-02T17:46:47+02:00
 slug: Mapping-the-Location-of-my-Twitter-Followers-and-Following-in-R
 description: Mapping locations for twitter followers and following
 tags: 
     - Twitter followers
     - twitteR
-#image: "images/background.jpg"
-authoravatar: "../../images/avatar.png"
 output:
    blogdown::html_page:
      toc: true
@@ -27,34 +26,37 @@ output:
 <p>From the R side. We need the following packages: <code>ROAuth</code> which is R’s interface to the OAuth (Open Authorization) - which is an open standard for token-based authentication and authorization on the Internet, allowing us give access to the third-party apps like twitter and Facebook to communicate with the local machine set-up.<code>twitteR</code> is the other package, plus the <code>httr</code> package.</p>
 <pre class="r"><code># The following code will install the packages.
 install.packages(&quot;twitteR&quot;, &quot;httr&quot;, &quot;ROAuth&quot;)</code></pre>
-<pre class="r"><code>#load the packages
+<pre class="r"><code># load the packages
 library(httr)
 library(twitteR)</code></pre>
 <p>Authenticating R to have access to your twitter account, the <code>twitteR</code> package has a function called <code>setup_twitter_oauth()</code>, where you are required to supply the keys and tokens to be found under the keys and tokens tab on your twitter developer profile. Supplying the <code>consumer key</code> and <code>secret key</code> obtained on-line, will prompt authorisation through the web browser, where a step by step prompt is given. Refer to the link above to the walk through set-up.</p>
-<pre class="r"><code>setup_twitter_oauth(consumer_key =&quot;&quot;,consumer_secret =&quot;&quot;
-                    ,access_token =&quot;&quot; ,access_secret = &quot;&quot;)</code></pre>
+<pre class="r"><code>setup_twitter_oauth(consumer_key = &quot;insert key&quot;, consumer_secret = &quot;insert key&quot;, 
+    access_token = &quot;insert token key&quot;, access_secret = &quot;insert key&quot;)</code></pre>
 <div id="mapping-followers-and-following-locations" class="section level2">
 <h2>Mapping followers and Following locations</h2>
 <p>Jeff Leek provides the following description for the twitterMap function:</p>
-<pre class="r"><code>twitterMap &lt;- function(userName,userLocation=NULL,
-fileName=”twitterMap.pdf”,nMax = 1000,
-plotType=c(“followers”,”both”,”following”))</code></pre>
+<pre class="r"><code>twitterMap &lt;- function(userName,userLocation = NULL,fileName = &quot;twitterMap.pdf&quot;,nMax = 1000,plotType = c(&quot;followers&quot;, &quot;both&quot;,&quot;following&quot;))</code></pre>
 <p>with arguments:</p>
-<pre><code>userName - the twitter username you want to plot
-
-userLocation - an optional argument giving the location of the user, necessary when the location information you have provided Twitter isn’t sufficient for us to find latitude/longitude data
-
-fileName - the file where you want the plot to appear
-
-nMax - The maximum number of followers/following to get from Twitter, this is implemented to avoid rate limiting for people with large numbers of followers.
-
-plotType - if “both” both followers/following are
-plotted, etc.</code></pre>
+<blockquote>
+<p>userName - the twitter username you want to plot</p>
+</blockquote>
+<blockquote>
+<p>userLocation - an optional argument giving the location of the user, necessary when the location information you have provided Twitter isn’t sufficient for us to find latitude/longitude data</p>
+</blockquote>
+<blockquote>
+<p>fileName - the file where you want the plot to appear</p>
+</blockquote>
+<blockquote>
+<p>nMax - The maximum number of followers/following to get from Twitter, this is implemented to avoid rate limiting for people with large numbers of followers.</p>
+</blockquote>
+<blockquote>
+<p>plotType - if “both” both followers/following are plotted, etc.</p>
+</blockquote>
 <p>Mapping my twitter data, I run the following code, supplying my twitter username, and changing the <code>plotType</code> argument to “both”, which plots both locations for my followers and those I follow.</p>
 <p>I call the <code>twitterMap.R</code> script through <code>source()</code>, the script loads the function in the work environment, in order to use the <code>twitterMap()</code> command.</p>
 <pre class="r"><code>source(&quot;twitterMap.R&quot;)
-twitterMap(&quot;zedsamurai&quot;,
-           fileName = &quot;twitterMap.pdf&quot;, plotType = &quot;both&quot; )</code></pre>
+
+twitterMap(&quot;zedsamurai&quot;, fileName = &quot;twitterMap.pdf&quot;, plotType = &quot;both&quot;)</code></pre>
 <p>The following is the map of the locations of my twitter followers and those I follow.</p>
 <div style="text-align:center" markdown="1">
 <div class="figure">

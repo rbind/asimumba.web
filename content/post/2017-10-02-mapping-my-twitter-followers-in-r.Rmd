@@ -1,19 +1,20 @@
 ---
 author: Aaron Simumba
 title: "Mapping the Location of my Twitter Followers and Following in R"
+subtitle: Twitter data mining
 date: 2017-10-02T17:46:47+02:00
 slug: Mapping-the-Location-of-my-Twitter-Followers-and-Following-in-R
 description: Mapping locations for twitter followers and following
 tags: 
     - Twitter followers
     - twitteR
-#image: "images/background.jpg"
-authoravatar: "../../images/avatar.png"
 output:
    blogdown::html_page:
      toc: true
 ---
-
+```{r,echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE, tidy = TRUE)
+```
 It is always nice to capture how wide and dense your twitter interactions spread. More so, the spread and locations of your twitter followers and those you are following. Making use of the `twitteR` package, and the inspiration from a post written by [Jeff Leek](https://simplystatistics.org/2011/12/21/an-r-function-to-map-your-twitter-followers/), I attempt to map my followers' locations and those I follow on twitter.
 
 Jeff Leek  wrote a `twitterMap()`function that lets you map the locations of your twitter followers and those you follow, the script that holds the function can be downloaded [here](http://biostat.jhsph.edu/~jleek/code/twitterMap.R). 
@@ -36,8 +37,7 @@ library(twitteR)
 Authenticating R to have access to your twitter account, the `twitteR` package has a function called `setup_twitter_oauth()`, where you are required to supply the keys and tokens to be found under the keys and tokens tab on your twitter developer profile. Supplying the `consumer key` and `secret key` obtained on-line, will prompt authorisation through the web browser, where a step by step prompt is given. Refer to the link above to the walk through set-up.
 
 ```{r, eval=FALSE}
-setup_twitter_oauth(consumer_key ="",consumer_secret =""
-                    ,access_token ="" ,access_secret = "")
+setup_twitter_oauth(consumer_key = "insert key", consumer_secret ="insert key", access_token ="insert token key", access_secret = "insert key")
 ```
 
 
@@ -46,23 +46,21 @@ setup_twitter_oauth(consumer_key ="",consumer_secret =""
 Jeff Leek provides the following description for the twitterMap function:
 
 ```r
-twitterMap <- function(userName,userLocation=NULL,
-fileName=”twitterMap.pdf”,nMax = 1000,
-plotType=c(“followers”,”both”,”following”))
+twitterMap <- function(userName,userLocation = NULL,fileName = "twitterMap.pdf",nMax = 1000,plotType = c("followers", "both","following"))
 ```
 with arguments:
-```
-userName - the twitter username you want to plot
 
-userLocation - an optional argument giving the location of the user, necessary when the location information you have provided Twitter isn’t sufficient for us to find latitude/longitude data
+>userName - the twitter username you want to plot
 
-fileName - the file where you want the plot to appear
+>userLocation - an optional argument giving the location of the user, necessary when the location information you have provided Twitter isn’t sufficient for us to find latitude/longitude data
 
-nMax - The maximum number of followers/following to get from Twitter, this is implemented to avoid rate limiting for people with large numbers of followers.
+>fileName - the file where you want the plot to appear
 
-plotType - if “both” both followers/following are
+>nMax - The maximum number of followers/following to get from Twitter, this is implemented to avoid rate limiting for people with large numbers of followers.
+
+>plotType - if “both” both followers/following are
 plotted, etc.
-```
+
 
 Mapping my twitter data, I run the following code, supplying my twitter username, and changing the `plotType` argument to "both", which plots both locations for my followers and those I follow.
 
@@ -70,8 +68,8 @@ I call the `twitterMap.R` script through `source()`, the script loads the functi
 
 ```{r, message=FALSE, eval=FALSE}
 source("twitterMap.R")
-twitterMap("zedsamurai",
-           fileName = "twitterMap.pdf", plotType = "both" )
+
+twitterMap("zedsamurai",fileName = "twitterMap.pdf", plotType = "both" )
 ```
 
 
