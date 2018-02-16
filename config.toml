@@ -37,10 +37,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   src = "img/nature.jpg"
   desc = "Nature"
 
-[[Params.bigimg]]
-  src = "img/laptop.jpg"
-  desc = "Analytics"
-  position = "center bottom"
+#[[Params.bigimg]]
+#  src = "img/laptop.jpg"
+#desc = "Analytics"
+#  position = "center bottom"
 
 [[Params.bigimg]]
   src = "img/report.jpg"
