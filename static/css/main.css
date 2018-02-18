@@ -213,16 +213,16 @@ img {
 /* --- Footer --- */
 
 footer {
-  padding: 30px 0;
-  background: #222222;
+  padding: 20px 0;
+  background-color: #111111;
   border-top: none;
   margin-top: auto;
-  font-size: 14px;
 }
 
 footer a {
-  color: #2F4F4F;
+  color: #6c7989;
   border-bottom: none;
+  font-size: 18px;
 }
 
 footer .list-inline {
@@ -234,23 +234,23 @@ footer .copyright {
   font-family: 'Carlito', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-align: center;
   margin-bottom: 0;
-    color: #2F4F4F;
+    color: #6c7989;
 }
-footer .theme-by {
+/* footer .theme-by {
   text-align: center;
   margin: 10px 0 0;
-  color: #2F4F4F;
-}
+  color: #6c7989;
+} */
 
 @media only screen and (min-width: 768px) {
   footer {
-    padding: 40px 0;
+    padding: 50px 0;
   }
   footer .footer-links {
     font-size: 18px;
   }
   footer .copyright {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -425,7 +425,7 @@ footer .theme-by {
   background-size: cover;
   -o-background-size: cover;
   margin-top: 51px; /* The small navbar is 50px tall + 1px border */
-  margin-bottom: 0px;
+  margin-bottom: -2px;
 }
 .intro-header.big-img  .big-img-transition {
   position: absolute;
