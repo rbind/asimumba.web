@@ -9,6 +9,7 @@ disqusShortname = "asimumba"
 googleAnalytics = "UA-101235795-1"
 enableEmoji = true
 relativeURLs = false
+socialShare = true
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 

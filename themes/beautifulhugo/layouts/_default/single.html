@@ -4,7 +4,23 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         {{ .Content }}
+        {{ if .Site.Params.socialShare }}
+            <hr/>
+            <section id="social-share">
+              <ul class="list-inline footer-links">
+                {{ partial "share-links" . }}
+              </ul>
+            </section>
+        {{ end }}
       </article>
+
+      <div class="github-link">
+      <a href="https://github.com/rbind/asimumba/edit/master/content/blog/" target="blank"><i class="fa fa-code-fork"></i> Suggest a post edit</a>
+      </div>
+
+      {{ if .Params.toc }}
+      {{ .TableOfContents }}
+      {{ end }}
 
       {{ if ne .Type "page" }}
         <ul class="pager blog-pager">
@@ -20,11 +36,6 @@
           {{ end }}
         </ul>
       {{ end }}
-
-      {{ if .Params.toc }}
-      {{ .TableOfContents }}
-      {{ end }}
-
       {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (ne .Type "page"))) }}
         {{ if .Site.DisqusShortname }}
           <div class="disqus-comments">
@@ -37,6 +48,12 @@
           </div>
         {{ end }}
       {{ end }}
+
+      <div class="col-xs-2">
+        <p class="pull-right">
+          <i  class="fa fa-arrow-circle-o-up"></i><a href="#"> Back to top</a>
+        </p>
+      </div>
 
     </div>
   </div>
