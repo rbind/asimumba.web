@@ -1,0 +1,187 @@
+---
+title: Stocks Portfolio Analysis
+author: Aaron Simumba
+date: "2017-03-17"
+slug: portfolio-analysis
+tags: 
+  - GOOG
+  - AMAZON
+  - APPLE
+  - Stocks
+output:
+   blogdown::html_page:
+     toc: true
+---
+
+```{r,echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE, tidy = TRUE)
+```
+
+```{r,results='hide',message=FALSE}
+## Packages to load
+library(quantmod)
+library(ggplot2) 
+library(xts)
+library(highcharter)
+library(PerformanceAnalytics)
+library(dygraphs)
+```
+
+
+
+```{r, echo=FALSE, message=FALSE}
+#loading the data
+fundreturn <- readRDS("../../static/data/fundreturns.RDS")
+
+```
+
+```{r}
+## Dates have been loaded as a factor instead of as dates. There is need to convert this variable to the date class and covert the rest of the variables to xts(Extensible Time Series)
+
+temp <- xts(x =fundreturn[,-1], order.by = as.Date(fundreturn[,1])) 
+# all the variables except data are coerced to xts using date as the index.
+# Overwriting the fundreturn object with the xts temp object
+fundreturn <- temp
+str(fundreturn)
+rm(temp) # gettting rid of temp object
+## Next I, stack variables of the same unique class within the same column. That is the returns of all the stocks in one column and the tickers in another column, indexed by the date variable.
+
+# make use of a temporary object.
+temp <- data.frame(index(fundreturn), stack(as.data.frame(coredata(fundreturn))))
+fundreturn_final <- temp
+```
+
+
+```{r}
+# Give the variables more descriptive names 
+    names(fundreturn_final)[1] <-  "Year"
+    names(fundreturn_final)[2] <-  "PercentageReturn"
+    names(fundreturn_final)[3] <-  "Stockticker"
+    names(fundreturn_final)
+  rm(temp) # removing the temp. object
+  # we coerce the data frame back to xts to be able to use quantmod and highcharter
+  
+#fundreturn_final <- xts(x=fundreturn_final[-1], order.by = as.Date(fundreturn_final[,1]))
+  
+```
+
+
+```{r,fig.height=3.5,fig.width=6}
+ggplot(data = fundreturn_final, aes(x=Year, y=PercentageReturn, color=Stockticker)) +geom_line()
+```
+
+
+```{r,fig.height=3.5,fig.width=6}
+# Google stock Performance
+# GOOG
+GOOG <- subset(fundreturn_final, Stockticker=="GOOG")
+g <- ggplot(data = GOOG, aes(x=Year, y=PercentageReturn)) +geom_line()
+# add features
+g <- g + ggtitle("Google Monthly Return", subtitle = "For the Period between June 2007 - Nov. 2016") + 
+      theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+            axis.text = element_text(colour = "blue"),
+            axis.title.y = element_text(size = rel(1.0), angle = 90),
+            axis.title.x = element_text(size = rel(1.0), angle = 360))
+
+g <- g + labs(x = "Year",
+        y ="Return") 
+
+g + annotate("text",x=as.Date("2009-09-01"),y=0.3245,label="HR",fontface="bold",size=3, colour = "forestgreen") +
+annotate("text",x=as.Date("2010-04-01"),y=-0.1900,label="LR",fontface="bold",size=3,colour ="red") 
+```
+
+
+```{r,fig.height=3.5,fig.width=6}
+# Portfolio Performance Appraisal
+
+# Having the following portfolio
+
+# Google = GOOG, Amazon = AZMN,Apple = AAPL JP Morgans = JPM, Microsoft = MSFT, General Electric = GE, and Hewlett Packard = HPQ
+#, "GE", "HPQ"
+
+p1 <- subset(fundreturn_final, Stockticker =="AMZN")
+p2 <- subset(fundreturn_final, Stockticker =="MSFT")
+p3 <- subset(fundreturn_final, Stockticker =="AAPL")
+p4 <- subset(fundreturn_final, Stockticker =="GOOG")
+
+portfolio <- rbind(p1,p2,p3,p4) # binding the returns into one returns variable
+rm("p1","p2", "p3","p4") # Removal of the temp. subsets 
+ 
+# quick visual representation of the data
+p <- ggplot(data = portfolio, aes(x = Year, y =PercentageReturn, colour = Stockticker))+geom_line()
+p + labs(
+        x = " Year",
+        y = "Return",
+        colour = "Stock ticker") +
+    ggtitle(" Apple, Amazon and Google Stock Returns",subtitle =" For the period June 2007 - Nov. 2016")
+```
+
+
+```{r}
+#Dygraphing
+
+p1 <- subset(fundreturn_final, Stockticker =="AMZN")
+p2 <- subset(fundreturn_final, Stockticker =="MSFT")
+p3 <- subset(fundreturn_final, Stockticker =="AAPL")
+p4 <- subset(fundreturn_final, Stockticker =="GOOG")
+
+
+# Converting to xts before graphing
+AMZN <- xts(x = p1[,c(-1,-3)], order.by = p1[,1])
+MSFT <- xts(x = p2[,c(-1,-3)], order.by = p2[,1])
+AAPL <- xts(x = p3[,c(-1,-3)], order.by = p3[,1])
+GOOG_ <- xts(x = p4[,c(-1,-3)], order.by = p4[,1])
+
+rm("p1","p2", "p3","p4") # Removal of the temp. subsets 
+
+```
+
+
+```{r}
+merged_returns <- merge.xts(AMZN,MSFT,AAPL,GOOG_) # merging the separate share returns into one xts object.
+
+dygraph(merged_returns, main = "Amazon v Microsoft v Apple v Google") %>% # Using pipes to connect the codes
+  dyAxis("y", label ="Return") %>%
+  dyAxis("x", label ="Year") %>%
+  dyOptions(colors = RColorBrewer::brewer.pal(4, "Set2")) 
+
+```
+
+```{r}
+# Let's now evaluate the portfolio
+
+## Part of the code is adapted from Jonathan Regenstein from RStudio
+
+# We assume an equally weighted portfolio. Allocating 25% to all the stocks in our portfolio
+w <- c(.25,.25,.25,.25)
+
+# We use the performanceAnalytics built infuction Return.porftolio to calculate portfolio monthly returns
+
+monthly_P_return <-  Return.portfolio(R = merged_returns, weights = w)
+
+# Use dygraphs to chart the portfolio monthly returns.
+dygraph(monthly_P_return, main = "Portfolio Monthly Return") %>% 
+  dyAxis("y", label = "Return")
+
+```
+
+
+```{r}
+# Add the wealth.index = TRUE argument and, instead of returning monthly returns,
+# the function will return the growth of $1 invested in the portfolio.
+dollar_growth <- Return.portfolio(merged_returns, weights = w, wealth.index = TRUE)
+
+# Use dygraphs to chart the growth of $1 in the portfolio.
+dygraph(dollar_growth, main = "Growth of $1 Invested in Portfolio") %>% 
+  dyAxis("y", label = "$")
+```
+
+
+```{r}
+# Calculating the Sharpe Ratio
+# Taking the US 10 Year Treasury Rate of 2.40% as the risk free rate.
+# Making use of the built in SharpeRatio function in Performance Analytics package.
+print(sharpe_ratio <- round(SharpeRatio(monthly_P_return, Rf = 0.024), 4))
+
+```
+
