@@ -1,5 +1,5 @@
 ---
-title: Money is Everything, not Until you Meet Open Source Software Maintainers
+title: Money is everything, not until you meet Open Source Software maintainers
 author: Aaron Simumba
 date: '2018-02-24'
 slug: open-source-software-maintainers
