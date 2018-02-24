@@ -15,7 +15,8 @@ tags:
 description: "A brief introduction to my blogging journey, and how I crafted my personal website"
 draft: false
 ---
-
+This post was originally submitted to the [Rbind support](https://support.rbind.io/2018/02/19/introduction-to-aaron-simumba-website/) website.
+***
 
 ## Introduction
 
