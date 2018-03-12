@@ -30,6 +30,7 @@ For this analysis, I will mainly use the following packages. The beauty with the
 library(ggplot2)
 library(dplyr)
 library(readr)
+theme_set(theme_light())
 ```
 
 ## Data
