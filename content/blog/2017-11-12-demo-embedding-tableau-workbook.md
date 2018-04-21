@@ -14,7 +14,9 @@ In this short demo, I implement how to embed Tableau public visualizations on th
 
 The visualization below is embedded with the following code:
 
-    <iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="652px" height="756px" style="border: 0px;" scrolling="no"></iframe>
+    <iframe 
+    src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="652px" height="756px" style="border: 0px;" scrolling="no">
+    </iframe>
 
 **NOTE:** You must strip off the extra text from the URL to the right side of the `?` from the URL obtained from the Tableau public viz. There after add the colon followed by other arguments as indicated above.
 

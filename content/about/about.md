@@ -66,4 +66,5 @@ To support Data Science and analytics growth in Zambia, I started a blog [ZedR](
 
 <br><br><br><br><br>
 ***
-This website is built with [**Blogdown**](https://github.com/rstudio/blogdown), [**hugo**](https://gohugo.io/), and deployed by [**netlify**](https://www.netlify.com/)
+This website is built with [**Beautiful Hugo**](https://github.com/halogenica/beautifulhugo) theme,
+[**Blogdown**](https://github.com/rstudio/blogdown), [**hugo**](https://gohugo.io/), and deployed by [**netlify**](https://www.netlify.com/)

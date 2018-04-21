@@ -10,6 +10,7 @@ googleAnalytics = "UA-101235795-1"
 enableEmoji = true
 relativeURLs = false
 socialShare = true
+useHLJS = true
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
@@ -17,7 +18,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   post = "/:year/:month/:day/:slug/"
 
 [Params]
-  homeTitle = "Data Musing"
+  homeTitle = "Data Musings"
   subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast \ | Data Visualisation, R programming, Python, Tableau, and Microsoft Power BI."
   favicon = "img/favicon.ico"
   dateFormat = "2006/01/02"
@@ -39,11 +40,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   src = "img/nature.jpg"
   desc = "Nature"
 
-#[[Params.bigimg]]
-#  src = "img/laptop.jpg"
-#desc = "Analytics"
-#  position = "center bottom"
-
 [[Params.bigimg]]
   src = "img/report.jpg"
   desc = "Research"
@@ -60,46 +56,32 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   twitter = "asimumba21"
   facebook = "aaron.s.simumba"
   youtube = "user/aaronsimumba"
-[[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
 
 [[menu.main]]
     name = "Blog"
     url = "blog"
-    weight = 2
+    weight = 1
 
 [[menu.main]]
     name = "Projects"
     url = "projects/projects"
-    weight = 3
-
-[[menu.main]]
-    name = "Curriculum Vitae"
-    url = "cv/2017-09-22-curriculum-vitae"
-    weight = 4
+    weight = 2
 
 [[menu.main]]
     name = "Tags"
     url = "tags"
-    weight = 5
+    weight = 3
 
 [[menu.main]]
     name = "Adventure"
     url = "travel"
-    weight = 6
+    weight = 4
 
-# [[menu.main]]
-#     name = "Tutorials"
-#     url = "tutorials/"
-#     weight = 7
-
+[[menu.main]]
+    name = "CV"
+    url = "cv/2017-09-22-curriculum-vitae"
+    weight = 5
 [[menu.main]]
     name = "About"
     url = "about/about/"
-    weight = 8
-# [[menu.main]]
-#     identifier = "about"
-#     name = "About"
-#     weight = 4
+    weight = 6

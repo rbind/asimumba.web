@@ -60,9 +60,10 @@ blockquote p:first-child {
 hr.small {
   max-width: 100px;
   margin: 15px auto;
-  border-width: 4px;
+  border-width: 2px;
   border-color: inherit;
-  border-radius: 3px;
+  border-radius: 6px;
+  color: #e9e9e9;
 }
 /* end  */
 .main-content {
@@ -130,7 +131,7 @@ img {
   background-color: #08253a;
   color: #ffffff;
   border: none;
-  text-align: left;
+  text-align:right;
   font-size: 110%;
   display: block;
   line-height: 1;
@@ -452,8 +453,8 @@ footer .copyright {
   text-shadow: 1px 1px 3px #000;
 }
 .intro-header.big-img .page-heading h1 {
-  color: #FFF;
-  font-size: 60px;
+  color: #e9e9e9;
+  font-size: 50px;
   padding: 5px 0;
   text-shadow: 1px 1px 3px #000;
 }
@@ -479,7 +480,8 @@ footer .copyright {
 .intro-header.big-img .page-subheading {
   font-family: 'Carlito', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 200;
-  font-size: 23px;
+  font-size: 25px;
+  color: #e9e9e9;
 }
 
 .intro-header .blog-heading h1 {
@@ -608,10 +610,10 @@ footer .copyright {
   text-transform: none;
   font-weight: 600;
   background: #e0e3e5;
-  border-radius: 10px;
+  border-radius: 8px;
   color: #404040;
   font-size: 11.25px;
-  padding: 5px 5px 3px 5px;
+  padding: 5px 5px 3px 3px;
 }
 @media only screen and (min-width: 768px) {
   .pager li a {
