@@ -17,6 +17,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   post = "/:year/:month/:day/:slug/"
 
 [Params]
+  homeTitle = "Data Musing"
   subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast \ | Data Visualisation, R programming, Python, Tableau, and Microsoft Power BI."
   favicon = "img/favicon.ico"
   dateFormat = "2006/01/02"
