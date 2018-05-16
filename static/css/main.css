@@ -307,14 +307,14 @@ footer .copyright {
 .post-preview .post-meta a,
 .post-heading .post-meta a {
   font-family: 'Open Sans', sans-serif;
-  color: #24292e;
+  color: #FFFFFF;
   text-decoration: none;
   border: none;
-  font-size: 12px;
+  font-size: 11px;
   display: inline-block;
   line-height: 1;
   padding: 5px 5px 3px 5px;
-  background: #F8F8F8;
+  background: #1AB394;
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
@@ -355,8 +355,8 @@ footer .copyright {
   /* display: inline-block; */
   line-height: 1;
   padding: 5px 5px 3px 5px;
-  background:  #d0d6d8;
-  color: #24292e;
+  background:  #1AB394;
+  color: #FFFFFF;
   text-align: center;
   font-weight: normal;
   text-transform: uppercase;
@@ -612,11 +612,12 @@ footer .copyright {
   font-family: 'Open Sans', sans-serif;
   text-transform: none;
   font-weight: 800;
-  background: #23CEA3;
-  border-radius: 6px;
-  color: #FFFFFF;
+  /* background: #1AB394; */
+  /* border-radius: 3px; */
+  color: #1AB394;
   font-size: 13.25px;
-  padding: 5px 5px 3px 3px;
+  /* padding: 3px 3px 2px 2px; */
+  padding-bottom: 3px;
 }
 @media only screen and (min-width: 768px) {
   .pager li a {
@@ -625,9 +626,9 @@ footer .copyright {
 }
 .pager li a:hover,
 .pager li a:focus {
-  color: #FFF;
+  color: #FFFFFF;
   background: #0085a1;
-  border: 1px solid #0085a1;
+  border: 1px solid #FFFFFF;
 }
 .pager {
   margin: 10px 0 0;

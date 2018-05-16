@@ -44,7 +44,7 @@ To support Data Science and analytics growth in Zambia, I started a blog [ZedR](
 
 - _Intro to Statistics with R: Introduction_ [**DataCamp**](https://www.datacamp.com/statement-of-accomplishment/course/16da816f65c95d6322d6a68fb569a094ef683f0e)
 
-**Courses in progress:**
+- _Spreadsheet Basics_ [**DataCamp**](https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6IlpOMkhCQUFCWXhEZWZIZDdHMEFrcG1hNE5GcW8iLCJocmVmIjoiaHR0cHM6Ly93d3cuZGF0YWNhbXAuY29tL3N0YXRlbWVudC1vZi1hY2NvbXBsaXNobWVudC9jb3Vyc2UvMzVmZjU2NDFjYzg1YTFlOGNhN2ZkMmZjZTYxMzZlMTFjNzIxYjM0MiIsImxpbmtfaWQiOjU4ODYzNDk1LCJwb3NpdGlvbiI6Mn0/f23a7a5d8ab4d3a56af0b7bd3b5b5165b3d7269be75345ba13112eec7ee5d843)
 
 - _Introduction to Data and Probability_ [**Coursera**](https://www.coursera.org/learn/probability-intro?authMode=login)
 
