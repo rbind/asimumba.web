@@ -2,9 +2,9 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  color: #FFFFFF;
+  color: #222222;
   position: relative;
-  background: #FAF8F8;
+  background: #FFFFFF;
   display: flex;
   flex-flow: column;
   height: 100vh;
