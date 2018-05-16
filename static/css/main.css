@@ -124,7 +124,7 @@ img {
   background: #08253a;
   border-bottom: none;
   font-family: 'Raleway', sans-serif;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 .navbar-custom .nav li a {
   text-transform: none;
@@ -134,7 +134,7 @@ img {
   color: #ffffff;
   border: none;
   text-align:right;
-  font-size: 110%;
+  font-size: 100%;
   display: block;
   line-height: 1;
 }
@@ -455,16 +455,17 @@ footer .copyright {
   text-shadow: 1px 1px 3px #000;
 }
 .intro-header.big-img .page-heading h1 {
-  color: #FFFFFF;
-  font-size: 60px;
+  font-family: 'Open Sans', sans-serif;
+  color: #0FA494;
+  font-size: 50px;
   padding: 5px 0;
-  text-shadow: 1px 1px 3px #000;
+  /* text-shadow: 1px 1px 3px #000; */
 }
 .intro-header.big-img .page-subheading {
   font-family: 'Open Sans', sans-serif;
   font-weight: 200;
-  font-size: 30px;
-  color: #FFFFFF;
+  font-size: 25px;
+  color: #0FA494;
 }
 /* .intro-header .page-heading h1, */
 .intro-header .tags-heading h1 {
