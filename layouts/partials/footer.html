@@ -39,6 +39,23 @@
         <!-- <p class="credits theme-by text-muted">
           <font style="vertical-align: inherit;"> Powered by </font><a href="http://gohugo.io"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hugo</font></font></a><font style="vertical-align: inherit;"> and </font><a href="http://github.com/rstudio/blogdown"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Blogdown</font></font></a><font style="vertical-align: inherit;">
         </p> -->
+        
+        {{ if .File.Path }}
+           {{ $.Scratch.Set "FilePath" .File.Path }}
+           {{ $RmdFile := (print .File.BaseFileName ".Rmd") }}
+           {{ $Files := readDir (print "content/" .File.Dir) }}
+           {{ if (where $Files "Name" $RmdFile) }}
+             {{ $.Scratch.Set "FilePath" (print .File.Dir $RmdFile) }}
+           {{ else }}
+             {{ $RmdFile := (print .File.BaseFileName ".Rmarkdown") }}
+             {{ if (where $Files "Name" $RmdFile) }}
+               {{ $.Scratch.Set "FilePath" (print .File.Dir $RmdFile) }}
+             {{ end }}
+           {{ end }}
+           {{ with .Site.Params.GithubEdit}}
+           | <a href="{{ . }}{{ $.Scratch.Get "FilePath" }}">Edit this page</a>
+           {{ end }}
+         {{ end }}
       </div>
     </div>
   </div>
