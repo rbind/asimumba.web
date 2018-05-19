@@ -145,14 +145,14 @@ Helvetica,Arial,sans-serif,"Apple Color Emoji",
   background-color: #1AB394;
   color: #ffffff;
   border: none;
-  text-align:right;
+  text-align: justify;
   font-size: 100%;
   display: block;
   line-height: 1;
+  font-weight:  bold;
 }
 .navbar-brand {
-  color: #ffffff;
-  text-align: right;
+  color:#ffffff;
   font-size: 100%;
   display: block;
   line-height: 1;
@@ -299,6 +299,7 @@ Helvetica,Arial,sans-serif,"Apple Color Emoji",
   font-size: 15px;
   margin-top: 0;
   border-bottom: 1px dotted #b3cde0;
+  color: #2F3132;
 }
 .post-preview .post-subtitle {
   font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",
