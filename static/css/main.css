@@ -763,7 +763,7 @@ Helvetica,Arial,sans-serif,"Apple Color Emoji",
   }
 
 .col-xs-2 {
-    width: 17.66666667%;
+    width: 19.66666667%;
     position: relative;
-    min-height: 4px;
+    min-height: 15px;
 }

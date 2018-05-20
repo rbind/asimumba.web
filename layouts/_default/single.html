@@ -57,16 +57,18 @@
              {{ $.Scratch.Set "FilePath" (print .File.Dir $RmdFile) }}
            {{ end }}
          {{ end }}
-         {{ with .Site.Params.GithubEdit}}
-         | <a href="{{ . }}{{ $.Scratch.Get "FilePath" }}">Edit this page</a>
-         {{ end }}
+
        {{ end }}
-       
+
       <div class="col-xs-2">
         <p class="pull-right">
           <i  class="fa fa-arrow-circle-o-up"></i><a href="#"> Back to top</a>
         </p>
       </div>
+      
+      {{ with .Site.Params.GithubEdit}}
+       <a href="{{ . }}{{ $.Scratch.Get "FilePath" }}"><i class="far fa-edit"> Edit this page</i></a>
+      {{ end }}
 
     </div>
   </div>
