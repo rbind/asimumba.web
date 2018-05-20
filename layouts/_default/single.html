@@ -65,9 +65,8 @@
           <i  class="fa fa-arrow-circle-o-up"></i><a href="#"> Back to top</a>
         </p>
       </div>
-      
       {{ with .Site.Params.GithubEdit}}
-       <a href="{{ . }}{{ $.Scratch.Get "FilePath" }}"><i class="far fa-edit"> Edit this page</i></a>
+       <a href="{{ . }}{{ $.Scratch.Get "FilePath" }}">Edit page</a>
       {{ end }}
 
     </div>
