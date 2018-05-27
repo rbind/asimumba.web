@@ -34,18 +34,25 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   highlightjsCDN = "//cdn.bootcss.com"
   highlightjsLang = ["r", "yaml", "tex", "python"]
   highlightjsTheme = "github"
+# [[Params.bigimg]]
+#   src = "img/image1 (1).jpg"
+#   desc = ""
+# [[Params.bigimg]]
+#   src = "img/image1 (2).jpg"
+#   desc = ""
+# [[Params.bigimg]]
+#   src = "img/background (3).jpg"
+#   desc = ""
+# [[Params.bigimg]]
+#   src = "img/image1 (4).jpg"
+#   desc = ""
+
 [[Params.bigimg]]
-  src = "img/image1 (1).jpg"
+  src = "img/adult-art-backlit.jpg"
   desc = ""
-[[Params.bigimg]]
-  src = "img/image1 (2).jpg"
-  desc = ""
-[[Params.bigimg]]
-  src = "img/image1 (3).jpg"
-  desc = ""
-[[Params.bigimg]]
-  src = "img/image1 (4).jpg"
-  desc = ""
+# [[Params.bigimg]]
+#   src = "img/image1 (4).jpg"
+#   desc = ""
 [Author]
   website = "https://asimumba.rbind.io/"
   email = "simumbaa21@gmail.com"

@@ -42,23 +42,29 @@ if(!require("ghit")){
 # on 64-bit Windows
 ghit::install_github(c("ropenscilabs/tabulizerjars",
                        "ropenscilabs/tabulizer"), 
-                     INSTALL_opts = "--no-multiarch")
+                     INSTALL_opts = "--no-multiarch"
+                     )
 # elsewhere
 ghit::install_github(c("ropenscilabs/tabulizerjars",
-                       "ropenscilabs/tabulizer"))
+                       "ropenscilabs/tabulizer")
+                     )
 
 #After searching around, a workable option is installing 
 #from Thomas Leeper cloned repo
 
 if(!require("ghit")){
-    install.packages("ghit")
+                       install.packages("ghit")
 }
+
 # on 64-bit Windows
 ghit::install_github(c("leeper/tabulizerjars", 
                        "leeper/tabulizer"), 
-                     INSTALL_opts = "--no-multiarch")
+                         INSTALL_opts = "--no-multiarch"
+                     )
 # elsewhere
-ghit::install_github(c("leeper/tabulizerjars", "leeper/tabulizer"))
+ghit::install_github(c("leeper/tabulizerjars", 
+                       "leeper/tabulizer")
+                     )
 
 
 ```
@@ -88,8 +94,11 @@ cso <- ("https://goo.gl/d2xMwS")
 # This is the shortened version of the original URL. Stored the link to the report as a variable.
 
 cso_table <- extract_tables(cso, pages = 24, 
-                            method = "data.frame") # We are going to pass the cso variable to the extract_tables() function
-cso_column <- cso_table[[1]] # The table of interest is on page 24, the other arguments are left as defaults
+                            method = "data.frame")
+# We are going to pass the cso variable to the extract_tables() function
+cso_column <- cso_table[[1]] 
+
+# The table of interest is on page 24, the other arguments are left as defaults
 ```
 
 From the extracted results, it can be seen the output is not in a "tidy" format, to allow any meaning analyses to be done. The next step would be reshaping and reordering the extracted results into a neat data frame. 
@@ -115,10 +124,10 @@ First step is to clean the data, eliminating unwanted variables and title header
 ```{r, message=FALSE,include=FALSE}
 cso_data <- cso_column[-c(1,2,33:36), ] # this eleminates the rows specified
 # Renaming the columns 
-names(cso_data) <-  
-  c("province", "sex", "2011", "2015", "2020",
-    "2025", "2030", "2035")
+names(cso_data) <- c("province", "sex", "2011", 
+                     "2015", "2020","2025", "2030", "2035")
 str(cso_data)[3,] # Checking the structure of the data.
+
 cso_data[1:10, ] # first 10 rows
 ```
 `tidyr` package is used to gather the observations in the columns into rows and combine all the observations across 2 columns. The function `gather()` achieves this in the `tidyr` package.
