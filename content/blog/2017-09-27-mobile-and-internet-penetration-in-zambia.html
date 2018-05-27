@@ -56,7 +56,9 @@ theme_set(theme_light())</code></pre>
 </div>
 <p>Running the following codes loads the data into the work environment, so we can work with it to do our analysis.</p>
 <pre class="r"><code>operator_stats &lt;- read_csv(&quot;../../static/data/operator_stats.csv&quot;)
+
 isps &lt;- read_csv(&quot;../../static/data/isps.csv&quot;)
+
 network_coverage &lt;- read_csv(&quot;../../static/data/network_coverage.csv&quot;)
 
 operator_stats &lt;- operator_stats %&gt;% as_tibble()
