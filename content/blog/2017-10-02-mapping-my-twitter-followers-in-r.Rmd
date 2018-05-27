@@ -37,7 +37,11 @@ library(twitteR)
 Authenticating R to have access to your twitter account, the `twitteR` package has a function called `setup_twitter_oauth()`, where you are required to supply the keys and tokens to be found under the keys and tokens tab on your twitter developer profile. Supplying the `consumer key` and `secret key` obtained on-line, will prompt authorisation through the web browser, where a step by step prompt is given. Refer to the link above to the walk through set-up.
 
 ```{r, eval=FALSE}
-setup_twitter_oauth(consumer_key = "insert key", consumer_secret ="insert key", access_token ="insert token key", access_secret = "insert key")
+setup_twitter_oauth(consumer_key = "insert key",
+                    consumer_secret ="insert key", 
+                    access_token ="insert token key",
+                    access_secret = "insert key"
+                    )
 ```
 
 
@@ -69,7 +73,10 @@ I call the `twitterMap.R` script through `source()`, the script loads the functi
 ```{r, message=FALSE, eval=FALSE}
 source("twitterMap.R")
 
-twitterMap("zedsamurai",fileName = "twitterMap.pdf", plotType = "both" )
+twitterMap("zedsamurai",
+           fileName = "twitterMap.pdf", 
+           plotType = "both" 
+           )
 ```
 
 
