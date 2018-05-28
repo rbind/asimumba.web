@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https//:zedr.rbind.io/"
 languageCode = "en-us"
 title = "A Hugo website"
 theme = "hugo-lithium"

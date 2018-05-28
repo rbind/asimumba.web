@@ -13,14 +13,14 @@ output:
      toc: true
 ---
 
-<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
-<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
-<link href="/rmarkdown-libs/dygraphs/dygraph.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/dygraphs/dygraph-combined.js"></script>
-<script src="/rmarkdown-libs/moment/moment.js"></script>
-<script src="/rmarkdown-libs/moment-timezone/moment-timezone-with-data.js"></script>
-<script src="/rmarkdown-libs/moment-fquarter/moment-fquarter.min.js"></script>
-<script src="/rmarkdown-libs/dygraphs-binding/dygraphs.js"></script>
+<script src="/https//:zedr.rbind.io/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/https//:zedr.rbind.io/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/https//:zedr.rbind.io/rmarkdown-libs/dygraphs/dygraph.css" rel="stylesheet" />
+<script src="/https//:zedr.rbind.io/rmarkdown-libs/dygraphs/dygraph-combined.js"></script>
+<script src="/https//:zedr.rbind.io/rmarkdown-libs/moment/moment.js"></script>
+<script src="/https//:zedr.rbind.io/rmarkdown-libs/moment-timezone/moment-timezone-with-data.js"></script>
+<script src="/https//:zedr.rbind.io/rmarkdown-libs/moment-fquarter/moment-fquarter.min.js"></script>
+<script src="/https//:zedr.rbind.io/rmarkdown-libs/dygraphs-binding/dygraphs.js"></script>
 
 
 <pre class="r"><code>## Packages to load
@@ -69,7 +69,7 @@ names(fundreturn_final)</code></pre>
 # as.Date(fundreturn_final[,1]))</code></pre>
 <pre class="r"><code>ggplot(data = fundreturn_final, aes(x = Year, y = PercentageReturn, color = Stockticker)) + 
     geom_line()</code></pre>
-<p><img src="/post/2017-02-06-fund-returns_files/figure-html/unnamed-chunk-6-1.png" width="576" /></p>
+<p><img src="/https//:zedr.rbind.io/post/2017-02-06-fund-returns_files/figure-html/unnamed-chunk-6-1.png" width="576" /></p>
 <pre class="r"><code># Google stock Performance GOOG
 GOOG &lt;- subset(fundreturn_final, Stockticker == &quot;GOOG&quot;)
 g &lt;- ggplot(data = GOOG, aes(x = Year, y = PercentageReturn)) + geom_line()
@@ -84,7 +84,7 @@ g &lt;- g + labs(x = &quot;Year&quot;, y = &quot;Return&quot;)
 g + annotate(&quot;text&quot;, x = as.Date(&quot;2009-09-01&quot;), y = 0.3245, label = &quot;HR&quot;, fontface = &quot;bold&quot;, 
     size = 3, colour = &quot;forestgreen&quot;) + annotate(&quot;text&quot;, x = as.Date(&quot;2010-04-01&quot;), 
     y = -0.19, label = &quot;LR&quot;, fontface = &quot;bold&quot;, size = 3, colour = &quot;red&quot;)</code></pre>
-<p><img src="/post/2017-02-06-fund-returns_files/figure-html/unnamed-chunk-7-1.png" width="576" /></p>
+<p><img src="/https//:zedr.rbind.io/post/2017-02-06-fund-returns_files/figure-html/unnamed-chunk-7-1.png" width="576" /></p>
 <pre class="r"><code># Portfolio Performance Appraisal
 
 # Having the following portfolio
@@ -105,7 +105,7 @@ p &lt;- ggplot(data = portfolio, aes(x = Year, y = PercentageReturn, colour = St
     geom_line()
 p + labs(x = &quot; Year&quot;, y = &quot;Return&quot;, colour = &quot;Stock ticker&quot;) + ggtitle(&quot; Apple, Amazon and Google Stock Returns&quot;, 
     subtitle = &quot; For the period June 2007 - Nov. 2016&quot;)</code></pre>
-<p><img src="/post/2017-02-06-fund-returns_files/figure-html/unnamed-chunk-8-1.png" width="576" /></p>
+<p><img src="/https//:zedr.rbind.io/post/2017-02-06-fund-returns_files/figure-html/unnamed-chunk-8-1.png" width="576" /></p>
 <pre class="r"><code># Dygraphing
 
 p1 &lt;- subset(fundreturn_final, Stockticker == &quot;AMZN&quot;)
