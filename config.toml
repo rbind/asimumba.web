@@ -27,7 +27,7 @@ pygmentsCodeFences = false
     tagline = "A Data Science Blog"
 
 [[menu.main]]
-    name = "Home"
+    name = "Main Site"
     url = "https://asimumba.rbind.io/"
     weight = 1
 

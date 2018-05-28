@@ -11,6 +11,7 @@ tags:
 output:
    blogdown::html_page:
      toc: true
+image : "images/report.jpg"
 ---
 
 ```{r,echo=FALSE}
