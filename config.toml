@@ -1,5 +1,5 @@
 baseurl = "https://zedr.rbind.io/"
-title = "Kiera"
+title = "ZedR Blog"
 copyright = "Copyright &copy; 2017 - ZedR"
 canonifyurls = true
 theme = "hugo-kiera"
