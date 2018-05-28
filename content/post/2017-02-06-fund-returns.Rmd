@@ -14,7 +14,7 @@ output:
 ---
 
 ```{r,echo=FALSE}
-knitr::opts_chunk$set(echo = TRUE, tidy = TRUE)
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r,results='hide',message=FALSE}

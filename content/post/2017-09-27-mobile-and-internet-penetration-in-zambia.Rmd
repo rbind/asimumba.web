@@ -30,6 +30,7 @@ For this analysis, I will mainly use the following packages. The beauty with the
 library(ggplot2)
 library(dplyr)
 library(readr)
+theme_set(theme_light())
 ```
 
 ## Data
@@ -43,7 +44,9 @@ The data used in this analysis can be found on the [ZICTA](http://onlinesystems.
 Running the following codes loads the data into the work environment, so we can work with it to do our analysis. 
 ```{r,message=FALSE}
 operator_stats <- read_csv("../../static/data/operator_stats.csv")
+
 isps <- read_csv("../../static/data/isps.csv")
+
 network_coverage <- read_csv("../../static/data/network_coverage.csv")
 
 operator_stats <- operator_stats %>% 

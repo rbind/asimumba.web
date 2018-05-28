@@ -3,6 +3,8 @@ title = "ZedR Blog"
 copyright = "Copyright &copy; 2017 - ZedR"
 canonifyurls = true
 theme = "hugo-kiera"
+disqusShortname = "asimumba"
+
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 paginate = 3
