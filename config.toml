@@ -21,8 +21,17 @@ pygmentsCodeFences = false
     facebook = ""
     twitter = "asimumba21"
     instagram = ""
+    email = "simumbaa21@gmail.com"
 
 [params]
     tagline = "A Data Science Blog"
 
+[[menu.main]]
+    name = "Home"
+    url = "https://asimumba.rbind.io/"
+    weight = 1
 
+[[menu.main]]
+    name = "About"
+    url = "https://asimumba.rbind.io/about/about/"
+    weight = 2
