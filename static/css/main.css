@@ -3,7 +3,7 @@ body {
   font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",
 Helvetica,Arial,sans-serif,"Apple Color Emoji",
 "Segoe UI Emoji","Segoe UI Symbol";: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   color: #222222;
   position: relative;
   background: #FFFFFF;
@@ -35,9 +35,7 @@ p a {
 h1,h2,h3,h4,h5,h6 {
   font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",
 Helvetica,Arial,sans-serif,"Apple Color Emoji",
-"Segoe UI Emoji","Segoe UI Symbol";: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",
-Helvetica,Arial,sans-serif,"Apple Color Emoji",
-"Segoe UI Emoji","Segoe UI Symbol";: 'Open Sans', sans-serif;
+"Segoe UI Emoji","Segoe UI Symbol";
   font-weight: 600;
   color: #36454f;
 }
@@ -85,9 +83,7 @@ hr.small {
 .main-explain-area {
   font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",
 Helvetica,Arial,sans-serif,"Apple Color Emoji",
-"Segoe UI Emoji","Segoe UI Symbol";: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",
-Helvetica,Arial,sans-serif,"Apple Color Emoji",
-"Segoe UI Emoji","Segoe UI Symbol";: 'Open Sans', sans-serif;
+"Segoe UI Emoji","Segoe UI Symbol";
   padding: 15px inherit;
 }
 .hideme {

@@ -51,7 +51,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
     name = "Blog"
-    url = "blog"
+    url = "https://zedr.rbind.io/"
     weight = 1
 
 [[menu.main]]
