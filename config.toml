@@ -62,13 +62,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [[menu.main]]
     name = "Adventure"
     url = "travel"
-    weight = 4
+    weight = 3
 
 [[menu.main]]
     name = "CV"
     url = "cv/2017-09-22-curriculum-vitae"
-    weight = 5
+    weight = 4
 [[menu.main]]
     name = "About"
     url = "about/about/"
-    weight = 6
+    weight = 5
