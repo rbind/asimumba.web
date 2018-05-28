@@ -15,8 +15,6 @@ linkedIn: [aaronsimumba](https://linkedin.com/in/aaronsimumba)
 
 ***
 
-
-
 Education background
 --------------------
 ***
@@ -55,7 +53,7 @@ Employment
   Projects under consultancy
 ----------
 ***
-1. [Data-Driven Entrepreneurship Pursuits](https://bongohive.co.zm/data-driven-entrepreneurship/)- web-based visualization platform.
+[Data-Driven Entrepreneurship Pursuits](https://bongohive.co.zm/data-driven-entrepreneurship/)- web-based visualization platform.
 
 
 ***
