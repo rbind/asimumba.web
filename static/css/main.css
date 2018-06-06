@@ -694,11 +694,6 @@ table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee }
 
-/* --- Social media sharing section --- */
-#social-share-section {
-  margin-bottom: 30px;
-}
-
 /* --- Google Custom Search Engine Popup --- */
 #modalSearch table tr, #modalSearch table tr td, #modalSearch table tr th {
   border:none;
@@ -761,9 +756,3 @@ Helvetica,Arial,sans-serif,"Apple Color Emoji",
     border: 1px solid #eee;
     border-radius: 5px;
   }
-
-.col-xs-2 {
-    width: 19.66666667%;
-    position: relative;
-    min-height: 15px;
-}
