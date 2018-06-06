@@ -66,7 +66,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [[menu.main]]
     name = "CV"
-    url = "cv/2017-09-22-curriculum-vitae"
+    url = "https://asimumba.github.io/aaron-simumba-cv/"
     weight = 4
 [[menu.main]]
     name = "About"
