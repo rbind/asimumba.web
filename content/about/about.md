@@ -28,6 +28,9 @@ I can be found on [**Github**](https://github.com/asimumba/) poking around inter
 **Courses completed:**
 ***
 
+- _Data Analysis with Spreadsheets_ - [**DataCamp**](https://www.datacamp.com/statement-of-accomplishment/course/712b36601d6e732f07128239c057eda77132ae38)
+
+
 - _Introduction to R course_ - [**DataCamp**](https://www.datacamp.com/statement-of-accomplishment/course/284ca241bbb76f34add2d7c8a7ad4d4a8167d7f2)
 
 - _Introduction to SQL for Data Science Course_ - [**DataCamp**](https://www.datacamp.com/statement-of-accomplishment/course/9c58b5ae8c2e5918dbee19f70e9bf797686b9ddd)
