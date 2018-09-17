@@ -2,7 +2,6 @@
 title: About
 date: 2014-04-09
 comments: false
-bigimg: [{src: "/img/light.jpg", desc: ""}]
 ---
 
 
@@ -66,5 +65,5 @@ I can be found on [**Github**](https://github.com/asimumba/) poking around inter
 
 <br><br><br><br><br>
 ***
-This website is built with [**Beautiful Hugo**](https://github.com/halogenica/beautifulhugo) theme,
+This website is built with [**forty**](https://github.com/MarcusVirg/forty) theme,
 [**Blogdown**](https://github.com/rstudio/blogdown), [**hugo**](https://gohugo.io/), and deployed by [**netlify**](https://www.netlify.com/)

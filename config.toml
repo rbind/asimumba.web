@@ -3,6 +3,7 @@ baseURL = "http://asimumba.rbind.io/"
 languageCode = "en-us"
 title = "Aaron Simumba"
 theme = "forty"
+enableEmoji = "true"
 
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
