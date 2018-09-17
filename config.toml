@@ -31,6 +31,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
   # Just a custom image variable, please define it in .md files for content.
   image = ""
+  
+  [permalinks]
+    post = "/:year/:month/:day/:slug/"
 
   # 404 error customization
   [params.error404]
