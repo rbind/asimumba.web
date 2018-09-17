@@ -99,16 +99,16 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     # Display your showcases here.
     
     [[params.tiles.showcase]]
-      title = "Aliquam"
-      subtitle = "Ipsum Dolor Sit Amet"
-      image = "pic01.jpg"
-      url = "blogs/aliquam"
+      title = "Data Driven Entrepreneurship Pursuits"
+      subtitle = "Sector Visualizations"
+      image = "DDEP.png"
+      url = "https://bongohive.co.zm/data-driven-entrepreneurship/#1512738883738-3bf2d5d0-0c63"
 
     [[params.tiles.showcase]]
-      title = "Tempus"
-      subtitle = "Feugiat Amet Tempus"
-      image = "pic02.jpg"
-      url = "blogs/tempus"
+      title = "Data Science Africa"
+      subtitle = "Data Science reference material"
+      image = "data.jpg"
+      url = "https://github.com/asimumba/Data-Science-material"
 
     [[params.tiles.showcase]]
       title = "Magna"
