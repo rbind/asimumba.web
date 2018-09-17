@@ -1,5 +1,5 @@
 # Site settings
-baseURL = "https://asimumba.rbind.io/"
+baseURL = "https://asimumba.rbind.io"
 languageCode = "en-us"
 title = "Aaron Simumba"
 theme = "forty"
