@@ -1,7 +1,7 @@
 options(
         servr.daemon = TRUE,
         blogdown.yaml.empty = FALSE,
-        blogdown.publishDir = '../aaronpublic',  
+        blogdown.publishDir = '../aaron-public',  
         blogdown.author = "Aaron Simumba",
         blogdown.generator.server = TRUE,
         blogdown.hugo.server = c('-D', '-F', '--navigateToChanged'),
