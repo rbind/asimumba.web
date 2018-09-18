@@ -147,11 +147,12 @@ time {
 }
 
 #container main article pre {
-  background-color: #ffffcc;
+  background-color: #f8f8f8;
   overflow-x: auto;
   padding: 0.8em;
-  font-size: 0.9em;
-  box-shadow: 0 -1px 0 #bbbbbb inset;
+  font-size: 0.8em;
+  box-shadow: 5px 5px 5px #eee;
+  line-height: 1.75;
 }
 
 #container main article pre code {
@@ -160,7 +161,7 @@ time {
 
 #container main article p code {
   padding: 0.2em;
-  background-color: #ffcccc;
+  background-color: #f9f9f9;
   font-size: 0.9em;
 }
 
@@ -371,4 +372,12 @@ ul.pagination {
 
 ul.pagination li {
   padding: 0 1em;
+}
+
+pre {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  background: #f8f8f8;
+  padding: 1em;
+  overflow-x: auto;
 }

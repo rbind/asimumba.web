@@ -7,7 +7,7 @@ disqusShortname = "asimumba"
 
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-paginate = 3
+paginate = 20
 
 summaryLength = 30
 enableEmoji = true
@@ -27,7 +27,7 @@ pygmentsCodeFences = false
     tagline = "A Data Science Blog"
 
 [[menu.main]]
-    name = "Main Site"
+    name = "My Site"
     url = "https://asimumba.rbind.io/"
     weight = 1
 
@@ -35,3 +35,11 @@ pygmentsCodeFences = false
     name = "About"
     url = "https://asimumba.rbind.io/about/about/"
     weight = 2
+
+
+  # options for highlight.js (version, additional languages, and theme)
+  disable_highlight = false # set to true to disable Highlight
+  highlightjsVersion = "9.11.0"
+  highlightjsCDN = "//cdn.bootcss.com"
+  highlightjsLang = ["r", "yaml", "css"]
+  highlightjsTheme = "github"
