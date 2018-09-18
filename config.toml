@@ -9,6 +9,9 @@ disqusShortname = "asimumba"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 paginate = 20
 
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+    
 summaryLength = 30
 enableEmoji = true
 pygmentsCodeFences = false

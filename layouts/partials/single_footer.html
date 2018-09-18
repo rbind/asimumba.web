@@ -13,7 +13,8 @@
         {{ end }}
     </ul>
 </section>
-    {{ if .Site.DisqusShortname }}
+    <!-- {{ if .Site.DisqusShortname }}
         {{ partial "disqus" . }}
-    {{ end }}
+    {{ end }} -->
+    {{ template "_internal/disqus.html" . }}
 {{ end }}
