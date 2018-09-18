@@ -136,6 +136,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       subtitle = "LASI yearly performance"
       image = "pic06.jpg"
       url = "https://zedr.rbind.io/post/lusaka-stock-exchange/"
+      
+    [[params.tiles.showcase]]
+      title = "Stocks Portfolio Analysis"
+      subtitle = ""
+      image = "stock.png"
+      url = "https://zedr.rbind.io/post/portfolio-analysis/"
     # You can make more showcases by copy and pasting the code above
 
   [params.blog]
