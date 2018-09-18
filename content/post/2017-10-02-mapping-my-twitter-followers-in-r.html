@@ -30,12 +30,25 @@ install.packages(&quot;twitteR&quot;, &quot;httr&quot;, &quot;ROAuth&quot;)</cod
 library(httr)
 library(twitteR)</code></pre>
 <p>Authenticating R to have access to your twitter account, the <code>twitteR</code> package has a function called <code>setup_twitter_oauth()</code>, where you are required to supply the keys and tokens to be found under the keys and tokens tab on your twitter developer profile. Supplying the <code>consumer key</code> and <code>secret key</code> obtained on-line, will prompt authorisation through the web browser, where a step by step prompt is given. Refer to the link above to the walk through set-up.</p>
-<pre class="r"><code>setup_twitter_oauth(consumer_key = &quot;insert key&quot;, consumer_secret = &quot;insert key&quot;, 
-    access_token = &quot;insert token key&quot;, access_secret = &quot;insert key&quot;)</code></pre>
+<pre class="r"><code>setup_twitter_oauth(consumer_key = &quot;insert key&quot;,
+                    
+                    consumer_secret =&quot;insert key&quot;, 
+                    
+                    access_token =&quot;insert token key&quot;,
+                    
+                    access_secret = &quot;insert key&quot;
+                    )</code></pre>
 <div id="mapping-followers-and-following-locations" class="section level2">
 <h2>Mapping followers and Following locations</h2>
 <p>Jeff Leek provides the following description for the twitterMap function:</p>
-<pre class="r"><code>twitterMap &lt;- function(userName,userLocation = NULL,fileName = &quot;twitterMap.pdf&quot;,nMax = 1000,plotType = c(&quot;followers&quot;, &quot;both&quot;,&quot;following&quot;))</code></pre>
+<pre class="r"><code>twitterMap &lt;- function(userName,
+userLocation = NULL,
+fileName = &quot;twitterMap.pdf&quot;,
+nMax = 1000,
+plotType = c(&quot;followers&quot;, 
+&quot;both&quot;,
+&quot;following&quot;)
+)</code></pre>
 <p>with arguments:</p>
 <blockquote>
 <p>userName - the twitter username you want to plot</p>

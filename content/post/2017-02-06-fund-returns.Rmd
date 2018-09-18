@@ -15,7 +15,7 @@ image : "images/report.jpg"
 ---
 
 ```{r,echo=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,warning = FALSE)
 ```
 
 ```{r,results='hide',message=FALSE}
@@ -48,7 +48,8 @@ rm(temp) # gettting rid of temp object
 ## Next I, stack variables of the same unique class within the same column. That is the returns of all the stocks in one column and the tickers in another column, indexed by the date variable.
 
 # make use of a temporary object.
-temp <- data.frame(index(fundreturn), stack(as.data.frame(coredata(fundreturn))))
+temp <- data.frame(index(fundreturn), 
+                   stack(as.data.frame(coredata(fundreturn))))
 fundreturn_final <- temp
 ```
 
@@ -68,7 +69,9 @@ fundreturn_final <- temp
 
 
 ```{r,fig.height=3.5,fig.width=6}
-ggplot(data = fundreturn_final, aes(x=Year, y=PercentageReturn, color=Stockticker)) +geom_line()
+ggplot(data = fundreturn_final, aes(x=Year, 
+                                    y=PercentageReturn, color=Stockticker)) +
+  geom_line()
 ```
 
 
@@ -76,19 +79,31 @@ ggplot(data = fundreturn_final, aes(x=Year, y=PercentageReturn, color=Stockticke
 # Google stock Performance
 # GOOG
 GOOG <- subset(fundreturn_final, Stockticker=="GOOG")
-g <- ggplot(data = GOOG, aes(x=Year, y=PercentageReturn)) +geom_line()
+
+g <- ggplot(data = GOOG, aes(x=Year, y=PercentageReturn)) +
+  geom_line()
 # add features
-g <- g + ggtitle("Google Monthly Return", subtitle = "For the Period between June 2007 - Nov. 2016") + 
-      theme(panel.background = element_rect(fill = "white", colour = "grey50"),
+g <- g + ggtitle("Google Monthly Return", 
+                 subtitle = "For the Period between June 2007 - Nov. 2016") + 
+  
+      theme(panel.background = element_rect(fill = "white",
+                                            colour = "grey50"),
             axis.text = element_text(colour = "blue"),
+            
             axis.title.y = element_text(size = rel(1.0), angle = 90),
             axis.title.x = element_text(size = rel(1.0), angle = 360))
 
 g <- g + labs(x = "Year",
         y ="Return") 
 
-g + annotate("text",x=as.Date("2009-09-01"),y=0.3245,label="HR",fontface="bold",size=3, colour = "forestgreen") +
-annotate("text",x=as.Date("2010-04-01"),y=-0.1900,label="LR",fontface="bold",size=3,colour ="red") 
+g + annotate("text",x=as.Date("2009-09-01"),
+             y=0.3245,label="HR",
+             fontface="bold",size=3, 
+             colour = "forestgreen") +
+annotate("text",x=as.Date("2010-04-01"),
+         y=-0.1900,label="LR",
+         fontface="bold",size=3,
+         colour ="red") 
 ```
 
 

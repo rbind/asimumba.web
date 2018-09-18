@@ -38,8 +38,11 @@ Authenticating R to have access to your twitter account, the `twitteR` package h
 
 ```{r, eval=FALSE}
 setup_twitter_oauth(consumer_key = "insert key",
+                    
                     consumer_secret ="insert key", 
+                    
                     access_token ="insert token key",
+                    
                     access_secret = "insert key"
                     )
 ```
@@ -50,7 +53,14 @@ setup_twitter_oauth(consumer_key = "insert key",
 Jeff Leek provides the following description for the twitterMap function:
 
 ```r
-twitterMap <- function(userName,userLocation = NULL,fileName = "twitterMap.pdf",nMax = 1000,plotType = c("followers", "both","following"))
+twitterMap <- function(userName,
+userLocation = NULL,
+fileName = "twitterMap.pdf",
+nMax = 1000,
+plotType = c("followers", 
+"both",
+"following")
+)
 ```
 with arguments:
 

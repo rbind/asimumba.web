@@ -27,14 +27,11 @@ image : "images/report.jpg"
 
 <pre class="r"><code>## Packages to load
 library(quantmod)
-library(ggplot2) </code></pre>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.5.1</code></pre>
-<pre class="r"><code>library(xts)
-library(highcharter)</code></pre>
-<pre><code>## Warning: package &#39;highcharter&#39; was built under R version 3.5.1</code></pre>
-<pre class="r"><code>library(PerformanceAnalytics)
+library(ggplot2) 
+library(xts)
+library(highcharter)
+library(PerformanceAnalytics)
 library(dygraphs)</code></pre>
-<pre><code>## Warning: package &#39;dygraphs&#39; was built under R version 3.5.1</code></pre>
 <pre class="r"><code>## Dates have been loaded as a factor instead of as dates. There is need to convert this variable to the date class and covert the rest of the variables to xts(Extensible Time Series)
 
 temp &lt;- xts(x =fundreturn[,-1], order.by = as.Date(fundreturn[,1])) 
@@ -54,7 +51,8 @@ str(fundreturn)</code></pre>
 ## Next I, stack variables of the same unique class within the same column. That is the returns of all the stocks in one column and the tickers in another column, indexed by the date variable.
 
 # make use of a temporary object.
-temp &lt;- data.frame(index(fundreturn), stack(as.data.frame(coredata(fundreturn))))
+temp &lt;- data.frame(index(fundreturn), 
+                   stack(as.data.frame(coredata(fundreturn))))
 fundreturn_final &lt;- temp</code></pre>
 <pre class="r"><code># Give the variables more descriptive names 
     names(fundreturn_final)[1] &lt;-  &quot;Year&quot;
@@ -66,24 +64,38 @@ fundreturn_final &lt;- temp</code></pre>
   # we coerce the data frame back to xts to be able to use quantmod and highcharter
   
 #fundreturn_final &lt;- xts(x=fundreturn_final[-1], order.by = as.Date(fundreturn_final[,1]))</code></pre>
-<pre class="r"><code>ggplot(data = fundreturn_final, aes(x=Year, y=PercentageReturn, color=Stockticker)) +geom_line()</code></pre>
+<pre class="r"><code>ggplot(data = fundreturn_final, aes(x=Year, 
+                                    y=PercentageReturn, color=Stockticker)) +
+  geom_line()</code></pre>
 <p><img src="/post/2017-02-06-fund-returns_files/figure-html/unnamed-chunk-6-1.png" width="576" /></p>
 <pre class="r"><code># Google stock Performance
 # GOOG
 GOOG &lt;- subset(fundreturn_final, Stockticker==&quot;GOOG&quot;)
-g &lt;- ggplot(data = GOOG, aes(x=Year, y=PercentageReturn)) +geom_line()
+
+g &lt;- ggplot(data = GOOG, aes(x=Year, y=PercentageReturn)) +
+  geom_line()
 # add features
-g &lt;- g + ggtitle(&quot;Google Monthly Return&quot;, subtitle = &quot;For the Period between June 2007 - Nov. 2016&quot;) + 
-      theme(panel.background = element_rect(fill = &quot;white&quot;, colour = &quot;grey50&quot;),
+g &lt;- g + ggtitle(&quot;Google Monthly Return&quot;, 
+                 subtitle = &quot;For the Period between June 2007 - Nov. 2016&quot;) + 
+  
+      theme(panel.background = element_rect(fill = &quot;white&quot;,
+                                            colour = &quot;grey50&quot;),
             axis.text = element_text(colour = &quot;blue&quot;),
+            
             axis.title.y = element_text(size = rel(1.0), angle = 90),
             axis.title.x = element_text(size = rel(1.0), angle = 360))
 
 g &lt;- g + labs(x = &quot;Year&quot;,
         y =&quot;Return&quot;) 
 
-g + annotate(&quot;text&quot;,x=as.Date(&quot;2009-09-01&quot;),y=0.3245,label=&quot;HR&quot;,fontface=&quot;bold&quot;,size=3, colour = &quot;forestgreen&quot;) +
-annotate(&quot;text&quot;,x=as.Date(&quot;2010-04-01&quot;),y=-0.1900,label=&quot;LR&quot;,fontface=&quot;bold&quot;,size=3,colour =&quot;red&quot;) </code></pre>
+g + annotate(&quot;text&quot;,x=as.Date(&quot;2009-09-01&quot;),
+             y=0.3245,label=&quot;HR&quot;,
+             fontface=&quot;bold&quot;,size=3, 
+             colour = &quot;forestgreen&quot;) +
+annotate(&quot;text&quot;,x=as.Date(&quot;2010-04-01&quot;),
+         y=-0.1900,label=&quot;LR&quot;,
+         fontface=&quot;bold&quot;,size=3,
+         colour =&quot;red&quot;) </code></pre>
 <p><img src="/post/2017-02-06-fund-returns_files/figure-html/unnamed-chunk-7-1.png" width="576" /></p>
 <pre class="r"><code># Portfolio Performance Appraisal
 

@@ -37,18 +37,24 @@ The following excerpt from Bloomberg stands out:
 
 ```{r, message=FALSE,echo=FALSE}
 library(xts)
+
 load("../../static/data/luse.RData")
+
 # convert the data frame to an xts
 LASI_monthly <- xts(x = LASI_monthly[,-1], 
+                    
                     order.by = as.Date(LASI_monthly[,1]))
 
 LASI_monthly_zccm <- xts(x = LASI_monthly_zccm[,-1], 
+                         
                          order.by = as.Date(LASI_monthly_zccm[,1]))
 
 LASI_yearly <- xts(x = LASI_yearly[,-1], 
+                   
                    order.by = as.Date(LASI_yearly[,1]))
 
 LASI_yearly_zccm <- xts(x = LASI_yearly_zccm[,-1], 
+                        
                         order.by = as.Date(LASI_yearly_zccm[,1]))
 ```
 
@@ -72,9 +78,14 @@ NB: The returns are computed in the local currency (Kwacha).
 
 ```{r, first-figure,fig.cap="The LuSE LASI Monthly Returns For the Period 2005-2014 (excl. ZCCM-IH)", fig.height=3.5,fig.width=6}
 plot(LASI_monthly$Return, xlab=" Period",
+     
 ylab="Return",
+
 main = "The LuSE LASI Monthly Returns For the Period 2005-2014 (excl. ZCCM-IH)",
-cex.main =1, font.main=2)
+
+cex.main =1, 
+font.main=2
+)
 ```
 
 
@@ -87,27 +98,42 @@ The following chart shows the LASI index inclusive of  ZCCM-IH. Since the LASI i
 
 ```{r,fig.cap= "The LuSE LASI Monthly Returns For the Period 2005-2014 (incl. ZCCM-IH)", fig.height=3.5,fig.width=6}
 plot(LASI_monthly_zccm$Return,xlab=" Period", 
+     
 ylab="Return", 
+
 main="The LuSE LASI Monthly Returns For the Period 2005-2014 
-     (incl. ZCCM-IH)",cex.main =1, font.main=2)
+     (incl. ZCCM-IH)",
+cex.main =1, 
+font.main=2
+)
 ```
 
 The last two charts detail the index on a yearly basis. Though unlike the picture painted from the monthly data, yearly data that goes farther down the years, seem to be carrying a different message on the effect of the company ZCCM-IH. When introduced into the computations, the volatility is more than that observed without its inclusion.
 
 ```{r, fig.cap= "The LuSE LASI yearly Returns For the Period 1997-2014 (excl. ZCCM-IH)", fig.height=3.5,fig.width=6}
 plot(LASI_yearly$Return,xlab=" Period", 
+     
 ylab="Return", 
+
 main="The LuSE LASI yearly Returns For the Period 1997-2014 
-     (excl. ZCCM-IH)",cex.main =1, font.main=2)
+     (excl. ZCCM-IH)",
+cex.main =1,
+font.main=2
+)
 ```
 
 **Inclusive of ZCCM-IH yearly LASI Index returns**
 
 ```{r, fig.cap= "The LuSE LASI yearly Returns For the Period 1997-2014 (incl. ZCCM-IH)", fig.height=3.5,fig.width=6}
-plot(LASI_yearly_zccm$Return, 
+plot(LASI_yearly_zccm$Return,
+     
 xlab=" Period", ylab="Return", 
+
 main="The LuSE LASI yearly Returns For the Period 1997-2014 
-     (incl. ZCCM-IH)",cex.main =1, font.main=2)
+     (incl. ZCCM-IH)",
+cex.main =1,
+font.main=2
+)
 ```
 
 ### Final Remarks
