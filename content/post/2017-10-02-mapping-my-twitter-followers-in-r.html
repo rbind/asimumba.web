@@ -31,7 +31,7 @@ library(httr)
 library(twitteR)</code></pre>
 <p>Authenticating R to have access to your twitter account, the <code>twitteR</code> package has a function called <code>setup_twitter_oauth()</code>, where you are required to supply the keys and tokens to be found under the keys and tokens tab on your twitter developer profile. Supplying the <code>consumer key</code> and <code>secret key</code> obtained on-line, will prompt authorisation through the web browser, where a step by step prompt is given. Refer to the link above to the walk through set-up.</p>
 <pre class="r"><code>setup_twitter_oauth(consumer_key = &quot;insert key&quot;, consumer_secret = &quot;insert key&quot;, 
-  access_token = &quot;insert token key&quot;, access_secret = &quot;insert key&quot;)</code></pre>
+    access_token = &quot;insert token key&quot;, access_secret = &quot;insert key&quot;)</code></pre>
 <div id="mapping-followers-and-following-locations" class="section level2">
 <h2>Mapping followers and Following locations</h2>
 <p>Jeff Leek provides the following description for the twitterMap function:</p>
@@ -50,7 +50,8 @@ library(twitteR)</code></pre>
 <p>nMax - The maximum number of followers/following to get from Twitter, this is implemented to avoid rate limiting for people with large numbers of followers.</p>
 </blockquote>
 <blockquote>
-<p>plotType - if “both” both followers/following are plotted, etc.</p>
+<p>plotType - if “both” both followers/following are
+plotted, etc.</p>
 </blockquote>
 <p>Mapping my twitter data, I run the following code, supplying my twitter username, and changing the <code>plotType</code> argument to “both”, which plots both locations for my followers and those I follow.</p>
 <p>I call the <code>twitterMap.R</code> script through <code>source()</code>, the script loads the function in the work environment, in order to use the <code>twitterMap()</code> command.</p>
