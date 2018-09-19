@@ -109,13 +109,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     [[params.tiles.showcase]]
       title = "Data Driven Entrepreneurship Pursuits"
       subtitle = "Sector Visualizations"
-      image = "DDEP.png"
+      image = "ddep.png"
       url = "https://bongohive.co.zm/data-driven-entrepreneurship/#1512738883738-3bf2d5d0-0c63"
 
     [[params.tiles.showcase]]
       title = "Data Science Africa"
       subtitle = "Data Science reference material"
-      image = "data.jpg"
+      image = "laptop.jpg"
       url = "https://github.com/asimumba/Data-Science-material"
 
     [[params.tiles.showcase]]
@@ -127,25 +127,25 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     [[params.tiles.showcase]]
       title = "Internet Penetration in Zambia"
       subtitle = "Data on internet and mobile usage"
-      image = "zicta.png"
+      image = "int.jpg"
       url = "https://zedr.rbind.io/2017/09/27/mobile-internet-penetration-in-zambia/"
 
     [[params.tiles.showcase]]
       title = "Developer Circles Lusaka"
       subtitle = "Panel discussant"
-      image = "dev.jpg"
+      image = "ds.jpg"
       url = "blogs/ipsum"
 
     [[params.tiles.showcase]]
       title = "What is in the numbers: Lusaka Securities Exchange"
       subtitle = "LASI yearly performance"
-      image = "pic06.jpg"
+      image = "lasi.jpg"
       url = "https://zedr.rbind.io/2017/04/06/lusaka-stock-exchange/"
       
     [[params.tiles.showcase]]
       title = "Stocks Portfolio Analysis"
       subtitle = ""
-      image = "stock.png"
+      image = "stock.jpg"
       url = "https://zedr.rbind.io/2017/03/17/portfolio-analysis/"
     # You can make more showcases by copy and pasting the code above
 
