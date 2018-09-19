@@ -27,7 +27,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # Link custom assets relative to /static
   custom_css = []
   custom_js  = []
-  favicon    = "logo.png"
+  favicon    = "favicon.ico"
 
   # Just a custom image variable, please define it in .md files for content.
   image = ""
@@ -59,6 +59,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     [[params.navigation.links]]
       name = "CV"
       url = "https://asimumba.github.io/online-cv/"
+      
+      
+     [[params.navigation.links]]
+      name = "Adventure"
+      url = "/adventure/"
       
     [[params.navigation.links]]
       name = "About"
@@ -123,7 +128,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       title = "Internet Penetration in Zambia"
       subtitle = "Data on internet and mobile usage"
       image = "zicta.png"
-      url = "https://zedr.rbind.io/post/mobile-internet-penetration-in-zambia/"
+      url = "https://zedr.rbind.io/2017/09/27/mobile-internet-penetration-in-zambia/"
 
     [[params.tiles.showcase]]
       title = "Developer Circles Lusaka"
@@ -135,13 +140,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       title = "What is in the numbers: Lusaka Securities Exchange"
       subtitle = "LASI yearly performance"
       image = "pic06.jpg"
-      url = "https://zedr.rbind.io/post/lusaka-stock-exchange/"
+      url = "https://zedr.rbind.io/2017/04/06/lusaka-stock-exchange/"
       
     [[params.tiles.showcase]]
       title = "Stocks Portfolio Analysis"
       subtitle = ""
       image = "stock.png"
-      url = "https://zedr.rbind.io/post/portfolio-analysis/"
+      url = "https://zedr.rbind.io/2017/03/17/portfolio-analysis/"
     # You can make more showcases by copy and pasting the code above
 
   [params.blog]
@@ -160,7 +165,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 In another life, I am an Accounting and Finance major. Graduated from the University of Namibia with a BA degree in Accounting(Honours). Previously tutored Business Administration students in the art of business and accounting at the University of Zambia.
 """
     buttonText = "Get Started"
-    url = "blogs"
+    url = "https://zedr.rbind.io/post/"
 
 
   # Contact section
@@ -227,7 +232,7 @@ In another life, I am an Accounting and Finance major. Graduated from the Univer
 
     [[params.footer.social]]
       icon = "fa-linkedin"
-      url= "https://www.linkedin.com"
+      url= "https://www.linkedin.com/aaronsimumba"
       label = "LinkedIn"
 
    # [[params.footer.quicklinks]]
