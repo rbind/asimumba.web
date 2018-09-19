@@ -245,10 +245,15 @@ ggplot() +
 ```{r}
 network_cover <-  network_coverage %>% 
   
-  select(Year, Airtel_Zambia, MTN_Zambia, Zamtel) 
+  select(Year, 
+         Airtel_Zambia, 
+         MTN_Zambia,
+         Zamtel
+         ) 
 
 knitr::kable(network_cover, booktabs = TRUE, 
-             caption = "Percentage network coverage by operator")  
+             caption = "Percentage network coverage by operator"
+             )  
 ```
 
 ## Internet Penetration
@@ -305,18 +310,30 @@ operator_stats %>%
   
   ggplot() + 
   
-  geom_line(aes(x = Year, y = Voice_Tariff_Mobile)) +
-  annotate("text",x= 2013,y=0.55,
-           label="Mobile voice tariff",size = 3) +
+  geom_line(aes(x = Year,
+                y = Voice_Tariff_Mobile)) +
+  annotate("text",
+           x= 2013,
+           y=0.55,
+           label="Mobile voice tariff",
+           size = 3) +
   
-  geom_line(aes(x = Year, y = SMS_on_net_Mobile)) +
-  annotate("text",x= 2013,y=0.32,
-           label="SMS on-net tariff",size = 3) +
+  geom_line(aes(x = Year,
+                y = SMS_on_net_Mobile)) +
+  annotate("text",
+           x= 2013,
+           y=0.32,
+           label="SMS on-net tariff",
+           size = 3) +
   
-  geom_line(aes(x = Year, y = SMS_off_net_Mobile)) +
+  geom_line(aes(x = Year,
+                y = SMS_off_net_Mobile)) +
   
-  annotate("text",x= 2013,y=0.25,
-           label="SMS off-net tariff",size = 3) +
+  annotate("text",
+           x= 2013,
+           y=0.25,
+           label="SMS off-net tariff",
+           size = 3) +
   labs(
     x = "year",
     y = "Mobile Voice tariff/ SMS - on and off net "
@@ -334,21 +351,33 @@ On all accounts, 2014 through to 2016 saw a significant drop in the cost of call
 ```{r}
 operator_stats %>% 
   ggplot() +
-  geom_line(aes(x = Year, y = Voice_on_net_peak_Mobile)) +
-  annotate("text",x= 2013,y=1.18,
-           label="Voice on net peak - Mobile",size = 3) +
+  geom_line(aes(x = Year,
+                y = Voice_on_net_peak_Mobile)) +
+  annotate("text",x= 2013,
+           y=1.18,
+           label="Voice on net peak - Mobile",
+           size = 3) +
   
-  geom_line(aes(x = Year, y = Voice_on_net_off_peak_Mobile)) +
-  annotate("text",x= 2013,y= 0.9,
-           label="Voice on net off peak - Mobile",size = 3) +
+  geom_line(aes(x = Year, 
+                y = Voice_on_net_off_peak_Mobile)) +
+  annotate("text",x= 2013,
+           y= 0.9,
+           label="Voice on net off peak - Mobile",
+           size = 3) +
   
-  geom_line(aes(x = Year, y = Voice_off_net_peak_Mobile)) +
-  annotate("text",x= 2013,y= 1.4,
-           label="Voice off net peak - Mobile",size = 3) +
+  geom_line(aes(x = Year,
+                y = Voice_off_net_peak_Mobile)) +
+  annotate("text",x= 2013,
+           y= 1.4,
+           label="Voice off net peak - Mobile",
+           size = 3) +
   
-  geom_line(aes(x = Year, y = Voice_off_net_off_peak_Mobile)) +
-  annotate("text",x= 2013,y=1.22,
-           label="Voice off net off peak - Mobile",size = 3) +
+  geom_line(aes(x = Year, 
+                y = Voice_off_net_off_peak_Mobile)) +
+  annotate("text",x= 2013,
+           y=1.22,
+           label="Voice off net off peak - Mobile",
+           size = 3) +
   
   labs(
     x = "Year",
