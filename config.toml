@@ -22,11 +22,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
   # Provide your metadata here.
   name = "Aaron Simumba"
-  description = "Your description"
+  description = "Data Management Associate @ mPharma"
 
   # Link custom assets relative to /static
-  custom_css = []
-  custom_js  = []
+  #custom_css = []
+  #custom_js  = []
   favicon    = "favicon.ico"
 
   # Just a custom image variable, please define it in .md files for content.
