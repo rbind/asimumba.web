@@ -122,7 +122,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       title = "Mapping Twitter Data"
       subtitle = "Followers/following interactions"
       image = "twitter.png"
-      url = "https://zedr.rbind.io/post/mapping-the-location-of-my-twitter-followers-and-following-in-r/"
+      url = "https://zedr.rbind.io/2017/10/02/mapping-twitter-followers-and-following-in-r/"
 
     [[params.tiles.showcase]]
       title = "Internet Penetration in Zambia"
