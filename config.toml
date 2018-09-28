@@ -110,7 +110,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       title = "Data Driven Entrepreneurship Pursuits"
       subtitle = "Sector Visualizations"
       image = "ddep.png"
-      url = "https://bongohive.co.zm/data-driven-entrepreneurship/#1512738883738-3bf2d5d0-0c63"
+      url = "https://bongohive.co.zm/data-driven-entrepreneurship/#1512737748557-24a47327-b1c0"
 
     [[params.tiles.showcase]]
       title = "Data Science Africa"
