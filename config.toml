@@ -67,7 +67,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       
     [[params.navigation.links]]
       name = "About"
-      url = "/about/"
+      url = "https://zedr.rbind.io/about/about/"
       
 
     [[params.navigation.links]]
