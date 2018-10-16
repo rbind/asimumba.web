@@ -37,11 +37,11 @@ pygmentsCodeFences = false
     MathJaxVersion = "2.7.1"
 
 [[menu.main]]
-    name = "My Site"
+    name = "Portfolio"
     url = "https://asimumba.rbind.io/"
     weight = 1
 
 [[menu.main]]
     name = "About"
-    url = "https://asimumba.rbind.io/about/about/"
+    url = "/about/"
     weight = 2
