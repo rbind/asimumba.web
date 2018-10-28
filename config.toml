@@ -1,6 +1,6 @@
 baseurl = "https://zedr.rbind.io/"
-title = "ZedR Blog"
-copyright = "Copyright &copy; 2017 - ZedR"
+title = "ZedR Blog - Data Science . R . Stock Markets"
+copyright = "Copyright &copy; 2017 - 2018 - ZedR"
 canonifyurls = true
 theme = "hugo-kiera"
 disqusShortname = "asimumba"
@@ -11,7 +11,7 @@ paginate = 20
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
-    
+
 summaryLength = 30
 enableEmoji = true
 pygmentsCodeFences = false
@@ -32,7 +32,7 @@ pygmentsCodeFences = false
     highlightjsCDN = "//cdn.bootcss.com"
     highlightjsLang = ["r", "yaml", "css"]
     highlightjsTheme = "github"
-    
+
     MathJaxCDN = "//cdn.bootcss.com"
     MathJaxVersion = "2.7.1"
 
