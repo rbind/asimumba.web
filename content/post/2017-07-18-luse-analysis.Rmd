@@ -90,7 +90,7 @@ dygraph((LASI_monthly$Return)*100,
    
   dyAxis("x", label ="Year") %>%
    
-  dyOptions(colors = RColorBrewer::brewer.pal(1, "Set2")) 
+  dyOptions(colors = RColorBrewer::brewer.pal(3, "Set2")) 
 
 ```
 
@@ -111,7 +111,7 @@ dygraph((LASI_monthly_zccm$Return)*100,
    
   dyAxis("x", label ="Year") %>%
    
-  dyOptions(colors = RColorBrewer::brewer.pal(1, "Set2")) 
+  dyOptions(colors = RColorBrewer::brewer.pal(3, "Set2")) 
 
 ```
 
@@ -127,7 +127,7 @@ dygraph((LASI_yearly$Return)*100,
    
   dyAxis("x", label ="Year") %>%
    
-  dyOptions(colors = RColorBrewer::brewer.pal(1, "Set2")) 
+  dyOptions(colors = RColorBrewer::brewer.pal(3, "Set2")) 
 ```
 
 **Inclusive of ZCCM-IH yearly LASI Index returns**
@@ -141,7 +141,7 @@ dygraph((LASI_yearly_zccm$Return)*100,
    
   dyAxis("x", label ="Year") %>%
    
-  dyOptions(colors = RColorBrewer::brewer.pal(1, "Set2")) 
+  dyOptions(colors = RColorBrewer::brewer.pal(3, "Set2")) 
 ```
 
 ### Final Remarks
