@@ -121,7 +121,9 @@ After cleaning the data in Excel, it can be re-imported to aid in analysis.
 
 First step is to clean the data, eliminating unwanted variables and title headers. That is in addition to transforming the data into a "tidy" format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second, and the last three row of the extracted data.
 
-```{r, message=FALSE,include=FALSE}
+```{r, message=FALSE,include=FALSE,eval=TRUE}
+library(tidyverse)
+cso_column <- read_csv("../../static/data/cso_data.csv")
 cso_data <- cso_column[-c(1,2,33:36), ] # this eleminates the rows specified
 # Renaming the columns 
 names(cso_data) <- c("province", "sex", "2011", 
@@ -133,8 +135,7 @@ cso_data[1:10, ] # first 10 rows
 `tidyr` package is used to gather the observations in the columns into rows and combine all the observations across 2 columns. The function `gather()` achieves this in the `tidyr` package.
 
 After gathering the data from the columns to rows, the second issue is to index the numbers by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.
-```{r,message=FALSE}
-library(tidyverse) # install.packages("tidyverse") This will install the tidyverse
+```{r,message=FALSE,eval=TRUE}
 cso_data <- cso_data %>% 
   as.tibble() # converting to a tibble
 cso_provincial <- cso_data %>% 
@@ -157,7 +158,7 @@ cso_transformed
 
 ```
 For the full data table view, see the table below.
-```{r}
+```{r,eval=TRUE}
 knitr::kable(cso_transformed, booktabs = TRUE, 
              caption = "Census data per Province")  
 ```

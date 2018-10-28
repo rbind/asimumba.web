@@ -110,8 +110,7 @@ cso_column &lt;- cso_table[[1]]
 <p>First step is to clean the data, eliminating unwanted variables and title headers. That is in addition to transforming the data into a “tidy” format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second, and the last three row of the extracted data.</p>
 <p><code>tidyr</code> package is used to gather the observations in the columns into rows and combine all the observations across 2 columns. The function <code>gather()</code> achieves this in the <code>tidyr</code> package.</p>
 <p>After gathering the data from the columns to rows, the second issue is to index the numbers by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.</p>
-<pre class="r"><code>library(tidyverse) # install.packages(&quot;tidyverse&quot;) This will install the tidyverse
-cso_data &lt;- cso_data %&gt;% 
+<pre class="r"><code>cso_data &lt;- cso_data %&gt;% 
   as.tibble() # converting to a tibble
 cso_provincial &lt;- cso_data %&gt;% 
   filter(sex == &quot;Total&quot;) %&gt;% 
@@ -128,9 +127,335 @@ cso_transformed &lt;- cbind(cso_provincial,province) %&gt;%
   select(year,province, census_proj) %&gt;% 
   as.tibble() 
 cso_transformed</code></pre>
+<pre><code>## # A tibble: 60 x 3
+##    year  province      census_proj
+##    &lt;chr&gt; &lt;fct&gt;         &lt;chr&gt;      
+##  1 2011  central       1,355,775  
+##  2 2011  copperbelt    2,143,413  
+##  3 2011  eastern       1,628,880  
+##  4 2011  luapula       1,015,629  
+##  5 2011  lusaka        2,362,967  
+##  6 2011  muchinga      749,449    
+##  7 2011  northern      1,146,392  
+##  8 2011  north.western 746,982    
+##  9 2011  southern      1,642,757  
+## 10 2011  western       926,478    
+## # ... with 50 more rows</code></pre>
 <p>For the full data table view, see the table below.</p>
 <pre class="r"><code>knitr::kable(cso_transformed, booktabs = TRUE, 
              caption = &quot;Census data per Province&quot;)  </code></pre>
+<table>
+<caption><span id="tab:unnamed-chunk-8">Table 1: </span>Census data per Province</caption>
+<thead>
+<tr class="header">
+<th align="left">year</th>
+<th align="left">province</th>
+<th align="left">census_proj</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">central</td>
+<td align="left">1,355,775</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">copperbelt</td>
+<td align="left">2,143,413</td>
+</tr>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">eastern</td>
+<td align="left">1,628,880</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">luapula</td>
+<td align="left">1,015,629</td>
+</tr>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">lusaka</td>
+<td align="left">2,362,967</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">muchinga</td>
+<td align="left">749,449</td>
+</tr>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">northern</td>
+<td align="left">1,146,392</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">north.western</td>
+<td align="left">746,982</td>
+</tr>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">southern</td>
+<td align="left">1,642,757</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">western</td>
+<td align="left">926,478</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">central</td>
+<td align="left">1515086</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">copperbelt</td>
+<td align="left">2362207</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">eastern</td>
+<td align="left">1813445</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">luapula</td>
+<td align="left">1127453</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">lusaka</td>
+<td align="left">2777439</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">muchinga</td>
+<td align="left">895058</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">northern</td>
+<td align="left">1304435</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">north.western</td>
+<td align="left">833818</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">southern</td>
+<td align="left">1853464</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">western</td>
+<td align="left">991500</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">central</td>
+<td align="left">1734601</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">copperbelt</td>
+<td align="left">2669635</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">eastern</td>
+<td align="left">2065590</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">luapula</td>
+<td align="left">1276608</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">lusaka</td>
+<td align="left">3360183</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">muchinga</td>
+<td align="left">1095535</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">northern</td>
+<td align="left">1520004</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">north.western</td>
+<td align="left">950789</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">southern</td>
+<td align="left">2135794</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">western</td>
+<td align="left">1076683</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">central</td>
+<td align="left">1979202</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">copperbelt</td>
+<td align="left">3016344</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">eastern</td>
+<td align="left">2344980</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">luapula</td>
+<td align="left">1439877</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">lusaka</td>
+<td align="left">4004276</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">muchinga</td>
+<td align="left">1326222</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">northern</td>
+<td align="left">1763638</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">north.western</td>
+<td align="left">1080072</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">southern</td>
+<td align="left">2445929</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">western</td>
+<td align="left">1173598</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">central</td>
+<td align="left">2254435</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">copperbelt</td>
+<td align="left">3402007</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">eastern</td>
+<td align="left">2655422</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">luapula</td>
+<td align="left">1623991</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">lusaka</td>
+<td align="left">4704135</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">muchinga</td>
+<td align="left">1587414</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">northern</td>
+<td align="left">2040926</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">north.western</td>
+<td align="left">1227481</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">southern</td>
+<td align="left">2793523</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">western</td>
+<td align="left">1286880</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">central</td>
+<td align="left">2565450</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">copperbelt</td>
+<td align="left">3823642</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">eastern</td>
+<td align="left">3001152</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">luapula</td>
+<td align="left">1834667</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">lusaka</td>
+<td align="left">5465775</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">muchinga</td>
+<td align="left">1879642</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">northern</td>
+<td align="left">2355007</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">north.western</td>
+<td align="left">1397137</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">southern</td>
+<td align="left">3184855</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">western</td>
+<td align="left">1416331</td>
+</tr>
+</tbody>
+</table>
 We can finally take a breather, and enjoy!
 <center>
 <iframe src="https://giphy.com/embed/13r9tgg7ZisiT6" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen>
