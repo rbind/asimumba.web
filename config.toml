@@ -4,7 +4,7 @@ copyright = "Copyright &copy; 2017 - 2018 - ZedR"
 canonifyurls = true
 theme = "hugo-kiera"
 disqusShortname = "asimumba"
-
+googleAnalytics = "UA-101235795-2"
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 paginate = 20

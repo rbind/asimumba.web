@@ -8,11 +8,14 @@
 <script src="{{ "js/scripts.js" | relURL }}"></script>
 </body>
 
+{{ template "_internal/google_analytics.html" . }}
+
 <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
- <script>
-hljs.configure({languages: []});
-hljs.initHighlightingOnLoad();
+
+<script>
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
 </script>
 
 </html>
