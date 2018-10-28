@@ -45,13 +45,16 @@ LASI_monthly <- xts(x = LASI_monthly[,-1],
                     
                     order.by = as.Date(LASI_monthly[,1]))
 
+
 LASI_monthly_zccm <- xts(x = LASI_monthly_zccm[,-1], 
                          
                          order.by = as.Date(LASI_monthly_zccm[,1]))
 
+
 LASI_yearly <- xts(x = LASI_yearly[,-1], 
                    
                    order.by = as.Date(LASI_yearly[,1]))
+
 
 LASI_yearly_zccm <- xts(x = LASI_yearly_zccm[,-1], 
                         
@@ -76,16 +79,19 @@ The following charts give a snapshot of the performance of the Lusaka Securities
 
 NB: The returns are computed in the local currency (Kwacha).
 
-```{r, first-figure,fig.cap="The LuSE LASI Monthly Returns For the Period 2005-2014 (excl. ZCCM-IH)", fig.height=3.5,fig.width=6}
-plot(LASI_monthly$Return, xlab=" Period",
-     
-ylab="Return",
+```{r, first-figure,fig.cap="The LuSE LASI Monthly Returns For the Period 2005-2014 (excl. ZCCM-IH)"}
 
-main = "The LuSE LASI Monthly Returns For the Period 2005-2014 (excl. ZCCM-IH)",
+library(dygraphs)
 
-cex.main =1, 
-font.main=2
-)
+dygraph((LASI_monthly$Return)*100, 
+        main = "LASI Monthly Returns 2005 - 2014 Excl. ZCCM - IH") %>% 
+   
+  dyAxis("y", label ="Return") %>%
+   
+  dyAxis("x", label ="Year") %>%
+   
+  dyOptions(colors = RColorBrewer::brewer.pal(1, "Set2")) 
+
 ```
 
 
@@ -96,44 +102,46 @@ Most noticeable from the above chart is the greater volatility experienced at th
 
 The following chart shows the LASI index inclusive of  ZCCM-IH. Since the LASI is a value weighted index, stocks having greater market value tend to have a much more pronounced effect on the movement in the index. For instance, factoring ZCCM-IH’s market capitalization into the LASI index has a telling effect on the overall picture of the index. The chart below shows volatility in certain months relatively lower compared to the chart above which excludes ZCCM-IH. My follow-up posts will closely evaluate this effect and try to elicit some information that explains why this is the case.
 
-```{r,fig.cap= "The LuSE LASI Monthly Returns For the Period 2005-2014 (incl. ZCCM-IH)", fig.height=3.5,fig.width=6}
-plot(LASI_monthly_zccm$Return,xlab=" Period", 
-     
-ylab="Return", 
+```{r,fig.cap= "The LuSE LASI Monthly Returns For the Period 2005-2014 (incl. ZCCM-IH)"}
 
-main="The LuSE LASI Monthly Returns For the Period 2005-2014 
-     (incl. ZCCM-IH)",
-cex.main =1, 
-font.main=2
-)
+dygraph((LASI_monthly_zccm$Return)*100,
+        main = "LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH") %>% 
+   
+  dyAxis("y", label ="Return") %>%
+   
+  dyAxis("x", label ="Year") %>%
+   
+  dyOptions(colors = RColorBrewer::brewer.pal(1, "Set2")) 
+
 ```
 
 The last two charts detail the index on a yearly basis. Though unlike the picture painted from the monthly data, yearly data that goes farther down the years, seem to be carrying a different message on the effect of the company ZCCM-IH. When introduced into the computations, the volatility is more than that observed without its inclusion.
 
-```{r, fig.cap= "The LuSE LASI yearly Returns For the Period 1997-2014 (excl. ZCCM-IH)", fig.height=3.5,fig.width=6}
-plot(LASI_yearly$Return,xlab=" Period", 
-     
-ylab="Return", 
+```{r, fig.cap= "The LuSE LASI yearly Returns For the Period 1997-2014 (excl. ZCCM-IH)"}
 
-main="The LuSE LASI yearly Returns For the Period 1997-2014 
-     (excl. ZCCM-IH)",
-cex.main =1,
-font.main=2
-)
+
+dygraph((LASI_yearly$Return)*100,
+        main = "LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH") %>% 
+   
+  dyAxis("y", label ="Return") %>%
+   
+  dyAxis("x", label ="Year") %>%
+   
+  dyOptions(colors = RColorBrewer::brewer.pal(1, "Set2")) 
 ```
 
 **Inclusive of ZCCM-IH yearly LASI Index returns**
 
-```{r, fig.cap= "The LuSE LASI yearly Returns For the Period 1997-2014 (incl. ZCCM-IH)", fig.height=3.5,fig.width=6}
-plot(LASI_yearly_zccm$Return,
-     
-xlab=" Period", ylab="Return", 
+```{r, fig.cap= "The LuSE LASI yearly Returns For the Period 1997-2014 (incl. ZCCM-IH)"}
 
-main="The LuSE LASI yearly Returns For the Period 1997-2014 
-     (incl. ZCCM-IH)",
-cex.main =1,
-font.main=2
-)
+dygraph((LASI_yearly_zccm$Return)*100, 
+        main = "LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH") %>% 
+   
+  dyAxis("y", label ="Return") %>%
+   
+  dyAxis("x", label ="Year") %>%
+   
+  dyOptions(colors = RColorBrewer::brewer.pal(1, "Set2")) 
 ```
 
 ### Final Remarks
