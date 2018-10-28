@@ -1,7 +1,7 @@
 # Site settings
 baseURL = "https://asimumba.rbind.io"
 languageCode = "en-us"
-title = "Aaron Simumba"
+title = "Aaron Simumba - R . Data Science . Stock Markets"
 theme = "forty"
 enableEmoji = "true"
 
@@ -22,16 +22,16 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
   # Provide your metadata here.
   name = "Aaron Simumba"
-  description = "Data Management Associate @ mPharma"
+  description = "Data Management Associate - mPharma"
 
   # Link custom assets relative to /static
   #custom_css = []
   #custom_js  = []
-  favicon    = "favicon.ico"
+  favicon = "favicon.ico"
 
   # Just a custom image variable, please define it in .md files for content.
   image = ""
-  
+
   [permalinks]
     post = "/:year/:month/:day/:slug/"
 
@@ -46,7 +46,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     subtitle = "Data Science Portfolio"
     menu = "Menu"
     # Optional logo as brand stored in img/
-    # logo = "logo.png"
+    #logo = "logo.png"
 
     [[params.navigation.links]]
       name = "Home"
@@ -55,24 +55,23 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     [[params.navigation.links]]
       name = "Blogs"
       url = "https://zedr.rbind.io/"
-      
+
     [[params.navigation.links]]
       name = "CV"
       url = "https://asimumba.github.io/online-cv/"
-      
-      
-     [[params.navigation.links]]
-      name = "Adventure"
-      url = "/adventure/"
-      
+
+     # [[params.navigation.links]]
+     #  name = "Adventure"
+     #  url = "/adventure/"
+
     [[params.navigation.links]]
       name = "About"
       url = "https://zedr.rbind.io/about/about/"
-      
 
-    [[params.navigation.links]]
-      name = "Elements"
-      url = "elements.html"
+
+  #  [[params.navigation.links]]
+    #  name = "Elements"
+      #url = "elements.html"
 
     # Add custom links here by uncommenting code below. To remove links just delete
     # the [[params.navigation.links]] map associated with that link. Copy and paste
@@ -81,15 +80,15 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     #    name = "NameOfLink"
     #    url = "UrlOfLink"
 
-    # Button Style 1
-    [[params.navigation.button1]]
-      name = "Get Started"
-      url = "/about/about.md"
+    # # Button Style 1
+    # [[params.navigation.button1]]
+    #   name = "Get Started"
+    #   url = "https://zedr.rbind.io/"
 
     # Button Style 2
-    [[params.navigation.button2]]
-      name = "Log In"
-      url = "#"
+    # [[params.navigation.button2]]
+    #   name = "Log In"
+    #   url = "#"
 
 
   # Banner section
@@ -98,14 +97,14 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     # the 'static/img' folder.
     title = "Hi, my name is Aaron"
     subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast | Data Visualisation, R programming, Python, Tableau, and Microsoft Power BI."
-    buttonText = "Get Started"
+    buttonText = "Welcome"
 
 
   # Tiles Section
   [params.tiles]
     enable = true
     # Display your showcases here.
-    
+
     [[params.tiles.showcase]]
       title = "Data Driven Entrepreneurship Pursuits"
       subtitle = "Sector Visualizations"
@@ -134,14 +133,14 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       title = "Developer Circles Lusaka"
       subtitle = "Panel discussant"
       image = "ds.jpg"
-      url = "blogs/ipsum"
+      # url = "blogs/ipsum"
 
     [[params.tiles.showcase]]
       title = "What is in the numbers: Lusaka Securities Exchange"
       subtitle = "LASI yearly performance"
       image = "lasi.jpg"
       url = "https://zedr.rbind.io/2017/04/06/lusaka-stock-exchange/"
-      
+
     [[params.tiles.showcase]]
       title = "Stocks Portfolio Analysis"
       subtitle = ""
@@ -157,15 +156,15 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     # To add more blogs just copy and paste the code.
 
   # Section Type Two
-  [params.two]
-    enable = true
-    title = "Quick intro"
-    subtitle = """
-    In my current job, I work for mPharma as a Data Management Associate. 
-In another life, I am an Accounting and Finance major. Graduated from the University of Namibia with a BA degree in Accounting(Honours). Previously tutored Business Administration students in the art of business and accounting at the University of Zambia.
-"""
-    buttonText = "Get Started"
-    url = "https://zedr.rbind.io/post/"
+#   [params.two]
+#     enable = true
+#     title = "Quick intro"
+#     subtitle = """
+#     In my current job, I work for mPharma as a Data Management Associate.
+# In another life, I am an Accounting and Finance major. Graduated from the University of Namibia with a BA degree in Accounting(Honours). Previously tutored Business Administration students in the art of business and accounting at the University of Zambia.
+# """
+    # buttonText = "Get Started"
+    # url = "https://zedr.rbind.io/post/"
 
 
   # Contact section
@@ -196,7 +195,7 @@ In another life, I am an Accounting and Finance major. Graduated from the Univer
 
     [[params.contact.phone]]
     title = "Phone"
-    phone = "(+260) "
+    phone = "(+260)975306285 "
 
     [[params.contact.address]]
     title = "Address"
@@ -207,7 +206,7 @@ In another life, I am an Accounting and Finance major. Graduated from the Univer
   # Footer section
   [params.footer]
     enable = true
-    copyright = "Aaron Simumba"
+    copyright = "Aaron Simumba 2018"
 
     # Uses font awesome icons
     [[params.footer.social]]
@@ -224,7 +223,7 @@ In another life, I am an Accounting and Finance major. Graduated from the Univer
       icon = "fa-instagram"
       url= "https://www.instagram.com/aaronsimumba"
       label = "Instagram"
-    
+
     [[params.footer.social]]
       icon = "fa-github"
       url= "https://www.github.com/asimumba"
