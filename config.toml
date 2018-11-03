@@ -45,3 +45,8 @@ pygmentsCodeFences = false
     name = "About"
     url = "/about/"
     weight = 2
+
+[[menu.main]]
+    name = "Twit-site"
+    url = "https://twitter-scraps.netlify.com/"
+    weight = 3
