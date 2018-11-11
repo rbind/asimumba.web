@@ -6,8 +6,8 @@ slug: datahack4fi-twitter-data
 categories:
   - Twitter
 tags:
-  - '#DataHack4FI'
-  - '#financialInclusion'
+  - 'DataHack4FI'
+  - 'financialInclusion'
 ---
 
 <!--more-->
