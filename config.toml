@@ -133,7 +133,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       title = "#DataHack4FI Twitter Data"
       subtitle = "Mining #datahack4fi data with Google Data Studio"
       image = "datahack.png"
-      # url = "https://zedr.rbind.io/2018/11/11/datahack4fi-twitter-data/"
+      url = "https://zedr.rbind.io/2018/11/11/datahack4fi-twitter-data/"
       
    [[params.tiles.showcase]]
       title = "African Stock Markets Indices Tracker"
