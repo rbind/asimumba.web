@@ -134,6 +134,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       subtitle = "Mining #datahack4fi data with Google Data Studio"
       image = "datahack.png"
       # url = "https://zedr.rbind.io/2018/11/11/datahack4fi-twitter-data/"
+      
+   [[params.tiles.showcase]]
+      title = "African Stock Markets Indices Tracker"
+      subtitle = ""
+      image = "indices.png"
+      url = "https://zedr.rbind.io/2018/11/07/african-markets-indices-tracker/"
 
     [[params.tiles.showcase]]
       title = "What is in the numbers: Lusaka Securities Exchange"
@@ -146,18 +152,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       subtitle = ""
       image = "stock.jpg"
       url = "https://zedr.rbind.io/2017/03/17/portfolio-analysis/"
-   
-    [[params.tiles.showcase]]
-      title = "African Stock Markets Indices Tracker"
-      subtitle = ""
-      image = "indices.png"
-      url = "https://zedr.rbind.io/2018/11/07/african-markets-indices-tracker/"
-      
-   [[params.tiles.showcase]]
-      title = "Developer Circles Lusaka"
-      subtitle = "Panel discussant"
-      image = "ds.jpg"
-      # url = "blogs/ipsum"
+  
     # You can make more showcases by copy and pasting the code above
 
   [params.blog]
@@ -218,7 +213,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # Footer section
   [params.footer]
     enable = true
-    copyright = "Aaron Simumba 2018"
+    copyright = "Aaron Simumba - 2018"
 
     # Uses font awesome icons
     [[params.footer.social]]
