@@ -45,6 +45,9 @@ I can be found on [**Github**](https://github.com/asimumba/) poking around inter
 
 - _Introduction to Data and Probability_ [**Coursera**](https://www.coursera.org/learn/probability-intro?authMode=login)
 
+_Learn the Command Line_
+[**Codeacademy**](https://www.codecademy.com/learn/learn-the-command-line)
+
 **Recommended blogs**
 ***
 
