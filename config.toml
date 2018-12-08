@@ -175,10 +175,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 
   # Contact section
-  [params.contact]
-    enable = true
-    buttonSend = "Send message"
-    buttonClear = "Clear"
+  # [params.contact]
+  #   enable = true
+  #   buttonSend = "Send message"
+  #   buttonClear = "Clear"
 
     # Since this template is static, the contact form uses www.formspree.io as a
     # proxy. The form makes a POST request to their servers to send the actual
@@ -191,24 +191,24 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     # - send a dummy email yourself to confirm your account
     # - click the confirm link in the email from www.formspree.io
     # - you're done. Happy mailing!
-     formEmail = "simumbaa21@gmail.com"
+    #  formEmail = "simumbaa21@gmail.com"
 
-    # Contact Section
-    # You can add multiple emails, phone numbers, or addresses
-    # by copying the corresponding map with frontmatter code.
-    [[params.contact.email]]
-    title = "Email"
-    email = "simumbaa21@gmail.com"
+    # # Contact Section
+    # # You can add multiple emails, phone numbers, or addresses
+    # # by copying the corresponding map with frontmatter code.
+    # [[params.contact.email]]
+    # title = "Email"
+    # email = "simumbaa21@gmail.com"
 
-    [[params.contact.phone]]
-    title = "Phone"
-    phone = "(+260)975306285 "
+    # [[params.contact.phone]]
+    # title = "Phone"
+    # phone = "(+260)975306285 "
 
-    [[params.contact.address]]
-    title = "Address"
-    #street = "Street"
-    city = "Lusaka, 10101"
-    country = "Zambia"
+    # [[params.contact.address]]
+    # title = "Address"
+    # #street = "Street"
+    # city = "Lusaka, 10101"
+    # country = "Zambia"
 
   # Footer section
   [params.footer]
