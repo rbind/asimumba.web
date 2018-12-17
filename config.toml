@@ -89,7 +89,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   [params.banner]
     # To change the background image on the homepage banner, replace 'banner.jpg' in
     # the 'static/img' folder.
-    title = "Hi, my name is Aaron"
+    title = "Hi, I'm Aaron"
     subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast | Data Visualisation, R programming, Python, Tableau, and Microsoft Power BI."
     buttonText = "Welcome"
 
