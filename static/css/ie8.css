@@ -15,7 +15,7 @@
 /* Tiles */
 
 	.tiles article {
-		width: 50%;
+		width: 80%;
 		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");
 		background-size: cover;
 	}
@@ -33,5 +33,5 @@
 /* Menu */
 
 	#menu {
-		background: #242943;
+		background: #b2b6ce;
 	}
