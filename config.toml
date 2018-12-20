@@ -43,7 +43,7 @@ pygmentsCodeFences = false
 
 [[menu.main]]
     name = "About"
-    url = "/about/"
+    url = "/about/about/"
     weight = 2
 
 [[menu.main]]
