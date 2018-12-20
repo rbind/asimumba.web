@@ -195,6 +195,9 @@ h1 {
 
 #container main h1 {
   margin-bottom: 1rem;
+  color: #666666;
+  border: none;
+  font-family: "Ruda", sans-serif;
 }
 
 #container footer {
