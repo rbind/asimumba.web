@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: "Lato",sans-serif;
+  font-family: 'Merriweather', Georgia, 'Times New Roman', Times, Serif;
   color: #333333;
 }
 
@@ -13,7 +13,15 @@ h4,
 h5,
 h6,
 time {
-  font-family: "Ruda", sans-serif;
+font-family: 'Fira Sans', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+color: #36454f;
+font-weight: bold;
+}
+
+h1 {
+    font-size: 1.5em;
+    padding-bottom: 1em;
+    line-height: 1.6em;
 }
 
 #container {
