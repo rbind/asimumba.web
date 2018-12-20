@@ -35,6 +35,9 @@ pygmentsCodeFences = false
 
     MathJaxCDN = "//cdn.bootcss.com"
     MathJaxVersion = "2.7.1"
+    
+    favicon = "favicon.ico"
+
 
 [[menu.main]]
     name = "Portfolio"
