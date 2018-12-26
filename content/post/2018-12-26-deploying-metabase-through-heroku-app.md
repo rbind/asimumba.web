@@ -13,7 +13,7 @@ In this mini project, I deployed my first [**Metabase**](https://www.metabase.co
 
 
 <iframe
-    src="http://asimumba.herokuapp.com/public/dashboard/75003796-9773-444f-a7e4-d0f9a050ecd1"
+    src="https://asimumba.herokuapp.com/public/dashboard/75003796-9773-444f-a7e4-d0f9a050ecd1"
     frameborder="0"
     width="800"
     height="600"
