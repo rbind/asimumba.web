@@ -106,6 +106,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       url = "https://bongohive.co.zm/data-driven-entrepreneurship/#1512737748557-24a47327-b1c0"
 
     [[params.tiles.showcase]]
+      title = "Deploying Metabase through Heroku"
+      subtitle = "Powering Business Intelligence"
+      image = "metabase.png"
+      url = "https://www.metabase.com/start/heroku.html"
+
+    [[params.tiles.showcase]]
       title = "Data Science Africa"
       subtitle = "Data Science reference material"
       image = "laptop.jpg"
