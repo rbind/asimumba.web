@@ -210,7 +210,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     # city = "Lusaka, 10101"
     # country = "Zambia"
 
-  # Footer section
+  # Footer sectionT
   [params.footer]
     enable = true
     copyright = "Aaron Simumba - 2018"
