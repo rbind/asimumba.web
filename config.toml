@@ -14,7 +14,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # for more icons. The icons are represented by their corresponding
   # CSS class.
 
-  # Provide your metadata here.
   name = "Aaron Simumba"
   description = "Data Management Associate - mPharma"
 
@@ -39,7 +38,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     title = "Data Musing"
     subtitle = "Data Science Portfolio"
     menu = "Menu"
-    # Optional logo as brand stored in img/
     #logo = "logo.png"
 
     [[params.navigation.links]]
@@ -53,10 +51,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     [[params.navigation.links]]
       name = "CV"
       url = "https://asimumba.github.io/online-cv/"
-
-     # [[params.navigation.links]]
-     #  name = "Adventure"
-     #  url = "/adventure/"
 
     [[params.navigation.links]]
       name = "About"
@@ -109,7 +103,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       title = "Deploying Metabase through Heroku"
       subtitle = "Powering Business Intelligence"
       image = "metabase.png"
-      url = "https://www.metabase.com/start/heroku.html"
+      url = "https://zedr.rbind.io/2018/12/26/deploying-metabase-through-heroku-app/"
 
     [[params.tiles.showcase]]
       title = "Data Science Africa"
@@ -174,42 +168,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     # url = "https://zedr.rbind.io/post/"
 
 
-  # Contact section
-  # [params.contact]
-  #   enable = true
-  #   buttonSend = "Send message"
-  #   buttonClear = "Clear"
-
-    # Since this template is static, the contact form uses www.formspree.io as a
-    # proxy. The form makes a POST request to their servers to send the actual
-    # email. Visitors can send up to a 1000 emails each month for free.
-    #
-    # What you need to do for the setup?
-    #
-    # - set your email address under 'email' below and uncomment
-    # - upload the generated site to your server
-    # - send a dummy email yourself to confirm your account
-    # - click the confirm link in the email from www.formspree.io
-    # - you're done. Happy mailing!
-    #  formEmail = "simumbaa21@gmail.com"
-
-    # # Contact Section
-    # # You can add multiple emails, phone numbers, or addresses
-    # # by copying the corresponding map with frontmatter code.
-    # [[params.contact.email]]
-    # title = "Email"
-    # email = "simumbaa21@gmail.com"
-
-    # [[params.contact.phone]]
-    # title = "Phone"
-    # phone = "(+260)975306285 "
-
-    # [[params.contact.address]]
-    # title = "Address"
-    # #street = "Street"
-    # city = "Lusaka, 10101"
-    # country = "Zambia"
-
   # Footer sectionT
   [params.footer]
     enable = true
@@ -225,11 +183,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       icon = "fa-facebook"
       url= "https://www.facebook.com/aaron.s.simumba"
       label = "Facebook"
-
-    [[params.footer.social]]
-      icon = "fa-instagram"
-      url= "https://www.instagram.com/aaronsimumba"
-      label = "Instagram"
 
     [[params.footer.social]]
       icon = "fa-github"
