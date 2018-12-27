@@ -13,4 +13,5 @@ tags:
 <!--more-->
 
 
-<iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/1j0s-40eido8SriTBxNLCJwibqAjW8l2T/page/947b" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe width="800" height="600" src="https://datastudio.google.com/embed/reporting/1j0s-40eido8SriTBxNLCJwibqAjW8l2T/page/947b" frameborder="0" style="border:0" allowfullscreen  allowtransparency></iframe>
+

@@ -28,6 +28,6 @@ Here is the breakdown of each argument and value:
 - **scrolling="no"** - setting this to `no` allows for the visualization to fully occupy the available space, and not have extended scrolling bars.
 
 
-<iframe src="https://public.tableau.com/views/StockMarkets/LUSEKPI?:showVizHome=no&:embed=true" width="95%" height="500"></iframe>
+<iframe src="https://public.tableau.com/views/StockMarkets/LUSEKPI?:showVizHome=no&:embed=true" frameborder="0" width="800" height="550" allowtransparency></iframe>
 
  That is all. It is that simple to leverage Tableau public infrastructure  for great visualizations which can be shared on private websites.
