@@ -1,7 +1,7 @@
 ---
 title: About
 date: 2014-04-09
-disable_comments: false
+disable_comments: true
 ---
 
 

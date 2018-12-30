@@ -37,7 +37,8 @@ fundreturn <- readRDS("../../static/data/fundreturns.RDS")
 ```
 
 ```{r}
-## Dates have been loaded as a factor instead of as dates. There is need to convert this variable to the date class and covert the rest of the variables to xts(Extensible Time Series)
+## Dates have been loaded as a factor instead of as dates. 
+#There is need to convert this variable to the date class and covert the rest of the variables to xts(Extensible Time Series)
 
 temp <- xts(x =fundreturn[,-1], order.by = as.Date(fundreturn[,1])) 
 # all the variables except data are coerced to xts using date as the index.
@@ -45,7 +46,8 @@ temp <- xts(x =fundreturn[,-1], order.by = as.Date(fundreturn[,1]))
 fundreturn <- temp
 str(fundreturn)
 rm(temp) # gettting rid of temp object
-## Next I, stack variables of the same unique class within the same column. That is the returns of all the stocks in one column and the tickers in another column, indexed by the date variable.
+## Next I, stack variables of the same unique class within the same column.
+#That is the returns of all the stocks in one column and the tickers in another column, indexed by the date variable.
 
 # make use of a temporary object.
 temp <- data.frame(index(fundreturn), 
