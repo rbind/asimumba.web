@@ -5,6 +5,7 @@ canonifyurls = true
 theme = "hugo-kiera"
 disqusShortname = "asimumba"
 googleAnalytics = "UA-101235795-2"
+enableEmoji = true
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 paginate = 20
@@ -21,9 +22,9 @@ pygmentsCodeFences = false
     github = "asimumba"
     gitlab = "asimumba"
     linkedin = "aaronsimumba"
-    facebook = ""
+    facebook = "aaron.s.simumba"
     twitter = "asimumba21"
-    instagram = ""
+    instagram = "aaronsimumba"
     email = "simumbaa21@gmail.com"
 
 [params]
