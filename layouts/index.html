@@ -17,11 +17,6 @@
 				{{ if .Site.Params.Tiles.enable }}
 					{{ partial "tile.html" . }}
 				{{ end }}
-
-				{{ if .Site.Params.Two.enable }}
-					{{ partial "two.html" . }}
-				{{ end }}
-
 			</div>
 		{{ "<!-- Footer -->" | safeHTML}}
 			{{ if .Site.Params.Footer.enable }}
