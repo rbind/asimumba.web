@@ -37,15 +37,14 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   [params.navigation]
     title = "Data Musing"
     subtitle = "Data Science Portfolio"
-    menu = "Menu"
-    #logo = "logo.png"
+    #menu = "Menu"
 
     [[params.navigation.links]]
       name = "Home"
       url = "#"
 
     [[params.navigation.links]]
-      name = "Blogs"
+      name = "Blog"
       url = "https://zedr.rbind.io/"
 
     [[params.navigation.links]]
@@ -56,11 +55,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       name = "About"
       url = "https://zedr.rbind.io/about/about/"
 
-
-  #  [[params.navigation.links]]
-    #  name = "Elements"
-      #url = "elements.html"
-
     # Add custom links here by uncommenting code below. To remove links just delete
     # the [[params.navigation.links]] map associated with that link. Copy and paste
     # code below if you need more links. Buttons work in the same way.
@@ -68,31 +62,15 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     #    name = "NameOfLink"
     #    url = "UrlOfLink"
 
-    # # Button Style 1
-    # [[params.navigation.button1]]
-    #   name = "Get Started"
-    #   url = "https://zedr.rbind.io/"
-
-    # Button Style 2
-    # [[params.navigation.button2]]
-    #   name = "Log In"
-    #   url = "#"
-
-
   # Banner section
   [params.banner]
-    # To change the background image on the homepage banner, replace 'banner.jpg' in
-    # the 'static/img' folder.
     title = "Hi, I'm Aaron"
     subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast | Data Visualisation, R programming, Python, Tableau, and Microsoft Power BI."
     buttonText = "Welcome"
 
-
   # Tiles Section
   [params.tiles]
     enable = true
-    # Display your showcases here.
-
     [[params.tiles.showcase]]
       title = "Data Driven Entrepreneurship Pursuits"
       subtitle = "Sector Visualizations"
@@ -146,8 +124,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       subtitle = ""
       image = "stock.jpg"
       url = "https://zedr.rbind.io/2017/03/17/portfolio-analysis/"
-  
-    # You can make more showcases by copy and pasting the code above
 
   [params.blog]
     # All blogs defined in their own files. You can find example blogs
@@ -155,18 +131,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     # at the root of this Hugo site.
     # For more informtion take a look at the README.
     # To add more blogs just copy and paste the code.
-
-  # Section Type Two
-#   [params.two]
-#     enable = true
-#     title = "Quick intro"
-#     subtitle = """
-#     In my current job, I work for mPharma as a Data Management Associate.
-# In another life, I am an Accounting and Finance major. Graduated from the University of Namibia with a BA degree in Accounting(Honours). Previously tutored Business Administration students in the art of business and accounting at the University of Zambia.
-# """
-    # buttonText = "Get Started"
-    # url = "https://zedr.rbind.io/post/"
-
 
   # Footer sectionT
   [params.footer]
