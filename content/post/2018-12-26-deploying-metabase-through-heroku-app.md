@@ -20,3 +20,12 @@ In this mini project, I deployed my first [**Metabase**](https://www.metabase.co
     allowtransparency
 ></iframe>
 
+-----
+
+<iframe
+    src="http://asimumba.herokuapp.com/public/dashboard/01e08360-83d7-4ef6-a7f7-fad12220c725"
+   frameborder="0"
+    width="800"
+    height="600"
+    allowtransparency
+></iframe>
