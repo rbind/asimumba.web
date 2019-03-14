@@ -15,7 +15,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # CSS class.
 
   name = "Aaron Simumba"
-  description = "Data Management Associate - mPharma"
+  description = "Former Data Management Associate - mPharma"
 
   # Link custom assets relative to /static
   #custom_css = []
@@ -65,8 +65,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # Banner section
   [params.banner]
     title = "Hi, I'm Aaron"
-    subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast | Data Visualisation, R programming, Python, Tableau, and Microsoft Power BI."
-    buttonText = "Welcome"
+    subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast\n | \n Data Visualisation, SQL, Python, Tableau, and Microsoft Power BI."
 
   # Tiles Section
   [params.tiles]
@@ -114,7 +113,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       url = "https://zedr.rbind.io/2018/11/07/african-markets-indices-tracker/"
 
     [[params.tiles.showcase]]
-      title = "What is in the numbers: Lusaka Securities Exchange"
+      title = "What is in the numbers: A Look at the Lusaka Securities Exchange"
       subtitle = "LASI yearly performance"
       image = "lasi.jpg"
       url = "https://zedr.rbind.io/2017/04/06/lusaka-stock-exchange/"
@@ -135,12 +134,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # Footer sectionT
   [params.footer]
     enable = true
-    copyright = "Aaron Simumba - 2018"
+    copyright = "Aaron Simumba 2017 - 2019"
 
     # Uses font awesome icons
     [[params.footer.social]]
       icon = "fa-twitter"
-      url= "https://www.twitter.com/asimumba21"
+      url= "https://www.twitter.com/asimumba_"
       label = "Twitter"
 
     [[params.footer.social]]
