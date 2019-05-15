@@ -10,11 +10,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [params]
 
   name = "Aaron Simumba"
-<<<<<<< HEAD
-  description = "Former Data Management Associate - mPharma"
-=======
   description = ""
->>>>>>> new-style
 
   favicon = "favicon.ico"
 
@@ -53,13 +49,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # Banner section
   [params.banner]
     title = "Hi, I'm Aaron"
-<<<<<<< HEAD
-    subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast\n | \n Data Visualisation, SQL, Python, Tableau, and Microsoft Power BI."
-
-=======
     subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast | Data Visualisation, R programming, Python, Tableau, and Microsoft Power BI."
     
->>>>>>> new-style
   # Tiles Section
   [params.tiles]
     enable = true
