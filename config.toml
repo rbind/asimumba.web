@@ -6,20 +6,16 @@ enableEmoji = "true"
 googleAnalytics = "UA-101235795-1"
 disqusShortname = "asimumba"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
 [params]
-  # You can use Markdown syntax for urls [text](//url.to/source)
-  # To create multi-line text in strings use the """example Text""" format
-  #
-  # All icons using Fontawesome's icon font. Look at fontawesome.io/icons
-  # for more icons. The icons are represented by their corresponding
-  # CSS class.
 
   name = "Aaron Simumba"
+<<<<<<< HEAD
   description = "Former Data Management Associate - mPharma"
+=======
+  description = ""
+>>>>>>> new-style
 
-  # Link custom assets relative to /static
-  #custom_css = []
-  #custom_js  = []
   favicon = "favicon.ico"
 
   # Just a custom image variable, please define it in .md files for content.
@@ -37,11 +33,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   [params.navigation]
     title = "Data Musing"
     subtitle = "Data Science Portfolio"
-    #menu = "Menu"
-
-    [[params.navigation.links]]
-      name = "Home"
-      url = "#"
+    
+    # [[params.navigation.links]]
+    #   name = "Home"
+    #   url = "#"
 
     [[params.navigation.links]]
       name = "Blog"
@@ -55,18 +50,16 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       name = "About"
       url = "https://zedr.rbind.io/about/about/"
 
-    # Add custom links here by uncommenting code below. To remove links just delete
-    # the [[params.navigation.links]] map associated with that link. Copy and paste
-    # code below if you need more links. Buttons work in the same way.
-    # [[params.navigation.links]]
-    #    name = "NameOfLink"
-    #    url = "UrlOfLink"
-
   # Banner section
   [params.banner]
     title = "Hi, I'm Aaron"
+<<<<<<< HEAD
     subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast\n | \n Data Visualisation, SQL, Python, Tableau, and Microsoft Power BI."
 
+=======
+    subtitle = "Aspiring Data Scientist & Blogger | R & Stock Markets Enthusiast | Data Visualisation, R programming, Python, Tableau, and Microsoft Power BI."
+    
+>>>>>>> new-style
   # Tiles Section
   [params.tiles]
     enable = true
@@ -124,17 +117,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       image = "stock.jpg"
       url = "https://zedr.rbind.io/2017/03/17/portfolio-analysis/"
 
-  [params.blog]
-    # All blogs defined in their own files. You can find example blogs
-    # at 'exampleSite/content/blogs'. Copy the 'blogs' folder into the 'content' directory
-    # at the root of this Hugo site.
-    # For more informtion take a look at the README.
-    # To add more blogs just copy and paste the code.
-
-  # Footer sectionT
+  # Footer section
   [params.footer]
     enable = true
-    copyright = "Aaron Simumba 2017 - 2019"
+    copyright = "Aaron Simumba (2017 - 2019)"
 
     # Uses font awesome icons
     [[params.footer.social]]
