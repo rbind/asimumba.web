@@ -1,13 +1,9 @@
 # Site settings
-baseURL = "https://asimumba.rbind.io"
+baseurl = "https://example.org/"
 languageCode = "en-us"
 title = "Hugo Freelancer Theme"
 theme = "hugo-freelancer-theme"
-enableEmoji = "true"
-googleAnalytics = "UA-101235795-1"
-disqusShortname = "asimumba"
 
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [params]
 
@@ -16,7 +12,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
     # To provide some metadata for search engines feel free to add a few
     # information about you and your website.
-    name = "Aaron Simumba"
+    name = "Mr. Hugo"
     description = "My awesome description"
 
     # Since this template is static, the contact form uses www.formspree.io as a
@@ -30,21 +26,21 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     # - send a dummy email youself to confirm your account
     # - click the confirm link in the email from www.formspree.io
     # - you're done. Happy mailing!
-    email = "simumbaa21@gmail.com"
+    email = "your@email.com"
 
     # Custom assets
 	custom_css = []
 	custom_js  = []
 
     [params.navigation]
-        brand = "Data Science portfolio"
+        brand = "Mr. Hugo's Portfolio"
 
 
     [params.header]
         # Copy your own image into './static/img/'' if you wish
-        image = "avatar.png"
-        name = "Hi, I'm Aaron"
-        subtitle = "R - Data Science - Stock Markets"
+        image = "profile.png"
+        name = "Mr. Hugo"
+        subtitle = "Blogger - Programmer - Gopher"
 
 
     [params.portfolio]
@@ -64,14 +60,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     [params.about]
         title = "About"
         # The about text is splitted into a left and right column
-        left = "I my prevous job, I worked for mPharma as a Data Management Associate. In another life, I am an Accounting and Finance major. Graduated from the University of Namibia with a BA degree in Accounting(Honours). Previously tutored Business Administration students in the art of business and accounting at the University of Zambia."
-        right = "I am lost in the Data Science web… hoping to find my way out of the maze soon. I find data and the process of data analysis to glean insight from the raw data, overly exciting and fascinating alike. In addition, I’m fascinated by stock markets and everything with a business and finance buzz. I can be found on Github poking around interesting projects… and occasionally I rant on twitter."
-        
+        left = "Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization."
+        right = "Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!"
 
         [params.about.button]
-            text = "Blog"
-            link = "//zedr.rbind.io/"
-            icon = "blog"
+            text = "Download theme"
+            link = "//github.com/digitalcraftsman/hugo-freelancer-theme/archive/master.zip"
+            icon = "download"
 
 
     [params.contact]
@@ -99,27 +94,27 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 
     [params.footer]
-        copyright = "(c) Aaron Simumba Powered by [blogdown](//github.com/rstudio/blogdown) and [Hugo](//gohugo.io)."
+        copyright = "Published under the Apache License 2.0. Powered by [Hugo](//gohugo.io)."
 
         [params.footer.location]
             title = "Location"
             # Postal address (add as many lines as necessary)
-            address = ["Lusaka, Zambia 10101"]
+            address = ["3481 Melrose Place", "Beverly Hills, CA 90210"]
 
         [params.footer.social]
-            title = "Data Wilderness"
+            title = "Around the web"
             # All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
             # for more icons. The icons are represented by their corresponding
             # CSS class.
             [[params.footer.social.networks]]
                 icon = "fa-github"
-                link = "//github.com/asimumba"
+                link = "//github.com/spf13/hugo"
 
             [[params.footer.social.networks]]
-                icon = "fa-twitter"
-                link=  "//twitter.com/asimumba_"
+                icon = "fa-stack-overflow"
+                link=  "//stackoverflow.com/questions/tagged/hugo"
 
 
         [params.footer.credits]
-            title = "Data Musings"
-            text = "[Blog](//zedr.rbind.io/)"
+            title = "About Freelancer"
+            text = "Freelance is a free to use, open source Bootstrap theme created by [Start Bootstrap](//startbootstrap.com)."
