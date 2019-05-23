@@ -64,7 +64,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     [params.about]
         title = "About"
         # The about text is splitted into a left and right column
-        left = "Currently workingin the financial services sector, previously I was a Data Management Associate at mPharma. In another life, I am an Accounting and Finance major. Graduated from the University of Namibia with a BA degree in Accounting(Honours). Previously tutored Business Administration students in the art of business and accounting at the University of Zambia."
+        left = "Currently working in the financial services sector, previously I was a Data Management Associate at mPharma. In another life, I am an Accounting and Finance major. Graduated from the University of Namibia with a BA degree in Accounting(Honours). Previously tutored Business Administration students in the art of business and accounting at the University of Zambia."
         right = "I am lost in the Data Science web… hoping to find my way out of the maze soon. I find data and the process of data analysis to glean insight from the raw data, overly exciting and fascinating alike. In addition, I’m fascinated by stock markets and everything with a business and finance buzz. I can be found on Github poking around interesting projects… and occasionally I rant on twitter."
         
 
