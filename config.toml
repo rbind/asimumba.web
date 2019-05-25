@@ -1,7 +1,7 @@
 # Site settings
-baseURL = "https://asimumba.rbind.io"
+baseURL = "https://asimumba.rbind.io/"
 languageCode = "en-us"
-title = "Hugo Freelancer Theme"
+title = "Aaron Simumba"
 theme = "hugo-freelancer-theme"
 enableEmoji = "true"
 googleAnalytics = "UA-101235795-1"
