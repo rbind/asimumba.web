@@ -1,8 +1,8 @@
 modalID: 6
 title: "Mapping Twitter Data"
-date: 2014-07-18
+date: 2017-10-02
 img: twitter.png
 client: Personal Porject
-clientLink: "#"
+clientLink: "//zedr.rbind.io/2017/10/02/mapping-twitter-followers-and-following-in-r/"
 category: "Twitter Data"
 description: 
