@@ -121,7 +121,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
             [[params.footer.social.networks]]
                 icon = "fa-linkedin"
                 link=  "//linkedin.com/aaronsimumba"
-
+                
+            [[params.footer.social.networks]]
+                icon = "fa-stackoverflow"
+                link=  "//stackoverflow.com/users/8137815/aaron-simumba"
+                
         [params.footer.credits]
            title = "Data Musings"
            text = "[Blog](//zedr.rbind.io/)"
