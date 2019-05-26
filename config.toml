@@ -120,7 +120,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
             
             [[params.footer.social.networks]]
                 icon = "fa-linkedin"
-                link=  "//fa-linkedin.com/aaronsimumba"
+                link=  "//linkedin.com/aaronsimumba"
 
         #[params.footer.credits]
            # title = "Data Musings"
