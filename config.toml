@@ -17,7 +17,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     # To provide some metadata for search engines feel free to add a few
     # information about you and your website.
     name = "Aaron Simumba"
-    description = "My awesome description"
+    description = "R - Stock Markets - Data Science"
 
     # Since this template is static, the contact form uses www.formspree.io as a
     # proxy. The form makes a POST request to their servers to send the actual
@@ -117,6 +117,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
             [[params.footer.social.networks]]
                 icon = "fa-twitter"
                 link=  "//twitter.com/asimumba_"
+            
+            [[params.footer.social.networks]]
+                icon = "fa-linkedin"
+                link=  "//fa-linkedin.com/aaronsimumba"
 
         #[params.footer.credits]
            # title = "Data Musings"
