@@ -98,7 +98,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 
     [params.footer]
-        copyright = "(c) Aaron Simumba powered by [blogdown](//github.com/rstudio/blogdown) and [Hugo](//gohugo.io)."
+        copyright = "(c) Aaron Simumba 2019"
 
         [params.footer.location]
             title = "Location"
