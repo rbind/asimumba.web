@@ -98,12 +98,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 
     [params.footer]
-        copyright = "(c) Aaron Simumba built with [blogdown](//github.com/rstudio/blogdown) and [Hugo](//gohugo.io)."
+        copyright = "(c) Aaron Simumba powered by [blogdown](//github.com/rstudio/blogdown) and [Hugo](//gohugo.io)."
 
         [params.footer.location]
-            #title = "Location"
-            # Postal address (add as many lines as necessary)
-            #address = ["Lusaka, Zambia 10101"]
+            title = "Location"
+            #Postal address (add as many lines as necessary)
+            address = ["Lusaka, Zambia"]
 
         [params.footer.social]
             title = "Connect with me"
@@ -122,6 +122,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
                 icon = "fa-linkedin"
                 link=  "//linkedin.com/aaronsimumba"
 
-        #[params.footer.credits]
-           # title = "Data Musings"
-           # text = "[Blog](//zedr.rbind.io/)"
+        [params.footer.credits]
+           title = "Data Musings"
+           text = "[Blog](//zedr.rbind.io/)"
