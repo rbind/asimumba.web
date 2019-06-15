@@ -225,12 +225,19 @@ h1 {
   margin: 0;
   padding: 0;
 }
-
+/*
 a {
   color: #666666;
   text-decoration: none;
 }
 
+*/
+a {
+    transition-property: color;
+    transition-duration: .3s;
+    color: #08c;
+    text-decoration: none
+}
 .image, figure img, img {
   width: 100%;
   box-shadow: 0 3px 3px #bbbbbb;
