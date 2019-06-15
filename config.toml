@@ -64,8 +64,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     [params.about]
         title = "About"
         # The about text is splitted into a left and right column
-        left = "Currently working in the financial services sector, and previously I was a Data Management Associate at [mPharma](//www.mpharma.com/). In another life, I am an Accounting and Finance major. Graduated from the University of Namibia with a BA degree in Accounting(Honours). Previously tutored Business Administration students in the art of business and accounting at the University of Zambia. I am lost in the Data Science web… hoping to find my way out of the maze soon. I find data and the process of data analysis to glean insight from the raw data, overly exciting and fascinating alike. In addition, I’m fascinated by stock markets and everything with a business and finance buzz. I can be found on [Github](//github.com/asimumba) poking around interesting projects… and occasionally I rant on [Twitter](//twitter.com/asimumba_)."
-        right = ""
+        left = "Currently working in the financial services sector, and previously I was a Data Management Associate at [mPharma](//www.mpharma.com/). In another life, I am an Accounting and Finance major. Graduated from the University of Namibia with a BA degree in Accounting(Honours). Previously tutored Business Administration students in the art of business and accounting at the University of Zambia."
+        right = "I am lost in the Data Science web… hoping to find my way out of the maze soon. I find data and the process of data analysis to glean insight from the raw data, overly exciting and fascinating alike. In addition, I’m fascinated by stock markets and everything with a business and finance buzz. I can be found on [Github](//github.com/asimumba) poking around interesting projects… and occasionally I rant on [Twitter](//twitter.com/asimumba_)."
+        
         
         [params.about.button]
             text = "Blog"
@@ -100,10 +101,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     [params.footer]
         copyright = "(c) Aaron Simumba 2019"
 
-        [params.footer.location]
-            title = "Location"
+       # [params.footer.location]
+            #title = "Location"
             #Postal address (add as many lines as necessary)
-            address = ["Lusaka, Zambia"]
+            #address = ["Lusaka, Zambia"]
 
         [params.footer.social]
             title = "Connect with me"
@@ -126,6 +127,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
                 icon = "fa-stack-overflow"
                 link=  "//stackoverflow.com/users/8137815/aaron-simumba"
                 
-        [params.footer.credits]
-           title = "Data Musings"
-           text = "[Blog](//zedr.rbind.io/)"
+        #[params.footer.credits]
+           #title = "Data Musings"
+           #text = "[Blog](//zedr.rbind.io/)"
