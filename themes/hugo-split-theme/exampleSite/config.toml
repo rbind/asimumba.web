@@ -1,24 +1,23 @@
 # Site settings
-baseURL = "https://asimumba.rbind.io/"
+baseURL = "//example.org"
 languageCode = "en-US"
 title = "Split - HTML Template Demo"
 theme = "hugo-split-theme"
 disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
 
 # Enter your tracking code to enable Google Analytics
-googleAnalytics = "UA-101235795-1"
+googleAnalytics = ""
 
 # Copyright
-copyright = "&copy;2019 Aaron Simumba"
+copyright = "&copy;2018 Your Name"
 
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [params]
 
   # Metadata for search engines and social sharing
-  author = "Aaron Simumba"
-  description = ""
+  author = "Jenny Jones"
+  description = "Split is a centrally-divided layout for a professional online presence with a big image or video left with alongside content."
   shareImage = "images/social.jpg"
-  twitterHandle = "asimumba_"
+  twitterHandle = "onepagelove"
 
   # Favicon
   favicon = "favicon.ico"
@@ -37,7 +36,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       enable = false
       mute = true
       file = "videos/background.mp4"
-      #youtubeId = "UCpeLQRVt3O0kdecIrQpDibg"
+      # youtubeId = "dk9uNWPP7EA"
 
   # Links
   #
@@ -48,16 +47,15 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
       [[params.links.list1.link]]
         text = "Blog"
-        url = "https://zedr.rbind.io/"
+        url = "#"
 
       [[params.links.list1.link]]
         text = "Email"
-        url = "simumbaa21@gmail.com"
-        
-    
+        url = "#"
+
       [[params.links.list1.link]]
-        text = "Github"
-        url = "https://github.com/asimumba"
+        text = "Newsletter"
+        url = "#"
 
   # Links List #2
   [[params.links]]
@@ -66,29 +64,32 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
       [[params.links.list2.link]]
         text = "Twitter"
-        url = "https://twitter.com/asimumba_"
-        
+        url = "#"
 
       [[params.links.list2.link]]
         text = "Instagram"
-        url = "https://www.instagram.com/zedsamurai/?hl=en"
+        url = "#"
+
+      [[params.links.list2.link]]
+        text = "Dribbble"
+        url = "#"
 
   # Links List #3
   [[params.links]]
     [params.links.list3]
-      heading = "Projects"
+      heading = "Network"
 
       [[params.links.list3.link]]
-        text = "Data-Driven Entrepreneurship Viz"
-        url = "https://bongohive.co.zm/data-driven-entrepreneurship/"
+        text = "Link One"
+        url = "#"
 
       [[params.links.list3.link]]
-        text = "African Stock Markets"
-        url = "https://zedr.rbind.io/2018/11/07/african-markets-indices-tracker/"
+        text = "Link Two"
+        url = "#"
 
       [[params.links.list3.link]]
-        text = "Data Extraction"
-        url = "https://zedr.rbind.io/2017/10/12/breathing-life-back-into-pdf-presented-data/"
+        text = "Link Three"
+        url = "#"
 
   # The original template is released under the Creative Commons Attribution 3.0 License.
   # Please keep the original attribution link when using for your own project.
