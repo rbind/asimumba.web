@@ -1,6 +1,6 @@
 +++
 title = "Aaron Simumba"
-tagline = "Data Scientist | Data Whisperer | Afro-Enthusiast"
+tagline = "Data Scientist | Data Whisperer | AfroEnthusiast"
 +++
 
 
