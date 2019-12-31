@@ -1,7 +1,7 @@
 # Site settings
 baseURL = "https://asimumba.rbind.io/"
 languageCode = "en-US"
-title = "Split - HTML Template Demo"
+title = "Data Science. R. Stock Markets"
 theme = "hugo-split-theme"
 disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
 
@@ -89,7 +89,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       [[params.links.list2.link]]
         text = "Twitter"
         url = "https://twitter.com/asimumba_"
-        
 
       [[params.links.list2.link]]
         text = "Instagram"
