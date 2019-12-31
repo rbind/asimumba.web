@@ -58,22 +58,12 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       [[params.links.list1.link]]
         text = "Github"
         url = "https://github.com/asimumba"
-
-  # Links List #2
-  [[params.links]]
-    [params.links.list2]
-      heading = "Social"
-
-      [[params.links.list2.link]]
-        text = "Twitter"
-        url = "https://twitter.com/asimumba_"
         
-
-      [[params.links.list2.link]]
-        text = "Instagram"
-        url = "https://www.instagram.com/zedsamurai/?hl=en"
-
-  # Links List #3
+      [[params.links.list1.link]]
+        text = "LinkedIn"
+        url = "https://www.linkedin.com/in/aaronsimumba/"
+        
+    # Links List #3
   [[params.links]]
     [params.links.list3]
       heading = "Projects"
@@ -89,6 +79,22 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       [[params.links.list3.link]]
         text = "Data Extraction"
         url = "https://zedr.rbind.io/2017/10/12/breathing-life-back-into-pdf-presented-data/"
+
+
+  # Links List #2
+  [[params.links]]
+    [params.links.list2]
+      heading = "Social"
+
+      [[params.links.list2.link]]
+        text = "Twitter"
+        url = "https://twitter.com/asimumba_"
+        
+
+      [[params.links.list2.link]]
+        text = "Instagram"
+        url = "https://www.instagram.com/zedsamurai/?hl=en"
+
 
   # The original template is released under the Creative Commons Attribution 3.0 License.
   # Please keep the original attribution link when using for your own project.

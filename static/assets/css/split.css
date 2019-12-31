@@ -181,12 +181,12 @@ body.page-template-page-fullsingle-split p {
 .split-intro {
   font-weight: 600;
   font-size: 64px;
-  line-height: 80px;
+  line-height: 75px;
   letter-spacing: -2px;
 }
 .split-intro h1 {
-  font-weight: 400;
-  text-transform: uppercase;
+  font-weight: 300;
+  text-transform: none;
   font-size: 16px;
   line-height: 16px;
   margin-bottom: 40px;
@@ -217,14 +217,14 @@ body.page-template-page-fullsingle-split p {
   line-height: inherit;
 }
 .split-bio a {
-  color: #848d96;
+  color: #47BEC7;
   transition-duration: 0.5s;
-  border-bottom: 1px dotted #848d96;
+  /* border-bottom: 1px dotted #848d96; */
 }
 .split-bio a:hover {
   color: #CA486d;
   transition-duration: 0.1s;
-  border-bottom: 1px dotted #CA486d;
+  /* border-bottom: 1px dotted #CA486d; */
 }
 .split-bio em,
 .split-bio i {
