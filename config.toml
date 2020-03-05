@@ -9,7 +9,7 @@ disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
 googleAnalytics = "UA-101235795-1"
 
 # Copyright
-copyright = "&copy;2019 Aaron Simumba"
+copyright = "&copy;2020 Aaron Simumba"
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [params]
