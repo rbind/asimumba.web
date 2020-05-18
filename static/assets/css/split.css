@@ -179,19 +179,19 @@ body.page-template-page-fullsingle-split p {
 }
 
 .split-intro {
-  font-weight: 600;
-  font-size: 64px;
-  line-height: 75px;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 50px;
   letter-spacing: -2px;
 }
 .split-intro h1 {
-  font-weight: 300;
+  font-weight: 200;
   text-transform: none;
-  font-size: 16px;
-  line-height: 16px;
-  margin-bottom: 40px;
+  font-size: 15px;
+  line-height: 10px;
+  margin-bottom: 10px;
   letter-spacing: 0.4px;
-  color: #47bec7;
+  color: #47BEC7;
 }
 .split-intro .tagline {
   color: #CCCCCC;
@@ -208,7 +208,7 @@ body.page-template-page-fullsingle-split p {
 }
 @media (max-width: 800px) {
   .split-bio {
-    padding: 20px 0 0 0;
+    padding: 15px 0 0 0;
   }
 }
 .split-bio p {
@@ -237,7 +237,7 @@ body.page-template-page-fullsingle-split p {
   line-height: inherit;
 }
 .split-bio small {
-  font-size: 80%;
+  font-size: 30%;
   line-height: inherit;
 }
 .split-bio h1, .split-bio .h1,
@@ -259,7 +259,7 @@ body.page-template-page-fullsingle-split p {
   line-height: 0;
 }
 .split-bio h1, .split-bio .h1 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: inherit;
   margin-top: 0;
   margin-bottom: 20px;
