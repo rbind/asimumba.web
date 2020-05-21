@@ -115,7 +115,7 @@ body.page-template-page-fullsingle-split {
   background-color: #061C30;
   font-family: Satisfy;
   font-weight: 300;
-  font-size: 15.5px;
+  font-size: 13.5px;
   line-height: 1.65;
   letter-spacing: -0.2px;
   color: #848d96;
@@ -180,14 +180,14 @@ body.page-template-page-fullsingle-split p {
 
 .split-intro {
   font-weight: 500;
-  font-size: 45px;
+  font-size: 40px;
   line-height: 50px;
   letter-spacing: -2px;
 }
 .split-intro h1 {
   font-weight: 200;
   text-transform: none;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 10px;
   margin-bottom: 10px;
   letter-spacing: 0.4px;
@@ -259,13 +259,13 @@ body.page-template-page-fullsingle-split p {
   line-height: 0;
 }
 .split-bio h1, .split-bio .h1 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: inherit;
   margin-top: 0;
   margin-bottom: 20px;
 }
 .split-bio h2, .split-bio .h2 {
-  font-size: 1.25em;
+  font-size: 1.1em;
   line-height: inherit;
   margin-top: 0;
   margin-bottom: 20px;
@@ -338,7 +338,7 @@ body.page-template-page-fullsingle-split p {
 .split-lists .split-list h3 {
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 11px;
   margin-bottom: 31px;
   color: #848d96;
@@ -363,7 +363,7 @@ body.page-template-page-fullsingle-split p {
   opacity: 0.4;
 }
 .split-credit p {
-  font-size: 12px;
+  font-size: 10px;
   line-height: 14px;
 }
 .split-credit p a {
