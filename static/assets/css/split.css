@@ -113,9 +113,9 @@ html {
 
 body.page-template-page-fullsingle-split {
   background-color: #061C30;
-  font-family: Satisfy;
-  font-weight: 300;
-  font-size: 13.5px;
+  font-family: 'Fira Sans', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 250;
+  font-size: 15px;
   line-height: 1.65;
   letter-spacing: -0.2px;
   color: #848d96;
@@ -199,7 +199,7 @@ body.page-template-page-fullsingle-split p {
 
 .split-bio {
   padding: 40px 0 20px 0;
-  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, 'source-han-serif-sc', 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif TC', 'Source Han Serif TW', 'Source Han Serif', 'Songti SC', 'Microsoft YaHei', serif;;
+  font-family: 'Fira Sans', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 @media (max-width: 1200px) {
   .split-bio {
@@ -213,7 +213,7 @@ body.page-template-page-fullsingle-split p {
 }
 .split-bio p {
   color: #848d96;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   line-height: inherit;
 }
 .split-bio a {
@@ -363,7 +363,7 @@ body.page-template-page-fullsingle-split p {
   opacity: 0.4;
 }
 .split-credit p {
-  font-size: 10px;
+  font-size: 9px;
   line-height: 14px;
 }
 .split-credit p a {
