@@ -88,10 +88,15 @@
     },
     "httpuv": {
       "Package": "httpuv",
-      "Version": "1.5.3.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "6c977bbfd872e34f1415ebbd9cfc9dda"
+      "Version": "1.5.3.9000",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "httpuv",
+      "RemoteUsername": "rstudio",
+      "RemoteRef": "master",
+      "RemoteSha": "7fbfd5eff8d6947ff65bcb33d47b73db9ab32049",
+      "Hash": "6c03ec7711ba95ec3dd9bc1d1c04515f"
     },
     "jsonlite": {
       "Package": "jsonlite",
@@ -170,10 +175,10 @@
     },
     "servr": {
       "Package": "servr",
-      "Version": "0.17",
+      "Version": "0.17.1",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "a59f16bb4cb2280bebe6b7726103af66"
+      "Repository": null,
+      "Hash": "72feb7e99bf5b9427d0d01729a69dd8e"
     },
     "stringi": {
       "Package": "stringi",
