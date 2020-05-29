@@ -62,12 +62,16 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
       [[params.links.list1.link]]
         text = "LinkedIn"
         url = "https://www.linkedin.com/in/aaronsimumba/"
-        
+  
     # Links List #3
   [[params.links]]
     [params.links.list3]
       heading = "Projects"
 
+      [[params.links.list3.link]]
+        text = "COVID-19 Trend Analysis"
+        url = "https://github.com/asimumba/covid-19"
+        
       [[params.links.list3.link]]
         text = "Data-Driven Entrepreneurship Viz"
         url = "https://bongohive.co.zm/data-driven-entrepreneurship/"
