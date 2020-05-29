@@ -41,7 +41,7 @@
       "Package": "blogdown",
       "Version": "0.19",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Hash": "ab00a36e2941c1a79c86e455406b6145"
     },
     "bookdown": {
@@ -147,11 +147,12 @@
       "Version": "0.10.0-45",
       "Source": "GitHub",
       "RemoteType": "github",
-      "RemoteHost": "api.github.com",
       "RemoteUsername": "rstudio",
       "RemoteRepo": "renv",
-      "RemoteRef": "0.10.0-45",
-      "RemoteSha": "386b1ba5785bd4d99cef41f40db446874877c054"
+      "RemoteRef": "master",
+      "RemoteSha": "386b1ba5785bd4d99cef41f40db446874877c054",
+      "RemoteHost": "api.github.com",
+      "Hash": "84284424bfcc716315eafed80800f857"
     },
     "rlang": {
       "Package": "rlang",
