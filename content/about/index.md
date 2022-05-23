@@ -2,12 +2,13 @@
 title: About
 date: 2014-04-09
 comments: false
+image: images/avatar.png
 ---
 
+![Aaron Simumba](/images/aaron.JPG#float-right)
 
-Hi, I'm Aaron Simumba, welcome to my website.
----------------------------------------------
-***
+Hi, I'm **Aaron Simumba**, _welcome to my website._
+
 I work in the financial services sector as a **Business Intelligence & Analytics Lead**. Previously, I worked for [**mPharma**](https://www.mpharma.com/) as a **Data Management Associate**. 
 
 In another life, I was an Accounting and Finance major. Graduated from the [**University of Namibia**](http://unam.edu.na/) with a BA degree in Accounting(Honours). Equally tutored Business Administration students in the art of business and accounting at the [**University of Zambia**](https://www.unza.zm/).
