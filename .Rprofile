@@ -1,6 +1,6 @@
 options(
   servr.daemon = TRUE, blogdown.yaml.empty = FALSE,
-  blogdown.publishDir = '../zedr-public',  blogdown.author = "Aaron Simumba"
+  blogdown.publishDir = '../a.web',  blogdown.author = "Aaron Simumba"
 )
 
 local({
