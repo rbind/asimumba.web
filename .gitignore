@@ -3,6 +3,10 @@
 .RData
 .Ruserdata
 .DS_Store
-public
-blogdown
+/public
+/blogdown
 .vscode
+.hugo_build.lock
+Thumbs.db
+/public/
+/resources/

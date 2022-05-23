@@ -1,26 +1,11 @@
 </main>
     <footer>
-        <h6>{{ .Site.Copyright | markdownify }} |
-            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a>
-            and <a href="https://github.com/rstudio/blogdown" title="blogdown">blogdown</a> |
+        <h6>{{ .Site.Copyright | markdownify }} | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
             <a href="{{.Site.BaseURL}}index.xml">Subscribe</a></h6>
     </footer>
 </div>
 <script src="{{ "js/scripts.js" | relURL }}"></script>
 </body>
-
-{{ template "_internal/google_analytics.html" . }}
-
-<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-<script async src="//yihui.name/js/center-img.js"></script>
-
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
-
-<script>
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-</script>
 
 </html>

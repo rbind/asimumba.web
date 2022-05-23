@@ -1,0 +1,461 @@
+---
+title: Breathing life back into PDF presented Data
+subtitle: Implementation through Tabulizer
+author: Aaron Simumba
+date: '2017-10-12'
+categories:
+  - R
+  - Rmarkdown
+tags:
+  - pdf
+  - Java-jdk
+  - tabulizer
+description: Bringing PDF presented data back to life.
+slug: Breathing-life-back-into-PDF-presented-Data
+photo:
+  url: https://unsplash.com/photos/RX_0vwSPiWs
+  author: Austin Distel
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.</p>
+<p>The good news is, technology seem to run on a brain of its own. While one side of the technology spectrum impedes, another end liberate. One such solution to extracting the dead and static PDF presented data, is to turn to the powerful and versatile R package, <code>tabulizer</code>. The <a href="https://github.com/ropensci/tabulizer">tabulizer</a> package is an R wrapper for the powerful PDF extractor Java library <a href="https://github.com/tabulapdf/tabula-java/">Tabula</a>. This package allows one to extract with ease, data presented in tables in a PDF document. For as long as the data is in a clean and uncluttered format. The <code>extract_tables()</code> function will try to guess the delimiters for the data and extract the data in the format which maintains close to the original data outline.</p>
+<div id="installation" class="section level2">
+<h2>Installation</h2>
+<p>For the installation and usage, the package depends on Java. The appropriate Java Development Kit can be downloaded straight from the Oracle website <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">here</a>. Installation instructions are platform specific. Follow the instructions depending on your OS. I am on Windows, so I installed Java, running the <code>jdk-8u144-windows-x64.exe</code> executable file.</p>
+<p>Installing tabulizer package, this can be installed from github. There is only the development version of the package, you will not find it on CRAN.</p>
+<pre class="r"><code># The original instructions from ropenscilabs, listing the following code to install
+#the packages, but from my experience, I had troulbes installing it from their repo
+
+if(!require(&quot;ghit&quot;)){
+    install.packages(&quot;ghit&quot;)
+}
+# on 64-bit Windows
+ghit::install_github(c(&quot;ropenscilabs/tabulizerjars&quot;,
+                       &quot;ropenscilabs/tabulizer&quot;), 
+                     INSTALL_opts = &quot;--no-multiarch&quot;
+                     )
+# elsewhere
+ghit::install_github(c(&quot;ropenscilabs/tabulizerjars&quot;,
+                       &quot;ropenscilabs/tabulizer&quot;)
+                     )
+
+#After searching around, a workable option is installing 
+#from Thomas Leeper cloned repo
+
+if(!require(&quot;ghit&quot;)){
+                       install.packages(&quot;ghit&quot;)
+}
+# on 64-bit Windows
+ghit::install_github(c(&quot;leeper/tabulizerjars&quot;, 
+                       &quot;leeper/tabulizer&quot;), 
+                         INSTALL_opts = &quot;--no-multiarch&quot;
+                     )
+# elsewhere
+ghit::install_github(c(&quot;leeper/tabulizerjars&quot;, 
+                       &quot;leeper/tabulizer&quot;))</code></pre>
+<p>This will download and install other Java related packages tabulizer depends on.</p>
+<p>##Demo</p>
+<p>For demonstration purpose, I will use the report from the Central Statistics Office (CSO), Zambia, on <a href="https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf">Zambia Census Projection 2011-2035</a>. Below is the outline of the sample data as presented in the PDF report.</p>
+<div style="text-align:center" markdown="1">
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/24398851/31639999-7d7cc290-b2e4-11e7-85d3-03cc648a73e6.png" width="600" height="500" alt="" />
+<p class="caption">Sample Data File - Source: CSO</p>
+</div>
+</div>
+<p>We call the tabulizer package with the following command.</p>
+<pre class="r"><code>library(&quot;tabulizer&quot;)</code></pre>
+<p>The main function is the <code>extract_tables()</code>. The first argument is the PDF <code>file</code> or report where the targeted table(s) is/are. The second argument is the <code>pages</code>, where you specify the page number the table of data is. There are other arguments such as <code>area</code>, which you can specify the targeted area(s) to extract. <code>columns</code> which matches with the number of pages to be extracted. This argument allows for each page extracted to be stored in its own separate column.The <code>guess</code> argument, which by default is <code>=TRUE</code>, allows for the function to guess the location of the table(s) on each page. For a list of all the arguments: run <code>?extract_tables</code> in the R console.
+By default, the data is extracted as a list. Lists in R can be thought of as a vector containing other objects. We can zoom in on a particular object using the double square brackets,<code>[[]]</code>. For instance, the first object in the variable is indexed by the number 1, and the second object by 2, and so on. Since,only one table is being extracted, the variable below contain one column; extracted with this command,<code>cso_table[[1]]</code>.</p>
+<p>The default way, <code>extract_table()</code> extracts the data as a list of character matrices. This helps in cases where the data is irregular and cannot be properly coerced to a data frame (row by column format). To change this behaviour so that the extracted data is coerced to a data frame, we supply the <code>method</code> argument, and have <code>data.frame</code> as the value.</p>
+<pre class="r"><code>cso &lt;- (&quot;https://goo.gl/d2xMwS&quot;) 
+# This is the shortened version of the original URL. Stored the link to the report as a variable.
+
+cso_table &lt;- extract_tables(cso, pages = 24, 
+                            method = &quot;data.frame&quot;)
+# We are going to pass the cso variable to the extract_tables() function
+cso_column &lt;- cso_table[[1]] 
+
+# The table of interest is on page 24, the other arguments are left as defaults</code></pre>
+<p>From the extracted results, it can be seen the output is not in a “tidy” format, to allow any meaning analyses to be done. The next step would be reshaping and reordering the extracted results into a neat data frame.</p>
+</div>
+<div id="tidying-the-data" class="section level2">
+<h2>Tidying the data</h2>
+<p>Two approaches can be implemented here: the easy way or the hard way.</p>
+<ul>
+<li>Firstly, the easy way. We can write the data to a <code>CSV</code> file and clean the data in Microsoft Excel. The solution is to use the <code>write.csv()</code> function. The first argument in the function is the data object. The <code>file</code> argument, you define the output file name together with the file extension - in our case it is a <code>.CSV</code> extension. The <code>row.names</code> specifies whether to include the default index R attaches to the data, which spans the length of your data.</li>
+</ul>
+<pre class="r"><code>write.csv(cso_column, file = &quot;cso_data.csv&quot;,
+          row.names = FALSE) # I have passed a relative path where I want the CSV file to be stored</code></pre>
+<p>After cleaning the data in Excel, it can be re-imported to aid in analysis.</p>
+<ul>
+<li>Second choice, the hard way. The <code>tidyverse</code> package has a suite of packages built specifically to handle such tasks. The<code>dplyr</code> package, is one such package, which represents the grammar of data manipulation. Using well crafted verbs, one can transform, order, filter etc.. data with ease.</li>
+</ul>
+</div>
+<div id="welcome-to-the-tidyverse-universe" class="section level2">
+<h2>Welcome to the tidyverse universe</h2>
+<p>First step is to clean the data, eliminating unwanted variables and title headers. That is in addition to transforming the data into a “tidy” format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second, and the last three row of the extracted data.</p>
+<p><code>tidyr</code> package is used to gather the observations in the columns into rows and combine all the observations across 2 columns. The function <code>gather()</code> achieves this in the <code>tidyr</code> package.</p>
+<p>After gathering the data from the columns to rows, the second issue is to index the numbers by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.</p>
+<pre class="r"><code>cso_data &lt;- cso_data %&gt;% 
+  as.tibble() # converting to a tibble</code></pre>
+<pre><code>#&gt; Warning: `as.tibble()` was deprecated in tibble 2.0.0.
+#&gt; Please use `as_tibble()` instead.
+#&gt; The signature and semantics have changed, see `?as_tibble`.</code></pre>
+<pre class="r"><code>cso_provincial &lt;- cso_data %&gt;% 
+  filter(sex == &quot;Total&quot;) %&gt;% 
+  select(`2011`:`2035`) %&gt;% 
+  gather(key = &quot;year&quot;, value = &quot;census_proj&quot;)
+
+province &lt;- rep(c(&quot;central&quot;, &quot;copperbelt&quot;, &quot;eastern&quot;,
+                  &quot;luapula&quot;, &quot;lusaka&quot;, &quot;muchinga&quot;,
+                  &quot;northern&quot;, &quot;north.western&quot;, &quot;southern&quot;, &quot;western&quot;)
+                , 6
+                ) 
+
+cso_transformed &lt;- cbind(cso_provincial,province) %&gt;% 
+  select(year,province, census_proj) %&gt;% 
+  as.tibble() 
+cso_transformed</code></pre>
+<pre><code>#&gt; # A tibble: 60 x 3
+#&gt;    year  province      census_proj
+#&gt;    &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;      
+#&gt;  1 2011  central       1,355,775  
+#&gt;  2 2011  copperbelt    2,143,413  
+#&gt;  3 2011  eastern       1,628,880  
+#&gt;  4 2011  luapula       1,015,629  
+#&gt;  5 2011  lusaka        2,362,967  
+#&gt;  6 2011  muchinga      749,449    
+#&gt;  7 2011  northern      1,146,392  
+#&gt;  8 2011  north.western 746,982    
+#&gt;  9 2011  southern      1,642,757  
+#&gt; 10 2011  western       926,478    
+#&gt; # ... with 50 more rows</code></pre>
+<p>For the full data table view, see the table below.</p>
+<pre class="r"><code>knitr::kable(cso_transformed, booktabs = TRUE, 
+             caption = &quot;Census data per Province&quot;)  </code></pre>
+<table>
+<caption><span id="tab:unnamed-chunk-8">Table 1: </span>Census data per Province</caption>
+<thead>
+<tr class="header">
+<th align="left">year</th>
+<th align="left">province</th>
+<th align="left">census_proj</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">central</td>
+<td align="left">1,355,775</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">copperbelt</td>
+<td align="left">2,143,413</td>
+</tr>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">eastern</td>
+<td align="left">1,628,880</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">luapula</td>
+<td align="left">1,015,629</td>
+</tr>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">lusaka</td>
+<td align="left">2,362,967</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">muchinga</td>
+<td align="left">749,449</td>
+</tr>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">northern</td>
+<td align="left">1,146,392</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">north.western</td>
+<td align="left">746,982</td>
+</tr>
+<tr class="odd">
+<td align="left">2011</td>
+<td align="left">southern</td>
+<td align="left">1,642,757</td>
+</tr>
+<tr class="even">
+<td align="left">2011</td>
+<td align="left">western</td>
+<td align="left">926,478</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">central</td>
+<td align="left">1515086</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">copperbelt</td>
+<td align="left">2362207</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">eastern</td>
+<td align="left">1813445</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">luapula</td>
+<td align="left">1127453</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">lusaka</td>
+<td align="left">2777439</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">muchinga</td>
+<td align="left">895058</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">northern</td>
+<td align="left">1304435</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">north.western</td>
+<td align="left">833818</td>
+</tr>
+<tr class="odd">
+<td align="left">2015</td>
+<td align="left">southern</td>
+<td align="left">1853464</td>
+</tr>
+<tr class="even">
+<td align="left">2015</td>
+<td align="left">western</td>
+<td align="left">991500</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">central</td>
+<td align="left">1734601</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">copperbelt</td>
+<td align="left">2669635</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">eastern</td>
+<td align="left">2065590</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">luapula</td>
+<td align="left">1276608</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">lusaka</td>
+<td align="left">3360183</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">muchinga</td>
+<td align="left">1095535</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">northern</td>
+<td align="left">1520004</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">north.western</td>
+<td align="left">950789</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">southern</td>
+<td align="left">2135794</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">western</td>
+<td align="left">1076683</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">central</td>
+<td align="left">1979202</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">copperbelt</td>
+<td align="left">3016344</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">eastern</td>
+<td align="left">2344980</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">luapula</td>
+<td align="left">1439877</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">lusaka</td>
+<td align="left">4004276</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">muchinga</td>
+<td align="left">1326222</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">northern</td>
+<td align="left">1763638</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">north.western</td>
+<td align="left">1080072</td>
+</tr>
+<tr class="odd">
+<td align="left">2025</td>
+<td align="left">southern</td>
+<td align="left">2445929</td>
+</tr>
+<tr class="even">
+<td align="left">2025</td>
+<td align="left">western</td>
+<td align="left">1173598</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">central</td>
+<td align="left">2254435</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">copperbelt</td>
+<td align="left">3402007</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">eastern</td>
+<td align="left">2655422</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">luapula</td>
+<td align="left">1623991</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">lusaka</td>
+<td align="left">4704135</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">muchinga</td>
+<td align="left">1587414</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">northern</td>
+<td align="left">2040926</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">north.western</td>
+<td align="left">1227481</td>
+</tr>
+<tr class="odd">
+<td align="left">2030</td>
+<td align="left">southern</td>
+<td align="left">2793523</td>
+</tr>
+<tr class="even">
+<td align="left">2030</td>
+<td align="left">western</td>
+<td align="left">1286880</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">central</td>
+<td align="left">2565450</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">copperbelt</td>
+<td align="left">3823642</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">eastern</td>
+<td align="left">3001152</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">luapula</td>
+<td align="left">1834667</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">lusaka</td>
+<td align="left">5465775</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">muchinga</td>
+<td align="left">1879642</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">northern</td>
+<td align="left">2355007</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">north.western</td>
+<td align="left">1397137</td>
+</tr>
+<tr class="odd">
+<td align="left">2035</td>
+<td align="left">southern</td>
+<td align="left">3184855</td>
+</tr>
+<tr class="even">
+<td align="left">2035</td>
+<td align="left">western</td>
+<td align="left">1416331</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>We can finally take a breather, and enjoy!</p>
+<hr />
+<center>
+<iframe src="https://giphy.com/embed/13r9tgg7ZisiT6" frameborder="0" width="300" height="250" allowtransparency class="giphy-embed" allowFullScreen>
+</iframe>
+<p>
+<a href="https://giphy.com/gifs/michelle-tanner-stickleyman-13r9tgg7ZisiT6">via GIPHY</a>
+</p>
+</center>
+</div>
