@@ -10,7 +10,7 @@ Hi, I'm Aaron Simumba, welcome to my website.
 ***
 I work in the financial services sector as a **Business Intelligence & Analytics Lead**. Previously, I worked for [**mPharma**](https://www.mpharma.com/) as a **Data Management Associate**. 
 
-In another life, I was an Accounting and Finance major. Graduated from the [**University of Namibia**](http://unam.edu.na/) with a BA degree in Accounting(Honours). Eqaully tutored Business Administration students in the art of business and accounting at the [**University of Zambia**](https://www.unza.zm/).
+In another life, I was an Accounting and Finance major. Graduated from the [**University of Namibia**](http://unam.edu.na/) with a BA degree in Accounting(Honours). Equally tutored Business Administration students in the art of business and accounting at the [**University of Zambia**](https://www.unza.zm/).
 
 I am lost in the Data Science web... hoping to find my way out of the maze soon. I find data and the process of data analysis to glean insight from the raw data, overly exciting and fascinating alike.
 
