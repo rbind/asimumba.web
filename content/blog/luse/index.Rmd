@@ -15,7 +15,7 @@ photo:
 ---
 
 ```{r,echo=FALSE}
-knitr::opts_chunk$set(echo = TRUE, tidy = TRUE)
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
@@ -39,24 +39,24 @@ library(xts)
 load("luse.RData")
 
 # convert the data frame to an xts
-LASI_monthly <- xts(x = LASI_monthly[,-1], 
+LASI_monthly <- xts(x = LASI_monthly[, -1],
                     
-                    order.by = as.Date(LASI_monthly[,1]))
+                    order.by = as.Date(LASI_monthly[, 1]))
 
 
-LASI_monthly_zccm <- xts(x = LASI_monthly_zccm[,-1], 
+LASI_monthly_zccm <- xts(x = LASI_monthly_zccm[, -1],
                          
-                         order.by = as.Date(LASI_monthly_zccm[,1]))
+                         order.by = as.Date(LASI_monthly_zccm[, 1]))
 
 
-LASI_yearly <- xts(x = LASI_yearly[,-1], 
+LASI_yearly <- xts(x = LASI_yearly[, -1],
                    
-                   order.by = as.Date(LASI_yearly[,1]))
+                   order.by = as.Date(LASI_yearly[, 1]))
 
 
-LASI_yearly_zccm <- xts(x = LASI_yearly_zccm[,-1], 
+LASI_yearly_zccm <- xts(x = LASI_yearly_zccm[, -1],
                         
-                        order.by = as.Date(LASI_yearly_zccm[,1]))
+                        order.by = as.Date(LASI_yearly_zccm[, 1]))
 ```
 
 
@@ -81,13 +81,13 @@ NB: The returns are computed in the local currency (Kwacha).
 
 library(dygraphs)
 
-dygraph((LASI_monthly$Return)*100, 
-        main = "LASI Monthly Returns 2005 - 2014 Excl. ZCCM - IH") %>% 
-   
-  dyAxis("y", label ="Return") %>%
-   
-  dyAxis("x", label ="Year") %>%
-   
+dygraph((LASI_monthly$Return) * 100,
+        main = "LASI Monthly Returns 2005 - 2014 Excl. ZCCM - IH") %>%
+  
+  dyAxis("y", label = "Return") %>%
+  
+  dyAxis("x", label = "Year") %>%
+  
   dyOptions(colors = RColorBrewer::brewer.pal(3, "Set2")) 
 
 ```
@@ -102,13 +102,13 @@ The following chart shows the LASI index inclusive of  ZCCM-IH. Since the LASI i
 
 ```{r,fig.cap= "The LuSE LASI Monthly Returns For the Period 2005-2014 (incl. ZCCM-IH)"}
 
-dygraph((LASI_monthly_zccm$Return)*100,
-        main = "LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH") %>% 
-   
-  dyAxis("y", label ="Return") %>%
-   
-  dyAxis("x", label ="Year") %>%
-   
+dygraph((LASI_monthly_zccm$Return) * 100,
+        main = "LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH") %>%
+  
+  dyAxis("y", label = "Return") %>%
+  
+  dyAxis("x", label = "Year") %>%
+  
   dyOptions(colors = RColorBrewer::brewer.pal(3, "Set2")) 
 
 ```
@@ -132,13 +132,13 @@ dygraph((LASI_yearly$Return)*100,
 
 ```{r, fig.cap= "The LuSE LASI yearly Returns For the Period 1997-2014 (incl. ZCCM-IH)"}
 
-dygraph((LASI_yearly_zccm$Return)*100, 
-        main = "LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH") %>% 
-   
-  dyAxis("y", label ="Return") %>%
-   
-  dyAxis("x", label ="Year") %>%
-   
+dygraph((LASI_yearly_zccm$Return) * 100,
+        main = "LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH") %>%
+  
+  dyAxis("y", label = "Return") %>%
+  
+  dyAxis("x", label = "Year") %>%
+  
   dyOptions(colors = RColorBrewer::brewer.pal(3, "Set2")) 
 ```
 
