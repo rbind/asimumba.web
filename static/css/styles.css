@@ -56,7 +56,7 @@ h1 {
 #container header h1 a {
   color: #666666;
   border: none;
-  font-family: "Ruda", sans-serif;
+  font-family: "Atkinson", sans-serif;
 }
 
 #container header ul {
@@ -83,7 +83,7 @@ h1 {
 #container nav {
   border-bottom: solid 3px #cecece;
   padding-bottom: 0.5em;
-  font-family: "Ruda", sans-serif;
+  font-family: "Atkinson", sans-serif;
 }
 
 #container nav ul {
@@ -112,13 +112,13 @@ h1 {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: "Ruda", sans-serif;
+  font-family: "Atkinson", sans-serif;
 }
 
 #container main section#home ul li {
   margin: 0.5em 0;
   padding-bottom: 0.5em;
-  font-family: "Ruda", sans-serif;
+  font-family: "Atkinson", sans-serif;
 }
 
 #container main section#home ul li h2 {
@@ -159,7 +159,7 @@ h1 {
 }
 
 #container main article pre {
-  background-color: #f8f8f8;
+  background-color: #FDF6E3;
   overflow-x: auto;
   padding: 0.8em;
   font-size: 0.8em;
@@ -197,7 +197,7 @@ h1 {
   margin-bottom: 1rem;
   color: #666666;
   border: none;
-  font-family: "Ruda", sans-serif;
+  font-family: "Atkinson", sans-serif;
 }
 
 #container footer {
@@ -210,7 +210,7 @@ h1 {
 
 .meta-aside, #container main section#home ul li aside, #container main article aside {
   margin: 0.5em 0;
-  font-family: "Ruda", sans-serif;
+  font-family: "Atkinson", sans-serif;
   color: #909090;
   font-size: 0.8em;
 }
