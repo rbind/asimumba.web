@@ -2,8 +2,8 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Merriweather', Georgia, 'Times New Roman', Times, Serif;
-  color: #222222;
+  font-family: Atkinson Hyperlegible;
+  color: #024238;
 }
 
 h1,
@@ -13,7 +13,7 @@ h4,
 h5,
 h6,
 time {
-font-family: 'Fira Sans', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-family: Atkinson Hyperlegible;
 color: #36454f;
 font-weight: bold;
 }
@@ -56,7 +56,7 @@ h1 {
 #container header h1 a {
   color: #666666;
   border: none;
-  font-family: "Atkinson", sans-serif;
+  font-family: "Atkinson Hyperlegible", sans-serif;
 }
 
 #container header ul {
@@ -83,7 +83,7 @@ h1 {
 #container nav {
   border-bottom: solid 3px #cecece;
   padding-bottom: 0.5em;
-  font-family: "Atkinson", sans-serif;
+  font-family: "Atkinson Hyperlegible", sans-serif;
 }
 
 #container nav ul {
@@ -112,13 +112,13 @@ h1 {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: "Atkinson", sans-serif;
+  font-family: "Atkinson Hyperlegible", sans-serif;
 }
 
 #container main section#home ul li {
   margin: 0.5em 0;
   padding-bottom: 0.5em;
-  font-family: "Atkinson", sans-serif;
+  font-family: "Atkinson Hyperlegible", sans-serif;
 }
 
 #container main section#home ul li h2 {
@@ -197,7 +197,7 @@ h1 {
   margin-bottom: 1rem;
   color: #666666;
   border: none;
-  font-family: "Atkinson", sans-serif;
+  font-family: "Atkinson Hyperlegible", sans-serif;
 }
 
 #container footer {
@@ -210,7 +210,7 @@ h1 {
 
 .meta-aside, #container main section#home ul li aside, #container main article aside {
   margin: 0.5em 0;
-  font-family: "Atkinson", sans-serif;
+  font-family: "Atkinson Hyperlegible", sans-serif;
   color: #909090;
   font-size: 0.8em;
 }
