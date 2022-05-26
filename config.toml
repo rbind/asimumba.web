@@ -4,7 +4,7 @@ copyright = "Copyright &copy; 2022 - Aaron Simumba"
 canonifyurls = true
 theme = "hugo-kiera"
 disqusShortname = "asimumba"
-googleAnalytics = "UA-101235795-2"
+googleAnalytics = "251788376"
 enableEmoji = true
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
