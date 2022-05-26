@@ -23,6 +23,7 @@ pygmentsCodeFences = false
     linkedin = "aaronsimumba"
     twitter = "asimumba_"
     email = "simumbaaaron20@gmail.com"
+    stackoverflow = "aaron-simumba"
 
 [params]
     tagline = "A Data Connoisseur's playground - Where data mets ideas"
