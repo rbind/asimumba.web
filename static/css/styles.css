@@ -13,15 +13,15 @@ h4,
 h5,
 h6,
 time {
-font-family: Atkinson Hyperlegible;
-color: #36454f;
+font-family: "Ruda";
+color: #31e2bc;
 font-weight: bold;
 }
 
 h1 {
-    font-size: 1.6em;
-    padding-bottom: 1em;
-    line-height: 1.5em;
+    font-size: 1.8em;
+    padding-bottom: 0.2em;
+    line-height: 1.1em;
 }
 
 #container {
@@ -54,9 +54,9 @@ h1 {
 }
 
 #container header h1 a {
-  color: #0c0505;
+  color: #dd2182;
   border: none;
-  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-family: "Ruda";
 }
 
 #container header ul {
@@ -225,22 +225,17 @@ h1 {
   margin: 0;
   padding: 0;
 }
-/*
-a {
-  color: #666666;
-  text-decoration: none;
-}
 
-*/
 a {
     transition-property: color;
     transition-duration: .3s;
-    color: #08c;
+    color: #c50b65;
     text-decoration: none
 }
 .image, figure img, img {
   width: 100%;
-  box-shadow: 0 3px 3px #bbbbbb;
+  box-shadow: 0 3px 3px #fcfbfb;
+  border-radius: 25px;
 }
 
 .full-image, figure.full img, img[src*="full"] {

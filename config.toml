@@ -1,5 +1,5 @@
 baseurl = "https://asimumba.rbind.io/"
-title = "Data Science . R . Business Intelligence"
+title = "R . Data Science . Business Intelligence"
 copyright = "Copyright &copy; 2022 - Aaron Simumba"
 canonifyurls = true
 theme = "hugo-kiera"

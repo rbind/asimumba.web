@@ -1,7 +1,6 @@
 ---
 title: About
 date: 2014-04-09
-comments: false
 image: images/avatar.png
 ---
 
@@ -66,7 +65,3 @@ I can be found on [**Github**](https://github.com/asimumba/) poking around inter
 - [*RStudio community: Everything RStudio*](https://community.rstudio.com/)
 - [*R Weekly*](https://rweekly.org/)
 
-<br><br><br><br><br>
-***
-This website is built with [**hugo-kiera**](https://github.com/avianto/hugo-kiera/) theme,
-[**Blogdown**](https://github.com/rstudio/blogdown), [**hugo**](https://gohugo.io/), and deployed by [**netlify**](https://www.netlify.com/)

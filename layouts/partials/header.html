@@ -6,6 +6,7 @@
   <title>{{ .Site.Title }}</title>
   {{ partial "meta" . }}
   {{ partial "header_includes" . -}}
+  {{ template "_internal/google_analytics.html" . }}
 </head>
 
 <body>
@@ -27,7 +28,7 @@
         {{ end }} {{ if .Site.Author.instagram }}
         <li><a href="https://instagram.com/{{ .Site.Author.instagram }}"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
         {{ end }} {{ if .Site.Author.stackoverflow }}
-        <li><a href="https://stackoverflow.com/{{ .Site.Author.stackoverflow }}"><i class="fa fa-stack-overflow fa-lg" aria-hidden="true"></i></a></li>
+        <li><a href="https://stackoverflow.com/users/8137815/{{ .Site.Author.stackoverflow }}"><i class="fa fa-stack-overflow fa-lg" aria-hidden="true"></i></a></li>
         {{ end }}
       </ul>
       {{ with .Site.Params.tagline }}
