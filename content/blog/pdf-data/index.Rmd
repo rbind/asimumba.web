@@ -64,8 +64,7 @@ ghit::install_github(c("leeper/tabulizerjars",
 
 This will download and install other Java related packages tabulizer depends on.
 
-##Demo
-
+## Demo
 For demonstration purpose, I will use the report from the Central Statistics Office (CSO), Zambia, on [Zambia Census Projection 2011-2035](https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf). Below is the outline of the sample data as presented in the PDF report. 
 
 <div style="text-align:center" markdown="1">

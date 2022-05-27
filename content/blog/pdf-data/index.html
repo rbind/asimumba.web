@@ -17,7 +17,6 @@ photo:
   author: Austin Distel
 ---
 
-<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <p>It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.</p>
@@ -57,7 +56,9 @@ ghit::install_github(c(&quot;leeper/tabulizerjars&quot;,
 ghit::install_github(c(&quot;leeper/tabulizerjars&quot;, 
                        &quot;leeper/tabulizer&quot;))</code></pre>
 <p>This will download and install other Java related packages tabulizer depends on.</p>
-<p>##Demo</p>
+</div>
+<div id="demo" class="section level2">
+<h2>Demo</h2>
 <p>For demonstration purpose, I will use the report from the Central Statistics Office (CSO), Zambia, on <a href="https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf">Zambia Census Projection 2011-2035</a>. Below is the outline of the sample data as presented in the PDF report.</p>
 <div style="text-align:center" markdown="1">
 <div class="figure">
@@ -103,7 +104,9 @@ cso_column &lt;- cso_table[[1]]
   as.tibble() # converting to a tibble</code></pre>
 <pre><code>#&gt; Warning: `as.tibble()` was deprecated in tibble 2.0.0.
 #&gt; Please use `as_tibble()` instead.
-#&gt; The signature and semantics have changed, see `?as_tibble`.</code></pre>
+#&gt; The signature and semantics have changed, see `?as_tibble`.
+#&gt; This warning is displayed once every 8 hours.
+#&gt; Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</code></pre>
 <pre class="r"><code>cso_provincial &lt;- cso_data %&gt;% 
   filter(sex == &quot;Total&quot;) %&gt;% 
   select(`2011`:`2035`) %&gt;% 
@@ -119,7 +122,7 @@ cso_transformed &lt;- cbind(cso_provincial,province) %&gt;%
   select(year,province, census_proj) %&gt;% 
   as.tibble() 
 cso_transformed</code></pre>
-<pre><code>#&gt; # A tibble: 60 x 3
+<pre><code>#&gt; # A tibble: 60 × 3
 #&gt;    year  province      census_proj
 #&gt;    &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;      
 #&gt;  1 2011  central       1,355,775  
@@ -132,7 +135,7 @@ cso_transformed</code></pre>
 #&gt;  8 2011  north.western 746,982    
 #&gt;  9 2011  southern      1,642,757  
 #&gt; 10 2011  western       926,478    
-#&gt; # ... with 50 more rows</code></pre>
+#&gt; # … with 50 more rows</code></pre>
 <p>For the full data table view, see the table below.</p>
 <pre class="r"><code>knitr::kable(cso_transformed, booktabs = TRUE, 
              caption = &quot;Census data per Province&quot;)  </code></pre>

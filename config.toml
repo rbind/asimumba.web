@@ -36,12 +36,6 @@ pygmentsCodeFences = false
     MathJaxVersion = "2.7.1"
     favicon = "favicon.ico"
 
-
-[[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 1
-
 [[menu.main]]
     name = "Blog"
     url = "/blog/"
@@ -52,6 +46,11 @@ pygmentsCodeFences = false
     url = "/portfolio/"
     weight = 3
 
+[[menu.main]]
+    name = "Talks"
+    url = "/talks/"
+    weight = 4
+    
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
