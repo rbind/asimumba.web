@@ -11,7 +11,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 paginate = 20
 
 [permalinks]
-    post = "/:year/:month/:day/:slug/"
+    blog = "/blog/:year/:month/:day/:slug/"
 
 summaryLength = 30
 enableEmoji = true
