@@ -2,7 +2,7 @@
 title: Thoughts to Words - An Introduction to Aaron Simumba's Website
 author: Aaron Simumba
 date: '2018-02-19'
-slug: introduction-to-aaron-simumba-website
+slug: intro-to-aaron-simumba
 categories:
   - Blogdown
   - R

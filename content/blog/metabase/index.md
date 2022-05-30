@@ -2,7 +2,7 @@
 title: Deploying Metabase through Heroku App
 author: Aaron Simumba
 date: '2018-12-26'
-slug: deploying-metabase-through-heroku-app
+slug: deploying-metabase-on-heroku
 tags:
   - Heroku
   - Metabase

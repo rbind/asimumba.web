@@ -3,7 +3,7 @@ author: Aaron Simumba
 title: "Mapping the Location of Twitter Followers and Following in R"
 subtitle: Twitter data mining
 date: 2017-10-02T17:46:47+02:00
-slug: Mapping-Twitter-Followers-and-Following-in-R
+slug: mapping-twitter-data
 description: Mapping locations for twitter followers and following
 tags: 
     - Twitter followers

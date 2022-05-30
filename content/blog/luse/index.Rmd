@@ -2,7 +2,7 @@
 title: "What's in the numbers: A look at the Lusaka Securities Exchange"
 author: Aaron Simumba
 date: "2017-04-06"
-slug: lusaka-stock-exchange
+slug: luse
 tags:
    - LuSE
    - ALSI

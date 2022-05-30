@@ -3,7 +3,7 @@ author: Aaron Simumba
 title: "Mapping the Location of Twitter Followers and Following in R"
 subtitle: Twitter data mining
 date: 2017-10-02T17:46:47+02:00
-slug: Mapping-Twitter-Followers-and-Following-in-R
+slug: mapping-twitter-data
 description: Mapping locations for twitter followers and following
 tags: 
     - Twitter followers
@@ -13,7 +13,6 @@ photo:
   author: Apollo
 ---
 
-<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <p>It is always nice to capture how wide and dense your twitter interactions spread. More so, the spread and locations of your twitter followers and those you are following. Making use of the <code>twitteR</code> package, and the inspiration from a post written by <a href="https://simplystatistics.org/2011/12/21/an-r-function-to-map-your-twitter-followers/">Jeff Leek</a>, I attempt to map my followers’ locations and those I follow on twitter.</p>
@@ -26,7 +25,7 @@ install.packages(&quot;twitteR&quot;, &quot;httr&quot;, &quot;ROAuth&quot;)</cod
 library(httr)
 library(twitteR)</code></pre>
 <p>Authenticating R to have access to your twitter account, the <code>twitteR</code> package has a function called <code>setup_twitter_oauth()</code>, where you are required to supply the keys and tokens to be found under the keys and tokens tab on your twitter developer profile. Supplying the <code>consumer key</code> and <code>secret key</code> obtained on-line, will prompt authorisation through the web browser, where a step by step prompt is given. Refer to the link above to the walk through set-up.</p>
-<pre class="r"><code>setup_twitter_oauth(consumer_key = &quot;insert key&quot;, consumer_secret = &quot;insert key&quot;, 
+<pre class="r"><code>setup_twitter_oauth(consumer_key = &quot;insert key&quot;, consumer_secret = &quot;insert key&quot;,
     access_token = &quot;insert token key&quot;, access_secret = &quot;insert key&quot;)</code></pre>
 <div id="mapping-followers-and-following-locations" class="section level2">
 <h2>Mapping followers and Following locations</h2>

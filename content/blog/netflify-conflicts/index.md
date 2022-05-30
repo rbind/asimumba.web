@@ -2,7 +2,7 @@
 title: How to resolve hugo version conflicts with the default version on netlify
 author: Aaron Simumba
 date: '2017-09-13'
-slug: how-to-resolve-hugo-version-conflicts-with-the-default-version-on-netlify
+slug: how-to-resolve-hugo-version-conflicts
 tags:
   - netlify
   - hugo
