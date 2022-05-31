@@ -2,8 +2,8 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: Atkinson Hyperlegible;
-  color: #024238;
+  font-family: inter,lucida grande,Helvetica,Arial,sans-serif;
+  color: #333333;
 }
 
 h1,
@@ -13,15 +13,16 @@ h4,
 h5,
 h6,
 time {
-font-family: "Ruda";
-color: #022b22;
+font-family: roboto slab,serif;
+color: #333333;
 font-weight: bold;
 }
 
 h1 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     padding-bottom: 0.2em;
     line-height: 1.1em;
+    color:darkcyan;
 }
 
 #container {
@@ -56,7 +57,7 @@ h1 {
 #container header h1 a {
   color: #dd2182;
   border: none;
-  font-family: "Ruda";
+  font-family: inter,lucida grande,Helvetica,Arial,sans-serif;;
 }
 
 #container header ul {
@@ -159,23 +160,27 @@ h1 {
 }
 
 #container main article pre {
-  background-color: #272822;
+  /* background-color: #272822; */
   overflow-x: auto;
-  padding: 0.6em;
-  font-size: 1.2em;
-  line-height: 1.4;
-  font-weight: 400;
-  margin: 0;
-  display: block;
+  padding: 1.0em;
+  font-size: 1.0em;
+  line-height: 1.3;
 }
 
 #container main article pre code {
-  font-size: 0.9em;
+  font-size: 1.0em;
+  background-color: inherit;
+  color: inherit;
+  display: inline-block;
+  font-family: source code pro,lucida console,monospace;
+  font-weight: 400;
+  display: block;
+  
 }
 
 #container main article p code {
   padding: 0.2em;
-  background-color: #f9f9f9;
+  /* background-color: #0a0a0a; */
   font-size: 0.9em;
 }
 
@@ -364,7 +369,7 @@ blockquote::before {
   content: "\f10d";
   font-size: 3em;
   font-family: "FontAwesome";
-  color: rgba(192, 192, 192, 0.3);
+  color: rgba(179, 176, 176, 0.3);
   position: absolute;
   left: 6px;
   top: 0;
@@ -399,5 +404,4 @@ pre {
   background: #f8f8f8;
   padding: 1em;
   overflow-x: auto;
-  font-family: source code pro,lucida console,monospace;
 }

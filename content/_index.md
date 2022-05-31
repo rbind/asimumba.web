@@ -64,3 +64,10 @@ I can be found on [**Github**](https://github.com/asimumba/) poking around inter
 
 - [*RStudio community: Everything RStudio*](https://community.rstudio.com/)
 - [*R Weekly*](https://rweekly.org/)
+
+##Tes
+```r
+# load the packages
+library(httr)
+library(twitteR)
+```
