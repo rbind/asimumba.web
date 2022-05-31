@@ -159,12 +159,14 @@ h1 {
 }
 
 #container main article pre {
-  background-color: #FDF6E3;
+  background-color: #272822;
   overflow-x: auto;
-  padding: 0.8em;
-  font-size: 0.8em;
-  box-shadow: 5px 5px 5px #eee;
-  line-height: 1.6;
+  padding: 0.6em;
+  font-size: 1.2em;
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0;
+  display: block;
 }
 
 #container main article pre code {
@@ -397,4 +399,5 @@ pre {
   background: #f8f8f8;
   padding: 1em;
   overflow-x: auto;
+  font-family: source code pro,lucida console,monospace;
 }
