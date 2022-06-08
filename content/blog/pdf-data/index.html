@@ -17,6 +17,7 @@ photo:
   author: Austin Distel
 ---
 
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <p>It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.</p>
@@ -122,7 +123,7 @@ cso_transformed &lt;- cbind(cso_provincial,province) %&gt;%
   select(year,province, census_proj) %&gt;% 
   as.tibble() 
 cso_transformed</code></pre>
-<pre><code>#&gt; # A tibble: 60 × 3
+<pre><code>#&gt; # A tibble: 60 x 3
 #&gt;    year  province      census_proj
 #&gt;    &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;      
 #&gt;  1 2011  central       1,355,775  
@@ -135,7 +136,7 @@ cso_transformed</code></pre>
 #&gt;  8 2011  north.western 746,982    
 #&gt;  9 2011  southern      1,642,757  
 #&gt; 10 2011  western       926,478    
-#&gt; # … with 50 more rows</code></pre>
+#&gt; # ... with 50 more rows</code></pre>
 <p>For the full data table view, see the table below.</p>
 <pre class="r"><code>knitr::kable(cso_transformed, booktabs = TRUE, 
              caption = &quot;Census data per Province&quot;)  </code></pre>
