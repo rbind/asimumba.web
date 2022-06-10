@@ -14,13 +14,13 @@ In another life, I was an Accounting and Finance major. Graduated from the [**Un
 
 I am lost in the Data Science web... hoping to find my way out of the maze soon. I find data and the process of data analysis to glean insight from the raw data, overly exciting and fascinating alike.
 
-In addition, I'm fascinated by stock markets and everything with a business and finance buzz.
+In another world, I'm fascinated by stock markets and everything with a business and finance buzz.
 
 I can be found on [**Github**](https://github.com/asimumba/) poking around interesting projects... and occasionally I rant on [**twitter**](https://twitter.com/zedsamurai/).
 
 `For this website`
 
->This will be a place where I share my daily musings in the world of R, Stock markets, and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies.
+>This will be a place where I share my daily musings in the world of R, analytics and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies.
 
 `Let's have fun!` :smile:
 
@@ -64,10 +64,3 @@ I can be found on [**Github**](https://github.com/asimumba/) poking around inter
 
 - [*RStudio community: Everything RStudio*](https://community.rstudio.com/)
 - [*R Weekly*](https://rweekly.org/)
-
-##Tes
-```r
-# load the packages
-library(httr)
-library(twitteR)
-```
