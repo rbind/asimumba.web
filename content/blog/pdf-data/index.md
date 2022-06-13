@@ -17,9 +17,7 @@ photo:
   author: Austin Distel
 ---
 
-```{r,echo=FALSE}
-knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
-```
+
 
 It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.
 
@@ -31,8 +29,8 @@ For the installation and usage, the package depends on Java.  The appropriate Ja
 
 Installing tabulizer package, this can be installed from github. There is only the development version of the package, you will not find it on CRAN.
 
-```{r, eval=FALSE}
 
+```r
 if(!require("ghit")){
                        install.packages("ghit")
 }
@@ -57,7 +55,8 @@ For demonstration purpose, I will use the report from the Central Statistics Off
 
 We call the tabulizer package with the following command.
 
-```{r}
+
+```r
 library("tabulizer")
 ```
 
@@ -66,7 +65,8 @@ By default, the data is extracted as a list. Lists in R can be thought of as a v
 
 The default way, `extract_table()` extracts the data as a list of character matrices. This helps in cases where the data is irregular and cannot be properly coerced to a data frame (row by column format). To change this behaviour so that the extracted data is coerced to a data frame, we supply the `method` argument, and have `data.frame` as the value.   
 
-```{r}
+
+```r
 cso <- ("https://goo.gl/d2xMwS")
 # This is the shortened version of the original URL.
 
@@ -86,7 +86,8 @@ Two approaches can be implemented here: the easy way or the hard way.
 
 - Firstly, the easy way. We can write the data to a `CSV` file and clean the data in Microsoft Excel. The solution is to use the `write.csv()` function. The first argument in the function is the data object. The `file` argument, you define the output file name together with the file extension - in our case it is a `.CSV` extension. The `row.names` specifies whether to include the default index R attaches to the data, which spans the length of your data.
 
-```{r}
+
+```r
 # I have passed a relative path where I want the CSV file to be stored
 write.csv(cso_column, file = "cso_data.csv",
           row.names = FALSE) 
@@ -100,28 +101,14 @@ After cleaning the data in Excel, it can be re-imported to aid in analysis.
 
 First step is to clean the data, eliminating unwanted variables and title headers. That is in addition to transforming the data into a "tidy" format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second, and the last three row of the extracted data.
 
-```{r, message=FALSE,include=FALSE,eval=TRUE}
 
-library(tidyverse)
-cso_column <- read_csv("cso_data.csv")
-# this eliminates the rows specified
-cso_data <- cso_column[-c(1, 2, 33:36), ] 
-
-# Renaming the columns
-names(cso_data) <- c("province", "sex", "2011",
-                     "2015", "2020", "2025", "2030", "2035")
- # Checking the structure of the data.
-str(cso_data)[3, ]
-
-cso_data[1:10,] # first 10 rows
-```
 
 `tidyr` package is used to gather the observations in the columns into rows and combine all the observations across 2 columns. The function `gather()` achieves this in the `tidyr` package.
 
 After gathering the data from the columns to rows, the second issue is to index the numbers by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.
 
-```{r,eval=TRUE}
 
+```r
 cso_data <- cso_data %>%
   as_tibble()
 
@@ -154,12 +141,97 @@ cso_transformed <- cbind(cso_provincial, province) %>%
 cso_transformed
 ```
 
+```
+## # A tibble: 60 × 3
+##    year  province      census_proj
+##    <chr> <chr>         <chr>      
+##  1 2011  central       1,355,775  
+##  2 2011  copperbelt    2,143,413  
+##  3 2011  eastern       1,628,880  
+##  4 2011  luapula       1,015,629  
+##  5 2011  lusaka        2,362,967  
+##  6 2011  muchinga      749,449    
+##  7 2011  northern      1,146,392  
+##  8 2011  north.western 746,982    
+##  9 2011  southern      1,642,757  
+## 10 2011  western       926,478    
+## # … with 50 more rows
+```
+
 For the full data table view, see the table below.
 
-```{r,eval=TRUE}
+
+```r
 knitr::kable(cso_transformed, booktabs = TRUE,
              caption = "Census data per Province")  
 ```
+
+
+
+Table: Table 1: Census data per Province
+
+|year |province      |census_proj |
+|:----|:-------------|:-----------|
+|2011 |central       |1,355,775   |
+|2011 |copperbelt    |2,143,413   |
+|2011 |eastern       |1,628,880   |
+|2011 |luapula       |1,015,629   |
+|2011 |lusaka        |2,362,967   |
+|2011 |muchinga      |749,449     |
+|2011 |northern      |1,146,392   |
+|2011 |north.western |746,982     |
+|2011 |southern      |1,642,757   |
+|2011 |western       |926,478     |
+|2015 |central       |1515086     |
+|2015 |copperbelt    |2362207     |
+|2015 |eastern       |1813445     |
+|2015 |luapula       |1127453     |
+|2015 |lusaka        |2777439     |
+|2015 |muchinga      |895058      |
+|2015 |northern      |1304435     |
+|2015 |north.western |833818      |
+|2015 |southern      |1853464     |
+|2015 |western       |991500      |
+|2020 |central       |1734601     |
+|2020 |copperbelt    |2669635     |
+|2020 |eastern       |2065590     |
+|2020 |luapula       |1276608     |
+|2020 |lusaka        |3360183     |
+|2020 |muchinga      |1095535     |
+|2020 |northern      |1520004     |
+|2020 |north.western |950789      |
+|2020 |southern      |2135794     |
+|2020 |western       |1076683     |
+|2025 |central       |1979202     |
+|2025 |copperbelt    |3016344     |
+|2025 |eastern       |2344980     |
+|2025 |luapula       |1439877     |
+|2025 |lusaka        |4004276     |
+|2025 |muchinga      |1326222     |
+|2025 |northern      |1763638     |
+|2025 |north.western |1080072     |
+|2025 |southern      |2445929     |
+|2025 |western       |1173598     |
+|2030 |central       |2254435     |
+|2030 |copperbelt    |3402007     |
+|2030 |eastern       |2655422     |
+|2030 |luapula       |1623991     |
+|2030 |lusaka        |4704135     |
+|2030 |muchinga      |1587414     |
+|2030 |northern      |2040926     |
+|2030 |north.western |1227481     |
+|2030 |southern      |2793523     |
+|2030 |western       |1286880     |
+|2035 |central       |2565450     |
+|2035 |copperbelt    |3823642     |
+|2035 |eastern       |3001152     |
+|2035 |luapula       |1834667     |
+|2035 |lusaka        |5465775     |
+|2035 |muchinga      |1879642     |
+|2035 |northern      |2355007     |
+|2035 |north.western |1397137     |
+|2035 |southern      |3184855     |
+|2035 |western       |1416331     |
 
 
 We can finally take a breather, and enjoy!

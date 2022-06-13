@@ -16,15 +16,14 @@ photo:
 In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority ([ZICTA](http://www.zicta.zm/)) data. I will walk through the data on the subscriber base, the user traffic and the cost differentials among the three mobile operators, these being: Airtel, Zamtel and MTN Zambia. In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used. 
 
 
-```{r,echo=FALSE}
-knitr::opts_chunk$set(message = FALSE,warning = FALSE) 
-```
+
 
 ## Prerequisites
 
 For this analysis, I will mainly use the following packages. The beauty with the R language is  that as a modular language, meaning it is fully extensible with add-on packages. I will make use of the `ggplot2` for visualising the data; `dplyr`, which is the package made to seamlessly handle data transformations, will be used to tweak the data to match the objectives of the analysis. The other packages are `readr` for data import.
 
-```{r, message=FALSE}
+
+```r
 # the packages can be installed running the following command
 # install.packges("ggplot2", "dplyr", "readr", "plotly")
 library(ggplot2)
@@ -41,7 +40,8 @@ The data used in this analysis can be found on the [ZICTA](http://onlinesystems.
 
 Running the following codes loads the data into the work environment, so we can work with it to do our analysis. 
 
-```{r,message=FALSE}
+
+```r
 operator_stats <- read_csv("operator_stats.csv")
 
 isps <- read_csv("isps.csv")
@@ -60,7 +60,8 @@ network_coverage <- network_coverage %>%
 
 The `head()` command gives a view of the first 6 rows across variables of your data by default. This allows a quick peek at your data, revealing the data types and forms; and learn how the data is laid out .
 
-```{r, eval=FALSE}
+
+```r
 head(operator_stats, 4)
 head(isps, 4)
 head(network_coverage, 4)
@@ -68,14 +69,16 @@ head(network_coverage, 4)
 
 The `names()` function helps to know the variables or column names in the data. This comes in hand to pick the names and variables in the analysis.
 
-```{r, eval=FALSE}
+
+```r
 names(operator_stats) # column names 
 ```
 
 It is important to learn the data types and the form your data assumes in your dataset. To achieve this, the `str()` function can be called. Since the the dataset has variables I am not interested in, I narrow the field with the `select()` from the `dplyr` package 
 to select only variables of interest
 
-```{r, eval=FALSE}
+
+```r
 operator_stats %>%
   
   select(
@@ -102,7 +105,8 @@ ZICTA provides the following statistics on ICT as of the second quarter of 2017,
 
 As can be seen from the trend that spans from 2010 to the year 2017 up to Q2 statistics, there has been a relatively upward trend in active mobile user subscribers. With the period between 2010 to 2012 experiencing the biggest leap of nearly 50% change.
 
-```{r}
+
+```r
 operator_stats %>%
   ggplot() +
   geom_line(mapping = aes(x = Year,
@@ -115,9 +119,12 @@ operator_stats %>%
           subtitle = "Over the period from 2010 - 2017, Q1 & Q2") 
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="672" />
+
 The plot below shows a positive correlation between the active mobile subscribers with the population estimate from the Central Statistics Office.
 
-```{r}
+
+```r
 operator_stats %>%
   ggplot(aes(x = Population_CSO_Estimate,
              y = Number_of_active_Subscribers)) +
@@ -131,6 +138,8 @@ operator_stats %>%
           subtitle = "Over the period from 2010 - 2017, Q1 & Q2") 
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+
 
 ## Change in the active user base
 
@@ -138,7 +147,8 @@ For much of the period under review, the number of active users was had a positi
 
 Given  this was a free of charge exercise, some opted to make [money](https://www.lusakatimes.com/2013/01/30/sim-registration-as-the-process-is-absolutely-free-zicta/) by charging for registration. Further casting a negative image on the exercise.
 
-```{r}
+
+```r
 per_change <- operator_stats %>%
   
   select(Year, Population_CSO_Estimate,
@@ -165,14 +175,38 @@ knitr::kable(per_change,
               change in the Active subscribers")
 ```
 
+
+
+Table: Table 1: Change in Population Vs.
+              change in the Active subscribers
+
+| Year| Population| Active subscribers| % change pop.|   % change|
+|----:|----------:|------------------:|-------------:|----------:|
+| 2010|   13092666|            5447536|            NA|         NA|
+| 2011|   13721498|            8164553|      4.802933| 49.8760724|
+| 2012|   14156468|           10524676|      3.169989| 28.9069469|
+| 2013|   14605555|           10395801|      3.172310| -1.2245033|
+| 2014|   15068729|           10114867|      3.171218| -2.7023795|
+| 2015|   15545778|           11557725|      3.165821| 14.2647254|
+| 2016|   16037474|           12017034|      3.162891|  3.9740433|
+| 2017|   16405229|           11916871|      2.293098| -0.8335085|
+| 2017|   16405229|           12429675|      0.000000|  4.3031766|
+
 In terms of the summary statistics, the active users numbers have average 10,285,415 a year. Considering a population size of nearly 16 million, this is a decent uptake in active mobile users.
-```{r}
+
+```r
 summary(operator_stats$Number_of_active_Subscribers)
+```
+
+```
+##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+##  5447536 10114867 10524676 10285415 11916871 12429675
 ```
 
 For the mobile penetration numbers per 100 inhabitants, the graph below shows an upward trend for much of the years under review. More in line with the active user base numbers. 
 
-```{r}
+
+```r
 operator_stats %>%
   
   ggplot(aes(x = Year, y = Mobile_Penetration_100_Inhabitants)) +
@@ -185,8 +219,11 @@ operator_stats %>%
           subtitle = "Over the period from 2010 - 2017, Q1 & Q2") 
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-11-1.png" width="672" />
+
 ## Domestic calls Traffic - Incoming and Outgoing 
-```{r, message=FALSE}
+
+```r
 operator_stats %>%
   
   ggplot() +
@@ -199,9 +236,12 @@ operator_stats %>%
   ggtitle("Domestic incoming Vs. Outgoing Traffic in minutes") 
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-12-1.png" width="672" />
+
 ## International incoming and outgoing traffic 
 
-```{r}
+
+```r
 operator_stats %>%
   ggplot() +
   geom_line(aes(x = Year,
@@ -215,9 +255,12 @@ operator_stats %>%
   ggtitle("International incoming Vs. Outgoing Traffic in minutes") 
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-13-1.png" width="672" />
+
 ## Network Coverage
 
-```{r}
+
+```r
 network_cover <-  network_coverage %>%
   
   select(Year,
@@ -229,18 +272,41 @@ knitr::kable(network_cover, booktabs = TRUE,
              caption = "Percentage network coverage by operator")  
 ```
 
+
+
+Table: Table 2: Percentage network coverage by operator
+
+| Year|Airtel_Zambia |MTN_Zambia |Zamtel |
+|----:|:-------------|:----------|:------|
+| 2010|NA            |NA         |NA     |
+| 2011|NA            |36.60%     |75.00% |
+| 2012|NA            |37.50%     |75.00% |
+| 2013|42.70%        |39.40%     |29.70% |
+| 2014|42.70%        |31.70%     |27.00% |
+| 2015|42.70%        |45.40%     |27.00% |
+| 2016|42.70%        |44.10%     |27.00% |
+| 2017|42.70%        |44.10%     |27.00% |
+| 2017|42.70%        |44.10%     |27.00% |
+
 ## Internet Penetration
 
 **Broadband users**
 
 The broadband data which covers all those on Direct Subscriber Line,cable and  optic fibre internet access, on average there are 3855730 users, with 75% of the users amounting to 5338910.
 
-```{r}
+
+```r
 summary(operator_stats$Mobile_Broadband_users)
 ```
 
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##  379888 2289147 4403005 3855730 5338910 6090412       1
+```
 
-```{r, message=FALSE}
+
+
+```r
 operator_stats %>%
   
   ggplot() +
@@ -257,9 +323,12 @@ operator_stats %>%
   )
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-16-1.png" width="672" />
+
 ## Internet subscribers Vs Penetration per 100 inhabitants
 
-```{r}
+
+```r
 isps %>%
   ggplot() +
   geom_line(aes(x = Fixed_internet_Penetration_per_100,
@@ -272,12 +341,15 @@ isps %>%
           subtitle = "Over the period from 2010 - 2017, Q1 & Q2") 
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-17-1.png" width="672" />
+
 
 ## Cost differentials
 
 The average cost for SMSs had maintained  a very stable flow from the year 2010 to the year 2014, with on network SMS cost standing at K 0.30. Off net SMS cost averaged K0.24, significantly low than off net cost. A signal to growing competition and the mobile operators' desire to benefit across networks. For the mobile phone tariff, for much of the period under review, we can see a relatively declining average cost of mobile tariff across different mobile operators. Although the year 2017 second quarter numbers show an increase in the tariff.The year 2017 saw a further increase in Excise duty taxes on telephone airtime from 15% to 15.5% for the 2017 [budget](http://taxsummaries.pwc.com/ID/Zambia-Corporate-Other-taxes), this is in addition to the 2015 increase from 10% to 15%. This can be reflected in the up-tick in the tariff costs beyond 2016.
 
-```{r}
+
+```r
 operator_stats %>%
   
   ggplot() +
@@ -319,12 +391,15 @@ operator_stats %>%
           subtitle = "Over the period from 2010 - 2017, Q1 & Q2") 
 ```
 
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-18-1.png" width="672" />
+
 
 ## Mobile voice call cost per/minute 
 
 On all accounts, 2014 through to 2016 saw a significant drop in the cost of calling per minute. This is in comparison to the numbers prevailing from the year 2010 t0 2014. With Voice-off-net off peak on mobile  maintaining a very steady cost per minute between 2010 to 2014. Conversely, Voice-on-net off peak on mobile had a relatively up-ward swing in the cost of calling per minute. For the year 2014, there was a drop in all forms of calling, whether on net and off network. This was preceded by the sim registration exercise, which has significant back drop on the mobile operators. The drop in cost may have been a means to lure back customers on their platform.
 
-```{r}
+
+```r
 operator_stats %>%
   ggplot() +
   geom_line(aes(x = Year,
@@ -372,3 +447,5 @@ operator_stats %>%
   
   ggtitle("Voice cost in Kwachas per minute on mobile") 
 ```
+
+<img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-19-1.png" width="672" />

@@ -1,0 +1,103 @@
+---
+author: Aaron Simumba
+title: "Mapping the Location of Twitter Followers and Following in R"
+subtitle: Twitter data mining
+date: 2017-10-02T17:46:47+02:00
+slug: mapping-twitter-data
+description: Mapping locations for twitter followers and following
+tags: 
+    - Twitter followers
+    - twitteR
+photo:
+  url: https://unsplash.com/photos/92PmjawKUfs
+  author: Apollo
+---
+
+It is always nice to capture how wide and dense your twitter interactions spread. More so, the spread and locations of your twitter followers and those you are following. Making use of the `twitteR` package, and the inspiration from a post written by [Jeff Leek](https://simplystatistics.org/2011/12/21/an-r-function-to-map-your-twitter-followers/), I attempt to map my followers' locations and those I follow on twitter.
+
+Jeff Leek  wrote a `twitterMap()`function that lets you map the locations of your twitter followers and those you follow, the script that holds the function can be downloaded [here](http://biostat.jhsph.edu/~jleek/code/twitterMap.R). 
+
+Since the data has to be mined from twitter to R. The first issue to address is setting up this link to twitter. Luckily, twitter's Application Programming Interface (API) handles this integration. Twitter has a developer site, where you can set-up your app and acquire the authentication keys and tokens  needed for R and twitter to communicate. For set-up instructions the following [post](https://www.credera.com/blog/business-intelligence/twitter-analytics-using-r-part-1-extract-tweets/) has a nice  step by step walk through set-up from the twitter side.
+
+From the R side. We need the following packages: `ROAuth` which is R's interface to the OAuth (Open Authorization) - which is an open standard for token-based authentication and authorization on the Internet, allowing  us give access to the third-party apps like twitter and Facebook to communicate with the local machine set-up.`twitteR` is the other package, plus the `httr` package.
+
+
+```r
+# The following code will install the packages.
+install.packages("twitteR", "httr", "ROAuth")
+```
+
+
+```r
+#load the packages
+library(httr)
+library(twitteR)
+```
+
+Authenticating R to have access to your twitter account, the `twitteR` package has a function called `setup_twitter_oauth()`, where you are required to supply the keys and tokens to be found under the keys and tokens tab on your twitter developer profile. Supplying the `consumer key` and `secret key` obtained on-line, will prompt authorisation through the web browser, where a step by step prompt is given. Refer to the link above to the walk through set-up.
+
+
+```r
+setup_twitter_oauth(consumer_key = "insert key",
+                    consumer_secret ="insert key", 
+                    access_token ="insert token key",
+                    access_secret = "insert key"
+                    )
+```
+
+
+## Mapping followers and Following locations
+
+Jeff Leek provides the following description for the twitterMap function:
+
+```r
+twitterMap <- function(userName,
+userLocation = NULL,
+fileName = "twitterMap.pdf",
+nMax = 1000,
+plotType = c("followers", 
+"both",
+"following")
+)
+```
+with arguments:
+
+>userName - the twitter username you want to plot
+
+>userLocation - an optional argument giving the location of the user, necessary when the location information you have provided Twitter isn’t sufficient for us to find latitude/longitude data
+
+>fileName - the file where you want the plot to appear
+
+>nMax - The maximum number of followers/following to get from Twitter, this is implemented to avoid rate limiting for people with large numbers of followers.
+
+>plotType - if “both” both followers/following are
+plotted, etc.
+
+
+Mapping my twitter data, I run the following code, supplying my twitter username, and changing the `plotType` argument to "both", which plots both locations for my followers and those I follow.
+
+I call the `twitterMap.R` script through `source()`, the script loads the function in the work environment, in order to use the `twitterMap()` command. 
+
+
+```r
+source("twitterMap.R")
+
+twitterMap("zedsamurai",
+           fileName = "twitterMap.pdf", 
+           plotType = "both" 
+           )
+```
+
+
+The following is the map of the locations of my twitter followers  and those I follow. 
+
+<div style="text-align:center" markdown="1">
+![Map of twitter followers and followings](https://user-images.githubusercontent.com/24398851/31088605-e90435ca-a7a9-11e7-89dc-7b5694d980d6.png)
+</div>
+
+
+Since most people and companies I follow and those that follow me are either investment firms, open source software developers and of course meme artists. Memes cannot miss out, they carry life.  
+
+For both the followers and those I follow, it can be seen that they are mainly located in North America, Europe and Africa. It is my hope to follow more of the budding tech and finance enthusiasts on the African continent. Next time I mine this data, it should paint a slightly more balanced picture.
+
+

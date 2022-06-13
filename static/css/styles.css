@@ -2,8 +2,8 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: inter,lucida grande,Helvetica,Arial,sans-serif;
-  color: #333333;
+  font-family: lucida grande,Helvetica,Arial,sans-serif;
+  color: #362f2f;
 }
 
 h1,
@@ -160,7 +160,6 @@ h1 {
 }
 
 #container main article pre {
-  /* background-color: #272822; */
   overflow-x: auto;
   padding: 1.0em;
   font-size: 1.0em;
@@ -175,12 +174,10 @@ h1 {
   font-family: source code pro,lucida console,monospace;
   font-weight: 400;
   display: block;
-  
 }
 
 #container main article p code {
   padding: 0.2em;
-  /* background-color: #0a0a0a; */
   font-size: 0.9em;
 }
 
