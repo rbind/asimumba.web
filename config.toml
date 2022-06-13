@@ -30,8 +30,7 @@ pygmentsCodeFences = false
     highlightjsVersion = "9.12.0"
     highlightjsCDN = "//cdn.bootcss.com"
     highlightjsLang = ["r", "yaml", "css"]
-    highlightjsTheme = "stackoverflow"
-
+    highlightjsTheme = "github"
     MathJaxCDN = "//cdn.bootcss.com"
     MathJaxVersion = "2.7.1"
     favicon = "favicon.ico"
@@ -50,7 +49,7 @@ pygmentsCodeFences = false
     name = "Talks"
     url = "/talks/"
     weight = 4
-    
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
