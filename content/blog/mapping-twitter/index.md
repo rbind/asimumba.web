@@ -29,7 +29,7 @@ install.packages("twitteR", "httr", "ROAuth")
 
 
 ```r
-#load the packages
+# load the packages
 library(httr)
 library(twitteR)
 ```
@@ -38,11 +38,8 @@ Authenticating R to have access to your twitter account, the `twitteR` package h
 
 
 ```r
-setup_twitter_oauth(consumer_key = "insert key",
-                    consumer_secret ="insert key", 
-                    access_token ="insert token key",
-                    access_secret = "insert key"
-                    )
+setup_twitter_oauth(consumer_key = "insert key", consumer_secret = "insert key",
+    access_token = "insert token key", access_secret = "insert key")
 ```
 
 
@@ -50,27 +47,29 @@ setup_twitter_oauth(consumer_key = "insert key",
 
 Jeff Leek provides the following description for the twitterMap function:
 
+
 ```r
 twitterMap <- function(userName,
-userLocation = NULL,
-fileName = "twitterMap.pdf",
-nMax = 1000,
-plotType = c("followers", 
-"both",
-"following")
+                       userLocation = NULL,
+                       fileName = "twitterMap.pdf",
+                       nMax = 1000,
+                       plotType = c("followers",
+                                    "both",
+                                    "following")
 )
 ```
+
 with arguments:
 
->userName - the twitter username you want to plot
+1. userName - the twitter username you want to plot
 
->userLocation - an optional argument giving the location of the user, necessary when the location information you have provided Twitter isn’t sufficient for us to find latitude/longitude data
+2. userLocation - an optional argument giving the location of the user, necessary when the location information you have provided Twitter isn’t sufficient for us to find latitude/longitude data
 
->fileName - the file where you want the plot to appear
+3. fileName - the file where you want the plot to appear
 
->nMax - The maximum number of followers/following to get from Twitter, this is implemented to avoid rate limiting for people with large numbers of followers.
+4. nMax - The maximum number of followers/following to get from Twitter, this is implemented to avoid rate limiting for people with large numbers of followers.
 
->plotType - if “both” both followers/following are
+5. plotType - if “both” both followers/following are
 plotted, etc.
 
 
@@ -82,22 +81,14 @@ I call the `twitterMap.R` script through `source()`, the script loads the functi
 ```r
 source("twitterMap.R")
 
-twitterMap("zedsamurai",
-           fileName = "twitterMap.pdf", 
-           plotType = "both" 
-           )
+twitterMap("zedsamurai", fileName = "twitterMap.pdf", plotType = "both")
 ```
 
 
 The following is the map of the locations of my twitter followers  and those I follow. 
 
-<div style="text-align:center" markdown="1">
 ![Map of twitter followers and followings](https://user-images.githubusercontent.com/24398851/31088605-e90435ca-a7a9-11e7-89dc-7b5694d980d6.png)
-</div>
-
 
 Since most people and companies I follow and those that follow me are either investment firms, open source software developers and of course meme artists. Memes cannot miss out, they carry life.  
 
 For both the followers and those I follow, it can be seen that they are mainly located in North America, Europe and Africa. It is my hope to follow more of the budding tech and finance enthusiasts on the African continent. Next time I mine this data, it should paint a slightly more balanced picture.
-
-
