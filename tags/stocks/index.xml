@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>stocks on R . Data Science . Business Intelligence</title>
+    <link>https://asimumba.rbind.io/tags/stocks/</link>
+    <description>Recent content in stocks on R . Data Science . Business Intelligence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>simumbaaaron20@gmail.com (Aaron Simumba)</managingEditor>
+    <webMaster>simumbaaaron20@gmail.com (Aaron Simumba)</webMaster>
+    <copyright>Copyright &amp;copy; 2022 - Aaron Simumba</copyright>
+    <lastBuildDate>Fri, 17 Mar 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://asimumba.rbind.io/tags/stocks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stocks Portfolio Analysis</title>
+      <link>https://asimumba.rbind.io/blog/2017/03/17/portfolio-analysis/</link>
+      <pubDate>Fri, 17 Mar 2017 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2017/03/17/portfolio-analysis/</guid>
+      <description>library(quantmod) library(ggplot2) library(xts) library(highcharter) library(PerformanceAnalytics) library(dygraphs) ## Dates have been loaded as a factor instead of as dates.  #There is need to convert this variable to the date class and covert the rest of the variables to xts(Extensible Time Series) temp &amp;lt;- xts(x =fundreturn[,-1], order.by = as.</description>
+    </item>
+    
+  </channel>
+</rss>

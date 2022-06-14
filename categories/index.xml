@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on R . Data Science . Business Intelligence</title>
+    <link>https://asimumba.rbind.io/categories/</link>
+    <description>Recent content in Categories on R . Data Science . Business Intelligence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>simumbaaaron20@gmail.com (Aaron Simumba)</managingEditor>
+    <webMaster>simumbaaaron20@gmail.com (Aaron Simumba)</webMaster>
+    <copyright>Copyright &amp;copy; 2022 - Aaron Simumba</copyright>
+    <lastBuildDate>Sun, 11 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://asimumba.rbind.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Twitter</title>
+      <link>https://asimumba.rbind.io/categories/twitter/</link>
+      <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/categories/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stock markets</title>
+      <link>https://asimumba.rbind.io/categories/stock-markets/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/categories/stock-markets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OSS</title>
+      <link>https://asimumba.rbind.io/categories/oss/</link>
+      <pubDate>Sat, 24 Feb 2018 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/categories/oss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blogdown</title>
+      <link>https://asimumba.rbind.io/categories/blogdown/</link>
+      <pubDate>Mon, 19 Feb 2018 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/categories/blogdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://asimumba.rbind.io/categories/hugo/</link>
+      <pubDate>Mon, 19 Feb 2018 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://asimumba.rbind.io/categories/r/</link>
+      <pubDate>Mon, 19 Feb 2018 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rmarkdown</title>
+      <link>https://asimumba.rbind.io/categories/rmarkdown/</link>
+      <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/categories/rmarkdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://asimumba.rbind.io/categories/tutorial/</link>
+      <pubDate>Fri, 17 Mar 2017 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

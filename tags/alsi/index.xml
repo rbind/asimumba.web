@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ALSI on R . Data Science . Business Intelligence</title>
+    <link>https://asimumba.rbind.io/tags/alsi/</link>
+    <description>Recent content in ALSI on R . Data Science . Business Intelligence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>simumbaaaron20@gmail.com (Aaron Simumba)</managingEditor>
+    <webMaster>simumbaaaron20@gmail.com (Aaron Simumba)</webMaster>
+    <copyright>Copyright &amp;copy; 2022 - Aaron Simumba</copyright>
+    <lastBuildDate>Thu, 06 Apr 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://asimumba.rbind.io/tags/alsi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What&#39;s in the numbers: A look at the Lusaka Securities Exchange</title>
+      <link>https://asimumba.rbind.io/blog/2017/04/06/luse/</link>
+      <pubDate>Thu, 06 Apr 2017 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2017/04/06/luse/</guid>
+      <description>In the next coming few weeks, I plan to do a series of posts specifically targeted at the Lusaka Securities Exchange (LuSE). Essentially, this idea came to mind after reading through this Bloomberg Markets article, which highlights historical equity market returns .</description>
+    </item>
+    
+  </channel>
+</rss>

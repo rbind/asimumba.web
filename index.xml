@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on R . Data Science . Business Intelligence</title>
+    <link>https://asimumba.rbind.io/</link>
+    <description>Recent content in About on R . Data Science . Business Intelligence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>simumbaaaron20@gmail.com (Aaron Simumba)</managingEditor>
+    <webMaster>simumbaaaron20@gmail.com (Aaron Simumba)</webMaster>
+    <copyright>Copyright &amp;copy; 2022 - Aaron Simumba</copyright>
+    <lastBuildDate>Wed, 09 Apr 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://asimumba.rbind.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploying Metabase through Heroku App</title>
+      <link>https://asimumba.rbind.io/blog/2018/12/26/deploying-metabase-on-heroku/</link>
+      <pubDate>Wed, 26 Dec 2018 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2018/12/26/deploying-metabase-on-heroku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DataHack4Fi twitter data</title>
+      <link>https://asimumba.rbind.io/blog/2018/11/11/datahack4fi-twitter-data/</link>
+      <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2018/11/11/datahack4fi-twitter-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>African Markets indices tracker</title>
+      <link>https://asimumba.rbind.io/blog/2018/11/07/african-markets-indices/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2018/11/07/african-markets-indices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Money is everything, but you haven&#39;t met Open Source Software maintainers</title>
+      <link>https://asimumba.rbind.io/blog/2018/02/24/open-source-software-maintainers/</link>
+      <pubDate>Sat, 24 Feb 2018 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2018/02/24/open-source-software-maintainers/</guid>
+      <description>For profit centred enterprises, it is not surprising when you encounter their overly aggressive marketing campaigns, which mostly have an end result of them trying to squeeze every penny from you as a customer. At the end of the day, you pay even for a service and product that is not satisfactory or worse, not worth you hard earned money.
+Conversely, for a few months now, I have been using many Open Source Software.</description>
+    </item>
+    
+    <item>
+      <title>Thoughts to Words - An Introduction to Aaron Simumba&#39;s Website</title>
+      <link>https://asimumba.rbind.io/blog/2018/02/19/intro-to-aaron-simumba/</link>
+      <pubDate>Mon, 19 Feb 2018 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2018/02/19/intro-to-aaron-simumba/</guid>
+      <description>This post was originally submitted to the Rbind support website.
+ Introduction Hi, my name is Aaron Simumba, and you can find my website on the following URL: https://asimumba.rbind.io/. And on Github, plus you can follow me on Twitter. A brief background about myself: I often like to refer to myself as a &amp;ldquo;Lost Accountant&amp;rdquo; - because professionally I trained as an accountant, who lost his way to practise accounting and ended up into the data science space.</description>
+    </item>
+    
+    <item>
+      <title>Demo: Embedding Tableau public Visualizations</title>
+      <link>https://asimumba.rbind.io/blog/2017/11/12/demo-embedding-tableau/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2017/11/12/demo-embedding-tableau/</guid>
+      <description>In this short demo, I implement how to embed Tableau public visualizations on the personal website.This implementation is achieved through using iframe. The embed link from a Tableau public visualization has to be enclosed with the &amp;lt;iframe&amp;gt; &amp;lt;/iframe&amp;gt; tag. I created a visualisation of LuSE listed companies for demonstration using data from Africa Markets. The visualization below is embedded with the following code:
+&amp;lt;iframe src=&amp;quot;https://public.tableau.com/views/StockMarkets/LUSEKPI?:showVizHome=no&amp;amp;:embed=true&amp;quot; width=&amp;quot;652px&amp;quot; height=&amp;quot;756px&amp;quot; style=&amp;quot;border: 0px;&amp;quot; scrolling=&amp;quot;no&amp;quot;&amp;gt; &amp;lt;/iframe&amp;gt;  NOTE: You must strip off the extra text from the URL to the right side of the ?</description>
+    </item>
+    
+    <item>
+      <title>Breathing life back into PDF presented Data</title>
+      <link>https://asimumba.rbind.io/blog/2017/10/12/breathing-life-back-into-pdf/</link>
+      <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2017/10/12/breathing-life-back-into-pdf/</guid>
+      <description>It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report.</description>
+    </item>
+    
+    <item>
+      <title>Mapping the Location of Twitter Followers and Following in R</title>
+      <link>https://asimumba.rbind.io/blog/2017/10/02/mapping-twitter-data/</link>
+      <pubDate>Mon, 02 Oct 2017 17:46:47 +0200</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2017/10/02/mapping-twitter-data/</guid>
+      <description>It is always nice to capture how wide and dense your twitter interactions spread. More so, the spread and locations of your twitter followers and those you are following. Making use of the twitteR package, and the inspiration from a post written by Jeff Leek, I attempt to map my followers&#39; locations and those I follow on twitter.
+Jeff Leek wrote a twitterMap()function that lets you map the locations of your twitter followers and those you follow, the script that holds the function can be downloaded here.</description>
+    </item>
+    
+    <item>
+      <title>Mobile and Internet Penetration in Zambia</title>
+      <link>https://asimumba.rbind.io/blog/2017/09/27/mobile-internet-penetration-in-zambia/</link>
+      <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2017/09/27/mobile-internet-penetration-in-zambia/</guid>
+      <description>In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority (ZICTA) data. I will walk through the data on the subscriber base, the user traffic and the cost differentials among the three mobile operators, these being: Airtel, Zamtel and MTN Zambia. In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used.</description>
+    </item>
+    
+    <item>
+      <title>How to resolve hugo version conflicts with the default version on netlify</title>
+      <link>https://asimumba.rbind.io/blog/2017/09/13/how-to-resolve-hugo-version-conflicts/</link>
+      <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2017/09/13/how-to-resolve-hugo-version-conflicts/</guid>
+      <description>There is nothing as frustrating as getting stuck with a computer operation/code bug, which you know no better how to get around it. That was my frustration while trying to deploy my website through netlify. Having changed the theme I was initially working with to the new theme, Cactus. I later discovered, the theme is only compatible with version 0.20 and above of the static site generator hugo. After hours of trying to debug what the problem might be to no avail.</description>
+    </item>
+    
+    <item>
+      <title>One Year Anniversary</title>
+      <link>https://asimumba.rbind.io/blog/2017/08/25/one-year-anniversary/</link>
+      <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2017/08/25/one-year-anniversary/</guid>
+      <description>The 26 August 2017 marks exactly one year since embarking on learning the R programming language. A year ago I had neither the foresight nor will strength of believing I would b this engrossed in the new found love for programming. But it didn&amp;rsquo;t take long before I found myself spending at least an hour a day playing with different skills and knowledge I had acquired. Coming from the background of playing with VBA in Excel.</description>
+    </item>
+    
+    <item>
+      <title>Building a Website with Blogdown and Hugo</title>
+      <link>https://asimumba.rbind.io/blog/2017/07/03/building-a-website-with-blogdown-and-hugo/</link>
+      <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2017/07/03/building-a-website-with-blogdown-and-hugo/</guid>
+      <description>In this short post. I will detail my journey building my website using blogdown an R package that makes use of the static website generator Hugo. This is a great R package, written by Yihui Xie.
+For starters, there is offical documentation which is so far still under developement, but nonetheless it has already covered most of the pertinent issues to get you started buiding your own desired website.
+If you are coming from the Google blogspot or wordpress dungeon, then by default I will assume you are going to love this new introduction to the blogsphere.</description>
+    </item>
+    
+    <item>
+      <title>What&#39;s in the numbers: A look at the Lusaka Securities Exchange</title>
+      <link>https://asimumba.rbind.io/blog/2017/04/06/luse/</link>
+      <pubDate>Thu, 06 Apr 2017 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2017/04/06/luse/</guid>
+      <description>In the next coming few weeks, I plan to do a series of posts specifically targeted at the Lusaka Securities Exchange (LuSE). Essentially, this idea came to mind after reading through this Bloomberg Markets article, which highlights historical equity market returns .</description>
+    </item>
+    
+    <item>
+      <title>Stocks Portfolio Analysis</title>
+      <link>https://asimumba.rbind.io/blog/2017/03/17/portfolio-analysis/</link>
+      <pubDate>Fri, 17 Mar 2017 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/blog/2017/03/17/portfolio-analysis/</guid>
+      <description>library(quantmod) library(ggplot2) library(xts) library(highcharter) library(PerformanceAnalytics) library(dygraphs) ## Dates have been loaded as a factor instead of as dates.  #There is need to convert this variable to the date class and covert the rest of the variables to xts(Extensible Time Series) temp &amp;lt;- xts(x =fundreturn[,-1], order.by = as.</description>
+    </item>
+    
+    <item>
+      <title>Portfolio Showcase</title>
+      <link>https://asimumba.rbind.io/portfolio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/portfolio/</guid>
+      <description>A place where I showcase my portfolio of projects and tools I have developed related to data analytics.
+ Sector Visualisation for BongoHive   var divElement = document.getElementById(&#39;viz1653335422721&#39;); var vizElement = divElement.getElementsByTagName(&#39;object&#39;)[0]; vizElement.style.width=&#39;900px&#39;;vizElement.style.height=&#39;700px&#39;; var scriptElement = document.createElement(&#39;script&#39;); scriptElement.src = &#39;https://public.tableau.com/javascripts/api/viz_v1.js&#39;; vizElement.parentNode.insertBefore(scriptElement, vizElement); </description>
+    </item>
+    
+    <item>
+      <title>Talks</title>
+      <link>https://asimumba.rbind.io/talks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      <guid>https://asimumba.rbind.io/talks/</guid>
+      <description>To Include all conference talks</description>
+    </item>
+    
+  </channel>
+</rss>
