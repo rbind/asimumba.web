@@ -1,0 +1,68 @@
+title = "R . Data Science . Business Intelligence"
+author = "Aaron Simumba"
+copyright = "2017-{{ YEAR }} - Aaron Simumba"
+description = "A Data Connoisseur's playground - Where data mets ideas"
+profilePicture = "images/aaron.jpg"
+keywords = ""
+favicon = "favicons/favicon.ico"
+customCss = []
+customJs = [] 
+mainSections = ["post"]
+images = ["images/site-feature-image.png"]
+doNotLoadAnimations = false
+
+# Form Spree Contact Form
+#contactFormAction = "https://formspree.io/f/your-form-hash-here"
+#contactFormReCaptcha = "your-site-key-here"
+# Google Fonts
+#googleFonts = ["Indie+Flower", "Roboto:ital,wght@0,100;0,400;0,700;1,400"]
+# Google Site Verify
+#googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+singleDateFormat = "2/1/2006"
+indexDateFormat = "2/1/2006"
+listDateFormat = "2/1/2006"
+
+reversepagetitle = true # When set to 'true', the Window Title will be reversed to 'Title | Author' instead of the default 'Author | Title'
+
+# hidesidebar = true
+
+[simpleAnalytics]
+# enable = true
+# customurl = "https://analytics.example.com"
+
+[plausibleAnalytics]
+# domain = "example.com"
+# serverURL = "https://analytics.example.com"
+
+[umami]
+# serverURL = "example.com"
+# id = "94db1cb1-74f4-4a40-ad6c-962362670409"
+
+## Math settings
+[math]
+enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "katex"  # options: "katex", "mathjax". default is "katex".
+
+## Social links
+[[socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://www.linkedin.com/in/aaronsimumba/"
+
+[[socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/asimumba"
+
+[[socialIcons]]
+icon = "fab fa-stack-overflow"
+title = "stackoverflow"
+url = "https://stackoverflow.com/users/8137815/aaron-simumba"
+
+[[socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:simumbaaaron20@gmail.com"
+
+[mermaid]
+# enable = true

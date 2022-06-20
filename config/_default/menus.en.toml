@@ -1,0 +1,29 @@
+  [[main]]
+  name = "About"
+  weight = 100
+  identifier = "about"
+  url = "/"
+  
+  [[main]]
+  name = "Blog"
+  identifier = "blog"
+  weight = 200
+  url = "/blog/"
+
+  [[main]]
+  name = "Portfolio"
+  weight = 300
+  identifier = "portfolio"
+  url = "/portfolio/"
+
+  [[main]]
+  name = "Accomplishments"
+  weight = 400
+  identifier = "accomplishments"
+  url = "/awards/"
+  
+  [[main]]
+  name = "Talks"
+  weight = 500
+  identifier = "talks"
+  url = "/talks/"

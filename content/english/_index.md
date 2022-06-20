@@ -1,0 +1,40 @@
+---
+title: About
+date: 2014-04-09
+image: images/avatar.png
+---
+
+
+Hi, I'm **Aaron Simumba**, welcome to my website.
+
+I work in the financial services sector as a **Business Intelligence & Analytics Lead**. Previously, I worked for [**mPharma**](https://www.mpharma.com/) as a **Data Management Associate**. 
+
+In another life, I was an Accounting and Finance major. Graduated from the [**University of Namibia**](http://unam.edu.na/) with a BA degree in Accounting(Honours). Equally tutored Business Administration students in the art of business and accounting at the [**University of Zambia**](https://www.unza.zm/).
+
+I am lost in the Data Science web... hoping to find my way out of the maze soon. I find data and the process of data analysis to glean insight from the raw data, overly exciting and fascinating alike.
+
+In another world, I'm fascinated by stock markets and everything with a business and finance buzz.
+
+I can be found on [**Github**](https://github.com/asimumba/) poking around interesting projects... and occasionally I rant on [**twitter**](https://twitter.com/zedsamurai/).
+
+`For this website`
+
+>This will be a place where I share my daily musings in the world of R, analytics and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies.
+
+`Let's have fun!` :smile:
+
+
+**Recommended blogs**
+
+- [*Yihui Xie*](https://yihui.name/en/)
+
+- [*David Robinson - Variance explained*](http://varianceexplained.org/)
+
+- [*Simply Statistics*](https://simplystatistics.org/)
+
+- [*R Bloggers*](https://www.r-bloggers.com/)
+
+- [*RStudio blog*](https://blog.rstudio.com/)
+
+- [*RStudio community: Everything RStudio*](https://community.rstudio.com/)
+- [*R Weekly*](https://rweekly.org/)
