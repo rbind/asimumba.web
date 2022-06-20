@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>netlify on R . Data Science . Business Intelligence</title>
+    <title>netlify on Aaron Simumba</title>
     <link>https://asimumba.rbind.io/tags/netlify/</link>
-    <description>Recent content in netlify on R . Data Science . Business Intelligence</description>
+    <description>Recent content in netlify on Aaron Simumba</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>simumbaaaron20@gmail.com (Aaron Simumba)</managingEditor>
-    <webMaster>simumbaaaron20@gmail.com (Aaron Simumba)</webMaster>
-    <copyright>Copyright &amp;copy; 2022 - Aaron Simumba</copyright>
+    <language>en</language>
     <lastBuildDate>Mon, 19 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://asimumba.rbind.io/tags/netlify/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thoughts to Words - An Introduction to Aaron Simumba&#39;s Website</title>
       <link>https://asimumba.rbind.io/blog/2018/02/19/intro-to-aaron-simumba/</link>
       <pubDate>Mon, 19 Feb 2018 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/blog/2018/02/19/intro-to-aaron-simumba/</guid>
-      <description>This post was originally submitted to the Rbind support website.
- Introduction Hi, my name is Aaron Simumba, and you can find my website on the following URL: https://asimumba.rbind.io/. And on Github, plus you can follow me on Twitter. A brief background about myself: I often like to refer to myself as a &amp;ldquo;Lost Accountant&amp;rdquo; - because professionally I trained as an accountant, who lost his way to practise accounting and ended up into the data science space.</description>
+      
+        <description>A brief introduction to my blogging journey, and how I crafted my personal website</description>
+      
     </item>
     
     <item>
       <title>How to resolve hugo version conflicts with the default version on netlify</title>
       <link>https://asimumba.rbind.io/blog/2017/09/13/how-to-resolve-hugo-version-conflicts/</link>
       <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/blog/2017/09/13/how-to-resolve-hugo-version-conflicts/</guid>
-      <description>There is nothing as frustrating as getting stuck with a computer operation/code bug, which you know no better how to get around it. That was my frustration while trying to deploy my website through netlify. Having changed the theme I was initially working with to the new theme, Cactus. I later discovered, the theme is only compatible with version 0.20 and above of the static site generator hugo. After hours of trying to debug what the problem might be to no avail.</description>
+      
+        <description>There is nothing as frustrating as getting stuck with a computer operation/code bug, which you know no better how to get around it. That was my frustration while trying to deploy my website through netlify. Having changed the theme I was initially working with to the new theme, Cactus. I later discovered, the theme is only compatible with version 0.20 and above of the static site generator hugo. After hours of trying to debug what the problem might be to no avail.</description>
+      
     </item>
     
     <item>
       <title>Building a Website with Blogdown and Hugo</title>
       <link>https://asimumba.rbind.io/blog/2017/07/03/building-a-website-with-blogdown-and-hugo/</link>
       <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/blog/2017/07/03/building-a-website-with-blogdown-and-hugo/</guid>
-      <description>In this short post. I will detail my journey building my website using blogdown an R package that makes use of the static website generator Hugo. This is a great R package, written by Yihui Xie.
-For starters, there is offical documentation which is so far still under developement, but nonetheless it has already covered most of the pertinent issues to get you started buiding your own desired website.
-If you are coming from the Google blogspot or wordpress dungeon, then by default I will assume you are going to love this new introduction to the blogsphere.</description>
+      
+        <description>How to craft a website with blogdown,hugo and host on netlify</description>
+      
     </item>
     
   </channel>

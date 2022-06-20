@@ -1,98 +1,481 @@
-
-<head>
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
     
-  </head>
+      
+        What&#39;s in the numbers: A look at the Lusaka Securities Exchange |
 
-<!doctype html>
+      Aaron Simumba
 
-<html lang="en">
+  </title>
 
-<head>
-  <title>R . Data Science . Business Intelligence</title>
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Aaron Simumba" />
+  <meta
+    name="description"
+    content="LuSE performance overview"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="https://asimumba.rbind.io/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
   
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab+Atkinson+Hyperlegible+Ruda+Source+Code+Pro" />
-  <link rel="stylesheet" type="text/css" href="https://asimumba.rbind.io/css/styles.css" />
+  
+  <link
+    rel="stylesheet"
+    href="https://asimumba.rbind.io/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="https://asimumba.rbind.io/fontawesome/css/fontawesome.min.b1c4e6a10bdbab01f33fff9d78816ee68cf9a9a731f07668afd546a79924cb80.css"
+    integrity="sha256-scTmoQvbqwHzP/&#43;deIFu5oz5qacx8HZor9VGp5kky4A="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://asimumba.rbind.io/fontawesome/css/solid.min.423dee17c62f55fa733a4ee13e00d523dfce88cc4f4ab4549a24ba36bd9de681.css"
+    integrity="sha256-Qj3uF8YvVfpzOk7hPgDVI9/OiMxPSrRUmiS6Nr2d5oE="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://asimumba.rbind.io/fontawesome/css/brands.min.b7d54133b27e5b4de15245b8e143de3e8ed2d674c706137274cedc9953f31917.css"
+    integrity="sha256-t9VBM7J&#43;W03hUkW44UPePo7S1nTHBhNydM7cmVPzGRc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Indie&#43;Flower&amp;family=Roboto:ital,wght@0,100;0,400;0,700;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="https://asimumba.rbind.io/favicons/favicon.icofavicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://asimumba.rbind.io/favicons/favicon.icoapple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://asimumba.rbind.io/favicons/favicon.icofavicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://asimumba.rbind.io/favicons/favicon.icofavicon-16x16.png" />
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-251788376', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
+  <link rel="canonical" href="https://asimumba.rbind.io/blog/2017/04/06/luse/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="https://asimumba.rbind.io/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="https://asimumba.rbind.io/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js"
+      integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs&#43;YLsmRW26cq0="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://asimumba.rbind.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="What&#39;s in the numbers: A look at the Lusaka Securities Exchange"/>
+<meta name="twitter:description" content="LuSE performance overview"/>
+
+
+
+  
+  <meta property="og:title" content="What&#39;s in the numbers: A look at the Lusaka Securities Exchange" />
+<meta property="og:description" content="LuSE performance overview" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://asimumba.rbind.io/blog/2017/04/06/luse/" /><meta property="og:image" content="https://asimumba.rbind.io/images/site-feature-image.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2017-04-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-04-06T00:00:00+00:00" /><meta property="og:site_name" content="Aaron Simumba" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "blog",
+        "name": "What\u0027s in the numbers: A look at the Lusaka Securities Exchange",
+        "headline": "What\u0027s in the numbers: A look at the Lusaka Securities Exchange",
+        "alternativeHeadline": "",
+        "description": "
+      LuSE performance overview
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/asimumba.rbind.io\/blog\/2017\/04\/06\/luse\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Aaron Simumba"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Aaron Simumba"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Aaron Simumba"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Aaron Simumba"
+        },
+        "copyrightYear" : "2017",
+        "dateCreated": "2017-04-06T00:00:00.00Z",
+        "datePublished": "2017-04-06T00:00:00.00Z",
+        "dateModified": "2017-04-06T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Aaron Simumba",
+            "url": "https://asimumba.rbind.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/asimumba.rbind.io\/favicons\/favicon.icofavicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://asimumba.rbind.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/asimumba.rbind.io\/blog\/2017\/04\/06\/luse\/",
+        "wordCount" : "1046",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "LuSE"
+
+    
+      
+        ,
+
+      
+      "ALSI"
+
+    
+      
+        ,
+
+      
+      "stock returns"
+
+    
+      
+        ,
+
+      
+      "Zambia capital market"
+
+    ]
+    }
+  </script>
+
+
 
 </head>
-
-<body>
-  <div id="container">
-    <header>
-      <h1>
-                <a href="https://asimumba.rbind.io/">R . Data Science . Business Intelligence</a>
-            </h1>
-
-      <ul id="social-media">
-        
-        <li><a href="https://twitter.com/asimumba_"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-         
-        <li><a href="https://www.linkedin.com/in/aaronsimumba"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-         
-        <li><a href="https://github.com/asimumba"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a></li>
-           
-        <li><a href="https://stackoverflow.com/users/8137815/aaron-simumba"><i class="fa fa-stack-overflow fa-lg" aria-hidden="true"></i></a></li>
-        
-      </ul>
-      
-      <p><em>A Data Connoisseur&rsquo;s playground - Where data mets ideas</em></p>
-      
-    </header>
+<body
+    
+      class="body theme--light"
 
     
-<nav>
-    <ul>
+  >
+    <div class="wrapper">
+      <aside
         
-        <li>
-            <a class="" href="https://asimumba.rbind.io/blog/">
-                <i class="fa-li fa  fa-lg"></i><span>Blog</span>
-            </a>
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="https://asimumba.rbind.io/images/aaron.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="https://asimumba.rbind.io/">Aaron Simumba</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>A Data Connoisseur's playground - Where data mets ideas</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/aaronsimumba/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
         </li>
-        
-        <li>
-            <a class="" href="https://asimumba.rbind.io/portfolio/">
-                <i class="fa-li fa  fa-lg"></i><span>Portfolio</span>
-            </a>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/asimumba"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
         </li>
-        
-        <li>
-            <a class="" href="https://asimumba.rbind.io/talks/">
-                <i class="fa-li fa  fa-lg"></i><span>Talks</span>
-            </a>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://stackoverflow.com/users/8137815/aaron-simumba"
+            target="_blank"
+            rel="noopener"
+            aria-label="stackoverflow"
+            title="stackoverflow"
+          >
+            <i class="fab fa-stack-overflow fa-2x" aria-hidden="true"></i>
+          </a>
         </li>
-        
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:simumbaaaron20@gmail.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
     </ul>
-</nav>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        2017-2022 - Aaron Simumba
 
-    <main>
-
-
-
-
-<article>
-
-    <h1>What&#39;s in the numbers: A look at the Lusaka Securities Exchange</h1>
-
+      
+    </li>
     
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="https://asimumba.rbind.io/js/medium-zoom.min.602bd2014468bd348112e2aa24f595c530d257a4ed6c335d7baaa6ac9a7ca6fb.js"
+    integrity="sha256-YCvSAURovTSBEuKqJPWVxTDSV6TtbDNde6qmrJp8pvs="
+    crossorigin="anonymous"
+  ></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-251788376"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-251788376', { 'anonymize_ip': false });
+}
+</script>
+</div>
+</aside>
+      <main
         
-    
+          class="wrapper__main"
 
-    <script src="https://asimumba.rbind.io/blog/2017/04/06/luse/index_files/htmlwidgets/htmlwidgets.js"></script>
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/blog/"
+              
+              title=""
+              >Blog</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/portfolio/"
+              
+              title=""
+              >Portfolio</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/awards/"
+              
+              title=""
+              >Accomplishments</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/talks/"
+              
+              title=""
+              >Talks</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>What&#39;s in the Numbers: A Look at the Lusaka Securities Exchange</h1>
+      <script src="https://asimumba.rbind.io/blog/2017/04/06/luse/index_files/htmlwidgets/htmlwidgets.js"></script>
 <script src="https://asimumba.rbind.io/blog/2017/04/06/luse/index_files/jquery/jquery.min.js"></script>
 <link href="https://asimumba.rbind.io/blog/2017/04/06/luse/index_files/dygraphs/dygraph.css" rel="stylesheet" />
 <script src="https://asimumba.rbind.io/blog/2017/04/06/luse/index_files/dygraphs/dygraph-combined.js"></script>
@@ -153,17 +536,17 @@ As this data from Bloomberg Markets shows, emerging and frontier markets account
 <h3 id="in-focus">In focus</h3>
 <p>The following charts give a snapshot of the performance of the Lusaka Securities Exchange All Share index (LASI). For the monthly index data, the period covered is from January 2005 to December 2014. As for the yearly data, it goes all the way back to January 1997- December 2014. Furthermore, I present the data on both time intervals, inclusive and exclusive of the Zambia Consolidated Copper Mines Investment Holdings (ZCCM-IH). This is simply to highlight the effect that the company has on the market index as a whole and on the bigger side, the nation’s economy.</p>
 <p>NB: The returns are computed in the local currency (Kwacha).</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(dygraphs)
-
-<span style="color:#a6e22e">dygraph</span>((LASI_monthly<span style="color:#f92672">$</span>Return) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>,
-        main <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;LASI Monthly Returns 2005 - 2014 Excl. ZCCM - IH&#34;</span>) <span style="color:#f92672">%&gt;%</span>
-  
-  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;y&#34;</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Return&#34;</span>) <span style="color:#f92672">%&gt;%</span>
-  
-  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;x&#34;</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Year&#34;</span>) <span style="color:#f92672">%&gt;%</span>
-  
-  <span style="color:#a6e22e">dyOptions</span>(colors <span style="color:#f92672">=</span> RColorBrewer<span style="color:#f92672">::</span><span style="color:#a6e22e">brewer.pal</span>(<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;Set2&#34;</span>)) 
-</code></pre></div><div class="figure">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(dygraphs)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">dygraph</span>((LASI_monthly<span style="color:#f92672">$</span>Return) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>,
+</span></span><span style="display:flex;"><span>        main <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;LASI Monthly Returns 2005 - 2014 Excl. ZCCM - IH&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;y&#34;</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Return&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;x&#34;</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Year&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dyOptions</span>(colors <span style="color:#f92672">=</span> RColorBrewer<span style="color:#f92672">::</span><span style="color:#a6e22e">brewer.pal</span>(<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;Set2&#34;</span>)) 
+</span></span></code></pre></div><div class="figure">
 <div id="htmlwidget-1" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"attrs":{"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"title":"LASI Monthly Returns 2005 - 2014 Excl. ZCCM - IH","labels":["month","Return"],"legend":"auto","retainDateWindow":false,"ylabel":"Return","xlabel":"Year","stackedGraph":false,"fillGraph":false,"fillAlpha":0.15,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colors":["#66C2A5","#FC8D62","#8DA0CB"],"colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2005-01-01T00:00:00.000Z","2005-02-01T00:00:00.000Z","2005-03-01T00:00:00.000Z","2005-04-01T00:00:00.000Z","2005-05-01T00:00:00.000Z","2005-06-01T00:00:00.000Z","2005-07-01T00:00:00.000Z","2005-08-01T00:00:00.000Z","2005-09-01T00:00:00.000Z","2005-10-01T00:00:00.000Z","2005-11-01T00:00:00.000Z","2005-12-01T00:00:00.000Z","2006-01-01T00:00:00.000Z","2006-02-01T00:00:00.000Z","2006-03-01T00:00:00.000Z","2006-04-01T00:00:00.000Z","2006-05-01T00:00:00.000Z","2006-06-01T00:00:00.000Z","2006-07-01T00:00:00.000Z","2006-08-01T00:00:00.000Z","2006-09-01T00:00:00.000Z","2006-10-01T00:00:00.000Z","2006-11-01T00:00:00.000Z","2006-12-01T00:00:00.000Z","2007-01-01T00:00:00.000Z","2007-02-01T00:00:00.000Z","2007-03-01T00:00:00.000Z","2007-04-01T00:00:00.000Z","2007-05-01T00:00:00.000Z","2007-06-01T00:00:00.000Z","2007-07-01T00:00:00.000Z","2007-08-01T00:00:00.000Z","2007-09-01T00:00:00.000Z","2007-10-01T00:00:00.000Z","2007-11-01T00:00:00.000Z","2007-12-01T00:00:00.000Z","2008-01-01T00:00:00.000Z","2008-02-01T00:00:00.000Z","2008-03-01T00:00:00.000Z","2008-04-01T00:00:00.000Z","2008-05-01T00:00:00.000Z","2008-06-01T00:00:00.000Z","2008-07-01T00:00:00.000Z","2008-08-01T00:00:00.000Z","2008-09-01T00:00:00.000Z","2008-10-01T00:00:00.000Z","2008-11-01T00:00:00.000Z","2008-12-01T00:00:00.000Z","2009-01-01T00:00:00.000Z","2009-02-01T00:00:00.000Z","2009-03-01T00:00:00.000Z","2009-04-01T00:00:00.000Z","2009-05-01T00:00:00.000Z","2009-06-01T00:00:00.000Z","2009-07-01T00:00:00.000Z","2009-08-01T00:00:00.000Z","2009-09-01T00:00:00.000Z","2009-10-01T00:00:00.000Z","2009-11-01T00:00:00.000Z","2009-12-01T00:00:00.000Z","2010-01-01T00:00:00.000Z","2010-02-01T00:00:00.000Z","2010-03-01T00:00:00.000Z","2010-04-01T00:00:00.000Z","2010-05-01T00:00:00.000Z","2010-06-01T00:00:00.000Z","2010-07-01T00:00:00.000Z","2010-08-01T00:00:00.000Z","2010-09-01T00:00:00.000Z","2010-10-01T00:00:00.000Z","2010-11-01T00:00:00.000Z","2010-12-01T00:00:00.000Z","2011-01-01T00:00:00.000Z","2011-02-01T00:00:00.000Z","2011-03-01T00:00:00.000Z","2011-04-01T00:00:00.000Z","2011-05-01T00:00:00.000Z","2011-06-01T00:00:00.000Z","2011-07-01T00:00:00.000Z","2011-08-01T00:00:00.000Z","2011-09-01T00:00:00.000Z","2011-10-01T00:00:00.000Z","2011-11-01T00:00:00.000Z","2011-12-01T00:00:00.000Z","2012-01-01T00:00:00.000Z","2012-02-01T00:00:00.000Z","2012-03-01T00:00:00.000Z","2012-04-01T00:00:00.000Z","2012-05-01T00:00:00.000Z","2012-06-01T00:00:00.000Z","2012-07-01T00:00:00.000Z","2012-08-01T00:00:00.000Z","2012-09-01T00:00:00.000Z","2012-10-01T00:00:00.000Z","2012-11-01T00:00:00.000Z","2012-12-01T00:00:00.000Z","2013-01-01T00:00:00.000Z","2013-02-01T00:00:00.000Z","2013-03-01T00:00:00.000Z","2013-04-01T00:00:00.000Z","2013-05-01T00:00:00.000Z","2013-06-01T00:00:00.000Z","2013-07-01T00:00:00.000Z","2013-08-01T00:00:00.000Z","2013-09-01T00:00:00.000Z","2013-10-01T00:00:00.000Z","2013-11-01T00:00:00.000Z","2013-12-01T00:00:00.000Z","2014-01-01T00:00:00.000Z","2014-02-01T00:00:00.000Z","2014-03-01T00:00:00.000Z","2014-04-01T00:00:00.000Z","2014-05-01T00:00:00.000Z","2014-06-01T00:00:00.000Z","2014-07-01T00:00:00.000Z","2014-08-01T00:00:00.000Z","2014-09-01T00:00:00.000Z","2014-10-01T00:00:00.000Z","2014-11-01T00:00:00.000Z","2014-12-01T00:00:00.000Z"],[null,4.5972065,2.0610459,3.5495694,9.6908348,6.530823,4.128364,13.370275,3.7280308,-2.2719402,-0.0379656,1.0925572,5.9685418,1.8435794,1.5398362,1.0182275,-0.4819223,6.8489258,0.2680994,3.5767717,2.97691,4.0746488,5.5190212,58.6716669,-25.5520541,-0.7691364,-0.8763321,10.8989701,7.446098,18.5284053,1.9921616,0.5054961,5.5884935,5.3528899,66.279886,-38.3949158,-9.4423258,58.1025935,2.4203557,-8.16487,1.2489078,2.2545472,-5.5095532,-4.7141453,-7.7203391,0,-14.6613198,-8.3938448,-2.6947764,-1.2404406,-6.5163207,-1.3691309,12.5909915,32.6962207,-17.2558558,-6.1836909,5.8092593,-4.015991,-0.3505018,4.1741513,-4.5574303,-0.3229795,7.956864,0.5744943,-2.3720483,1.2771709,0.6300609,0.6265846,5.827698,0.1531495,-5.805947,0.0144614,2.8312227,8.2071984,-0.630452,6.5908755,3.5748915,-3.8450663,-0.3763178,-6.4969565,1.418004,-1.9992597,0.5150546,6.9662873,-5.4818582,3.1241685,1.2000131,-0.1027949,-1.5208232,0.4623878,-1.1318128,-2.3533212,-0.6086595,-0.966163,-1.5107836,3.604321,-1.6174191,7.2894444,7.0910466,2.4627064,3.1002862,3.7886182,-18.2945404,27.4448476,0.4721859,3.985761,1.7981026,3.6455994,5.5804744,-1.6352237,8.7728024,3.6918007,3.9341603,1.2050161,0.3295901,1.0618857,0.1736957,9.1106831,-0.0515227,2.4513109]],"fixedtz":false,"tzone":"UTC"},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
@@ -173,15 +556,15 @@ Figure 1: The LuSE LASI Monthly Returns For the Period 2005-2014 (excl. ZCCM-IH)
 <p>Most noticeable from the above chart is the greater volatility experienced at the on set of the Global financial crisis. At the height of this crisis we see the index slumping close to -40.0%, conversely, also it hit a record high of more than 60.0% return. The index overall performance is an up-down swing with periods of decent returns and other periods of downward performance.</p>
 <h3 id="monthly-returns-inclusive-of-zccm-ih">Monthly Returns Inclusive of ZCCM-IH</h3>
 <p>The following chart shows the LASI index inclusive of ZCCM-IH. Since the LASI is a value weighted index, stocks having greater market value tend to have a much more pronounced effect on the movement in the index. For instance, factoring ZCCM-IH’s market capitalization into the LASI index has a telling effect on the overall picture of the index. The chart below shows volatility in certain months relatively lower compared to the chart above which excludes ZCCM-IH. My follow-up posts will closely evaluate this effect and try to elicit some information that explains why this is the case.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dygraph</span>((LASI_monthly_zccm<span style="color:#f92672">$</span>Return) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>,
-        main <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH&#34;</span>) <span style="color:#f92672">%&gt;%</span>
-  
-  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;y&#34;</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Return&#34;</span>) <span style="color:#f92672">%&gt;%</span>
-  
-  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;x&#34;</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Year&#34;</span>) <span style="color:#f92672">%&gt;%</span>
-  
-  <span style="color:#a6e22e">dyOptions</span>(colors <span style="color:#f92672">=</span> RColorBrewer<span style="color:#f92672">::</span><span style="color:#a6e22e">brewer.pal</span>(<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;Set2&#34;</span>)) 
-</code></pre></div><div class="figure">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">dygraph</span>((LASI_monthly_zccm<span style="color:#f92672">$</span>Return) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>,
+</span></span><span style="display:flex;"><span>        main <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;y&#34;</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Return&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;x&#34;</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Year&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dyOptions</span>(colors <span style="color:#f92672">=</span> RColorBrewer<span style="color:#f92672">::</span><span style="color:#a6e22e">brewer.pal</span>(<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;Set2&#34;</span>)) 
+</span></span></code></pre></div><div class="figure">
 <div id="htmlwidget-2" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
 <script type="application/json" data-for="htmlwidget-2">{"x":{"attrs":{"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"title":"LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH","labels":["month","Return"],"legend":"auto","retainDateWindow":false,"ylabel":"Return","xlabel":"Year","stackedGraph":false,"fillGraph":false,"fillAlpha":0.15,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colors":["#66C2A5","#FC8D62","#8DA0CB"],"colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2005-01-01T00:00:00.000Z","2005-02-01T00:00:00.000Z","2005-03-01T00:00:00.000Z","2005-04-01T00:00:00.000Z","2005-05-01T00:00:00.000Z","2005-06-01T00:00:00.000Z","2005-07-01T00:00:00.000Z","2005-08-01T00:00:00.000Z","2005-09-01T00:00:00.000Z","2005-10-01T00:00:00.000Z","2005-11-01T00:00:00.000Z","2005-12-01T00:00:00.000Z","2006-01-01T00:00:00.000Z","2006-02-01T00:00:00.000Z","2006-03-01T00:00:00.000Z","2006-04-01T00:00:00.000Z","2006-05-01T00:00:00.000Z","2006-06-01T00:00:00.000Z","2006-07-01T00:00:00.000Z","2006-08-01T00:00:00.000Z","2006-09-01T00:00:00.000Z","2006-10-01T00:00:00.000Z","2006-11-01T00:00:00.000Z","2006-12-01T00:00:00.000Z","2007-01-01T00:00:00.000Z","2007-02-01T00:00:00.000Z","2007-03-01T00:00:00.000Z","2007-04-01T00:00:00.000Z","2007-05-01T00:00:00.000Z","2007-06-01T00:00:00.000Z","2007-07-01T00:00:00.000Z","2007-08-01T00:00:00.000Z","2007-09-01T00:00:00.000Z","2007-10-01T00:00:00.000Z","2007-11-01T00:00:00.000Z","2007-12-01T00:00:00.000Z","2008-01-01T00:00:00.000Z","2008-02-01T00:00:00.000Z","2008-03-01T00:00:00.000Z","2008-04-01T00:00:00.000Z","2008-05-01T00:00:00.000Z","2008-06-01T00:00:00.000Z","2008-07-01T00:00:00.000Z","2008-08-01T00:00:00.000Z","2008-09-01T00:00:00.000Z","2008-10-01T00:00:00.000Z","2008-11-01T00:00:00.000Z","2008-12-01T00:00:00.000Z","2009-01-01T00:00:00.000Z","2009-02-01T00:00:00.000Z","2009-03-01T00:00:00.000Z","2009-04-01T00:00:00.000Z","2009-05-01T00:00:00.000Z","2009-06-01T00:00:00.000Z","2009-07-01T00:00:00.000Z","2009-08-01T00:00:00.000Z","2009-09-01T00:00:00.000Z","2009-10-01T00:00:00.000Z","2009-11-01T00:00:00.000Z","2009-12-01T00:00:00.000Z","2010-01-01T00:00:00.000Z","2010-02-01T00:00:00.000Z","2010-03-01T00:00:00.000Z","2010-04-01T00:00:00.000Z","2010-05-01T00:00:00.000Z","2010-06-01T00:00:00.000Z","2010-07-01T00:00:00.000Z","2010-08-01T00:00:00.000Z","2010-09-01T00:00:00.000Z","2010-10-01T00:00:00.000Z","2010-11-01T00:00:00.000Z","2010-12-01T00:00:00.000Z","2011-01-01T00:00:00.000Z","2011-02-01T00:00:00.000Z","2011-03-01T00:00:00.000Z","2011-04-01T00:00:00.000Z","2011-05-01T00:00:00.000Z","2011-06-01T00:00:00.000Z","2011-07-01T00:00:00.000Z","2011-08-01T00:00:00.000Z","2011-09-01T00:00:00.000Z","2011-10-01T00:00:00.000Z","2011-11-01T00:00:00.000Z","2011-12-01T00:00:00.000Z","2012-01-01T00:00:00.000Z","2012-02-01T00:00:00.000Z","2012-03-01T00:00:00.000Z","2012-04-01T00:00:00.000Z","2012-05-01T00:00:00.000Z","2012-06-01T00:00:00.000Z","2012-07-01T00:00:00.000Z","2012-08-01T00:00:00.000Z","2012-09-01T00:00:00.000Z","2012-10-01T00:00:00.000Z","2012-11-01T00:00:00.000Z","2012-12-01T00:00:00.000Z","2013-01-01T00:00:00.000Z","2013-02-01T00:00:00.000Z","2013-03-01T00:00:00.000Z","2013-04-01T00:00:00.000Z","2013-05-01T00:00:00.000Z","2013-06-01T00:00:00.000Z","2013-07-01T00:00:00.000Z","2013-08-01T00:00:00.000Z","2013-09-01T00:00:00.000Z","2013-10-01T00:00:00.000Z","2013-11-01T00:00:00.000Z","2013-12-01T00:00:00.000Z","2014-01-01T00:00:00.000Z","2014-02-01T00:00:00.000Z","2014-03-01T00:00:00.000Z","2014-04-01T00:00:00.000Z","2014-05-01T00:00:00.000Z","2014-06-01T00:00:00.000Z","2014-07-01T00:00:00.000Z","2014-08-01T00:00:00.000Z","2014-09-01T00:00:00.000Z","2014-10-01T00:00:00.000Z","2014-11-01T00:00:00.000Z","2014-12-01T00:00:00.000Z"],[1.0408097,5.3753296,2.2408654,3.0998824,11.1493798,7.4169842,4.4918087,15.1541719,4.1185428,-2.5227342,-0.0199508,-1.0065212,0.7095515,8.1567949,1.7195943,0.4613828,-0.5396713,7.679422,0.2982833,3.8924518,3.3811721,4.4987066,6.0618988,4.1009053,15.0858996,-0.8284354,-0.9445432,11.756438,7.9703154,19.7363959,2.1002552,0.5328626,5.884625,5.6207295,2.7243678,-0.1672581,-29.0826145,72.1123917,2.9569226,-9.9156394,1.5459382,-3.6090596,-0.37825,-5.5640301,-1.7065013,-7.6131687,-16.3719526,-10.4211053,-3.4211534,-1.5957689,-8.3572325,-1.7928981,16.5603699,9.8566237,3.2391231,-7.5864576,7.2082978,-4.9186751,-0.4330918,5.1651478,-5.5862664,-0.39943,9.8656125,0.7002573,-2.8864441,6.8719456,-2.7635568,-0.7647089,7.090635,0.1840634,5.7348531,0.0157414,3.0315504,8.7703579,-0.6703343,7.0093344,3.7874784,-4.0639857,3.2084947,-6.8734716,1.5059473,-2.1218272,0.5473009,7.3852884,-8.0621728,4.3347754,1.2883067,-0.1105575,-1.63087,0.4964651,-1.2147806,-2.5275962,-0.6550499,-1.0404278,-1.6274652,2.90377,-1.7396173,7.8512544,5.8251367,2.6700305,3.3541418,3.3366813,3.9872506,0.4705065,0.4913516,4.32402,1.9358913,3.9186391,1.7965699,-1.8182425,9.7649333,2.9385208,0.7122391,1.3797325,0.3766885,1.2133671,0.1981123,-0.805832,-0.0644976,-0.0994034]],"fixedtz":false,"tzone":"UTC"},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
@@ -189,15 +572,15 @@ Figure 2: The LuSE LASI Monthly Returns For the Period 2005-2014 (incl. ZCCM-IH
 </p>
 </div>
 <p>The last two charts detail the index on a yearly basis. Though unlike the picture painted from the monthly data, yearly data that goes farther down the years, seem to be carrying a different message on the effect of the company ZCCM-IH. When introduced into the computations, the volatility is more than that observed without its inclusion.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dygraph</span>((LASI_yearly<span style="color:#f92672">$</span>Return)<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>,
-        main <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH&#34;</span>) <span style="color:#f92672">%&gt;%</span> 
-   
-  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;y&#34;</span>, label <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Return&#34;</span>) <span style="color:#f92672">%&gt;%</span>
-   
-  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;x&#34;</span>, label <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Year&#34;</span>) <span style="color:#f92672">%&gt;%</span>
-   
-  <span style="color:#a6e22e">dyOptions</span>(colors <span style="color:#f92672">=</span> RColorBrewer<span style="color:#f92672">::</span><span style="color:#a6e22e">brewer.pal</span>(<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;Set2&#34;</span>)) 
-</code></pre></div><div class="figure">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">dygraph</span>((LASI_yearly<span style="color:#f92672">$</span>Return)<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>,
+</span></span><span style="display:flex;"><span>        main <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH&#34;</span>) <span style="color:#f92672">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;y&#34;</span>, label <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Return&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;x&#34;</span>, label <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Year&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dyOptions</span>(colors <span style="color:#f92672">=</span> RColorBrewer<span style="color:#f92672">::</span><span style="color:#a6e22e">brewer.pal</span>(<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;Set2&#34;</span>)) 
+</span></span></code></pre></div><div class="figure">
 <div id="htmlwidget-3" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
 <script type="application/json" data-for="htmlwidget-3">{"x":{"attrs":{"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"title":"LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH","labels":["year","Return"],"legend":"auto","retainDateWindow":false,"ylabel":"Return","xlabel":"Year","stackedGraph":false,"fillGraph":false,"fillAlpha":0.15,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colors":["#66C2A5","#FC8D62","#8DA0CB"],"colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false},"scale":"yearly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["1997-01-01T00:00:00.000Z","1998-01-01T00:00:00.000Z","1999-01-01T00:00:00.000Z","2000-01-01T00:00:00.000Z","2001-01-01T00:00:00.000Z","2002-01-01T00:00:00.000Z","2003-01-01T00:00:00.000Z","2004-01-01T00:00:00.000Z","2005-01-01T00:00:00.000Z","2006-01-01T00:00:00.000Z","2007-01-01T00:00:00.000Z","2008-01-01T00:00:00.000Z","2009-01-01T00:00:00.000Z","2010-01-01T00:00:00.000Z","2011-01-01T00:00:00.000Z","2012-01-01T00:00:00.000Z","2013-01-01T00:00:00.000Z","2014-01-01T00:00:00.000Z"],[null,130.47,-12.4788476,6.7373953,20.3158384,-2.0537369,11.1973829,79.5874242,0.8901257,65.5346453,54.1114184,46.94876,-2.6947764,6.2687031,11.258863,7.394371,-1.6049534,52.6696914]],"fixedtz":false,"tzone":"UTC"},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
@@ -205,15 +588,15 @@ Figure 3: The LuSE LASI yearly Returns For the Period 1997-2014 (excl. ZCCM-IH)
 </p>
 </div>
 <p><strong>Inclusive of ZCCM-IH yearly LASI Index returns</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">dygraph</span>((LASI_yearly_zccm<span style="color:#f92672">$</span>Return) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>,
-        main <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH&#34;</span>) <span style="color:#f92672">%&gt;%</span>
-  
-  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;y&#34;</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Return&#34;</span>) <span style="color:#f92672">%&gt;%</span>
-  
-  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;x&#34;</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Year&#34;</span>) <span style="color:#f92672">%&gt;%</span>
-  
-  <span style="color:#a6e22e">dyOptions</span>(colors <span style="color:#f92672">=</span> RColorBrewer<span style="color:#f92672">::</span><span style="color:#a6e22e">brewer.pal</span>(<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;Set2&#34;</span>)) 
-</code></pre></div><div class="figure">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">dygraph</span>((LASI_yearly_zccm<span style="color:#f92672">$</span>Return) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>,
+</span></span><span style="display:flex;"><span>        main <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;y&#34;</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Return&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dyAxis</span>(<span style="color:#e6db74">&#34;x&#34;</span>, label <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Year&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">dyOptions</span>(colors <span style="color:#f92672">=</span> RColorBrewer<span style="color:#f92672">::</span><span style="color:#a6e22e">brewer.pal</span>(<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;Set2&#34;</span>)) 
+</span></span></code></pre></div><div class="figure">
 <div id="htmlwidget-4" style="width:672px;height:480px;" class="dygraphs html-widget"></div>
 <script type="application/json" data-for="htmlwidget-4">{"x":{"attrs":{"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"title":"LASI Monthly Returns 2005 - 2014 Inc. ZCCM-IH","labels":["year","Return"],"legend":"auto","retainDateWindow":false,"ylabel":"Return","xlabel":"Year","stackedGraph":false,"fillGraph":false,"fillAlpha":0.15,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colors":["#66C2A5","#FC8D62","#8DA0CB"],"colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false},"scale":"yearly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["1997-01-01T00:00:00.000Z","1998-01-01T00:00:00.000Z","1999-01-01T00:00:00.000Z","2000-01-01T00:00:00.000Z","2001-01-01T00:00:00.000Z","2002-01-01T00:00:00.000Z","2003-01-01T00:00:00.000Z","2004-01-01T00:00:00.000Z","2005-01-01T00:00:00.000Z","2006-01-01T00:00:00.000Z","2007-01-01T00:00:00.000Z","2008-01-01T00:00:00.000Z","2009-01-01T00:00:00.000Z","2010-01-01T00:00:00.000Z","2011-01-01T00:00:00.000Z","2012-01-01T00:00:00.000Z","2013-01-01T00:00:00.000Z","2014-01-01T00:00:00.000Z"],[null,116.13,-25.5031694,18.5081672,56.0714847,5.2249832,17.2868267,108.3503387,1.0408097,61.4304917,69.3191462,18.490848,-3.4211534,9.0329112,29.0030166,9.1222885,-1.7396173,47.8173913]],"fixedtz":false,"tzone":"UTC"},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
@@ -224,118 +607,60 @@ Figure 4: The LuSE LASI yearly Returns For the Period 1997-2014 (incl. ZCCM-IH)
 <p>It’s with no doubt the Emerging Markets had a stellar performance the past 2 decades. But what remains inherently attached with these developing markets is: <code>(i)</code> lack of proper oversight on market monitoring and supervision; <code>(ii)</code> the lack of or inadequate liquidity in the market among other challenges.
 In the coming posts I hope to dwell more on the performance of the LuSE and have a look at its peer exchanges in the region.</p>
 <p><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
-<p>For the data and the code,you can find them on <a href="https://github.com/ASimumba/LuSE_Data">my GitHub account</a>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:1">
+<p>For the data and the code,you can find them on <a href="https://github.com/ASimumba/LuSE_Data">my GitHub account</a>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
-
-
-</article>
-
-
-<section class="post-nav">
-    <ul>
-        
-        <li>
-            <a href="https://asimumba.rbind.io/blog/2017/03/17/portfolio-analysis/"><i class="fa fa-chevron-circle-left"></i> Stocks Portfolio Analysis</a>
-        </li>
-        
-        
-        <li>
-            <a href="https://asimumba.rbind.io/blog/2017/07/03/building-a-website-with-blogdown-and-hugo/">Building a Website with Blogdown and Hugo <i class="fa fa-chevron-circle-right"></i> </a>
-        </li>
-        
-    </ul>
-</section>
-    
-        
-<section class="comments-block">
-      <button id="show-comments" style="display: none;"><i class="fa fa-comments-o"></i> Add/View Comments</button>
-</section>
-
-<section id="disqus_thread"></section>
-
-<script>
-      (function () {
-            
-            
-            if (window.location.hostname == "localhost")
-                  return;
-
-            var disqus_loaded = false;
-            var disqus_shortname = 'asimumba';
-            var disqus_button = document.getElementById("show-comments");
-
-            disqus_button.style.display = "";
-            disqus_button.addEventListener("click", disqus, false);
-
-            function disqus() {
-
-                  if (!disqus_loaded) {
-                        disqus_loaded = true;
-
-                        var e = document.createElement("script");
-                        e.type = "text/javascript";
-                        e.async = true;
-                        e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
-                        (document.getElementsByTagName("head")[0] ||
-                              document.getElementsByTagName("body")[0])
-                        .appendChild(e);
-
-                        
-                        document.getElementById("show-comments").style.display = "none";
-                  }
-            }
-
-            
-            var hash = window.location.hash.substr(1);
-            if (hash.length > 8) {
-                  if (hash.substring(0, 8) == "comment-") {
-                        disqus();
-                  }
-            }
-
-            
-            if (/bot|google|baidu|bing|msn|duckduckgo|slurp|yandex/i.test(navigator.userAgent)) {
-                  disqus();
-            }
-      })();
-</script>
-    
-
-
-
-
-
-</main>
-    <footer>
-        <h6>Copyright © 2022 - Aaron Simumba | 
-            Built with <a href="https://github.com/rstudio/blogdown" title="blogdown">blogdown</a> 
-            and <a href="https://gohugo.io" title="Hugo">Hugo</a>, deployed with 
-            <a href="https://www.netlify.com/" title="netlify">netlify</a> |
-            <a href="https://asimumba.rbind.io/index.xml">Subscribe</a></h6>
-    </footer>
 </div>
-<script src="https://asimumba.rbind.io/js/scripts.js"></script>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="https://asimumba.rbind.io/tags/luse/">LuSE</a><a class="tag" href="https://asimumba.rbind.io/tags/alsi/">ALSI</a><a class="tag" href="https://asimumba.rbind.io/tags/stock-returns/">stock returns</a><a class="tag" href="https://asimumba.rbind.io/tags/zambia-capital-market/">Zambia capital market</a></span>
 
 
-<script type="application/javascript">
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        2017-2022 - Aaron Simumba
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="https://asimumba.rbind.io/js/medium-zoom.min.602bd2014468bd348112e2aa24f595c530d257a4ed6c335d7baaa6ac9a7ca6fb.js"
+    integrity="sha256-YCvSAURovTSBEuKqJPWVxTDSV6TtbDNde6qmrJp8pvs="
+    crossorigin="anonymous"
+  ></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-251788376"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-251788376', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-251788376', { 'anonymize_ip': false });
 }
 </script>
-
 </body>
-
 </html>

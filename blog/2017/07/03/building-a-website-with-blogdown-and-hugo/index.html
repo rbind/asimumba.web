@@ -1,208 +1,564 @@
-
-<head>
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
     
-  </head>
+      
+        Building a Website with Blogdown and Hugo |
 
-<!doctype html>
+      Aaron Simumba
 
-<html lang="en">
+  </title>
 
-<head>
-  <title>R . Data Science . Business Intelligence</title>
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Aaron Simumba" />
+  <meta
+    name="description"
+    content="How to craft a website with blogdown,hugo and host on netlify"
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="https://asimumba.rbind.io/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
   
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab+Atkinson+Hyperlegible+Ruda+Source+Code+Pro" />
-  <link rel="stylesheet" type="text/css" href="https://asimumba.rbind.io/css/styles.css" />
+  
+  <link
+    rel="stylesheet"
+    href="https://asimumba.rbind.io/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="https://asimumba.rbind.io/fontawesome/css/fontawesome.min.b1c4e6a10bdbab01f33fff9d78816ee68cf9a9a731f07668afd546a79924cb80.css"
+    integrity="sha256-scTmoQvbqwHzP/&#43;deIFu5oz5qacx8HZor9VGp5kky4A="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://asimumba.rbind.io/fontawesome/css/solid.min.423dee17c62f55fa733a4ee13e00d523dfce88cc4f4ab4549a24ba36bd9de681.css"
+    integrity="sha256-Qj3uF8YvVfpzOk7hPgDVI9/OiMxPSrRUmiS6Nr2d5oE="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://asimumba.rbind.io/fontawesome/css/brands.min.b7d54133b27e5b4de15245b8e143de3e8ed2d674c706137274cedc9953f31917.css"
+    integrity="sha256-t9VBM7J&#43;W03hUkW44UPePo7S1nTHBhNydM7cmVPzGRc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Indie&#43;Flower&amp;family=Roboto:ital,wght@0,100;0,400;0,700;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="https://asimumba.rbind.io/favicons/favicon.icofavicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://asimumba.rbind.io/favicons/favicon.icoapple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://asimumba.rbind.io/favicons/favicon.icofavicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://asimumba.rbind.io/favicons/favicon.icofavicon-16x16.png" />
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-251788376', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
+  <link rel="canonical" href="https://asimumba.rbind.io/blog/2017/07/03/building-a-website-with-blogdown-and-hugo/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="https://asimumba.rbind.io/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="https://asimumba.rbind.io/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js"
+      integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs&#43;YLsmRW26cq0="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://asimumba.rbind.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Building a Website with Blogdown and Hugo"/>
+<meta name="twitter:description" content="How to craft a website with blogdown,hugo and host on netlify"/>
+
+
+
+  
+  <meta property="og:title" content="Building a Website with Blogdown and Hugo" />
+<meta property="og:description" content="How to craft a website with blogdown,hugo and host on netlify" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://asimumba.rbind.io/blog/2017/07/03/building-a-website-with-blogdown-and-hugo/" /><meta property="og:image" content="https://asimumba.rbind.io/images/site-feature-image.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2017-07-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-07-03T00:00:00+00:00" /><meta property="og:site_name" content="Aaron Simumba" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "blog",
+        "name": "Building a Website with Blogdown and Hugo",
+        "headline": "Building a Website with Blogdown and Hugo",
+        "alternativeHeadline": "",
+        "description": "
+      How to craft a website with blogdown,hugo and host on netlify
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/asimumba.rbind.io\/blog\/2017\/07\/03\/building-a-website-with-blogdown-and-hugo\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Aaron Simumba"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Aaron Simumba"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Aaron Simumba"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Aaron Simumba"
+        },
+        "copyrightYear" : "2017",
+        "dateCreated": "2017-07-03T00:00:00.00Z",
+        "datePublished": "2017-07-03T00:00:00.00Z",
+        "dateModified": "2017-07-03T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Aaron Simumba",
+            "url": "https://asimumba.rbind.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/asimumba.rbind.io\/favicons\/favicon.icofavicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://asimumba.rbind.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/asimumba.rbind.io\/blog\/2017\/07\/03\/building-a-website-with-blogdown-and-hugo\/",
+        "wordCount" : "297",
+        "genre" : [ 
+      
+      "hugo"
+
+    
+      
+        ,
+
+      
+      "R"
+
+    ],
+        "keywords" : [ 
+      
+      "website"
+
+    
+      
+        ,
+
+      
+      "blogdown"
+
+    
+      
+        ,
+
+      
+      "hugo"
+
+    
+      
+        ,
+
+      
+      "netlify"
+
+    
+      
+        ,
+
+      
+      "git"
+
+    
+      
+        ,
+
+      
+      "github"
+
+    ]
+    }
+  </script>
+
+
 
 </head>
-
-<body>
-  <div id="container">
-    <header>
-      <h1>
-                <a href="https://asimumba.rbind.io/">R . Data Science . Business Intelligence</a>
-            </h1>
-
-      <ul id="social-media">
-        
-        <li><a href="https://twitter.com/asimumba_"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-         
-        <li><a href="https://www.linkedin.com/in/aaronsimumba"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-         
-        <li><a href="https://github.com/asimumba"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a></li>
-           
-        <li><a href="https://stackoverflow.com/users/8137815/aaron-simumba"><i class="fa fa-stack-overflow fa-lg" aria-hidden="true"></i></a></li>
-        
-      </ul>
-      
-      <p><em>A Data Connoisseur&rsquo;s playground - Where data mets ideas</em></p>
-      
-    </header>
+<body
+    
+      class="body theme--light"
 
     
-<nav>
-    <ul>
+  >
+    <div class="wrapper">
+      <aside
         
-        <li>
-            <a class="" href="https://asimumba.rbind.io/blog/">
-                <i class="fa-li fa  fa-lg"></i><span>Blog</span>
-            </a>
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="https://asimumba.rbind.io/images/aaron.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="https://asimumba.rbind.io/">Aaron Simumba</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>A Data Connoisseur's playground - Where data mets ideas</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/aaronsimumba/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
         </li>
-        
-        <li>
-            <a class="" href="https://asimumba.rbind.io/portfolio/">
-                <i class="fa-li fa  fa-lg"></i><span>Portfolio</span>
-            </a>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/asimumba"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
         </li>
-        
-        <li>
-            <a class="" href="https://asimumba.rbind.io/talks/">
-                <i class="fa-li fa  fa-lg"></i><span>Talks</span>
-            </a>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://stackoverflow.com/users/8137815/aaron-simumba"
+            target="_blank"
+            rel="noopener"
+            aria-label="stackoverflow"
+            title="stackoverflow"
+          >
+            <i class="fab fa-stack-overflow fa-2x" aria-hidden="true"></i>
+          </a>
         </li>
-        
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:simumbaaaron20@gmail.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
     </ul>
-</nav>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        2017-2022 - Aaron Simumba
 
-    <main>
-
-
-
-
-<article>
-
-    <h1>Building a Website with Blogdown and Hugo</h1>
-
+      
+    </li>
     
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="https://asimumba.rbind.io/js/medium-zoom.min.602bd2014468bd348112e2aa24f595c530d257a4ed6c335d7baaa6ac9a7ca6fb.js"
+    integrity="sha256-YCvSAURovTSBEuKqJPWVxTDSV6TtbDNde6qmrJp8pvs="
+    crossorigin="anonymous"
+  ></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-251788376"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-251788376', { 'anonymize_ip': false });
+}
+</script>
+</div>
+</aside>
+      <main
         
-    
+          class="wrapper__main"
 
-    <p>In this short post. I will detail my journey building my website using <a href="https://github/rstudio/blogdown"><strong>blogdown</strong></a> an <a href="https://r-project.org"><strong>R</strong></a> package that makes use of the static website generator <a href="https://gohugo.io"><strong>Hugo</strong></a>. This is a great R package, written by <a href="https://yihui.name/en">Yihui Xie</a>.</p>
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/blog/"
+              
+              title=""
+              >Blog</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/portfolio/"
+              
+              title=""
+              >Portfolio</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/awards/"
+              
+              title=""
+              >Accomplishments</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/talks/"
+              
+              title=""
+              >Talks</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Building a Website With Blogdown and Hugo</h1>
+      <p>In this short post. I will detail my journey building my website using <a href="https://github/rstudio/blogdown"><strong>blogdown</strong></a> an <a href="https://r-project.org"><strong>R</strong></a> package that makes use of the static website generator <a href="https://gohugo.io"><strong>Hugo</strong></a>. This is a great R package, written by <a href="https://yihui.name/en">Yihui Xie</a>.</p>
 <p>For starters, there is <a href="https://bookdown.org/yihui/blogdown/">offical documentation</a> which is so far still under developement, but nonetheless it has already covered most of the pertinent issues to get you started buiding your own desired website.</p>
 <p>If you are coming from the <code>Google blogspot</code> or <code>wordpress</code> dungeon, then by default I will assume you are going to love this new introduction to the blogsphere. It&rsquo;s worth to make mention though that this, may not look quite easy and appealing to people with very little computers/tech aquaintance. For your own information, I am an Accounting/finace major in another life; apparently things had to balance, maybe so, some of the world&rsquo;s things have to find a reconciliation point after all. This I hope if you&rsquo;ve never built a website or even a blog it will help you believe you can do it, just the way I am doing it!</p>
 <p>Enough with the stories, buckle up we jump right into it.</p>
 <p>For the theme, I was initially spoiled for choice, I tried a few before finally settling for the <a href="https://themes.gohugo.io/cactus/">Cactus theme</a>. It&rsquo;s both well enriched with great visual aesthetics as well as a clean presentation. I have changed quite a lot of stuff to meet my own preferences and for what I intend to use the website for. If your choice is to get up and running without bothering to learn a bit of <code>HTML</code> and <code>CSS</code> for further alterations and customizations, the <a href="https://themes.gohugo.io/">Hugo site</a> has plenty of templates to suit different tastes.</p>
 <p><img src="https://user-images.githubusercontent.com/24398851/30351045-2fa78596-9822-11e7-916b-18cc3e551562.png" alt=""></p>
 <p><strong>NOTE</strong>: Lookout for a comprehensive summary of how I designed my current website soon&hellip;</p>
-
-
-</article>
-
-
-<section class="post-nav">
-    <ul>
-        
-        <li>
-            <a href="https://asimumba.rbind.io/blog/2017/04/06/luse/"><i class="fa fa-chevron-circle-left"></i> What&#39;s in the numbers: A look at the Lusaka Securities Exchange</a>
-        </li>
-        
-        
-        <li>
-            <a href="https://asimumba.rbind.io/blog/2017/08/25/one-year-anniversary/">One Year Anniversary <i class="fa fa-chevron-circle-right"></i> </a>
-        </li>
-        
-    </ul>
-</section>
-    
-        
-<section class="comments-block">
-      <button id="show-comments" style="display: none;"><i class="fa fa-comments-o"></i> Add/View Comments</button>
-</section>
-
-<section id="disqus_thread"></section>
-
-<script>
-      (function () {
-            
-            
-            if (window.location.hostname == "localhost")
-                  return;
-
-            var disqus_loaded = false;
-            var disqus_shortname = 'asimumba';
-            var disqus_button = document.getElementById("show-comments");
-
-            disqus_button.style.display = "";
-            disqus_button.addEventListener("click", disqus, false);
-
-            function disqus() {
-
-                  if (!disqus_loaded) {
-                        disqus_loaded = true;
-
-                        var e = document.createElement("script");
-                        e.type = "text/javascript";
-                        e.async = true;
-                        e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
-                        (document.getElementsByTagName("head")[0] ||
-                              document.getElementsByTagName("body")[0])
-                        .appendChild(e);
-
-                        
-                        document.getElementById("show-comments").style.display = "none";
-                  }
-            }
-
-            
-            var hash = window.location.hash.substr(1);
-            if (hash.length > 8) {
-                  if (hash.substring(0, 8) == "comment-") {
-                        disqus();
-                  }
-            }
-
-            
-            if (/bot|google|baidu|bing|msn|duckduckgo|slurp|yandex/i.test(navigator.userAgent)) {
-                  disqus();
-            }
-      })();
-</script>
-    
-
-
-
-
-
-</main>
-    <footer>
-        <h6>Copyright © 2022 - Aaron Simumba | 
-            Built with <a href="https://github.com/rstudio/blogdown" title="blogdown">blogdown</a> 
-            and <a href="https://gohugo.io" title="Hugo">Hugo</a>, deployed with 
-            <a href="https://www.netlify.com/" title="netlify">netlify</a> |
-            <a href="https://asimumba.rbind.io/index.xml">Subscribe</a></h6>
-    </footer>
 </div>
-<script src="https://asimumba.rbind.io/js/scripts.js"></script>
+    <div class="post__footer">
+      
+        <span><a class="category" href="https://asimumba.rbind.io/categories/hugo/">hugo</a><a class="category" href="https://asimumba.rbind.io/categories/r/">R</a></span>
 
 
-<script type="application/javascript">
+
+
+      
+
+      
+        <span><a class="tag" href="https://asimumba.rbind.io/tags/website/">website</a><a class="tag" href="https://asimumba.rbind.io/tags/blogdown/">blogdown</a><a class="tag" href="https://asimumba.rbind.io/tags/hugo/">hugo</a><a class="tag" href="https://asimumba.rbind.io/tags/netlify/">netlify</a><a class="tag" href="https://asimumba.rbind.io/tags/git/">git</a><a class="tag" href="https://asimumba.rbind.io/tags/github/">github</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        2017-2022 - Aaron Simumba
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="https://asimumba.rbind.io/js/medium-zoom.min.602bd2014468bd348112e2aa24f595c530d257a4ed6c335d7baaa6ac9a7ca6fb.js"
+    integrity="sha256-YCvSAURovTSBEuKqJPWVxTDSV6TtbDNde6qmrJp8pvs="
+    crossorigin="anonymous"
+  ></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-251788376"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-251788376', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-251788376', { 'anonymize_ip': false });
 }
 </script>
-
 </body>
-
 </html>

@@ -1,141 +1,528 @@
-
-<head>
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
     
-  </head>
+      
+        Breathing life back into PDF presented Data |
 
-<!doctype html>
+      Aaron Simumba
 
-<html lang="en">
+  </title>
 
-<head>
-  <title>R . Data Science . Business Intelligence</title>
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Aaron Simumba" />
+  <meta
+    name="description"
+    content="Bringing PDF presented data back to life."
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="https://asimumba.rbind.io/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
   
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab+Atkinson+Hyperlegible+Ruda+Source+Code+Pro" />
-  <link rel="stylesheet" type="text/css" href="https://asimumba.rbind.io/css/styles.css" />
+  
+  <link
+    rel="stylesheet"
+    href="https://asimumba.rbind.io/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="https://asimumba.rbind.io/fontawesome/css/fontawesome.min.b1c4e6a10bdbab01f33fff9d78816ee68cf9a9a731f07668afd546a79924cb80.css"
+    integrity="sha256-scTmoQvbqwHzP/&#43;deIFu5oz5qacx8HZor9VGp5kky4A="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://asimumba.rbind.io/fontawesome/css/solid.min.423dee17c62f55fa733a4ee13e00d523dfce88cc4f4ab4549a24ba36bd9de681.css"
+    integrity="sha256-Qj3uF8YvVfpzOk7hPgDVI9/OiMxPSrRUmiS6Nr2d5oE="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="https://asimumba.rbind.io/fontawesome/css/brands.min.b7d54133b27e5b4de15245b8e143de3e8ed2d674c706137274cedc9953f31917.css"
+    integrity="sha256-t9VBM7J&#43;W03hUkW44UPePo7S1nTHBhNydM7cmVPzGRc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+    
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Indie&#43;Flower&amp;family=Roboto:ital,wght@0,100;0,400;0,700;1,400&amp;display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="https://asimumba.rbind.io/favicons/favicon.icofavicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://asimumba.rbind.io/favicons/favicon.icoapple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://asimumba.rbind.io/favicons/favicon.icofavicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://asimumba.rbind.io/favicons/favicon.icofavicon-16x16.png" />
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-251788376', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
+  <link rel="canonical" href="https://asimumba.rbind.io/blog/2017/10/12/breathing-life-back-into-pdf/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="https://asimumba.rbind.io/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="https://asimumba.rbind.io/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js"
+      integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs&#43;YLsmRW26cq0="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://asimumba.rbind.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Breathing life back into PDF presented Data"/>
+<meta name="twitter:description" content="Bringing PDF presented data back to life."/>
+
+
+
+  
+  <meta property="og:title" content="Breathing life back into PDF presented Data" />
+<meta property="og:description" content="Bringing PDF presented data back to life." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://asimumba.rbind.io/blog/2017/10/12/breathing-life-back-into-pdf/" /><meta property="og:image" content="https://asimumba.rbind.io/images/site-feature-image.png"/><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2017-10-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-10-12T00:00:00+00:00" /><meta property="og:site_name" content="Aaron Simumba" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "blog",
+        "name": "Breathing life back into PDF presented Data",
+        "headline": "Breathing life back into PDF presented Data",
+        "alternativeHeadline": "",
+        "description": "
+      Bringing PDF presented data back to life.
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/asimumba.rbind.io\/blog\/2017\/10\/12\/breathing-life-back-into-pdf\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Aaron Simumba"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Aaron Simumba"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Aaron Simumba"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Aaron Simumba"
+        },
+        "copyrightYear" : "2017",
+        "dateCreated": "2017-10-12T00:00:00.00Z",
+        "datePublished": "2017-10-12T00:00:00.00Z",
+        "dateModified": "2017-10-12T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Aaron Simumba",
+            "url": "https://asimumba.rbind.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/asimumba.rbind.io\/favicons\/favicon.icofavicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://asimumba.rbind.io/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/asimumba.rbind.io\/blog\/2017\/10\/12\/breathing-life-back-into-pdf\/",
+        "wordCount" : "1364",
+        "genre" : [ 
+      
+      "R"
+
+    
+      
+        ,
+
+      
+      "Rmarkdown"
+
+    ],
+        "keywords" : [ 
+      
+      "pdf"
+
+    
+      
+        ,
+
+      
+      "Java-jdk"
+
+    
+      
+        ,
+
+      
+      "tabulizer"
+
+    ]
+    }
+  </script>
+
+
 
 </head>
-
-<body>
-  <div id="container">
-    <header>
-      <h1>
-                <a href="https://asimumba.rbind.io/">R . Data Science . Business Intelligence</a>
-            </h1>
-
-      <ul id="social-media">
-        
-        <li><a href="https://twitter.com/asimumba_"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-         
-        <li><a href="https://www.linkedin.com/in/aaronsimumba"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-         
-        <li><a href="https://github.com/asimumba"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a></li>
-           
-        <li><a href="https://stackoverflow.com/users/8137815/aaron-simumba"><i class="fa fa-stack-overflow fa-lg" aria-hidden="true"></i></a></li>
-        
-      </ul>
-      
-      <p><em>A Data Connoisseur&rsquo;s playground - Where data mets ideas</em></p>
-      
-    </header>
+<body
+    
+      class="body theme--light"
 
     
-<nav>
-    <ul>
+  >
+    <div class="wrapper">
+      <aside
         
-        <li>
-            <a class="" href="https://asimumba.rbind.io/blog/">
-                <i class="fa-li fa  fa-lg"></i><span>Blog</span>
-            </a>
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="https://asimumba.rbind.io/images/aaron.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="https://asimumba.rbind.io/">Aaron Simumba</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>A Data Connoisseur's playground - Where data mets ideas</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/aaronsimumba/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
         </li>
-        
-        <li>
-            <a class="" href="https://asimumba.rbind.io/portfolio/">
-                <i class="fa-li fa  fa-lg"></i><span>Portfolio</span>
-            </a>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/asimumba"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
         </li>
-        
-        <li>
-            <a class="" href="https://asimumba.rbind.io/talks/">
-                <i class="fa-li fa  fa-lg"></i><span>Talks</span>
-            </a>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://stackoverflow.com/users/8137815/aaron-simumba"
+            target="_blank"
+            rel="noopener"
+            aria-label="stackoverflow"
+            title="stackoverflow"
+          >
+            <i class="fab fa-stack-overflow fa-2x" aria-hidden="true"></i>
+          </a>
         </li>
-        
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:simumbaaaron20@gmail.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
     </ul>
-</nav>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        2017-2022 - Aaron Simumba
 
-    <main>
-
-
-
-
-<article>
-
-    <h1>Breathing life back into PDF presented Data</h1>
-
+      
+    </li>
     
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="https://asimumba.rbind.io/js/medium-zoom.min.602bd2014468bd348112e2aa24f595c530d257a4ed6c335d7baaa6ac9a7ca6fb.js"
+    integrity="sha256-YCvSAURovTSBEuKqJPWVxTDSV6TtbDNde6qmrJp8pvs="
+    crossorigin="anonymous"
+  ></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-251788376"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-251788376', { 'anonymize_ip': false });
+}
+</script>
+</div>
+</aside>
+      <main
         
-    
+          class="wrapper__main"
 
-    <p>It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.</p>
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/blog/"
+              
+              title=""
+              >Blog</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/portfolio/"
+              
+              title=""
+              >Portfolio</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/awards/"
+              
+              title=""
+              >Accomplishments</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="https://asimumba.rbind.io/talks/"
+              
+              title=""
+              >Talks</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Breathing Life Back Into PDF Presented Data</h1>
+      <p>It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.</p>
 <p>The good news is, technology seem to run on a brain of its own. While one side of the technology spectrum impedes, another end liberate. One such solution to extracting the dead and static PDF presented data, is to turn to the powerful and versatile R package, <code>tabulizer</code>. The <a href="https://github.com/ropensci/tabulizer">tabulizer</a> package is an R wrapper for the powerful PDF extractor Java library  <a href="https://github.com/tabulapdf/tabula-java/">Tabula</a>. This package allows one to extract with ease, data presented in tables in a PDF document. For as long as the data is in a clean and uncluttered format. The <code>extract_tables()</code> function will try to guess the delimiters for the data and extract the data in the format which maintains close to the original data outline.</p>
 <h2 id="installation">Installation</h2>
 <p>For the installation and usage, the package depends on Java.  The appropriate Java Development Kit can be downloaded straight from the Oracle website <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">here</a>. Installation instructions are platform specific. Follow the instructions depending on your OS. I am on Windows, so I installed Java, running the <code>jdk-8u144-windows-x64.exe</code> executable file.</p>
 <p>Installing tabulizer package, this can be installed from github. There is only the development version of the package, you will not find it on CRAN.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;ghit&#34;</span>)){
-                       <span style="color:#a6e22e">install.packages</span>(<span style="color:#e6db74">&#34;ghit&#34;</span>)
-}
-<span style="color:#75715e"># on 64-bit Windows</span>
-ghit<span style="color:#f92672">::</span><span style="color:#a6e22e">install_github</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;leeper/tabulizerjars&#34;</span>, 
-                       <span style="color:#e6db74">&#34;leeper/tabulizer&#34;</span>), 
-                         INSTALL_opts <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;--no-multiarch&#34;</span>
-                     )
-<span style="color:#75715e"># elsewhere</span>
-ghit<span style="color:#f92672">::</span><span style="color:#a6e22e">install_github</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;leeper/tabulizerjars&#34;</span>, 
-                       <span style="color:#e6db74">&#34;leeper/tabulizer&#34;</span>))
-</code></pre></div><p>This will download and install other Java related packages tabulizer depends on.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;ghit&#34;</span>)){
+</span></span><span style="display:flex;"><span>                       <span style="color:#a6e22e">install.packages</span>(<span style="color:#e6db74">&#34;ghit&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># on 64-bit Windows</span>
+</span></span><span style="display:flex;"><span>ghit<span style="color:#f92672">::</span><span style="color:#a6e22e">install_github</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;leeper/tabulizerjars&#34;</span>, 
+</span></span><span style="display:flex;"><span>                       <span style="color:#e6db74">&#34;leeper/tabulizer&#34;</span>), 
+</span></span><span style="display:flex;"><span>                         INSTALL_opts <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;--no-multiarch&#34;</span>
+</span></span><span style="display:flex;"><span>                     )
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># elsewhere</span>
+</span></span><span style="display:flex;"><span>ghit<span style="color:#f92672">::</span><span style="color:#a6e22e">install_github</span>(<span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;leeper/tabulizerjars&#34;</span>, 
+</span></span><span style="display:flex;"><span>                       <span style="color:#e6db74">&#34;leeper/tabulizer&#34;</span>))
+</span></span></code></pre></div><p>This will download and install other Java related packages tabulizer depends on.</p>
 <h2 id="demo">Demo</h2>
 <p>For demonstration purpose, I will use the report from the Central Statistics Office (CSO), Zambia, on <a href="https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf">Zambia Census Projection 2011-2035</a>. Below is the outline of the sample data as presented in the PDF report.</p>
 <p><img src="https://user-images.githubusercontent.com/24398851/31639999-7d7cc290-b2e4-11e7-85d3-03cc648a73e6.png" alt="Sample Data File - Source: CSO"></p>
 <p>We call the tabulizer package with the following command.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(<span style="color:#e6db74">&#34;tabulizer&#34;</span>)
-</code></pre></div><p>The main function is the <code>extract_tables()</code>. The first argument is the PDF <code>file</code> or report where the targeted table(s) is/are. The second argument is the <code>pages</code>, where you specify the page number the table of data is. There are other arguments such as <code>area</code>, which you can specify the targeted area(s) to extract. <code>columns</code>   which matches with the number of pages to be extracted. This argument allows for each page extracted to be stored in its own separate column.The <code>guess</code> argument, which by default is <code>=TRUE</code>, allows for the function to guess the location of the table(s) on each page. For a list of all the arguments: run <code>?extract_tables</code> in the R console.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">library</span>(<span style="color:#e6db74">&#34;tabulizer&#34;</span>)
+</span></span></code></pre></div><p>The main function is the <code>extract_tables()</code>. The first argument is the PDF <code>file</code> or report where the targeted table(s) is/are. The second argument is the <code>pages</code>, where you specify the page number the table of data is. There are other arguments such as <code>area</code>, which you can specify the targeted area(s) to extract. <code>columns</code>   which matches with the number of pages to be extracted. This argument allows for each page extracted to be stored in its own separate column.The <code>guess</code> argument, which by default is <code>=TRUE</code>, allows for the function to guess the location of the table(s) on each page. For a list of all the arguments: run <code>?extract_tables</code> in the R console.
 By default, the data is extracted as a list. Lists in R can be thought of as a vector containing other objects. We can zoom in on a particular object using the double square brackets,<code>[[]]</code>. For instance, the first object in the variable is indexed by the number 1, and the  second object by 2, and so on. Since,only one table is being extracted, the variable below contain one column; extracted with this command,<code>cso_table[[1]]</code>.</p>
 <p>The default way, <code>extract_table()</code> extracts the data as a list of character matrices. This helps in cases where the data is irregular and cannot be properly coerced to a data frame (row by column format). To change this behaviour so that the extracted data is coerced to a data frame, we supply the <code>method</code> argument, and have <code>data.frame</code> as the value.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">cso <span style="color:#f92672">&lt;-</span> (<span style="color:#e6db74">&#34;https://goo.gl/d2xMwS&#34;</span>)
-<span style="color:#75715e"># This is the shortened version of the original URL.</span>
-
-cso_table <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">extract_tables</span>(cso, pages <span style="color:#f92672">=</span> <span style="color:#ae81ff">24</span>,
-                            method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;data.frame&#34;</span>)
-<span style="color:#75715e"># We are going to pass the cso variable to the extract_tables() function</span>
-cso_column <span style="color:#f92672">&lt;-</span> cso_table[[1]]
-
-<span style="color:#75715e"># The table of interest is on page 24, the other arguments are left as defaults</span>
-</code></pre></div><p>From the extracted results, it can be seen the output is not in a &ldquo;tidy&rdquo; format, to allow any meaning analyses to be done. The next step would be reshaping and reordering the extracted results into a neat data frame.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>cso <span style="color:#f92672">&lt;-</span> (<span style="color:#e6db74">&#34;https://goo.gl/d2xMwS&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This is the shortened version of the original URL.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cso_table <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">extract_tables</span>(cso, pages <span style="color:#f92672">=</span> <span style="color:#ae81ff">24</span>,
+</span></span><span style="display:flex;"><span>                            method <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;data.frame&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># We are going to pass the cso variable to the extract_tables() function</span>
+</span></span><span style="display:flex;"><span>cso_column <span style="color:#f92672">&lt;-</span> cso_table[[1]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># The table of interest is on page 24, the other arguments are left as defaults</span>
+</span></span></code></pre></div><p>From the extracted results, it can be seen the output is not in a &ldquo;tidy&rdquo; format, to allow any meaning analyses to be done. The next step would be reshaping and reordering the extracted results into a neat data frame.</p>
 <h2 id="tidying-the-data">Tidying the data</h2>
 <p>Two approaches can be implemented here: the easy way or the hard way.</p>
 <ul>
 <li>Firstly, the easy way. We can write the data to a <code>CSV</code> file and clean the data in Microsoft Excel. The solution is to use the <code>write.csv()</code> function. The first argument in the function is the data object. The <code>file</code> argument, you define the output file name together with the file extension - in our case it is a <code>.CSV</code> extension. The <code>row.names</code> specifies whether to include the default index R attaches to the data, which spans the length of your data.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># I have passed a relative path where I want the CSV file to be stored</span>
-<span style="color:#a6e22e">write.csv</span>(cso_column, file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;cso_data.csv&#34;</span>,
-          row.names <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>) 
-</code></pre></div><p>After cleaning the data in Excel, it can be re-imported to aid in analysis.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># I have passed a relative path where I want the CSV file to be stored</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">write.csv</span>(cso_column, file <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;cso_data.csv&#34;</span>,
+</span></span><span style="display:flex;"><span>          row.names <span style="color:#f92672">=</span> <span style="color:#66d9ef">FALSE</span>) 
+</span></span></code></pre></div><p>After cleaning the data in Excel, it can be re-imported to aid in analysis.</p>
 <ul>
 <li>Second choice, the hard way. The <code>tidyverse</code> package has a suite of packages built specifically to handle such tasks. The<code>dplyr</code> package, is one such package, which represents the grammar of data manipulation. Using well crafted verbs, one can transform, order, filter etc.. data with ease.</li>
 </ul>
@@ -143,37 +530,37 @@ cso_column <span style="color:#f92672">&lt;-</span> cso_table[[1]]
 <p>First step is to clean the data, eliminating unwanted variables and title headers. That is in addition to transforming the data into a &ldquo;tidy&rdquo; format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second, and the last three row of the extracted data.</p>
 <p><code>tidyr</code> package is used to gather the observations in the columns into rows and combine all the observations across 2 columns. The function <code>gather()</code> achieves this in the <code>tidyr</code> package.</p>
 <p>After gathering the data from the columns to rows, the second issue is to index the numbers by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">cso_data <span style="color:#f92672">&lt;-</span> cso_data <span style="color:#f92672">%&gt;%</span>
-  <span style="color:#a6e22e">as_tibble</span>()
-
-cso_provincial <span style="color:#f92672">&lt;-</span> cso_data <span style="color:#f92672">%&gt;%</span>
-  <span style="color:#a6e22e">filter</span>(sex <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Total&#34;</span>) <span style="color:#f92672">%&gt;%</span>
-  <span style="color:#a6e22e">select</span>(`2011`<span style="color:#f92672">:</span>`2035`) <span style="color:#f92672">%&gt;%</span>
-  <span style="color:#a6e22e">gather</span>(key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;year&#34;</span>, value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;census_proj&#34;</span>)
-
-province <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rep</span>(
-  <span style="color:#a6e22e">c</span>(
-    <span style="color:#e6db74">&#34;central&#34;</span>,
-    <span style="color:#e6db74">&#34;copperbelt&#34;</span>,
-    <span style="color:#e6db74">&#34;eastern&#34;</span>,
-    <span style="color:#e6db74">&#34;luapula&#34;</span>,
-    <span style="color:#e6db74">&#34;lusaka&#34;</span>,
-    <span style="color:#e6db74">&#34;muchinga&#34;</span>,
-    <span style="color:#e6db74">&#34;northern&#34;</span>,
-    <span style="color:#e6db74">&#34;north.western&#34;</span>,
-    <span style="color:#e6db74">&#34;southern&#34;</span>,
-    <span style="color:#e6db74">&#34;western&#34;</span>
-  )
-  ,
-  <span style="color:#ae81ff">6</span>
-)
-
-cso_transformed <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">cbind</span>(cso_provincial, province) <span style="color:#f92672">%&gt;%</span>
-  <span style="color:#a6e22e">select</span>(year, province, census_proj) <span style="color:#f92672">%&gt;%</span>
-  <span style="color:#a6e22e">as_tibble</span>()
-
-cso_transformed
-</code></pre></div><pre><code>## # A tibble: 60 × 3
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>cso_data <span style="color:#f92672">&lt;-</span> cso_data <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">as_tibble</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cso_provincial <span style="color:#f92672">&lt;-</span> cso_data <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">filter</span>(sex <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Total&#34;</span>) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">select</span>(`2011`<span style="color:#f92672">:</span>`2035`) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">gather</span>(key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;year&#34;</span>, value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;census_proj&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>province <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">rep</span>(
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">c</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;central&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;copperbelt&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;eastern&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;luapula&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;lusaka&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;muchinga&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;northern&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;north.western&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;southern&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;western&#34;</span>
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>  ,
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cso_transformed <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">cbind</span>(cso_provincial, province) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">select</span>(year, province, census_proj) <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">as_tibble</span>()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cso_transformed
+</span></span></code></pre></div><pre tabindex="0"><code>## # A tibble: 60 × 3
 ##    year  province      census_proj
 ##    &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;      
 ##  1 2011  central       1,355,775  
@@ -188,9 +575,9 @@ cso_transformed
 ## 10 2011  western       926,478    
 ## # … with 50 more rows
 </code></pre><p>For the full data table view, see the table below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">knitr<span style="color:#f92672">::</span><span style="color:#a6e22e">kable</span>(cso_transformed, booktabs <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>,
-             caption <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Census data per Province&#34;</span>)  
-</code></pre></div><p>Table: Table 1: Census data per Province</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>knitr<span style="color:#f92672">::</span><span style="color:#a6e22e">kable</span>(cso_transformed, booktabs <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>,
+</span></span><span style="display:flex;"><span>             caption <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Census data per Province&#34;</span>)  
+</span></span></code></pre></div><p>Table: Table 1: Census data per Province</p>
 <table>
 <thead>
 <tr>
@@ -507,110 +894,58 @@ cso_transformed
 <iframe src="https://giphy.com/embed/13r9tgg7ZisiT6" frameborder="0"
     width="300" height="250" allowtransparency class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/michelle-tanner-stickleyman-13r9tgg7ZisiT6">via GIPHY</a></p>
 </center>
-
-
-</article>
-
-
-<section class="post-nav">
-    <ul>
-        
-        <li>
-            <a href="https://asimumba.rbind.io/blog/2017/10/02/mapping-twitter-data/"><i class="fa fa-chevron-circle-left"></i> Mapping the Location of Twitter Followers and Following in R</a>
-        </li>
-        
-        
-        <li>
-            <a href="https://asimumba.rbind.io/blog/2017/11/12/demo-embedding-tableau/">Demo: Embedding Tableau public Visualizations <i class="fa fa-chevron-circle-right"></i> </a>
-        </li>
-        
-    </ul>
-</section>
-    
-        
-<section class="comments-block">
-      <button id="show-comments" style="display: none;"><i class="fa fa-comments-o"></i> Add/View Comments</button>
-</section>
-
-<section id="disqus_thread"></section>
-
-<script>
-      (function () {
-            
-            
-            if (window.location.hostname == "localhost")
-                  return;
-
-            var disqus_loaded = false;
-            var disqus_shortname = 'asimumba';
-            var disqus_button = document.getElementById("show-comments");
-
-            disqus_button.style.display = "";
-            disqus_button.addEventListener("click", disqus, false);
-
-            function disqus() {
-
-                  if (!disqus_loaded) {
-                        disqus_loaded = true;
-
-                        var e = document.createElement("script");
-                        e.type = "text/javascript";
-                        e.async = true;
-                        e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
-                        (document.getElementsByTagName("head")[0] ||
-                              document.getElementsByTagName("body")[0])
-                        .appendChild(e);
-
-                        
-                        document.getElementById("show-comments").style.display = "none";
-                  }
-            }
-
-            
-            var hash = window.location.hash.substr(1);
-            if (hash.length > 8) {
-                  if (hash.substring(0, 8) == "comment-") {
-                        disqus();
-                  }
-            }
-
-            
-            if (/bot|google|baidu|bing|msn|duckduckgo|slurp|yandex/i.test(navigator.userAgent)) {
-                  disqus();
-            }
-      })();
-</script>
-    
-
-
-
-
-
-</main>
-    <footer>
-        <h6>Copyright © 2022 - Aaron Simumba | 
-            Built with <a href="https://github.com/rstudio/blogdown" title="blogdown">blogdown</a> 
-            and <a href="https://gohugo.io" title="Hugo">Hugo</a>, deployed with 
-            <a href="https://www.netlify.com/" title="netlify">netlify</a> |
-            <a href="https://asimumba.rbind.io/index.xml">Subscribe</a></h6>
-    </footer>
 </div>
-<script src="https://asimumba.rbind.io/js/scripts.js"></script>
+    <div class="post__footer">
+      
+        <span><a class="category" href="https://asimumba.rbind.io/categories/r/">R</a><a class="category" href="https://asimumba.rbind.io/categories/rmarkdown/">Rmarkdown</a></span>
 
 
-<script type="application/javascript">
+
+
+      
+
+      
+        <span><a class="tag" href="https://asimumba.rbind.io/tags/pdf/">pdf</a><a class="tag" href="https://asimumba.rbind.io/tags/java-jdk/">Java-jdk</a><a class="tag" href="https://asimumba.rbind.io/tags/tabulizer/">tabulizer</a></span>
+
+
+
+
+      
+    </div>
+
+    
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        2017-2022 - Aaron Simumba
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="https://asimumba.rbind.io/js/medium-zoom.min.602bd2014468bd348112e2aa24f595c530d257a4ed6c335d7baaa6ac9a7ca6fb.js"
+    integrity="sha256-YCvSAURovTSBEuKqJPWVxTDSV6TtbDNde6qmrJp8pvs="
+    crossorigin="anonymous"
+  ></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-251788376"></script>
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'G-251788376', 'auto');
-	
-	ga('send', 'pageview');
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-251788376', { 'anonymize_ip': false });
 }
 </script>
-
 </body>
-
 </html>

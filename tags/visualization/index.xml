@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Visualization on R . Data Science . Business Intelligence</title>
+    <title>Visualization on Aaron Simumba</title>
     <link>https://asimumba.rbind.io/tags/visualization/</link>
-    <description>Recent content in Visualization on R . Data Science . Business Intelligence</description>
+    <description>Recent content in Visualization on Aaron Simumba</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>simumbaaaron20@gmail.com (Aaron Simumba)</managingEditor>
-    <webMaster>simumbaaaron20@gmail.com (Aaron Simumba)</webMaster>
-    <copyright>Copyright &amp;copy; 2022 - Aaron Simumba</copyright>
+    <language>en</language>
     <lastBuildDate>Sun, 12 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://asimumba.rbind.io/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Demo: Embedding Tableau public Visualizations</title>
       <link>https://asimumba.rbind.io/blog/2017/11/12/demo-embedding-tableau/</link>
       <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/blog/2017/11/12/demo-embedding-tableau/</guid>
-      <description>In this short demo, I implement how to embed Tableau public visualizations on the personal website.This implementation is achieved through using iframe. The embed link from a Tableau public visualization has to be enclosed with the &amp;lt;iframe&amp;gt; &amp;lt;/iframe&amp;gt; tag. I created a visualisation of LuSE listed companies for demonstration using data from Africa Markets. The visualization below is embedded with the following code:
-&amp;lt;iframe src=&amp;quot;https://public.tableau.com/views/StockMarkets/LUSEKPI?:showVizHome=no&amp;amp;:embed=true&amp;quot; width=&amp;quot;652px&amp;quot; height=&amp;quot;756px&amp;quot; style=&amp;quot;border: 0px;&amp;quot; scrolling=&amp;quot;no&amp;quot;&amp;gt; &amp;lt;/iframe&amp;gt;  NOTE: You must strip off the extra text from the URL to the right side of the ?</description>
+      
+        <description>In this short demo, I implement how to embed Tableau public visualizations on the personal website.This implementation is achieved through using iframe. The embed link from a Tableau public visualization has to be enclosed with the &amp;lt;iframe&amp;gt; &amp;lt;/iframe&amp;gt; tag. I created a visualisation of LuSE listed companies for demonstration using data from Africa Markets. The visualization below is embedded with the following code:
+&amp;lt;iframe src=&amp;quot;https://public.tableau.com/views/StockMarkets/LUSEKPI?:showVizHome=no&amp;amp;:embed=true&amp;quot; width=&amp;quot;652px&amp;quot; height=&amp;quot;756px&amp;quot; style=&amp;quot;border: 0px;&amp;quot; scrolling=&amp;quot;no&amp;quot;&amp;gt; &amp;lt;/iframe&amp;gt; NOTE: You must strip off the extra text from the URL to the right side of the ?</description>
+      
     </item>
     
   </channel>

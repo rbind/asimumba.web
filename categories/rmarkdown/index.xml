@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rmarkdown on R . Data Science . Business Intelligence</title>
+    <title>Rmarkdown on Aaron Simumba</title>
     <link>https://asimumba.rbind.io/categories/rmarkdown/</link>
-    <description>Recent content in Rmarkdown on R . Data Science . Business Intelligence</description>
+    <description>Recent content in Rmarkdown on Aaron Simumba</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>simumbaaaron20@gmail.com (Aaron Simumba)</managingEditor>
-    <webMaster>simumbaaaron20@gmail.com (Aaron Simumba)</webMaster>
-    <copyright>Copyright &amp;copy; 2022 - Aaron Simumba</copyright>
+    <language>en</language>
     <lastBuildDate>Thu, 12 Oct 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://asimumba.rbind.io/categories/rmarkdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Breathing life back into PDF presented Data</title>
       <link>https://asimumba.rbind.io/blog/2017/10/12/breathing-life-back-into-pdf/</link>
       <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/blog/2017/10/12/breathing-life-back-into-pdf/</guid>
-      <description>It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report.</description>
+      
+        <description>Bringing PDF presented data back to life.</description>
+      
     </item>
     
     <item>
       <title>One Year Anniversary</title>
       <link>https://asimumba.rbind.io/blog/2017/08/25/one-year-anniversary/</link>
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/blog/2017/08/25/one-year-anniversary/</guid>
-      <description>The 26 August 2017 marks exactly one year since embarking on learning the R programming language. A year ago I had neither the foresight nor will strength of believing I would b this engrossed in the new found love for programming. But it didn&amp;rsquo;t take long before I found myself spending at least an hour a day playing with different skills and knowledge I had acquired. Coming from the background of playing with VBA in Excel.</description>
+      
+        <description>The 26 August 2017 marks exactly one year since embarking on learning the R programming language. A year ago I had neither the foresight nor will strength of believing I would b this engrossed in the new found love for programming. But it didn&amp;rsquo;t take long before I found myself spending at least an hour a day playing with different skills and knowledge I had acquired. Coming from the background of playing with VBA in Excel.</description>
+      
     </item>
     
   </channel>

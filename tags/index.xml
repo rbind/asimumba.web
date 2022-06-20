@@ -1,318 +1,384 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on R . Data Science . Business Intelligence</title>
+    <title>Tags on Aaron Simumba</title>
     <link>https://asimumba.rbind.io/tags/</link>
-    <description>Recent content in Tags on R . Data Science . Business Intelligence</description>
+    <description>Recent content in Tags on Aaron Simumba</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>simumbaaaron20@gmail.com (Aaron Simumba)</managingEditor>
-    <webMaster>simumbaaaron20@gmail.com (Aaron Simumba)</webMaster>
-    <copyright>Copyright &amp;copy; 2022 - Aaron Simumba</copyright>
+    <language>en</language>
     <lastBuildDate>Wed, 26 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://asimumba.rbind.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Heroku</title>
       <link>https://asimumba.rbind.io/tags/heroku/</link>
       <pubDate>Wed, 26 Dec 2018 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/heroku/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>Metabase</title>
       <link>https://asimumba.rbind.io/tags/metabase/</link>
       <pubDate>Wed, 26 Dec 2018 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/metabase/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>DataHack4FI</title>
       <link>https://asimumba.rbind.io/tags/datahack4fi/</link>
       <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/datahack4fi/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>financialInclusion</title>
       <link>https://asimumba.rbind.io/tags/financialinclusion/</link>
       <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/financialinclusion/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>african indices</title>
       <link>https://asimumba.rbind.io/tags/african-indices/</link>
       <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/african-indices/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>JSI</title>
       <link>https://asimumba.rbind.io/tags/jsi/</link>
       <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/jsi/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>LuSE</title>
       <link>https://asimumba.rbind.io/tags/luse/</link>
       <pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/luse/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>open source software</title>
       <link>https://asimumba.rbind.io/tags/open-source-software/</link>
       <pubDate>Sat, 24 Feb 2018 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/open-source-software/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>blog</title>
       <link>https://asimumba.rbind.io/tags/blog/</link>
       <pubDate>Mon, 19 Feb 2018 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/blog/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>blogdown</title>
       <link>https://asimumba.rbind.io/tags/blogdown/</link>
       <pubDate>Mon, 19 Feb 2018 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/blogdown/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>github</title>
       <link>https://asimumba.rbind.io/tags/github/</link>
       <pubDate>Mon, 19 Feb 2018 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/github/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>netlify</title>
       <link>https://asimumba.rbind.io/tags/netlify/</link>
       <pubDate>Mon, 19 Feb 2018 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/netlify/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>iframe</title>
       <link>https://asimumba.rbind.io/tags/iframe/</link>
       <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/iframe/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>tableau</title>
       <link>https://asimumba.rbind.io/tags/tableau/</link>
       <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/tableau/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>Visualization</title>
       <link>https://asimumba.rbind.io/tags/visualization/</link>
       <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/visualization/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>Java-jdk</title>
       <link>https://asimumba.rbind.io/tags/java-jdk/</link>
       <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/java-jdk/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>pdf</title>
       <link>https://asimumba.rbind.io/tags/pdf/</link>
       <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/pdf/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>tabulizer</title>
       <link>https://asimumba.rbind.io/tags/tabulizer/</link>
       <pubDate>Thu, 12 Oct 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/tabulizer/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>twitteR</title>
       <link>https://asimumba.rbind.io/tags/twitter/</link>
       <pubDate>Mon, 02 Oct 2017 17:46:47 +0200</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/twitter/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>Twitter followers</title>
       <link>https://asimumba.rbind.io/tags/twitter-followers/</link>
       <pubDate>Mon, 02 Oct 2017 17:46:47 +0200</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/twitter-followers/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>mobile penetration</title>
       <link>https://asimumba.rbind.io/tags/mobile-penetration/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/mobile-penetration/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>mobile user data</title>
       <link>https://asimumba.rbind.io/tags/mobile-user-data/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/mobile-user-data/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>Zambia</title>
       <link>https://asimumba.rbind.io/tags/zambia/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/zambia/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>continous deployment</title>
       <link>https://asimumba.rbind.io/tags/continous-deployment/</link>
       <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/continous-deployment/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>hugo</title>
       <link>https://asimumba.rbind.io/tags/hugo/</link>
       <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/hugo/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>git</title>
       <link>https://asimumba.rbind.io/tags/git/</link>
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/git/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>website</title>
       <link>https://asimumba.rbind.io/tags/website/</link>
       <pubDate>Fri, 25 Aug 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/website/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>ALSI</title>
       <link>https://asimumba.rbind.io/tags/alsi/</link>
       <pubDate>Thu, 06 Apr 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/alsi/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>stock returns</title>
       <link>https://asimumba.rbind.io/tags/stock-returns/</link>
       <pubDate>Thu, 06 Apr 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/stock-returns/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>Zambia capital market</title>
       <link>https://asimumba.rbind.io/tags/zambia-capital-market/</link>
       <pubDate>Thu, 06 Apr 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/zambia-capital-market/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>apple</title>
       <link>https://asimumba.rbind.io/tags/apple/</link>
       <pubDate>Fri, 17 Mar 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/apple/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>goog</title>
       <link>https://asimumba.rbind.io/tags/goog/</link>
       <pubDate>Fri, 17 Mar 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/goog/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>msft</title>
       <link>https://asimumba.rbind.io/tags/msft/</link>
       <pubDate>Fri, 17 Mar 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/msft/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
     <item>
       <title>stocks</title>
       <link>https://asimumba.rbind.io/tags/stocks/</link>
       <pubDate>Fri, 17 Mar 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/tags/stocks/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
   </channel>

@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Twitter followers on R . Data Science . Business Intelligence</title>
+    <title>Twitter followers on Aaron Simumba</title>
     <link>https://asimumba.rbind.io/tags/twitter-followers/</link>
-    <description>Recent content in Twitter followers on R . Data Science . Business Intelligence</description>
+    <description>Recent content in Twitter followers on Aaron Simumba</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>simumbaaaron20@gmail.com (Aaron Simumba)</managingEditor>
-    <webMaster>simumbaaaron20@gmail.com (Aaron Simumba)</webMaster>
-    <copyright>Copyright &amp;copy; 2022 - Aaron Simumba</copyright>
+    <language>en</language>
     <lastBuildDate>Mon, 02 Oct 2017 17:46:47 +0200</lastBuildDate><atom:link href="https://asimumba.rbind.io/tags/twitter-followers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mapping the Location of Twitter Followers and Following in R</title>
       <link>https://asimumba.rbind.io/blog/2017/10/02/mapping-twitter-data/</link>
       <pubDate>Mon, 02 Oct 2017 17:46:47 +0200</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/blog/2017/10/02/mapping-twitter-data/</guid>
-      <description>It is always nice to capture how wide and dense your twitter interactions spread. More so, the spread and locations of your twitter followers and those you are following. Making use of the twitteR package, and the inspiration from a post written by Jeff Leek, I attempt to map my followers&#39; locations and those I follow on twitter.
-Jeff Leek wrote a twitterMap()function that lets you map the locations of your twitter followers and those you follow, the script that holds the function can be downloaded here.</description>
+      
+        <description>Mapping locations for twitter followers and following</description>
+      
     </item>
     
   </channel>

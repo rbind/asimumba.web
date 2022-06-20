@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>financialInclusion on R . Data Science . Business Intelligence</title>
+    <title>financialInclusion on Aaron Simumba</title>
     <link>https://asimumba.rbind.io/tags/financialinclusion/</link>
-    <description>Recent content in financialInclusion on R . Data Science . Business Intelligence</description>
+    <description>Recent content in financialInclusion on Aaron Simumba</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>simumbaaaron20@gmail.com (Aaron Simumba)</managingEditor>
-    <webMaster>simumbaaaron20@gmail.com (Aaron Simumba)</webMaster>
-    <copyright>Copyright &amp;copy; 2022 - Aaron Simumba</copyright>
+    <language>en</language>
     <lastBuildDate>Sun, 11 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://asimumba.rbind.io/tags/financialinclusion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DataHack4Fi twitter data</title>
       <link>https://asimumba.rbind.io/blog/2018/11/11/datahack4fi-twitter-data/</link>
       <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/blog/2018/11/11/datahack4fi-twitter-data/</guid>
-      <description></description>
+      
+        <description></description>
+      
     </item>
     
   </channel>

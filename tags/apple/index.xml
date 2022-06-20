@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>apple on R . Data Science . Business Intelligence</title>
+    <title>apple on Aaron Simumba</title>
     <link>https://asimumba.rbind.io/tags/apple/</link>
-    <description>Recent content in apple on R . Data Science . Business Intelligence</description>
+    <description>Recent content in apple on Aaron Simumba</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>simumbaaaron20@gmail.com (Aaron Simumba)</managingEditor>
-    <webMaster>simumbaaaron20@gmail.com (Aaron Simumba)</webMaster>
-    <copyright>Copyright &amp;copy; 2022 - Aaron Simumba</copyright>
+    <language>en</language>
     <lastBuildDate>Fri, 17 Mar 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://asimumba.rbind.io/tags/apple/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Stocks Portfolio Analysis</title>
       <link>https://asimumba.rbind.io/blog/2017/03/17/portfolio-analysis/</link>
       <pubDate>Fri, 17 Mar 2017 00:00:00 +0000</pubDate>
-      <author>simumbaaaron20@gmail.com (Aaron Simumba)</author>
+      
       <guid>https://asimumba.rbind.io/blog/2017/03/17/portfolio-analysis/</guid>
-      <description>library(quantmod) library(ggplot2) library(xts) library(highcharter) library(PerformanceAnalytics) library(dygraphs) ## Dates have been loaded as a factor instead of as dates.  #There is need to convert this variable to the date class and covert the rest of the variables to xts(Extensible Time Series) temp &amp;lt;- xts(x =fundreturn[,-1], order.by = as.</description>
+      
+        <description>library(quantmod) library(ggplot2) library(xts) library(highcharter) library(PerformanceAnalytics) library(dygraphs) ## Dates have been loaded as a factor instead of as dates. #There is need to convert this variable to the date class and covert the rest of the variables to xts(Extensible Time Series) temp &amp;lt;- xts(x =fundreturn[,-1], order.by = as.Date(fundreturn[,1])) # all the variables except data are coerced to xts using date as the index. # Overwriting the fundreturn object with the xts temp object fundreturn &amp;lt;- temp str(fundreturn) #&amp;gt; An &amp;#39;xts&amp;#39; object on 2007-06-01/2016-11-01 containing: #&amp;gt; Data: num [1:114, 1:18] 0.</description>
+      
     </item>
     
   </channel>
