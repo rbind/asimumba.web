@@ -74,6 +74,7 @@ Mapping my twitter data, I run the following code, supplying my twitter username
 
 I call the `twitterMap.R` script through `source()`, the script loads the function in the work environment, in order to use the `twitterMap()` command. 
 
+
 ```{r, message=FALSE, eval=FALSE}
 source("twitterMap.R")
 

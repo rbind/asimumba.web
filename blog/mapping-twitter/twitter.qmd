@@ -17,6 +17,7 @@ Although it is one thing to put your thoughts out. It is another issue to attrac
 After finalising my previous blog [post](https://asimumba.rbind.io/2017/10/02/mapping-the-location-of-my-twitter-followers-and-following-in-r/), I decided to tweet the post, with the hash tag `#rstats`. Which is like the defacto twitter label if you want to get noticed in the `R` community. It did not take a long time before the post was being liked and retweeted within the community. Next, I checked my Google analytics data and the traffic had gone tenfold, all because of one post that most found of interest. 
 
 The post was not really based on something original, I was implementing some work done by [Jeff Leek](https://twitter.com/jtleek). Which I am happy I got to learn and experience something new. Thanks to `@Thinkr` for initiating the retweet... As they say the rest is history.
+
 <center>
 {{< tweet 915497991955472384 >}}
 </center>
