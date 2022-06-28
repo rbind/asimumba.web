@@ -13,8 +13,7 @@ image: line.jpg
 ---
 
 
-**African Markets indices performance tracker**
-
+African Markets indices performance tracker.
 A minimal project tracking selected African markets indices. The data used in the dashboard comes from the [African Markets](https://www.african-markets.com/en/) website.
 
 

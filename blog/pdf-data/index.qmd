@@ -8,7 +8,6 @@ tags:
   - pdf
   - Java-jdk
   - tabulizer
-description: Bringing PDF presented data back to life.
 slug: Breathing-life-back-into-PDF
 image: "pdf.jpg"
 ---

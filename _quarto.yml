@@ -10,7 +10,7 @@ website:
   repo-actions: [edit, issue]
   comments:
     utterances:
-      repo: asimumba/asimumba.web
+      repo: rbind/asimumba.web/
       label: "Comments"
       theme: github-light
   open-graph: true
@@ -18,9 +18,9 @@ website:
   navbar:
     right:
       - about.qmd
-      - talks.qmd
       - portfolio.qmd
       - Accomplishments.qmd
+      - talks.qmd
       - icon: github
         href: https://github.com/asimumba/
       - icon: twitter
@@ -31,7 +31,9 @@ website:
     left: "Blog made with [Quarto](https://quarto.org/) and published with [Netflify](https://www.netlify.com/) - Aaron Simumba. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
 format:
   html:
-    theme: cosmo
+    theme: 
+      light: cosmo
+      dark: darkly
     css: styles.css
 
 
