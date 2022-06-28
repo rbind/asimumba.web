@@ -164,7 +164,7 @@ gtag('config', 'G-251788376', { 'anonymize_ip': true});
     <a class="nav-link" href="../../portfolio.html">Portfolio</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../accomplishments.html">Accomplishments</a>
+    <a class="nav-link" href="../../Accomplishments.html">Accomplishments</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../talks.html">Talks</a>
@@ -454,13 +454,14 @@ gtag('config', 'G-251788376', { 'anonymize_ip': true});
 </table>
 </div>
 </div>
-<p>In terms of the summary statistics, the active users numbers have average 10,285,415 a year. Considering a population size of nearly 16 million, this is a decent uptake in active mobile users. ::: {.cell}</p>
+<p>In terms of the summary statistics, the active users numbers have average 10,285,415 a year. Considering a population size of nearly 16 million, this is a decent uptake in active mobile users.</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(operator_stats<span class="sc">$</span>Number_of_active_Subscribers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-stdout">
+<div class="cell-output cell-output-stdout">
 <pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
  5447536 10114867 10524676 10285415 11916871 12429675 </code></pre>
 </div>
-<p>:::</p>
+</div>
 <p>For the mobile penetration numbers per 100 inhabitants, the graph below shows an upward trend for much of the years under review. More in line with the active user base numbers.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>operator_stats <span class="sc">%&gt;%</span></span>
@@ -604,7 +605,7 @@ gtag('config', 'G-251788376', { 'anonymize_ip': true});
 <p>The broadband data which covers all those on Direct Subscriber Line,cable and optic fibre internet access, on average there are 3855730 users, with 75% of the users amounting to 5338910.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(operator_stats<span class="sc">$</span>Mobile_Broadband_users)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-stdout">
+<div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
  379888 2289147 4403005 3855730 5338910 6090412       1 </code></pre>
 </div>
@@ -930,7 +931,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://utteranc.es/client.js" repo="asimumba/asimumba.web" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+<script src="https://utteranc.es/client.js" repo="rbind/asimumba.web/" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">
