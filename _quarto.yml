@@ -1,0 +1,37 @@
+project:
+  type: website
+
+website:
+  title: "R . Data Science . Business Intelligence"
+  site-url: https://asimumba.rbind.io/
+  repo-url: https://github.com/rbind/asimumba.web/
+  google-analytics: "G-251788376"
+  repo-actions: [edit, issue]
+  comments:
+    utterances:
+      repo: asimumba/asimumba.web
+      label: "Comments"
+      theme: github-light
+  open-graph: true
+  favicon: favicon.ico
+  navbar:
+    right:
+      - about.qmd
+      - talks.qmd
+      - portfolio.qmd
+      - Accomplishments.qmd
+      - icon: github
+        href: https://github.com/asimumba/
+      - icon: twitter
+        href: https://twitter.com/asimumba_/
+      - icon: stack-overflow
+        href: https://stackoverflow.com/users/8137815/aaron-simumba/
+  page-footer:
+    left: "Blog made with [Quarto](https://quarto.org/) and published with [Netflify](https://www.netlify.com/) - Aaron Simumba. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+
