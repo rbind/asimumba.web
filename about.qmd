@@ -13,6 +13,8 @@ about:
     - icon: github
       text: Github
       href: https://github.com/asimumba/
+citation: false
+comments: false
 ---
 
 Hi, I'm **Aaron Simumba**, welcome to my website.

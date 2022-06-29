@@ -3,6 +3,8 @@ title: "Accomplishments"
 editor_options: 
   markdown: 
     wrap: 72
+citation: false
+comments: false
 ---
 
 ### Awards
@@ -18,9 +20,9 @@ editor_options:
     Entrepreneurs Financial Centre
 4.  **2020 Google Africa Developer Scholarship Recipient** - pursued the
     Google Cloud Engineer certification
-5.   **2019 Rookie of the Year at Entrepreneurs Financial Centre** --
-    For developing an innovative solution in the first year of joining
-    the company
+5.  **2019 Rookie of the Year at Entrepreneurs Financial Centre** -- For
+    developing an innovative solution in the first year of joining the
+    company
 6.  2019 Financial Aid to pursue **Financial Regulation in Emerging
     Markets and the Rise of FinTechs** -- University of Cape Town
     through Coursera
@@ -56,7 +58,7 @@ University of Namibia - **Bachelor of Accounting (Honours)**
 ### Courses completed
 
 -   Data Analysis with Spreadsheets -
-    [[**DataCamp**](https://www.datacamp.com/statement-of-accomplishment/course/712b36601d6e732f07128239c057eda77132ae38)]{.underline}
+    [[**DataCamp**]{.underline}](https://www.datacamp.com/statement-of-accomplishment/course/712b36601d6e732f07128239c057eda77132ae38)
 -   Introduction to R course -
     [**DataCamp**](https://www.datacamp.com/statement-of-accomplishment/course/284ca241bbb76f34add2d7c8a7ad4d4a8167d7f2)
 -   Introduction to SQL for Data Science Course -

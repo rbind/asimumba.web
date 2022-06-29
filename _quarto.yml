@@ -9,14 +9,14 @@ website:
   repo-actions: [edit, issue]
   comments:
     utterances:
-      repo: /rbind/asimumba.web/
+      repo: rbind/asimumba.web
       label: "Comments"
       theme: github-light
   open-graph: true
   twitter-card:
     creator: "@asimumba_"
     card-style: summary_large_image
-  favicon: favicon.ico
+  favicon: /data/images/favicon.ico
   navbar:
     right:
       - blog.qmd
@@ -30,7 +30,7 @@ website:
       - icon: stack-overflow
         href: https://stackoverflow.com/users/8137815/aaron-simumba/
   page-footer:
-    left: "Blog made with [Quarto](https://quarto.org/) and published with [Netflify](https://www.netlify.com/) - Aaron Simumba. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
+    left: "(c) Aaron Simumba. Blog made with [Quarto](https://quarto.org/) and published with [Netflify](https://www.netlify.com/). License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)."
     right:
       - icon: github
         href: https://github.com/asimumba/
@@ -38,10 +38,11 @@ website:
         href: https://twitter.com/asimumba_/
       - icon: envelope
         href: mailto:simumbaaaron20@gmail.com
+citation: true
+toc: true
 format:
   html:
     theme: 
-      #dark: cosmo
       dark: darkly
     css: styles.css
     

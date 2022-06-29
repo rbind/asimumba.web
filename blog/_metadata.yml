@@ -1,4 +1,3 @@
 
-freeze: false
-# Enable banner style title blocks
+freeze: true
 title-block-banner: true
