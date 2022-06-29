@@ -61,7 +61,7 @@ By default, the data is extracted as a list. Lists in R can be thought of as a v
 
 The default way, `extract_table()` extracts the data as a list of character matrices. This helps in cases where the data is irregular and cannot be properly coerced to a data frame (row by column format). To change this behaviour so that the extracted data is coerced to a data frame, we supply the `method` argument, and have `data.frame` as the value.   
 
-```{r}
+```{r, eval=FALSE}
 cso <- ("https://goo.gl/d2xMwS")
 # This is the shortened version of the original URL.
 

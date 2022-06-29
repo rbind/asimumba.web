@@ -5,4 +5,3 @@ title: 'Portfolio'
 A place where I showcase my portfolio of projects and tools I have developed related to data analytics.
 
 1.  Sector Visualisation for [BongoHive](http://bongohive.co.zm/)
-

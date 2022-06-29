@@ -42,7 +42,7 @@ format:
   html:
     theme: 
       #dark: cosmo
-      light: darkly
+      dark: darkly
     css: styles.css
     
 
