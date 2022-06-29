@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.629">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>R . Data Science . Business Intelligence - Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./favicon.ico" rel="icon">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-categories','listing-author','listing-reading-time','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-251788376"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-251788376', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="R . Data Science . Business Intelligence - Blog">
+<meta property="og:site-name" content="R . Data Science . Business Intelligence">
+<meta name="twitter:title" content="R . Data Science . Business Intelligence - Blog">
+<meta name="twitter:creator" content="@asimumba_">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">R . Data Science . Business Intelligence</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./blog.html" aria-current="page">Blog</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./portfolio.html">Portfolio</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Accomplishments.html">Accomplishments</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./talks.html">Talks</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/asimumba/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/asimumba_/"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://stackoverflow.com/users/8137815/aaron-simumba/"><i class="bi bi-stack-overflow" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Blog</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"><div class="category" data-category="R"><span class="quarto-category-count category-cloud-2">R</span></div><div class="category" data-category="Stock market"><span class="quarto-category-count category-cloud-1">Stock market</span></div><div class="category" data-category="analysis"><span class="quarto-category-count category-cloud-1">analysis</span></div><div class="category" data-category="apple"><span class="quarto-category-count category-cloud-1">apple</span></div><div class="category" data-category="blogdown"><span class="quarto-category-count category-cloud-1">blogdown</span></div><div class="category" data-category="datahack4fi"><span class="quarto-category-count category-cloud-1">datahack4fi</span></div><div class="category" data-category="google"><span class="quarto-category-count category-cloud-1">google</span></div><div class="category" data-category="hugo"><span class="quarto-category-count category-cloud-2">hugo</span></div><div class="category" data-category="msft"><span class="quarto-category-count category-cloud-1">msft</span></div><div class="category" data-category="open sourse"><span class="quarto-category-count category-cloud-1">open sourse</span></div><div class="category" data-category="reflections"><span class="quarto-category-count category-cloud-1">reflections</span></div><div class="category" data-category="rmarkdown"><span class="quarto-category-count category-cloud-1">rmarkdown</span></div><div class="category" data-category="twitter"><span class="quarto-category-count category-cloud-1">twitter</span></div></div></div>
+<!-- main -->
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1545775200000" data-listing-file-modified-sort="1656455989283" data-listing-reading-time-sort="0.465">
+<div class="thumbnail">
+<p><a href="./blog/metabase/index.html"> <img src="./blog/metabase/deploy.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/metabase/index.html">
+<h3 class="no-anchor listing-title">
+Deploying Metabase through Heroku App
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+In this mini project, I deployed my first <strong>Metabase</strong> through the Heroku App. Metabase is an open source business intelligence engine. It allows for company wide sharing of business insights with very little demand for techinical know-how. You can build powerful business data models using <strong>SQL</strong> and through the menu based report mechanism.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/metabase/index.html">
+<div class="listing-date">
+Dec 26, 2018
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+0 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="datahack4fi,twitter,analysis" data-listing-date-sort="1541887200000" data-listing-file-modified-sort="1656448878531" data-listing-reading-time-sort="0.09">
+<div class="thumbnail">
+<p><a href="./blog/datahack4fi/index.html"> <img src="./blog/datahack4fi/thumb.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/datahack4fi/index.html">
+<h3 class="no-anchor listing-title">
+DataHack4Fi twitter data
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('datahack4fi'); return false;">
+datahack4fi
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('twitter'); return false;">
+twitter
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
+analysis
+</div>
+</div>
+<a href="./blog/datahack4fi/index.html">
+<div class="listing-description">
+Scraping twitter data based on discussion under the #datahack4fi tag.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/datahack4fi/index.html">
+<div class="listing-date">
+Nov 11, 2018
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+0 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="Stock market" data-listing-date-sort="1541541600000" data-listing-file-modified-sort="1656458865207" data-listing-reading-time-sort="0.35">
+<div class="thumbnail">
+<p><a href="./blog/afrimarkets/index.html"> <img src="./blog/afrimarkets/line.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/afrimarkets/index.html">
+<h3 class="no-anchor listing-title">
+African Markets indices tracker
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Stock market'); return false;">
+Stock market
+</div>
+</div>
+<a href="./blog/afrimarkets/index.html">
+<div class="listing-description">
+African Markets indices performance tracker. A minimal project tracking selected African markets indices. The data used in the dashboard comes from the African Markets website.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/afrimarkets/index.html">
+<div class="listing-date">
+Nov 7, 2018
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+0 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="open sourse" data-listing-date-sort="1519423200000" data-listing-file-modified-sort="1656449579417" data-listing-reading-time-sort="1.11">
+<div class="thumbnail">
+<p><a href="./blog/oss/index.html"> <img src="./blog/oss/passion.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/oss/index.html">
+<h3 class="no-anchor listing-title">
+Money is everything, but you haven’t met Open Source Software maintainers
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('open sourse'); return false;">
+open sourse
+</div>
+</div>
+<a href="./blog/oss/index.html">
+<div class="listing-description">
+For profit centred enterprises, it is not surprising when you encounter their overly aggressive marketing campaigns, which mostly have an end result of them trying to squeeze every penny from you as a customer. At the end of the day, you pay even for a service and product that is not satisfactory or worse, not worth you hard earned money.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/oss/index.html">
+<div class="listing-date">
+Feb 24, 2018
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+1 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="blogdown,R,hugo" data-listing-date-sort="1518991200000" data-listing-file-modified-sort="1656458509415" data-listing-reading-time-sort="4.315">
+<div class="thumbnail">
+<p><a href="./blog/website/index.html"> <img src="./blog/website/website.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/website/index.html">
+<h3 class="no-anchor listing-title">
+Thoughts to Words - An Introduction to Aaron Simumba’s Website
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('blogdown'); return false;">
+blogdown
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('hugo'); return false;">
+hugo
+</div>
+</div>
+<a href="./blog/website/index.html">
+<div class="listing-description">
+This post was originally submitted to the Rbind support website. ***
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/website/index.html">
+<div class="listing-date">
+Feb 19, 2018
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+4 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1510437600000" data-listing-file-modified-sort="1656450242040" data-listing-reading-time-sort="1.17">
+<div class="thumbnail">
+<p><a href="./blog/tableau/index.html"> <img src="./blog/tableau/tableau.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/tableau/index.html">
+<h3 class="no-anchor listing-title">
+Demo: Embedding Tableau public Visualizations
+</h3>
+<div class="listing-subtitle">
+Through Tableau public integration
+</div>
+<div class="listing-description">
+
+In this short demo, I implement how to embed Tableau public visualizations on the personal website.This implementation is achieved through using <code>iframe.</code> The embed link from a Tableau public visualization has to be enclosed with the <code>&lt;iframe&gt; &lt;/iframe&gt;</code> tag. I created a visualisation of LuSE listed companies for demonstration using data from Africa Markets. The visualization below is embedded with the following code:
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/tableau/index.html">
+<div class="listing-date">
+Nov 12, 2017
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+1 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="rmarkdown" data-listing-date-sort="1507759200000" data-listing-file-modified-sort="1656458546635" data-listing-reading-time-sort="6.78">
+<div class="thumbnail">
+<p><a href="./blog/pdf-data/index.html"> <img src="./blog/pdf-data/pdf.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/pdf-data/index.html">
+<h3 class="no-anchor listing-title">
+Breathing life back into PDF presented Data
+</h3>
+<div class="listing-subtitle">
+Implementation through Tabulizer
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('rmarkdown'); return false;">
+rmarkdown
+</div>
+</div>
+<a href="./blog/pdf-data/index.html">
+<div class="listing-description">
+It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/pdf-data/index.html">
+<div class="listing-date">
+Oct 12, 2017
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+6 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1507240800000" data-listing-file-modified-sort="1656458610073" data-listing-reading-time-sort="1.4">
+<div class="thumbnail">
+<p><a href="./blog/mapping-twitter/twitter.html"> <img src="./blog/mapping-twitter/twitter.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/mapping-twitter/twitter.html">
+<h3 class="no-anchor listing-title">
+Let twitter do the job
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+One of the most exciting things I’ve been able to do in the past few months, has been my rekindled interest in blogging. No matter how trivial the idea that comes to mind is, I find myself constantly wanting to put it in words and hang it somewhere on this site. Although, this may seem like an obsession; you never know who is reading or interested in your thoughts, no matter how non-bearing they may seem.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/mapping-twitter/twitter.html">
+<div class="listing-date">
+Oct 6, 2017
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+1 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1506959207000" data-listing-file-modified-sort="1656525445193" data-listing-reading-time-sort="4.005">
+<div class="thumbnail">
+<p><a href="./blog/mapping-twitter/index.html"> <img src="./blog/mapping-twitter/twitter.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/mapping-twitter/index.html">
+<h3 class="no-anchor listing-title">
+Mapping the Location of Twitter Followers and Following in R
+</h3>
+<div class="listing-subtitle">
+Twitter data mining
+</div>
+<div class="listing-description">
+It is always nice to capture how wide and dense your twitter interactions spread. More so, the spread and locations of your twitter followers and those you are following. Making use of the <code>twitteR</code> package, and the inspiration from a post written by Jeff Leek, I attempt to map my followers’ locations and those I follow on twitter.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/mapping-twitter/index.html">
+<div class="listing-date">
+Oct 2, 2017
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+4 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-listing-date-sort="1506463200000" data-listing-file-modified-sort="1656449726642" data-listing-reading-time-sort="12.82">
+<div class="thumbnail">
+<p><a href="./blog/mobile-data/index.html"> <img src="./blog/mobile-data/mobile.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/mobile-data/index.html">
+<h3 class="no-anchor listing-title">
+Mobile and Internet Penetration in Zambia
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+In this post, I take an Exploratory Data Analysis (EDA) of the mobile phone and internet user data statistics for Zambia. Making use of the Zambia Information and Communications, Technology Authority (ZICTA) data. I will walk through the data on the subscriber base, the user traffic and the cost differentials among the three mobile operators, these being: Airtel, Zamtel and MTN Zambia. In addition, internet usage and the operational data on Internet Service Providers(ISPs) will be used.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/mobile-data/index.html">
+<div class="listing-date">
+Sep 27, 2017
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+12 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-listing-date-sort="1505253600000" data-listing-file-modified-sort="1656453044876" data-listing-reading-time-sort="1.185">
+<div class="thumbnail">
+<p><a href="./blog/netflify-conflicts/index.html"> <img src="./blog/netflify-conflicts/netlify.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/netflify-conflicts/index.html">
+<h3 class="no-anchor listing-title">
+How to resolve hugo version conflicts with the default version on netlify
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+There is nothing as frustrating as getting stuck with a computer operation/code bug, which you know no better how to get around it. That was my frustration while trying to deploy my website through netlify. Having changed the theme I was initially working with to the new theme, Cactus. I later discovered, the theme is only compatible with version 0.20 and above of the static site generator hugo. After hours of trying to debug what the problem might be to no avail. Before I could finally give up for another day, I stumbled upon this post that opened my eyes to look in the right place.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/netflify-conflicts/index.html">
+<div class="listing-date">
+Sep 13, 2017
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+1 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="11" data-categories="reflections" data-listing-date-sort="1503612000000" data-listing-file-modified-sort="1656449393020" data-listing-reading-time-sort="3.495">
+<div class="thumbnail">
+<p><a href="./blog/one-year/index.html"> <img src="./blog/one-year/ballons.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/one-year/index.html">
+<h3 class="no-anchor listing-title">
+One Year Anniversary
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('reflections'); return false;">
+reflections
+</div>
+</div>
+<a href="./blog/one-year/index.html">
+<div class="listing-description">
+The 26 August 2017 marks exactly one year since embarking on learning the R programming language. A year ago I had neither the foresight nor will strength of believing I would b this engrossed in the new found love for programming. But it didn’t take long before I found myself spending at least an hour a day playing with different skills and knowledge I had acquired. Coming from the background of playing with VBA in Excel. I got hooked every time I discovered I could do something more efficiently and, less painful in R than other data analysis packages I had used.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/one-year/index.html">
+<div class="listing-date">
+Aug 25, 2017
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+3 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="12" data-categories="hugo,R" data-listing-date-sort="1499032800000" data-listing-file-modified-sort="1656458678167" data-listing-reading-time-sort="1.47">
+<div class="thumbnail">
+<p><a href="./blog/blogdown/index.html"> <img src="./blog/blogdown/code.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/blogdown/index.html">
+<h3 class="no-anchor listing-title">
+Building a Website with Blogdown and Hugo
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('hugo'); return false;">
+hugo
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+</div>
+<a href="./blog/blogdown/index.html">
+<div class="listing-description">
+In this short post. I will detail my journey building my website using <strong>blogdown</strong> an <strong>R</strong> package that makes use of the static website generator <strong>Hugo</strong>. This is a great R package, written by Yihui Xie.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/blogdown/index.html">
+<div class="listing-date">
+Jul 3, 2017
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+1 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="13" data-listing-date-sort="1491429600000" data-listing-file-modified-sort="1656523300392" data-listing-reading-time-sort="6.525">
+<div class="thumbnail">
+<p><a href="./blog/luse/index.html"> <img src="./blog/luse/markets.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/luse/index.html">
+<h3 class="no-anchor listing-title">
+What’s in the numbers: A look at the Lusaka Securities Exchange
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+In the next coming few weeks, I plan to do a series of posts specifically targeted at the Lusaka Securities Exchange (LuSE). Essentially, this idea came to mind after reading through this Bloomberg Markets article, which highlights historical equity market returns . One aspect that stands out from this article is that over the past 2 decades, emerging markets equities provided greater returns; both on a risk adjusted basis and in dollar terms.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/luse/index.html">
+<div class="listing-date">
+Apr 6, 2017
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+6 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="14" data-categories="google,apple,msft" data-listing-date-sort="1489701600000" data-listing-file-modified-sort="1656449316071" data-listing-reading-time-sort="4.655">
+<div class="thumbnail">
+<p><a href="./blog/stock-returns/index.html"> <img src="./blog/stock-returns/returns.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./blog/stock-returns/index.html">
+<h3 class="no-anchor listing-title">
+Stocks Portfolio Analysis
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('google'); return false;">
+google
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('apple'); return false;">
+apple
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('msft'); return false;">
+msft
+</div>
+</div>
+<a href="./blog/stock-returns/index.html">
+<div class="listing-description">
+Detailed stock analysis process.
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./blog/stock-returns/index.html">
+<div class="listing-date">
+Mar 17, 2017
+</div>
+<div class="listing-author">
+Aaron Simumba
+</div>
+<div class="listing-reading-time">
+4 min
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="/rbind/asimumba.web/" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Blog made with <a href="https://quarto.org/">Quarto</a> and published with <a href="https://www.netlify.com/">Netflify</a> - Aaron Simumba. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/asimumba/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/asimumba_/">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:simumbaaaron20@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

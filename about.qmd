@@ -15,10 +15,9 @@ about:
       href: https://github.com/asimumba/
 ---
 
-
 Hi, I'm **Aaron Simumba**, welcome to my website.
 
-I work in the financial services sector as a **Business Intelligence & Analytics Lead**. Previously, I worked for [**mPharma**](https://www.mpharma.com/) as a **Data Management Associate**. 
+I work in the financial services sector as a **Business Intelligence & Analytics Lead**. Previously, I worked for [**mPharma**](https://www.mpharma.com/) as a **Data Management Associate**.
 
 In another life, I was an Accounting and Finance major. Graduated from the [**University of Namibia**](http://unam.edu.na/) with a BA degree in Accounting(Honours). Equally tutored Business Administration students in the art of business and accounting at the [**University of Zambia**](https://www.unza.zm/).
 
@@ -30,23 +29,22 @@ I can be found on [**Github**](https://github.com/asimumba/) poking around inter
 
 `For this website`
 
->This will be a place where I share my daily musings in the world of R, analytics and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies.
+> This will be a place where I share my daily musings in the world of R, analytics and mostly, everything remotely interesting. I have a knack for learning interesting data analytics technologies.
 
 `Let's have fun!` :smile:
 
-
 **Recommended blogs**
 
-- [*Yihui Xie*](https://yihui.name/en/)
+-   [Yihui Xie](https://yihui.name/en/)
 
-- [*David Robinson - Variance explained*](http://varianceexplained.org/)
+-   [David Robinson - Variance explained](http://varianceexplained.org/)
 
-- [*Simply Statistics*](https://simplystatistics.org/)
+-   [Simply Statistics](https://simplystatistics.org/)
 
-- [*R Bloggers*](https://www.r-bloggers.com/)
+-   [R Bloggers](https://www.r-bloggers.com/)
 
-- [*RStudio blog*](https://blog.rstudio.com/)
+-   [RStudio blog](https://blog.rstudio.com/)
 
-- [*RStudio community: Everything RStudio*](https://community.rstudio.com/)
-- [*R Weekly*](https://rweekly.org/)
+-   [RStudio community: Everything RStudio](https://community.rstudio.com/)
 
+-   [R Weekly](https://rweekly.org/)
