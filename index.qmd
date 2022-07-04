@@ -37,10 +37,16 @@ For this website:
 
 **Recommended blogs**
 
-i.  [[*Yihui Xie*]{.underline}](https://yihui.name/en/)
-ii. [[*David Robinson - Variance explained*]{.underline}](http://varianceexplained.org/)
-iii. [[*Simply Statistics*]{.underline}](https://simplystatistics.org/)
-iv. [[*R Bloggers*]{.underline}](https://www.r-bloggers.com/)
-v.  [[*RStudio blog*]{.underline}](https://blog.rstudio.com/)
-vi. [[*RStudio community: Everything RStudio*]{.underline}](https://community.rstudio.com/)
-vii. [[*R Weekly*]{.underline}](https://rweekly.org/)
+[[*Yihui Xie*]{.underline}](https://yihui.name/en/)
+
+[[*David Robinson - Variance explained*]{.underline}](http://varianceexplained.org/)
+
+[[*Simply Statistics*]{.underline}](https://simplystatistics.org/)
+
+[[*R Bloggers*]{.underline}](https://www.r-bloggers.com/)
+
+[[*RStudio blog*]{.underline}](https://blog.rstudio.com/)
+
+[[*RStudio community: Everything RStudio*]{.underline}](https://community.rstudio.com/)
+
+[[*R Weekly*]{.underline}](https://rweekly.org/)
