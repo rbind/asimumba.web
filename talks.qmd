@@ -1,7 +1,7 @@
 ---
 title: 'Talks'
 citation: false
-comments: false
+
 ---
 
 -   **2017 Facebook Developer Circles** - AI Masterclass speech 101 panelist under the topic: *AI, is the Zambian Industry Ready for the next wave in tech, and what are the opportunities.*

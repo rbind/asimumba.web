@@ -10,8 +10,8 @@ website:
   comments:
     utterances:
       repo: rbind/asimumba.web
-      label: "Comments"
-      theme: github-light
+      #label: "Comments"
+      theme: github-dark
   open-graph: true
   twitter-card:
     creator: "@asimumba_"

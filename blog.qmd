@@ -12,5 +12,4 @@ listing:
 page-layout: full
 title-block-banner: true
 citation: false
-comments: false
 ---

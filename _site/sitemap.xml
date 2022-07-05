@@ -2,90 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://asimumba.rbind.io/about.html</loc>
-    <lastmod>2022-07-04T12:03:27.611Z</lastmod>
-  </url>
-  <url>
-    <loc>https://asimumba.rbind.io/accomplishments.html</loc>
-    <lastmod>2022-07-04T12:03:29.639Z</lastmod>
-  </url>
-  <url>
-    <loc>https://asimumba.rbind.io/blog/afrimarkets/index.html</loc>
-    <lastmod>2022-07-04T12:03:31.842Z</lastmod>
-  </url>
-  <url>
-    <loc>https://asimumba.rbind.io/blog/blogdown/index.html</loc>
-    <lastmod>2022-07-04T12:03:33.830Z</lastmod>
-  </url>
-  <url>
-    <loc>https://asimumba.rbind.io/blog/datahack4fi/index.html</loc>
-    <lastmod>2022-07-04T12:03:35.748Z</lastmod>
-  </url>
-  <url>
-    <loc>https://asimumba.rbind.io/blog/luse/index.html</loc>
-    <lastmod>2022-07-04T12:03:40.076Z</lastmod>
-  </url>
-  <url>
-    <loc>https://asimumba.rbind.io/blog/mapping-twitter/index.html</loc>
-    <lastmod>2022-07-04T12:03:43.248Z</lastmod>
-  </url>
-  <url>
-    <loc>https://asimumba.rbind.io/blog/mapping-twitter/twitter.html</loc>
-    <lastmod>2022-07-04T12:03:45.141Z</lastmod>
-  </url>
-  <url>
-    <loc>https://asimumba.rbind.io/blog/metabase/index.html</loc>
-    <lastmod>2022-07-04T12:03:47.029Z</lastmod>
-  </url>
-  <url>
-    <loc>https://asimumba.rbind.io/blog/mobile-data/index.html</loc>
-    <lastmod>2022-07-04T12:03:51.145Z</lastmod>
-  </url>
-  <url>
-    <loc>https://asimumba.rbind.io/blog/netflify-conflicts/index.html</loc>
-    <lastmod>2022-07-04T12:03:53.102Z</lastmod>
-  </url>
-  <url>
-    <loc>https://asimumba.rbind.io/blog/one-year/index.html</loc>
-    <lastmod>2022-07-04T12:03:55.055Z</lastmod>
+    <lastmod>2022-07-05T11:29:11.542Z</lastmod>
   </url>
   <url>
     <loc>https://asimumba.rbind.io/blog/oss/index.html</loc>
-    <lastmod>2022-07-04T12:03:57.015Z</lastmod>
+    <lastmod>2022-07-05T11:29:12.038Z</lastmod>
   </url>
   <url>
-    <loc>https://asimumba.rbind.io/blog/pdf-data/index.html</loc>
-    <lastmod>2022-07-04T12:04:00.633Z</lastmod>
+    <loc>https://asimumba.rbind.io/blog/mobile-data/index.html</loc>
+    <lastmod>2022-07-05T11:29:12.918Z</lastmod>
   </url>
   <url>
-    <loc>https://asimumba.rbind.io/blog/stock-returns/index.html</loc>
-    <lastmod>2022-07-04T12:04:04.034Z</lastmod>
+    <loc>https://asimumba.rbind.io/blog/blogdown/index.html</loc>
+    <lastmod>2022-07-05T11:29:13.322Z</lastmod>
+  </url>
+  <url>
+    <loc>https://asimumba.rbind.io/blog/datahack4fi/index.html</loc>
+    <lastmod>2022-07-05T11:29:13.730Z</lastmod>
   </url>
   <url>
     <loc>https://asimumba.rbind.io/blog/tableau/index.html</loc>
-    <lastmod>2022-07-04T12:04:05.929Z</lastmod>
+    <lastmod>2022-07-05T11:29:14.066Z</lastmod>
   </url>
   <url>
     <loc>https://asimumba.rbind.io/blog/website/index.html</loc>
-    <lastmod>2022-07-04T12:04:07.926Z</lastmod>
+    <lastmod>2022-07-05T11:29:14.478Z</lastmod>
   </url>
   <url>
-    <loc>https://asimumba.rbind.io/blog.html</loc>
-    <lastmod>2022-07-04T12:04:10.262Z</lastmod>
+    <loc>https://asimumba.rbind.io/blog/pdf-data/index.html</loc>
+    <lastmod>2022-07-05T11:29:15.122Z</lastmod>
   </url>
   <url>
-    <loc>https://asimumba.rbind.io/index.html</loc>
-    <lastmod>2022-07-04T12:04:11.736Z</lastmod>
+    <loc>https://asimumba.rbind.io/blog/stock-returns/index.html</loc>
+    <lastmod>2022-07-05T11:29:15.678Z</lastmod>
   </url>
   <url>
-    <loc>https://asimumba.rbind.io/LICENSE.html</loc>
-    <lastmod>2022-07-04T12:04:13.528Z</lastmod>
+    <loc>https://asimumba.rbind.io/blog/one-year/index.html</loc>
+    <lastmod>2022-07-05T11:29:16.094Z</lastmod>
   </url>
   <url>
-    <loc>https://asimumba.rbind.io/portfolio.html</loc>
-    <lastmod>2022-07-04T12:04:14.870Z</lastmod>
+    <loc>https://asimumba.rbind.io/blog/afrimarkets/index.html</loc>
+    <lastmod>2022-07-05T11:29:16.446Z</lastmod>
+  </url>
+  <url>
+    <loc>https://asimumba.rbind.io/blog/mapping-twitter/index.html</loc>
+    <lastmod>2022-07-05T11:29:17.038Z</lastmod>
+  </url>
+  <url>
+    <loc>https://asimumba.rbind.io/blog/mapping-twitter/twitter.html</loc>
+    <lastmod>2022-07-05T11:29:17.398Z</lastmod>
+  </url>
+  <url>
+    <loc>https://asimumba.rbind.io/blog/netflify-conflicts/index.html</loc>
+    <lastmod>2022-07-05T11:29:17.782Z</lastmod>
+  </url>
+  <url>
+    <loc>https://asimumba.rbind.io/blog/metabase/index.html</loc>
+    <lastmod>2022-07-05T11:29:18.114Z</lastmod>
+  </url>
+  <url>
+    <loc>https://asimumba.rbind.io/blog/luse/index.html</loc>
+    <lastmod>2022-07-05T11:29:18.718Z</lastmod>
   </url>
   <url>
     <loc>https://asimumba.rbind.io/talks.html</loc>
-    <lastmod>2022-07-04T12:04:16.140Z</lastmod>
+    <lastmod>2022-07-05T11:29:18.950Z</lastmod>
+  </url>
+  <url>
+    <loc>https://asimumba.rbind.io/index.html</loc>
+    <lastmod>2022-07-05T11:29:19.222Z</lastmod>
+  </url>
+  <url>
+    <loc>https://asimumba.rbind.io/blog.html</loc>
+    <lastmod>2022-07-05T11:29:19.922Z</lastmod>
+  </url>
+  <url>
+    <loc>https://asimumba.rbind.io/portfolio.html</loc>
+    <lastmod>2022-07-05T11:29:20.174Z</lastmod>
+  </url>
+  <url>
+    <loc>https://asimumba.rbind.io/accomplishments.html</loc>
+    <lastmod>2022-07-05T11:29:20.454Z</lastmod>
+  </url>
+  <url>
+    <loc>https://asimumba.rbind.io/LICENSE.html</loc>
+    <lastmod>2022-07-05T11:29:20.814Z</lastmod>
   </url>
 </urlset>
