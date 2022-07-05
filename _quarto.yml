@@ -10,7 +10,7 @@ website:
   comments:
     utterances:
       repo: rbind/asimumba.web
-      #label: "Comments"
+      label: "Comments"
       theme: github-dark
   open-graph: true
   twitter-card:
@@ -30,7 +30,7 @@ website:
       - icon: stack-overflow
         href: https://stackoverflow.com/users/8137815/aaron-simumba/
   page-footer:
-    left: "© 2022 Aaron Simumba. Blog made with [Quarto](https://quarto.org/) and published with [Netflify](https://www.netlify.com/). License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)."
+    left: "© 2022 Aaron Simumba. Powered by [Quarto](https://quarto.org/) and [Netflify](https://www.netlify.com/). License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)."
     right:
       - icon: github
         href: https://github.com/asimumba/

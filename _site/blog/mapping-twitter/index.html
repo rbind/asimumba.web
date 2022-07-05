@@ -2,11 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.293">
+<meta name="generator" content="quarto-0.9.629">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Aaron Simumba">
+<meta name="dcterms.date" content="2017-10-02">
 
 <title>R . Data Science . Business Intelligence - Mapping the Location of Twitter Followers and Following in R</title>
 <style>
@@ -81,25 +82,26 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
 <link href="../..//data/images/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link class="quarto-color-scheme" id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
-<link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link class="quarto-color-scheme" href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
-<link class="quarto-color-scheme quarto-color-alternate" rel="prefetch" href="../../site_libs/bootstrap/bootstrap-dark.min.css">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -132,10 +134,12 @@ gtag('config', 'G-BJDLEWB0XZ', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="R . Data Science . Business Intelligence - Mapping the Location of Twitter Followers and Following in R">
-<meta property="og:image" content="https://asimumba.rbind.io//blog/mapping-twitter/twitter.jpg">
+<meta property="og:description" content="Twitter data mining">
+<meta property="og:image" content="https://asimumba.rbind.io/blog\mapping-twitter\twitter.jpg">
 <meta property="og:site-name" content="R . Data Science . Business Intelligence">
 <meta name="twitter:title" content="R . Data Science . Business Intelligence - Mapping the Location of Twitter Followers and Following in R">
-<meta name="twitter:image" content="https://asimumba.rbind.io//blog/mapping-twitter/twitter.jpg">
+<meta name="twitter:description" content="Twitter data mining">
+<meta name="twitter:image" content="https://asimumba.rbind.io/blog\mapping-twitter\twitter.jpg">
 <meta name="twitter:creator" content="@asimumba_">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -160,8 +164,9 @@ gtag('config', 'G-BJDLEWB0XZ', { 'anonymize_ip': true});
   <li class="nav-item">
     <a class="nav-link" href="../../portfolio.html">Portfolio</a>
   </li>  
-  <li class="dropdown-header">
- Accomplishments.qmd</li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../Accomplishments.html">Accomplishments</a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../talks.html">Talks</a>
   </li>  
@@ -195,13 +200,10 @@ gtag('config', 'G-BJDLEWB0XZ', { 'anonymize_ip': true});
     <div class="quarto-title column-body">
       <h1 class="title">Mapping the Location of Twitter Followers and Following in R</h1>
             <p class="subtitle lead">Twitter data mining</p>
-                </div>
+                      </div>
   </div>
     
   
-
-
-
   <div class="quarto-title-meta">
 
       <div>
@@ -214,7 +216,7 @@ gtag('config', 'G-BJDLEWB0XZ', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">2017-10-02T17:46:47+02:00</p>
+        <p class="date">October 2, 2017</p>
       </div>
     </div>
       
@@ -320,7 +322,7 @@ gtag('config', 'G-BJDLEWB0XZ', { 'anonymize_ip': true});
 Aaron Simumba. 2017. <span>“Mapping the Location of Twitter Followers
 and Following in R.”</span> October 2, 2017. <a href="https://asimumba.rbind.io//blog/mapping-twitter">https://asimumba.rbind.io//blog/mapping-twitter</a>.
 </div></div></section></div></main> <!-- /main -->
-<script type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const disableStylesheet = (stylesheets) => {
     for (let i=0; i < stylesheets.length; i++) {
