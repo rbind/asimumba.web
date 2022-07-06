@@ -11,7 +11,7 @@ website:
     utterances:
       repo: rbind/asimumba.web
       label: "Comments"
-      theme: github-dark
+      theme: github-light
   open-graph: true
   twitter-card:
     creator: "@asimumba_"
