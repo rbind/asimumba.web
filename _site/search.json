@@ -11,14 +11,14 @@
     "href": "accomplishments.html",
     "title": "Accomplishments",
     "section": "",
-    "text": "Professional Certifications\n\nMicrosoft Professional Program in Data Science – Certification obtained in January 2020\nData Engineering with Google Cloud - April 2020 (Data engineering, smart analytics, artificial intelligence, and data warehousing using BigQuery)\nGoogle Developers Certification for Google Cloud - A recipient of the Google Africa Developer Scholarship for the year 2020.\nFull-Stack Software Engineer 2022 - Currently pursuing this programme under the ALX Africa\n\n\n\nAcademic Career\nUniversity of Namibia - Bachelor of Accounting (Honours)\n\n\nCourses completed\n\nData Analysis with Spreadsheets - DataCamp\nIntroduction to R course - DataCamp\nIntroduction to SQL for Data Science Course - DataCamp\nIntroduction to the Tidyverse - DataCamp\nReporting with R Markdown - DataCamp\nIntroduction to Git for Data Science - DataCamp\nIntro to Statistics with R: Introduction DataCamp\nSpreadsheet Basics DataCamp\nIntroduction to Data and Probability Coursera\nLearn the Command Line Codeacademy"
+    "text": "Awards\n\n2021 3rd Prize for the Stanbic Bank and Hacklab Foundation AI Hackathon – Developed a machine learning model to predict and automate mortgage loans appraisal and approval process.\n2021 rstudio::global (2021) Diversity Scholarship - Recipient of the Diversity Scholarship at the RStudio Global conference focused on RStudio products and the R language for Statistical computing.\n2020 First the first Business Intelligence & Analytics Lead at Entrepreneurs Financial Centre\n2020 Google Africa Developer Scholarship Recipient - pursued the Google Cloud Engineer certification\n2019 Rookie of the Year at Entrepreneurs Financial Centre – For developing an innovative solution in the first year of joining the company\n2019 Financial Aid to pursue Financial Regulation in Emerging Markets and the Rise of FinTechs – University of Cape Town through Coursera\n2019 Chosen among the top highest performers in the Data Science programme by i2i under the DataHack4FI Competition\n2014 Delegate at the African Union Model Summit, hosted by the University of Namibia. A leadership simulation of the African Union Summit\n2017 Gapminder - Global facts certificate – for 100% correct answers on the Gapminder test 2017\n2017 Financial Aid to pursue the Introduction to Probability and Data course – Duke University through Coursera\n\n\n\nProfessional Certifications\n\nMicrosoft Professional Program in Data Science – Certification obtained in January 2020\nData Engineering with Google Cloud - April 2020 (Data engineering, smart analytics, artificial intelligence, and data warehousing using BigQuery)\nGoogle Developers Certification for Google Cloud - A recipient of the Google Africa Developer Scholarship for the year 2020.\nFull-Stack Software Engineer 2022 - Currently pursuing this programme under the ALX Africa\n\n\n\nAcademic Career\n2014 - University of Namibia - Bachelor of Accounting (Honours)\n\n\nTalks\n\n2017 Facebook Developer Circles - AI Masterclass speech 101 panelist under the topic: AI, is the Zambian Industry Ready for the next wave in tech, and what are the opportunities.\n2021 Deep Learning Indaba X - Zambia - Speaker on the topic, The State of AI in Zambia.\n2021 DataCon Africa Speaker - The is a Pan-African yearly conference that invites data experts across Africa and the world over to tackle the burning topics in the data space. I was a speaker on the topic, “The Role of Data Culture When Integrating Tech and Business”.\n\n\n\nShort courses\n\nData Analysis with Spreadsheets - DataCamp\nIntroduction to R course - DataCamp\nIntroduction to SQL for Data Science Course - DataCamp\nIntroduction to the Tidyverse - DataCamp\nReporting with R Markdown - DataCamp\nIntroduction to Git for Data Science - DataCamp\nIntro to Statistics with R: Introduction DataCamp\nSpreadsheet Basics DataCamp\nIntroduction to Data and Probability Coursera\nLearn the Command Line Codeacademy"
   },
   {
     "objectID": "blog/afrimarkets/index.html",
     "href": "blog/afrimarkets/index.html",
     "title": "African Markets indices tracker",
     "section": "",
-    "text": "The goal is to keep this updated with data mined to Google sheets. I have leveraged on Google Data Studio for the visualizations and its continuous integration to Google sheets to pull the latest data as it becomes available.\n\n\n\nCitationBibTeX citation:@online{simumba2018,\n  author = {Aaron Simumba},\n  title = {African {Markets} Indices Tracker},\n  date = {2018-11-07},\n  url = {https://asimumba.rbind.io//blog/afrimarkets},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nAaron Simumba. 2018. “African Markets Indices Tracker.”\nNovember 7, 2018. https://asimumba.rbind.io//blog/afrimarkets."
+    "text": "African Markets indices performance tracker. A minimal project tracking selected African markets indices. The data used in the dashboard comes from the African Markets website.\n\n\nThe goal is to keep this updated with data mined to Google sheets. I have leveraged on Google Data Studio for the visualizations and its continuous integration to Google sheets to pull the latest data as it becomes available.\n\n\n\nCitationBibTeX citation:@online{simumba2018,\n  author = {Aaron Simumba},\n  title = {African {Markets} Indices Tracker},\n  date = {2018-11-07},\n  url = {https://asimumba.rbind.io//blog/afrimarkets},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nAaron Simumba. 2018. “African Markets Indices Tracker.”\nNovember 7, 2018. https://asimumba.rbind.io//blog/afrimarkets."
   },
   {
     "objectID": "blog/blogdown/index.html",
@@ -32,7 +32,7 @@
     "href": "blog/datahack4fi/index.html",
     "title": "DataHack4Fi twitter data",
     "section": "",
-    "text": "CitationBibTeX citation:@online{simumba2018,\n  author = {Aaron Simumba},\n  title = {DataHack4Fi Twitter Data},\n  date = {2018-11-11},\n  url = {https://asimumba.rbind.io//blog/datahack4fi},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nAaron Simumba. 2018. “DataHack4Fi Twitter Data.” November\n11, 2018. https://asimumba.rbind.io//blog/datahack4fi."
+    "text": "Datahack Twitter Dashboard\n\n\n\n\n\nCitationBibTeX citation:@online{simumba2018,\n  author = {Aaron Simumba},\n  title = {DataHack4Fi Twitter Data},\n  date = {2018-11-11},\n  url = {https://asimumba.rbind.io//blog/datahack4fi},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nAaron Simumba. 2018. “DataHack4Fi Twitter Data.” November\n11, 2018. https://asimumba.rbind.io//blog/datahack4fi."
   },
   {
     "objectID": "blog/luse/index.html",
@@ -306,19 +306,5 @@
     "title": "R . Data Science . Business Intelligence",
     "section": "",
     "text": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n\n\nCitationBibTeX citation:@online{untitled,\n  author = {},\n  url = {https://asimumba.rbind.io//LICENSE.html},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nn.d. https://asimumba.rbind.io//LICENSE.html."
-  },
-  {
-    "objectID": "portfolio.html",
-    "href": "portfolio.html",
-    "title": "Portfolio",
-    "section": "",
-    "text": "Sector Visualisation for BongoHive"
-  },
-  {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "Talks",
-    "section": "",
-    "text": "2017 Facebook Developer Circles - AI Masterclass speech 101 panelist under the topic: AI, is the Zambian Industry Ready for the next wave in tech, and what are the opportunities.\n2021 Deep Learning Indaba X - Zambia - Speaker on the topic, The State of AI in Zambia.\n2021 DataCon Africa Speaker - The is a Pan-African yearly conference that invites data experts across Africa and the world over to tackle the burning topics in the data space. I was a speaker on the topic, “The Role of Data Culture When Integrating Tech and Business”."
   }
 ]

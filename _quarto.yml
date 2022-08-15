@@ -20,9 +20,7 @@ website:
   navbar:
     right:
       - blog.qmd
-      - portfolio.qmd
       - Accomplishments.qmd
-      - talks.qmd
       - icon: github
         href: https://github.com/asimumba/
       - icon: twitter

@@ -1,8 +1,32 @@
 ---
 title: "Accomplishments"
+image: data/certificates/GADS-Certi2020.png
+title-block-banner: data/banner.jpg
 citation: false
 comments: false
 ---
+
+::: {layout-nrow=4}
+
+![](data/data-engineer.png)
+
+![](data/GADS-2020.png)
+
+![](data/microsoft.png)
+
+![](data/MPPDS-Cert.png)
+
+![](data/explore-sql.png)
+
+![](data/join-sql.png)
+
+
+![](data/stanbic.png)
+
+![](data/interm-sql.png)
+:::
+
+
 
 ### Awards
 
@@ -50,9 +74,18 @@ comments: false
 
 ### Academic Career
 
-University of Namibia - **Bachelor of Accounting (Honours)**
+2014 - University of Namibia - **Bachelor of Accounting (Honours)**
 
-### Courses completed
+### Talks
+
+-   **2017 Facebook Developer Circles** - AI Masterclass speech 101 panelist under the topic: *AI, is the Zambian Industry Ready for the next wave in tech, and what are the opportunities.*
+
+-   **2021 Deep Learning Indaba X - Zambia** - Speaker on the topic, *The State of AI in Zambia.*
+
+-   **2021 DataCon Africa Speaker** - The is a Pan-African yearly conference that invites data experts across Africa and the world over to tackle the burning topics in the data space. I was a speaker on the topic, *"The Role of Data Culture When Integrating Tech and Business".*
+
+
+### Short courses
 
 -   Data Analysis with Spreadsheets -
     [[**DataCamp**]{.underline}](https://www.datacamp.com/statement-of-accomplishment/course/712b36601d6e732f07128239c057eda77132ae38)

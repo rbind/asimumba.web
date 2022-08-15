@@ -9,9 +9,10 @@ tags:
   - african indices
   - LuSE
   - JSI
-image: line.jpg
+image: indices.png
 ---
 
+![](indices.png)
 
 African Markets indices performance tracker.
 A minimal project tracking selected African markets indices. The data used in the dashboard comes from the [African Markets](https://www.african-markets.com/en/) website.
