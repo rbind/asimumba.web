@@ -18,7 +18,7 @@
     "href": "blog/afrimarkets/index.html",
     "title": "African Markets indices tracker",
     "section": "",
-    "text": "African Markets indices performance tracker. A minimal project tracking selected African markets indices. The data used in the dashboard comes from the African Markets website.\n\n\nThe goal is to keep this updated with data mined to Google sheets. I have leveraged on Google Data Studio for the visualizations and its continuous integration to Google sheets to pull the latest data as it becomes available.\n\n\n\nCitationBibTeX citation:@online{simumba2018,\n  author = {Aaron Simumba},\n  title = {African {Markets} Indices Tracker},\n  date = {2018-11-07},\n  url = {https://asimumba.rbind.io//blog/afrimarkets},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nAaron Simumba. 2018. “African Markets Indices Tracker.”\nNovember 7, 2018. https://asimumba.rbind.io//blog/afrimarkets."
+    "text": "The goal is to keep this updated with data mined to Google sheets. I have leveraged on Google Data Studio for the visualizations and its continuous integration to Google sheets to pull the latest data as it becomes available.\n\n\n\nComplete Dashboard\n\n\n\n\n\nCitationBibTeX citation:@online{simumba2018,\n  author = {Aaron Simumba},\n  title = {African {Markets} Indices Tracker},\n  date = {2018-11-07},\n  url = {https://asimumba.rbind.io//blog/afrimarkets},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nAaron Simumba. 2018. “African Markets Indices Tracker.”\nNovember 7, 2018. https://asimumba.rbind.io//blog/afrimarkets."
   },
   {
     "objectID": "blog/blogdown/index.html",

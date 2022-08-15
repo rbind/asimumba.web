@@ -6,15 +6,15 @@ citation: false
 comments: false
 ---
 
-::: {layout-nrow=4}
+::: {layout="[[100,100]]"}
 
 ![](data/data-engineer.png)
+
+![](data/MPPDS-Cert.png)
 
 ![](data/GADS-2020.png)
 
 ![](data/microsoft.png)
-
-![](data/MPPDS-Cert.png)
 
 ![](data/explore-sql.png)
 
