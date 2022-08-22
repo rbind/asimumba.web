@@ -16,7 +16,7 @@ website:
   twitter-card:
     creator: "@asimumba_"
     card-style: summary_large_image
-  favicon: /data/images/favicon.ico
+  favicon: /data/favicon.ico
   navbar:
     right:
       - blog.qmd

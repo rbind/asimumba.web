@@ -1,12 +1,11 @@
 ---
 title: "Accomplishments"
-image: data/certificates/GADS-Certi2020.png
 title-block-banner: data/banner.jpg
 citation: false
 comments: false
 ---
 
-::: {layout="[[100,100]]"}
+::: {layout-ncol=2}
 
 ![](data/data-engineer.png)
 
