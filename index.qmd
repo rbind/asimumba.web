@@ -9,7 +9,7 @@ about:
       href: https://twitter.com/asimumba_/
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com/aaron-simumba/
+      href: https://www.linkedin.com/in/aaronsimumba/
     - icon: github
       text: Github
       href: https://github.com/asimumba/
@@ -27,7 +27,7 @@ I am lost in the Data Science web... hoping to find my way out of the maze soon.
 
 I'm equally fascinated by stock markets and everything with a business and finance buzz.
 
-I can be found on [**Github**](https://github.com/asimumba/) poking around interesting projects... and occasionally I rant on [**twitter**](https://twitter.com/zedsamurai/).
+I can be found on [**Github**](https://github.com/asimumba/) poking around interesting projects... and occasionally I rant on [**twitter**](https://twitter.com/asimumba_/).
 
 For this website:
 

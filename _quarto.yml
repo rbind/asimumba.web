@@ -21,6 +21,8 @@ website:
     right:
       - blog.qmd
       - accomplishment.qmd
+      - icon: linkedin
+        href: https://www.linkedin.com/in/aaronsimumba/
       - icon: github
         href: https://github.com/asimumba/
       - icon: twitter
@@ -40,12 +42,11 @@ citation: true
 toc: true
 format:
   html:
-    theme: 
-      dark: darkly
+    theme: darkly
     css: styles.css
 mainfont: "Atkinson Hyperlegible"
 monofont: "Fira Mono"
-fontsize: 1.1em
+fontsize: 1.12em
     
 
 
