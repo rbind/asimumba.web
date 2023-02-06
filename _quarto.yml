@@ -40,7 +40,8 @@ citation: true
 toc: true
 format:
   html:
-    theme: darkly
+    theme: 
+      dark: darkly
     css: styles.css
 mainfont: "Atkinson Hyperlegible"
 monofont: "Fira Mono"

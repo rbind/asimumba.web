@@ -3,6 +3,8 @@ title: "Accomplishments"
 title-block-banner: data/banner.jpg
 citation: false
 comments: false
+page-layout: full
+title-block-banner: true
 ---
 
 ::: {layout-ncol=2}
