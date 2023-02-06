@@ -1,1 +1,17 @@
 /* css styles */
+
+@import url('https://fonts.google.com/download?family=Atkinson%20Hyperlegible');
+@import url('https://fonts.googleapis.com/css2?family=Chivo');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono');
+
+.navbar-brand{
+  font-family: "Atkinson Hyperlegible";
+}
+
+.navbar a:hover{
+  color: #00bc8c;
+}
+
+.quarto-listing-category {
+  font-family: "Atkinson Hyperlegible";
+}

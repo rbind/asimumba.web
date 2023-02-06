@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.640">
+<meta name="generator" content="quarto-1.1.189">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -25,7 +30,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href=".//data/images/favicon.ico" rel="icon">
+<link href=".//data/favicon.ico" rel="icon">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -33,12 +38,10 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -113,9 +116,11 @@ gtag('config', 'G-BJDLEWB0XZ', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">R . Data Science . Business Intelligence</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -124,9 +129,8 @@ gtag('config', 'G-BJDLEWB0XZ', { 'anonymize_ip': true});
   <li class="nav-item">
     <a class="nav-link active" href="./blog.html" aria-current="page">Blog</a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Accomplishments.html">Accomplishments</a>
-  </li>  
+  <li class="dropdown-header">
+ Accomplishments.qmd</li>
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/asimumba/"><i class="bi bi-github" role="img">
 </i> 
@@ -143,9 +147,6 @@ gtag('config', 'G-BJDLEWB0XZ', { 'anonymize_ip': true});
  </a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -210,7 +211,7 @@ gtag('config', 'G-BJDLEWB0XZ', { 'anonymize_ip': true});
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1545775200000" data-listing-file-modified-sort="1656455989283" data-listing-reading-time-sort="0.465">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1545775200000" data-listing-file-modified-sort="1675674121554" data-listing-reading-time-sort="0.465">
 <div class="thumbnail">
 <p><a href="./blog/metabase/index.html"> <img src="./blog/metabase/deploy.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -241,7 +242,7 @@ Aaron Simumba
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="datahack4fi,twitter,analysis" data-listing-date-sort="1541887200000" data-listing-file-modified-sort="1660589403884" data-listing-reading-time-sort="0.06">
+<div class="quarto-post image-right" data-index="1" data-categories="datahack4fi,twitter,analysis" data-listing-date-sort="1541887200000" data-listing-file-modified-sort="1675674121550" data-listing-reading-time-sort="0.06">
 <div class="thumbnail">
 <p><a href="./blog/datahack4fi/index.html"> <img src="./blog/datahack4fi/datahack.png" class="thumnail-image"> </a></p>
 </div>
@@ -285,7 +286,7 @@ Aaron Simumba
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Stock market" data-listing-date-sort="1541541600000" data-listing-file-modified-sort="1660593182124" data-listing-reading-time-sort="0.355">
+<div class="quarto-post image-right" data-index="2" data-categories="Stock market" data-listing-date-sort="1541541600000" data-listing-file-modified-sort="1675674121546" data-listing-reading-time-sort="0.355">
 <div class="thumbnail">
 <p><a href="./blog/afrimarkets/index.html"> <img src="./blog/afrimarkets/indices.png" class="thumnail-image"> </a></p>
 </div>
@@ -323,7 +324,7 @@ Aaron Simumba
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="open sourse" data-listing-date-sort="1519423200000" data-listing-file-modified-sort="1656449579417" data-listing-reading-time-sort="1.11">
+<div class="quarto-post image-right" data-index="3" data-categories="open sourse" data-listing-date-sort="1519423200000" data-listing-file-modified-sort="1675674121558" data-listing-reading-time-sort="1.11">
 <div class="thumbnail">
 <p><a href="./blog/oss/index.html"> <img src="./blog/oss/passion.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -361,7 +362,7 @@ Aaron Simumba
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="blogdown,R,hugo" data-listing-date-sort="1518991200000" data-listing-file-modified-sort="1656534370353" data-listing-reading-time-sort="4.315">
+<div class="quarto-post image-right" data-index="4" data-categories="blogdown,R,hugo" data-listing-date-sort="1518991200000" data-listing-file-modified-sort="1675674121570" data-listing-reading-time-sort="4.315">
 <div class="thumbnail">
 <p><a href="./blog/website/index.html"> <img src="./blog/website/website.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -405,7 +406,7 @@ Aaron Simumba
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1510437600000" data-listing-file-modified-sort="1656450242040" data-listing-reading-time-sort="1.17">
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1510437600000" data-listing-file-modified-sort="1675674121570" data-listing-reading-time-sort="1.17">
 <div class="thumbnail">
 <p><a href="./blog/tableau/index.html"> <img src="./blog/tableau/tableau.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -437,7 +438,7 @@ Aaron Simumba
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="rmarkdown" data-listing-date-sort="1507759200000" data-listing-file-modified-sort="1656529094242" data-listing-reading-time-sort="6.785">
+<div class="quarto-post image-right" data-index="6" data-categories="rmarkdown" data-listing-date-sort="1507759200000" data-listing-file-modified-sort="1675674121562" data-listing-reading-time-sort="6.785">
 <div class="thumbnail">
 <p><a href="./blog/pdf-data/index.html"> <img src="./blog/pdf-data/pdf.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -475,7 +476,7 @@ Aaron Simumba
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1507240800000" data-listing-file-modified-sort="1656458610073" data-listing-reading-time-sort="1.4">
+<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1507240800000" data-listing-file-modified-sort="1675674121554" data-listing-reading-time-sort="1.4">
 <div class="thumbnail">
 <p><a href="./blog/mapping-twitter/twitter.html"> <img src="./blog/mapping-twitter/twitter.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -506,7 +507,7 @@ Aaron Simumba
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1506959207000" data-listing-file-modified-sort="1660589706479" data-listing-reading-time-sort="4.005">
+<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1506959207000" data-listing-file-modified-sort="1675674121554" data-listing-reading-time-sort="4.005">
 <div class="thumbnail">
 <p><a href="./blog/mapping-twitter/index.html"> <img src="https://user-images.githubusercontent.com/24398851/31088605-e90435ca-a7a9-11e7-89dc-7b5694d980d6.png" class="thumnail-image"> </a></p>
 </div>
@@ -537,7 +538,7 @@ Aaron Simumba
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-listing-date-sort="1506463200000" data-listing-file-modified-sort="1656449726642" data-listing-reading-time-sort="12.82">
+<div class="quarto-post image-right" data-index="9" data-listing-date-sort="1506463200000" data-listing-file-modified-sort="1675674121554" data-listing-reading-time-sort="12.82">
 <div class="thumbnail">
 <p><a href="./blog/mobile-data/index.html"> <img src="./blog/mobile-data/mobile.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -568,7 +569,7 @@ Aaron Simumba
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-listing-date-sort="1505253600000" data-listing-file-modified-sort="1656453044876" data-listing-reading-time-sort="1.185">
+<div class="quarto-post image-right" data-index="10" data-listing-date-sort="1505253600000" data-listing-file-modified-sort="1675674121558" data-listing-reading-time-sort="1.185">
 <div class="thumbnail">
 <p><a href="./blog/netflify-conflicts/index.html"> <img src="./blog/netflify-conflicts/netlify.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -599,7 +600,7 @@ Aaron Simumba
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="reflections" data-listing-date-sort="1503612000000" data-listing-file-modified-sort="1656449393020" data-listing-reading-time-sort="3.495">
+<div class="quarto-post image-right" data-index="11" data-categories="reflections" data-listing-date-sort="1503612000000" data-listing-file-modified-sort="1675674121558" data-listing-reading-time-sort="3.495">
 <div class="thumbnail">
 <p><a href="./blog/one-year/index.html"> <img src="./blog/one-year/ballons.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -637,7 +638,7 @@ Aaron Simumba
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="hugo,R" data-listing-date-sort="1499032800000" data-listing-file-modified-sort="1656458678167" data-listing-reading-time-sort="1.47">
+<div class="quarto-post image-right" data-index="12" data-categories="hugo,R" data-listing-date-sort="1499032800000" data-listing-file-modified-sort="1675674121550" data-listing-reading-time-sort="1.47">
 <div class="thumbnail">
 <p><a href="./blog/blogdown/index.html"> <img src="./blog/blogdown/code.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -678,7 +679,7 @@ Aaron Simumba
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-listing-date-sort="1491429600000" data-listing-file-modified-sort="1656523300392" data-listing-reading-time-sort="6.525">
+<div class="quarto-post image-right" data-index="13" data-listing-date-sort="1491429600000" data-listing-file-modified-sort="1675674121550" data-listing-reading-time-sort="6.525">
 <div class="thumbnail">
 <p><a href="./blog/luse/index.html"> <img src="./blog/luse/markets.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -709,7 +710,7 @@ Aaron Simumba
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="google,apple,msft" data-listing-date-sort="1489701600000" data-listing-file-modified-sort="1656449316071" data-listing-reading-time-sort="4.655">
+<div class="quarto-post image-right" data-index="14" data-categories="google,apple,msft" data-listing-date-sort="1489701600000" data-listing-file-modified-sort="1675674121566" data-listing-reading-time-sort="4.655">
 <div class="thumbnail">
 <p><a href="./blog/stock-returns/index.html"> <img src="./blog/stock-returns/returns.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -760,103 +761,24 @@ No matching items
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
     } else {
-      disableStylesheet(alternateStylesheets);
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
     }
   }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
     }
   }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  let localAlternateSentinel = 'alternate';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } 
+  toggleBodyColorPrimary();  
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -906,7 +828,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
