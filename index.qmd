@@ -1,6 +1,6 @@
 ---
 title: "Get to know me"
-image: /data/images/aaron.jpg
+image: data/aaron.jpg
 about:
   template: solana
   links:
