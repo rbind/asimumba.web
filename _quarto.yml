@@ -42,8 +42,7 @@ citation: true
 toc: true
 format:
   html:
-    theme: 
-      dark: darkly
+    theme: [solar, theme.scss]
     css: styles.css
 mainfont: "Atkinson Hyperlegible"
 monofont: "Fira Mono"
