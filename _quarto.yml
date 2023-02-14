@@ -11,7 +11,7 @@ website:
     utterances:
       repo: rbind/asimumba.web
       label: "Comments"
-      theme: github-light
+      theme: github-dark
   open-graph: true
   twitter-card:
     creator: "@asimumba_"
@@ -30,7 +30,7 @@ website:
       - icon: stack-overflow
         href: https://stackoverflow.com/users/8137815/aaron-simumba/
   page-footer:
-    left: "© 2022 Aaron Simumba. Powered by [Quarto](https://quarto.org/) and [Netflify](https://www.netlify.com/). License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)."
+    left: "© 2023 Aaron Simumba. Powered by [Quarto](https://quarto.org/) and [Netflify](https://www.netlify.com/). License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)."
     right:
       - icon: github
         href: https://github.com/asimumba/
@@ -44,9 +44,10 @@ format:
   html:
     theme: [solar, theme.scss]
     css: styles.css
-mainfont: "Atkinson Hyperlegible"
 monofont: "Fira Mono"
 fontsize: 1.12em
+execute:
+  freeze: auto
     
 
 

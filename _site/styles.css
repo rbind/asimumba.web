@@ -1,17 +1,5 @@
 /* css styles */
 
-@import url('https://fonts.google.com/download?family=Atkinson+Hyperlegible');
-@import url('https://fonts.googleapis.com/css2?family=Chivo');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono');
-
-.navbar-brand{
-  font-family: "Atkinson Hyperlegible";
-}
-
-.quarto-listing-category {
-  font-family: "Atkinson Hyperlegible";
-}
-
 .profile-pic {
     border-radius: 50%;
 }
@@ -66,7 +54,7 @@
 
 code {
   font-size: 0.875em;
-  color: #878087;
+  color: #8f828f;
   background-color: #2b2b2b;
   border-radius: 0.25rem;
   padding: 0.125rem
