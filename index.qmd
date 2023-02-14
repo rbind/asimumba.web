@@ -1,8 +1,11 @@
 ---
 title: "Get to know me"
 image: data/aaron.jpg
+image-height: 50px
+image-width: 50px
+image-shape: round
 about:
-  template: solana
+  template: trestles
   links:
     - icon: twitter
       text: Twitter
@@ -17,7 +20,7 @@ citation: false
 comments: false
 ---
 
-Hi, I'm **Aaron Simumba**, welcome to my website.
+Hi, I'm **Aaron Simumba**,
 
 I work in the financial services sector as a **Business Intelligence & Analytics Lead**. Previously, I worked for [**mPharma**](https://www.mpharma.com/) as a **Data Management Associate**.
 

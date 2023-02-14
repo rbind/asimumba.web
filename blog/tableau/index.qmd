@@ -3,7 +3,6 @@ title: "Demo: Embedding Tableau public Visualizations"
 subtitle: "Through Tableau public integration"
 author: Aaron Simumba
 date: '2017-11-12'
-slug: demo-embedding-tableau
 image: "tableau.jpg"
 ---
 In this short demo, I implement how to embed Tableau public visualizations on the personal website.This implementation is achieved through using `iframe.` The embed link from a Tableau public visualization has to be enclosed with the `<iframe> </iframe>` tag. I created a visualisation of LuSE listed companies for demonstration using data from [Africa Markets](https://www.african-markets.com/en/).

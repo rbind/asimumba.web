@@ -5,7 +5,6 @@ date: "2017-10-06"
 tags:
     - tweet
     - blog
-slug: let-twitter-do-the-job
 image: "twitter.jpg"
 ---
 

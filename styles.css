@@ -1,9 +1,4 @@
 /* css styles */
-
-.profile-pic {
-    border-radius: 50%;
-}
-
 @media (max-width: 600px){
 .profile-pic {
     display: none;
@@ -19,11 +14,7 @@
     }
 }
 
-.profile-pic {
-    border-radius: 50%;
-}
-
-.profile-pic2 {
+.about-image {
     border-radius: 50%;
 }
 
