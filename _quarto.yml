@@ -43,8 +43,7 @@ toc: true
 format:
   html:
     theme: 
-      - solar 
-      - custom.scss
+      dark: [solar,custom.scss]
     css: 
       - styles.css
 monofont: "Fira Mono"
