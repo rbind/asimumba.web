@@ -44,8 +44,9 @@ format:
   html:
     theme: 
       - solar 
-      - theme.scss
-    css: styles.css
+      - custom.scss
+    css: 
+      - styles.css
 monofont: "Fira Mono"
 fontsize: 1.3em
 execute:
