@@ -4,26 +4,37 @@ title-block-banner: data/banner.jpg
 citation: false
 comments: false
 page-layout: full
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  loop: true
+  desc-position: bottom
+
 ---
 
-::: {layout-ncol=2}
+::: {layout-ncol=3}
 
-![](data/data-engineer.png)
+![Data Engineering with Google Cloud](data/data-engineer.png)
 
-![](data/MPPDS-Cert.png)
+![Microsoft Professional Program in Data Science](data/MPPDS-Cert.png)
 
-![](data/GADS-2020.png)
+![Google Africa Developer Training Program](data/GADS-2020.png)
 
-![](data/microsoft.png)
+![Microsoft Professional Capstone: Data Science](data/microsoft.png)
 
-![](data/explore-sql.png)
+![SQL for Exploratory Data Analysis](data/explore-sql.png)
 
-![](data/join-sql.png)
+![Joining Data in SQL](data/join-sql.png)
 
 
-![](data/stanbic.png)
+![Stanbic Bank Zambia Hacklab Hackathon](data/stanbic.png)
 
-![](data/interm-sql.png)
+![Intermediate SQL](data/interm-sql.png)
+
+![EDA in R - Case Study](data/eda_r.png)
+
 :::
 
 

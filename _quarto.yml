@@ -42,7 +42,8 @@ citation: true
 toc: true
 format:
   html:
-    theme: [solar, theme.scss]
+    theme: 
+      [solar, theme.scss]
     css: styles.css
 monofont: "Fira Mono"
 fontsize: 1.3em

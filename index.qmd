@@ -1,8 +1,6 @@
 ---
 title: "Get to know me"
 image: data/aaron.jpg
-image-height: 50px
-image-width: 50px
 image-shape: round
 about:
   template: trestles
