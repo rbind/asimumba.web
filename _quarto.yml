@@ -42,12 +42,11 @@ citation: true
 toc: true
 format:
   html:
-    theme: 
-      dark: [solar,custom.scss]
-    css: 
-      - styles.css
+    theme: [solar,custom.scss]
+    css: styles.css
+mainfont: "Source Sans Pro"
 monofont: "Fira Mono"
-fontsize: 1.3em
+fontsize: 1.2em
 execute:
   freeze: auto
     

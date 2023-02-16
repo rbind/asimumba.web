@@ -1,4 +1,8 @@
 /* css styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Chivo');
+
 @media (max-width: 600px){
 .about-image {
     display: none;
