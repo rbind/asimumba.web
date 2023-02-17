@@ -42,8 +42,7 @@ citation: true
 toc: true
 format:
   html:
-    theme:
-      dark: [solar,custom.scss]
+    theme: [solar,custom.scss]
     css: styles.css
 mainfont: "Source Sans Pro"
 monofont: "Fira Mono"
