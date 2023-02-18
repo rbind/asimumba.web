@@ -1,4 +1,4 @@
-/* css styles
+/* css styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono');
 @import url('https://fonts.googleapis.com/css2?family=Chivo');
@@ -60,7 +60,7 @@ rem
 
 a {
   /* color: #2d856f; */
-  /* text-decoration: none;
+    text-decoration: none;
 }
 
 @media (min-width: 991px){
@@ -77,4 +77,4 @@ input[type="text"], textarea {
 
     background-color : #d1d1d1!important; 
   
-  } */ 
+  }
