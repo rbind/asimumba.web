@@ -1,14 +1,13 @@
 /*-- scss:defaults --*/
+// import google fonts
+@import url('https://fonts.googleapis.com/css2?family=Fira Mono');
+@import url('https://fonts.googleapis.com/css2?family=Source Sans Pro');
 // $theme: "solar" !default;
 
 $body-bg: #363738;
-
-// import google fonts
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono');
 
 $font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
 $code-block-bg: #494b4d;
 $code-block-font-size: 0.7em;
-$link-color: #5d2d85;
 
