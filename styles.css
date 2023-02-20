@@ -1,6 +1,6 @@
 /* css styles */
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono');
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Mono');
 @import url('https://fonts.googleapis.com/css2?family=Chivo');
 
 @media (max-width: 600px){
@@ -59,7 +59,6 @@ rem
 }
 
 a {
-  /* color: #2d856f; */
     text-decoration: none;
 }
 
@@ -77,4 +76,4 @@ input[type="text"], textarea {
 
     background-color : #d1d1d1!important; 
   
-  }
+  } */
