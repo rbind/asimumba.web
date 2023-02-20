@@ -44,7 +44,7 @@ format:
   html:
     theme: 
       dark:  [solar,custom.scss] 
-      light: [solar,custom.scss]
+      light: custom.scss
     css: styles.css
 mainfont: "Source Sans Pro"
 monofont: "Fira Mono"
