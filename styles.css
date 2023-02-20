@@ -16,13 +16,13 @@
         flex-direction: row!important;
     }
 } */
-/* .quarto-body-color {
+.quarto-body-color {
     color: #adb5bd;
-} */
+} 
 
-/* .about-image {
+ .about-image {
     border-radius: 50%;
-} */
+}
 
 /* .quarto-dark .navbar-dark{
     background-color: #1b1b1d;
@@ -72,8 +72,8 @@ a {
     }
 }
 
-/* input[type="text"], textarea {
+input[type="text"], textarea {
 
     background-color : #d1d1d1!important; 
   
-  } */
+  }

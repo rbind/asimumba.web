@@ -47,9 +47,9 @@ format:
 mainfont: "Source Sans Pro"
 monofont: "Fira Mono"
 fontcolor: "#adb5bd"
-linkcolor: "#4ac192"
+linkcolor: "#2aa198"
 code-block-bg: true
-fontsize: 1.2em
+fontsize: 1.3em
 execute:
   freeze: auto
     
