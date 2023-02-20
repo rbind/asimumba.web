@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.262">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Aaron Simumba">
+<meta name="dcterms.date" content="2017-10-12">
+
+<title>R . Data Science . Business Intelligence - Breathing life back into PDF presented Data</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../..//data/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BJDLEWB0XZ"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-BJDLEWB0XZ', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="R . Data Science . Business Intelligence - Breathing life back into PDF presented Data">
+<meta property="og:description" content="Implementation through Tabulizer">
+<meta property="og:image" content="https://asimumba.rbind.io/blog/pdf-data/pdf.jpg">
+<meta property="og:site-name" content="R . Data Science . Business Intelligence">
+<meta name="twitter:title" content="R . Data Science . Business Intelligence - Breathing life back into PDF presented Data">
+<meta name="twitter:description" content="Implementation through Tabulizer">
+<meta name="twitter:image" content="https://asimumba.rbind.io/blog/pdf-data/pdf.jpg">
+<meta name="twitter:creator" content="@asimumba_">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">R . Data Science . Business Intelligence</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../accomplishment.html">
+ <span class="menu-text">Accomplishments</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/aaronsimumba/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/asimumba/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/asimumba_/"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://stackoverflow.com/users/8137815/aaron-simumba/"><i class="bi bi-stack-overflow" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Breathing life back into PDF presented Data</h1>
+            <p class="subtitle lead">Implementation through Tabulizer</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">rmarkdown</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Aaron Simumba </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 12, 2017</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#demo" id="toc-demo" class="nav-link" data-scroll-target="#demo">Demo</a></li>
+  <li><a href="#tidying-the-data" id="toc-tidying-the-data" class="nav-link" data-scroll-target="#tidying-the-data">Tidying the data</a></li>
+  <li><a href="#welcome-to-the-tidyverse" id="toc-welcome-to-the-tidyverse" class="nav-link" data-scroll-target="#welcome-to-the-tidyverse">Welcome to the tidyverse</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/rbind/asimumba.web/edit/main/blog/pdf-data/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/rbind/asimumba.web/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<div class="cell">
+
+</div>
+<p>It is almost not surprising to find most of the summarised data is presented in the form of a report - whose format is mainly Portable Document Format (PDF). The challenge is when you would like to access that data in a dynamic format and form - where it can be analysed, reformatted and reshaped to your desire; a requirement which is hard, if not impossible to achieve with data presented in a PDF report. Trying to do so would be like wishing to extract water from a rock, which is an endeavour in futility.</p>
+<p>The good news is, technology seem to run on a brain of its own. While one side of the technology spectrum impedes, another end liberate. One such solution to extracting the dead and static PDF presented data, is to turn to the powerful and versatile R package, <code>tabulizer</code>. The <a href="https://github.com/ropensci/tabulizer">tabulizer</a> package is an R wrapper for the powerful PDF extractor Java library <a href="https://github.com/tabulapdf/tabula-java/">Tabula</a>. This package allows one to extract with ease, data presented in tables in a PDF document. For as long as the data is in a clean and uncluttered format. The <code>extract_tables()</code> function will try to guess the delimiters for the data and extract the data in the format which maintains close to the original data outline.</p>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<p>For the installation and usage, the package depends on Java. The appropriate Java Development Kit can be downloaded straight from the Oracle website <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">here</a>. Installation instructions are platform specific. Follow the instructions depending on your OS. I am on Windows, so I installed Java, running the <code>jdk-8u144-windows-x64.exe</code> executable file.</p>
+<p>Installing tabulizer package, this can be installed from github. There is only the development version of the package, you will not find it on CRAN.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(<span class="st">"ghit"</span>)){</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                       <span class="fu">install.packages</span>(<span class="st">"ghit"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># on 64-bit Windows</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>ghit<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(<span class="st">"leeper/tabulizerjars"</span>, </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"leeper/tabulizer"</span>), </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                         <span class="at">INSTALL_opts =</span> <span class="st">"--no-multiarch"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                     )</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># elsewhere</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ghit<span class="sc">::</span><span class="fu">install_github</span>(<span class="fu">c</span>(<span class="st">"leeper/tabulizerjars"</span>, </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                       <span class="st">"leeper/tabulizer"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This will download and install other Java related packages tabulizer depends on.</p>
+</section>
+<section id="demo" class="level2">
+<h2 class="anchored" data-anchor-id="demo">Demo</h2>
+<p>For demonstration purpose, I will use the report from the Central Statistics Office (CSO), Zambia, on <a href="https://www.zamstats.gov.zm/phocadownload/Zambia%20Census%20Projection%202011%20-%202035.pdf">Zambia Census Projection 2011-2035</a>. Below is the outline of the sample data as presented in the PDF report.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://user-images.githubusercontent.com/24398851/31639999-7d7cc290-b2e4-11e7-85d3-03cc648a73e6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Sample Data File - Source: CSO</figcaption><p></p>
+</figure>
+</div>
+<p>We call the tabulizer package with the following command.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tabulizer"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The main function is the <code>extract_tables()</code>. The first argument is the PDF <code>file</code> or report where the targeted table(s) is/are. The second argument is the <code>pages</code>, where you specify the page number the table of data is. There are other arguments such as <code>area</code>, which you can specify the targeted area(s) to extract. <code>columns</code> which matches with the number of pages to be extracted. This argument allows for each page extracted to be stored in its own separate column.The <code>guess</code> argument, which by default is <code>=TRUE</code>, allows for the function to guess the location of the table(s) on each page. For a list of all the arguments: run <code>?extract_tables</code> in the R console. By default, the data is extracted as a list. Lists in R can be thought of as a vector containing other objects. We can zoom in on a particular object using the double square brackets,<code>[[]]</code>. For instance, the first object in the variable is indexed by the number 1, and the second object by 2, and so on. Since,only one table is being extracted, the variable below contain one column; extracted with this command,<code>cso_table[[1]]</code>.</p>
+<p>The default way, <code>extract_table()</code> extracts the data as a list of character matrices. This helps in cases where the data is irregular and cannot be properly coerced to a data frame (row by column format). To change this behaviour so that the extracted data is coerced to a data frame, we supply the <code>method</code> argument, and have <code>data.frame</code> as the value.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>cso <span class="ot">&lt;-</span> (<span class="st">"https://goo.gl/d2xMwS"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This is the shortened version of the original URL.</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>cso_table <span class="ot">&lt;-</span> <span class="fu">extract_tables</span>(cso, <span class="at">pages =</span> <span class="dv">24</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                            <span class="at">method =</span> <span class="st">"data.frame"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># We are going to pass the cso variable to the extract_tables() function</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>cso_column <span class="ot">&lt;-</span> cso_table[[<span class="dv">1</span>]]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># The table of interest is on page 24, the other arguments are left as defaults</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>From the extracted results, it can be seen the output is not in a “tidy” format, to allow any meaning analyses to be done. The next step would be reshaping and reordering the extracted results into a neat data frame.</p>
+</section>
+<section id="tidying-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="tidying-the-data">Tidying the data</h2>
+<p>Two approaches can be implemented here: the easy way or the hard way.</p>
+<ul>
+<li>Firstly, the easy way. We can write the data to a <code>CSV</code> file and clean the data in Microsoft Excel. The solution is to use the <code>write.csv()</code> function. The first argument in the function is the data object. The <code>file</code> argument, you define the output file name together with the file extension - in our case it is a <code>.CSV</code> extension. The <code>row.names</code> specifies whether to include the default index R attaches to the data, which spans the length of your data.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I have passed a relative path where I want the CSV file to be stored</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(cso_column, <span class="at">file =</span> <span class="st">"cso_data.csv"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">row.names =</span> <span class="cn">FALSE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>After cleaning the data in Excel, it can be re-imported to aid in analysis.</p>
+<ul>
+<li>Second choice, the hard way. The <code>tidyverse</code> package has a suite of packages built specifically to handle such tasks. The<code>dplyr</code> package, is one such package, which represents the grammar of data manipulation. Using well crafted verbs, one can transform, order, filter etc.. data with ease.</li>
+</ul>
+</section>
+<section id="welcome-to-the-tidyverse" class="level2">
+<h2 class="anchored" data-anchor-id="welcome-to-the-tidyverse">Welcome to the tidyverse</h2>
+<p>First step is to clean the data, eliminating unwanted variables and title headers. That is in addition to transforming the data into a “tidy” format - A variable per column, observation per row, and a value per cell. The command below eliminates the first, second, and the last three row of the extracted data.</p>
+<p><code>tidyr</code> package is used to gather the observations in the columns into rows and combine all the observations across 2 columns. The function <code>gather()</code> achieves this in the <code>tidyr</code> package.</p>
+<p>After gathering the data from the columns to rows, the second issue is to index the numbers by the corresponding provinces. This is achieved by replicating the provinces to span the length of the numbers. Combining the row names with their corresponding numbers completes our simple data extraction exercise.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>cso_data <span class="ot">&lt;-</span> cso_data <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>cso_provincial <span class="ot">&lt;-</span> cso_data <span class="sc">%&gt;%</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(sex <span class="sc">==</span> <span class="st">"Total"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">2011</span><span class="st">`</span><span class="sc">:</span><span class="st">`</span><span class="at">2035</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gather</span>(<span class="at">key =</span> <span class="st">"year"</span>, <span class="at">value =</span> <span class="st">"census_proj"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>province <span class="ot">&lt;-</span> <span class="fu">rep</span>(</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"central"</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"copperbelt"</span>,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"eastern"</span>,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"luapula"</span>,</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"lusaka"</span>,</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"muchinga"</span>,</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"northern"</span>,</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"north.western"</span>,</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"southern"</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"western"</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  ,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  <span class="dv">6</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>cso_transformed <span class="ot">&lt;-</span> <span class="fu">cbind</span>(cso_provincial, province) <span class="sc">%&gt;%</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, province, census_proj) <span class="sc">%&gt;%</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>()</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>cso_transformed</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 60 × 3
+   year  province      census_proj
+   &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;      
+ 1 2011  central       1,355,775  
+ 2 2011  copperbelt    2,143,413  
+ 3 2011  eastern       1,628,880  
+ 4 2011  luapula       1,015,629  
+ 5 2011  lusaka        2,362,967  
+ 6 2011  muchinga      749,449    
+ 7 2011  northern      1,146,392  
+ 8 2011  north.western 746,982    
+ 9 2011  southern      1,642,757  
+10 2011  western       926,478    
+# … with 50 more rows</code></pre>
+</div>
+</div>
+<p>For the full data table view, see the table below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(cso_transformed, <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">caption =</span> <span class="st">"Census data per Province"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<caption>Census data per Province</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">year</th>
+<th style="text-align: left;">province</th>
+<th style="text-align: left;">census_proj</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2011</td>
+<td style="text-align: left;">central</td>
+<td style="text-align: left;">1,355,775</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2011</td>
+<td style="text-align: left;">copperbelt</td>
+<td style="text-align: left;">2,143,413</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2011</td>
+<td style="text-align: left;">eastern</td>
+<td style="text-align: left;">1,628,880</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2011</td>
+<td style="text-align: left;">luapula</td>
+<td style="text-align: left;">1,015,629</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2011</td>
+<td style="text-align: left;">lusaka</td>
+<td style="text-align: left;">2,362,967</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2011</td>
+<td style="text-align: left;">muchinga</td>
+<td style="text-align: left;">749,449</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2011</td>
+<td style="text-align: left;">northern</td>
+<td style="text-align: left;">1,146,392</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2011</td>
+<td style="text-align: left;">north.western</td>
+<td style="text-align: left;">746,982</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2011</td>
+<td style="text-align: left;">southern</td>
+<td style="text-align: left;">1,642,757</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2011</td>
+<td style="text-align: left;">western</td>
+<td style="text-align: left;">926,478</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2015</td>
+<td style="text-align: left;">central</td>
+<td style="text-align: left;">1515086</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2015</td>
+<td style="text-align: left;">copperbelt</td>
+<td style="text-align: left;">2362207</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2015</td>
+<td style="text-align: left;">eastern</td>
+<td style="text-align: left;">1813445</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2015</td>
+<td style="text-align: left;">luapula</td>
+<td style="text-align: left;">1127453</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2015</td>
+<td style="text-align: left;">lusaka</td>
+<td style="text-align: left;">2777439</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2015</td>
+<td style="text-align: left;">muchinga</td>
+<td style="text-align: left;">895058</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2015</td>
+<td style="text-align: left;">northern</td>
+<td style="text-align: left;">1304435</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2015</td>
+<td style="text-align: left;">north.western</td>
+<td style="text-align: left;">833818</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2015</td>
+<td style="text-align: left;">southern</td>
+<td style="text-align: left;">1853464</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2015</td>
+<td style="text-align: left;">western</td>
+<td style="text-align: left;">991500</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">central</td>
+<td style="text-align: left;">1734601</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">copperbelt</td>
+<td style="text-align: left;">2669635</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">eastern</td>
+<td style="text-align: left;">2065590</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">luapula</td>
+<td style="text-align: left;">1276608</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">lusaka</td>
+<td style="text-align: left;">3360183</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">muchinga</td>
+<td style="text-align: left;">1095535</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">northern</td>
+<td style="text-align: left;">1520004</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">north.western</td>
+<td style="text-align: left;">950789</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">southern</td>
+<td style="text-align: left;">2135794</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2020</td>
+<td style="text-align: left;">western</td>
+<td style="text-align: left;">1076683</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2025</td>
+<td style="text-align: left;">central</td>
+<td style="text-align: left;">1979202</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2025</td>
+<td style="text-align: left;">copperbelt</td>
+<td style="text-align: left;">3016344</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2025</td>
+<td style="text-align: left;">eastern</td>
+<td style="text-align: left;">2344980</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2025</td>
+<td style="text-align: left;">luapula</td>
+<td style="text-align: left;">1439877</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2025</td>
+<td style="text-align: left;">lusaka</td>
+<td style="text-align: left;">4004276</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2025</td>
+<td style="text-align: left;">muchinga</td>
+<td style="text-align: left;">1326222</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2025</td>
+<td style="text-align: left;">northern</td>
+<td style="text-align: left;">1763638</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2025</td>
+<td style="text-align: left;">north.western</td>
+<td style="text-align: left;">1080072</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2025</td>
+<td style="text-align: left;">southern</td>
+<td style="text-align: left;">2445929</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2025</td>
+<td style="text-align: left;">western</td>
+<td style="text-align: left;">1173598</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2030</td>
+<td style="text-align: left;">central</td>
+<td style="text-align: left;">2254435</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2030</td>
+<td style="text-align: left;">copperbelt</td>
+<td style="text-align: left;">3402007</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2030</td>
+<td style="text-align: left;">eastern</td>
+<td style="text-align: left;">2655422</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2030</td>
+<td style="text-align: left;">luapula</td>
+<td style="text-align: left;">1623991</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2030</td>
+<td style="text-align: left;">lusaka</td>
+<td style="text-align: left;">4704135</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2030</td>
+<td style="text-align: left;">muchinga</td>
+<td style="text-align: left;">1587414</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2030</td>
+<td style="text-align: left;">northern</td>
+<td style="text-align: left;">2040926</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2030</td>
+<td style="text-align: left;">north.western</td>
+<td style="text-align: left;">1227481</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2030</td>
+<td style="text-align: left;">southern</td>
+<td style="text-align: left;">2793523</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2030</td>
+<td style="text-align: left;">western</td>
+<td style="text-align: left;">1286880</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2035</td>
+<td style="text-align: left;">central</td>
+<td style="text-align: left;">2565450</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2035</td>
+<td style="text-align: left;">copperbelt</td>
+<td style="text-align: left;">3823642</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2035</td>
+<td style="text-align: left;">eastern</td>
+<td style="text-align: left;">3001152</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2035</td>
+<td style="text-align: left;">luapula</td>
+<td style="text-align: left;">1834667</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2035</td>
+<td style="text-align: left;">lusaka</td>
+<td style="text-align: left;">5465775</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2035</td>
+<td style="text-align: left;">muchinga</td>
+<td style="text-align: left;">1879642</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2035</td>
+<td style="text-align: left;">northern</td>
+<td style="text-align: left;">2355007</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2035</td>
+<td style="text-align: left;">north.western</td>
+<td style="text-align: left;">1397137</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2035</td>
+<td style="text-align: left;">southern</td>
+<td style="text-align: left;">3184855</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2035</td>
+<td style="text-align: left;">western</td>
+<td style="text-align: left;">1416331</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>We can finally take a breather, and enjoy!</p>
+<center>
+<iframe src="https://giphy.com/embed/13r9tgg7ZisiT6" frameborder="0" width="300" height="250" allowtransparency="" class="giphy-embed" allowfullscreen="">
+</iframe>
+<p>
+<a href="https://giphy.com/gifs/michelle-tanner-stickleyman-13r9tgg7ZisiT6">via GIPHY</a>
+</p>
+</center>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{simumba2017,
+  author = {Aaron Simumba},
+  title = {Breathing Life Back into {PDF} Presented {Data}},
+  date = {2017-10-12},
+  url = {https://asimumba.rbind.io//blog/pdf-data},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-simumba2017" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Aaron Simumba. 2017. <span>“Breathing Life Back into PDF Presented
+Data.”</span> October 12, 2017. <a href="https://asimumba.rbind.io//blog/pdf-data">https://asimumba.rbind.io//blog/pdf-data</a>.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="rbind/asimumba.web" issue-term="pathname" theme="github-dark" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© 2023 Aaron Simumba. Powered by <a href="https://quarto.org/">Quarto</a> and <a href="https://www.netlify.com/">Netflify</a>. License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/asimumba/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/asimumba_/">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:simumbaaaron20@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
