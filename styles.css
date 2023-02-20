@@ -1,7 +1,6 @@
 /* css styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono');
-@import url('https://fonts.googleapis.com/css2?family=Chivo');
 
 /* @media (max-width: 600px){
 .about-image {
@@ -21,15 +20,15 @@
     color: #adb5bd;
 } */
 
-.about-image {
+/* .about-image {
     border-radius: 50%;
-}
+} */
 
 /* .quarto-dark .navbar-dark{
     background-color: #1b1b1d;
 } */
 
-.navbar {
+ .navbar {
     background-color: #1b1b1d;
 }
 
@@ -37,14 +36,14 @@
     margin-bottom: 1em;
     color: #dee2e6;
     background: #1b1b1d;
-}
+} 
 
 /* .quarto-dark .ex{
     color:#d4d0ab;
     font-weight: normal;    
 } */
 
-.sourceCode .at{
+ .sourceCode .at{
     color:#d4d0ab;
     font-weight: normal;
 }

@@ -5,12 +5,10 @@ $body-bg: #363738;
 
 // import google fonts
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono');
-@import url('https://fonts.googleapis.com/css2?family=Chivo');
 
-$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
 $code-block-bg: #494b4d;
 $code-block-font-size: 0.7em;
-$link-color: #2d856f;
-$nav-bar-color: #1b1b1d;
+$link-color: #5d2d85;
 

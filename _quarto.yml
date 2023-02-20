@@ -42,12 +42,13 @@ citation: true
 toc: true
 format:
   html:
-    theme: 
-      dark:  [solar,custom.scss] 
-      light: custom.scss
+    theme: custom.scss
     css: styles.css
 mainfont: "Source Sans Pro"
 monofont: "Fira Mono"
+fontcolor: "#adb5bd"
+linkcolor: "#4ac192"
+code-block-bg: true
 fontsize: 1.2em
 execute:
   freeze: auto

@@ -1,7 +1,7 @@
 ---
 title: "Get to know me"
 image: data/aaron.jpg
-image-shape: round
+image-shape: rounded
 about:
   template: trestles
   links:
